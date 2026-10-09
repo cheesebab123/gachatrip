@@ -14,7 +14,7 @@ spring:
     init:
       mode: always
       schema-locations: classpath:schema.sql
-      data-locations: classpath:data.sql, classpath:tour_data_insert.sql
+      data-locations: classpath:data.sql, classpath:tour_data_20_regions.sql, classpath:tour_data_insert.sql
   jpa:
     defer-datasource-initialization: false
     database-platform: org.hibernate.dialect.H2Dialect
