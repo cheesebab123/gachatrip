@@ -1,0 +1,24 @@
+# Build & Dependency Directories
+node_modules/
+dist/
+build/
+.gradle/
+bin/
+data/
+*.log
+
+# Backup & Temp
+frontend_backup_*
+scratch/
+.system_generated/
+
+# IDE & OS
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db

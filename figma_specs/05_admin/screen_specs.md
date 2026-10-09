@@ -1,0 +1,3952 @@
+# 관리자 백오피스 (05_admin) Design Specifications
+
+> 이 문서는 Figma의 모든 요소 세팅값(좌표, 크기, 색상, 타이포그래피, 패딩, 갭, 텍스트)을 100% 보존한 완벽한 스펙입니다.
+
+## 1. ADM-05 · 가챠 정책 관리 (ID: `2002:6503`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/01_ADM-05 · 가챠 정책 관리.png`
+
+### Component Tree & Styles
+- **ADM-05 · 가챠 정책 관리** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Top Divider** (`RECTANGLE`) | `1192.0x1.0` | Fill: #DDE5F1
+  - **Title** (`TEXT`) | `500.0x20.0` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "가챠 정책 관리"
+  - **Desc** (`TEXT`) | `700.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "개인·그룹 가챠의 추천 기준과 확률을 안전하게 설..."
+  - **History** (`RECTANGLE`) | `106.0x42.0` | Fill: #FFFFFF | Radius: 12.0px
+  - **History Text** (`TEXT`) | `45.0x14.0` | Fill: #3152C7 | Font: Pretendard 500 12.0px | Text: "변경 이력"
+  - **Publish** (`RECTANGLE`) | `124.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Publish Text** (`TEXT`) | `45.0x14.0` | Fill: #EAF0F7 | Font: Pretendard 700 12.0px | Text: "정책 배포"
+  - **Service Card** (`RECTANGLE`) | `1092.0x88.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Service Title** (`TEXT`) | `220.0x20.0` | Fill: #252C48 | Font: Pretendard 700 14.0px | Text: "가챠 서비스 상태"
+  - **Service Dot** (`RECTANGLE`) | `9.0x9.0` | Fill: #0D7A4F | Radius: 999.0px
+  - **Service State** (`TEXT`) | `180.0x20.0` | Fill: #0D7A4F | Font: Pretendard 500 12.0px | Text: "운영 중 · v1.8.3"
+  - **Updated** (`TEXT`) | `197.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "최근 배포 2026.09.15 10:20 · 관리..."
+  - **Toggle** (`RECTANGLE`) | `58.5x27.0` | Fill: #4D63FF | Radius: 13.5px
+  - **Toggle Knob** (`RECTANGLE`) | `21.0x21.0` | Fill: #FFFFFF | Radius: 749.25px
+  - **Policy Card** (`RECTANGLE`) | `704.0x430.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Policy Title** (`TEXT`) | `260.0x20.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "추천 가중치"
+  - **Policy Desc** (`TEXT`) | `320.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "합계가 100%가 되어야 저장할 수 있습니다."
+  - **Group 1437253496** (`GROUP`) | `601.0x36.0`
+    - **Weight Name 0** (`TEXT`) | `60.0x16.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "사용자 취향"
+    - **Track 0** (`RECTANGLE`) | `330.0x10.0` | Fill: #EAF0F7 | Radius: 999.0px
+    - **Value 0** (`RECTANGLE`) | `330.0x10.0` | Fill: #4D63FF | Radius: 999.0px
+    - **Knob 0** (`RECTANGLE`) | `22.0x22.0` | Fill: #FFFFFF | Radius: 999.0px
+    - **Input 0** (`RECTANGLE`) | `76.0x36.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Percent 0** (`TEXT`) | `27.0x14.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "35%"
+  - **Group 1437253497** (`GROUP`) | `601.0x36.0`
+    - **Weight Name 1** (`TEXT`) | `60.0x16.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "출발지 거리"
+    - **Track 1** (`RECTANGLE`) | `330.0x10.0` | Fill: #EAF0F7 | Radius: 999.0px
+    - **Value 1** (`RECTANGLE`) | `235.7x10.0` | Fill: #4D63FF | Radius: 999.0px
+    - **Knob 1** (`RECTANGLE`) | `22.0x22.0` | Fill: #FFFFFF | Radius: 999.0px
+    - **Input 1** (`RECTANGLE`) | `76.0x36.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Percent 1** (`TEXT`) | `27.0x14.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "25%"
+  - **Group 1437253493** (`GROUP`) | `601.0x36.0`
+    - **Weight Name 2** (`TEXT`) | `49.0x16.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "현재 날씨"
+    - **Track 2** (`RECTANGLE`) | `330.0x10.0` | Fill: #EAF0F7 | Radius: 999.0px
+    - **Value 2** (`RECTANGLE`) | `141.4x10.0` | Fill: #4D63FF | Radius: 999.0px
+    - **Knob 2** (`RECTANGLE`) | `22.0x22.0` | Fill: #FFFFFF | Radius: 999.0px
+    - **Input 2** (`RECTANGLE`) | `76.0x36.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Percent 2** (`TEXT`) | `25.0x14.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "15%"
+  - **Group 1437253494** (`GROUP`) | `601.0x36.0`
+    - **Weight Name 3** (`TEXT`) | `60.0x16.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "예산 적합도"
+    - **Track 3** (`RECTANGLE`) | `330.0x10.0` | Fill: #EAF0F7 | Radius: 999.0px
+    - **Value 3** (`RECTANGLE`) | `141.4x10.0` | Fill: #4D63FF | Radius: 999.0px
+    - **Knob 3** (`RECTANGLE`) | `22.0x22.0` | Fill: #FFFFFF | Radius: 999.0px
+    - **Input 3** (`RECTANGLE`) | `76.0x36.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Percent 3** (`TEXT`) | `25.0x14.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "15%"
+  - **Group 1437253495** (`GROUP`) | `601.0x36.0`
+    - **Weight Name 4** (`TEXT`) | `60.0x16.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "새로운 발견"
+    - **Track 4** (`RECTANGLE`) | `330.0x10.0` | Fill: #EAF0F7 | Radius: 999.0px
+    - **Value 4** (`RECTANGLE`) | `94.3x10.0` | Fill: #4D63FF | Radius: 999.0px
+    - **Knob 4** (`RECTANGLE`) | `22.0x22.0` | Fill: #FFFFFF | Radius: 999.0px
+    - **Input 4** (`RECTANGLE`) | `76.0x36.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Percent 4** (`TEXT`) | `26.0x14.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "10%"
+  - **Sum** (`RECTANGLE`) | `604.0x1.0` | Fill: #D4DDEA
+  - **Sum Label** (`TEXT`) | `55.0x14.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "가중치 합계"
+  - **Sum Value** (`TEXT`) | `39.0x17.0` | Fill: #0D7A4F | Font: Pretendard 700 14.0px | Text: "100%"
+  - **Rule Card** (`RECTANGLE`) | `364.0x430.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Rule Title** (`TEXT`) | `230.0x20.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "제외·보정 규칙"
+  - **Rule 0** (`TEXT`) | `220.0x20.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "최근 30일 방문지 제외"
+  - **Switch 0** (`RECTANGLE`) | `62.0x30.0` | Fill: #4D63FF | Radius: 999.0px
+  - **Switch Knob 0** (`RECTANGLE`) | `22.0x22.0` | Fill: #FFFFFF | Radius: 999.0px
+  - **Rule 1** (`TEXT`) | `220.0x20.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "운영 중단 여행지 제외"
+  - **Switch 1** (`RECTANGLE`) | `62.0x30.0` | Fill: #4D63FF | Radius: 999.0px
+  - **Switch Knob 1** (`RECTANGLE`) | `22.0x22.0` | Fill: #FFFFFF | Radius: 999.0px
+  - **Rule 2** (`TEXT`) | `220.0x20.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "악천후 지역 감점"
+  - **Switch 2** (`RECTANGLE`) | `62.0x30.0` | Fill: #4D63FF | Radius: 999.0px
+  - **Switch Knob 2** (`RECTANGLE`) | `22.0x22.0` | Fill: #FFFFFF | Radius: 999.0px
+  - **Rule 3** (`TEXT`) | `220.0x20.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "동일 지역 연속 추천 제한"
+  - **Switch 3** (`RECTANGLE`) | `62.0x30.0` | Fill: #4D63FF | Radius: 999.0px
+  - **Switch Knob 3** (`RECTANGLE`) | `22.0x22.0` | Fill: #FFFFFF | Radius: 999.0px
+  - **Rule 4** (`TEXT`) | `220.0x20.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "광역시 편향 보정"
+  - **Switch 4** (`RECTANGLE`) | `62.0x30.0` | Fill: #EAF0F7 | Radius: 999.0px
+  - **Switch Knob 4** (`RECTANGLE`) | `22.0x22.0` | Fill: #FFFFFF | Radius: 999.0px
+  - **Rule Note** (`TEXT`) | `290.0x20.0` | Fill: #A85E00 | Font: Pretendard 400 12.0px | Text: "※ 변경 시 추천 결과 분포가 달라질 수 있습니다."
+  - **Simulation Card** (`RECTANGLE`) | `704.0x214.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Sim Title** (`TEXT`) | `220.0x20.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "정책 시뮬레이션"
+  - **Sim Desc** (`TEXT`) | `290.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "샘플 10,000회 · 저장 전 결과 분포 확인"
+  - **Sim L 0** (`TEXT`) | `54.0x20.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "자연"
+  - **Sim BG 0** (`RECTANGLE`) | `310.0x8.0` | Fill: #EAF0F7 | Radius: 999.0px
+  - **Sim Bar 0** (`RECTANGLE`) | `194.0x8.0` | Fill: #4D63FF | Radius: 999.0px
+  - **Sim V 0** (`TEXT`) | `60.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "32.4%"
+  - **Sim L 1** (`TEXT`) | `54.0x20.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "도심"
+  - **Sim BG 1** (`RECTANGLE`) | `310.0x8.0` | Fill: #EAF0F7 | Radius: 999.0px
+  - **Sim Bar 1** (`RECTANGLE`) | `165.0x8.0` | Fill: #4D63FF | Radius: 999.0px
+  - **Sim V 1** (`TEXT`) | `60.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "27.6%"
+  - **Sim L 2** (`TEXT`) | `54.0x20.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "바다"
+  - **Sim BG 2** (`RECTANGLE`) | `310.0x8.0` | Fill: #EAF0F7 | Radius: 999.0px
+  - **Sim Bar 2** (`RECTANGLE`) | `132.0x8.0` | Fill: #4D63FF | Radius: 999.0px
+  - **Sim V 2** (`TEXT`) | `60.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "22.1%"
+  - **Sim L 3** (`TEXT`) | `54.0x20.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "이색"
+  - **Sim BG 3** (`RECTANGLE`) | `310.0x8.0` | Fill: #EAF0F7 | Radius: 999.0px
+  - **Sim Bar 3** (`RECTANGLE`) | `107.0x8.0` | Fill: #4D63FF | Radius: 999.0px
+  - **Sim V 3** (`TEXT`) | `60.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "17.9%"
+  - **Run Test** (`RECTANGLE`) | `150.0x42.0` | Fill: #EAF0F7 | Radius: 12.0px
+  - **Run Test Text** (`TEXT`) | `85.0x14.0` | Fill: #4D63FF | Font: Pretendard 700 12.0px | Text: "10,000회 테스트"
+  - **Version Card** (`RECTANGLE`) | `364.0x214.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Version Title** (`TEXT`) | `200.0x20.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "배포 버전"
+  - **Version Row 0** (`RECTANGLE`) | `310.0x44.0` | Fill: #EAF0F7 | Radius: 11.0px
+  - **Version 0** (`TEXT`) | `31.0x13.0` | Fill: #171A2B | Font: Pretendard 700 11.0px | Text: "v1.8.3"
+  - **Version State 0** (`TEXT`) | `32.0x13.0` | Fill: #0D7A4F | Font: Pretendard 500 11.0px | Text: "운영 중"
+  - **Version Date 0** (`TEXT`) | `57.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "09.15 10:20"
+  - **Version Row 1** (`RECTANGLE`) | `310.0x44.0` | Fill: #EAF0F7 | Radius: 11.0px
+  - **Version 1** (`TEXT`) | `61.0x13.0` | Fill: #171A2B | Font: Pretendard 700 11.0px | Text: "v1.8.4-draft"
+  - **Version State 1** (`TEXT`) | `41.0x13.0` | Fill: #A85E00 | Font: Pretendard 500 11.0px | Text: "임시 저장"
+  - **Version Date 1** (`TEXT`) | `57.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "09.15 14:08"
+  - **Rollback** (`TEXT`) | `82.0x13.0` | Fill: #C92A32 | Font: Pretendard 700 11.0px | Text: "이전 버전으로 롤백"
+  - **Prototype/뽑기 규칙 편집** (`RECTANGLE`) | `200.0x64.0` | Fill: #EAF0F7
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+
+---
+
+## 2. ADM-06 · 그룹 가챠방 (ID: `2002:6672`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/02_ADM-06 · 그룹 가챠방.png`
+
+### Component Tree & Styles
+- **ADM-06 · 그룹 가챠방** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `14.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Top Divider** (`RECTANGLE`) | `1192.0x1.0` | Fill: #DDE5F1
+  - **Title** (`TEXT`) | `500.0x20.0` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "그룹 가챠방"
+  - **Desc** (`TEXT`) | `730.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "실시간 그룹방, 투표 진행, 추천 결과와 오류 상..."
+  - **Realtime** (`RECTANGLE`) | `192.0x42.0` | Fill: #D8FFF029 | Radius: 12.0px
+  - **Realtime Dot** (`RECTANGLE`) | `9.0x9.0` | Fill: #0D7A4F | Radius: 999.0px
+  - **Realtime Text** (`TEXT`) | `130.0x20.0` | Fill: #0D7A4F | Font: Pretendard 700 12.0px | Text: "실시간 연결 24개"
+  - **Metric 0** (`RECTANGLE`) | `261.0x82.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Metric Label 0** (`TEXT`) | `152.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "활성 방"
+  - **Metric Value 0** (`TEXT`) | `152.0x20.0` | Fill: #171A2B | Font: Pretendard 700 22.0px | Text: "24개"
+  - **Metric 1** (`RECTANGLE`) | `261.0x82.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Metric Label 1** (`TEXT`) | `152.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "대기 중"
+  - **Metric Value 1** (`TEXT`) | `152.0x20.0` | Fill: #171A2B | Font: Pretendard 700 22.0px | Text: "9개"
+  - **Metric 2** (`RECTANGLE`) | `261.0x82.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Metric Label 2** (`TEXT`) | `152.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "투표 진행"
+  - **Metric Value 2** (`TEXT`) | `152.0x20.0` | Fill: #171A2B | Font: Pretendard 700 22.0px | Text: "11개"
+  - **Metric 3** (`RECTANGLE`) | `261.0x82.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Metric Label 3** (`TEXT`) | `152.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "오류 방"
+  - **Metric Value 3** (`TEXT`) | `152.0x20.0` | Fill: #C92A32 | Font: Pretendard 700 22.0px | Text: "2개"
+  - **Filter Card** (`RECTANGLE`) | `1093.0x72.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Room Search** (`RECTANGLE`) | `390.0x40.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Filter 0** (`RECTANGLE`) | `118.0x40.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Filter Text 0** (`TEXT`) | `95.0x20.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "상태 전체             ▾"
+  - **Filter 1** (`RECTANGLE`) | `118.0x40.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Filter Text 1** (`TEXT`) | `95.0x20.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "인원 전체              ▾"
+  - **Filter 2** (`RECTANGLE`) | `130.0x40.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Filter Text 2** (`TEXT`) | `107.0x20.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "생성 시간                  ▾"
+  - **Only Errors** (`RECTANGLE`) | `116.0x40.0` | Fill: #F3F6FC | Radius: 8.0px
+  - **Only Errors Text** (`TEXT`) | `116.0x40.0` | Fill: #3152C7 | Font: Pretendard 700 12.0px | Text: "오류만 보기"
+  - **Refresh** (`TEXT`) | `92.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "↻ 새로고침"
+  - **Room Table** (`RECTANGLE`) | `721.0x578.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **UX/Grid/Header BG** (`RECTANGLE`) | `685.0x44.0` | Fill: #EEF3FF | Radius: 8.0px
+  - **UX/Grid/Row BG 1** (`RECTANGLE`) | `685.0x54.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **UX/Grid/Row BG 2** (`RECTANGLE`) | `685.0x54.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **UX/Grid/Row BG 3** (`RECTANGLE`) | `685.0x54.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **UX/Grid/Row BG 4** (`RECTANGLE`) | `685.0x54.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **UX/Grid/Row BG 5** (`RECTANGLE`) | `685.0x54.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **UX/Grid/Row BG 6** (`RECTANGLE`) | `685.0x54.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **UX/Grid/Detail Divider 1** (`RECTANGLE`) | `296.0x1.0` | Fill: #DDE5F1
+  - **UX/Grid/Detail Divider 2** (`RECTANGLE`) | `296.0x1.0` | Fill: #DDE5F1
+  - **UX/Grid/User Row 0** (`RECTANGLE`) | `308.0x42.0` | Fill: #DDE5F1 | Radius: 7.0px
+  - **UX/Grid/User Row 1** (`RECTANGLE`) | `308.0x42.0` | Fill: #DDE5F1 | Radius: 7.0px
+  - **UX/Grid/User Row 2** (`RECTANGLE`) | `308.0x42.0` | Fill: #DDE5F1 | Radius: 7.0px
+  - **UX/Grid/User Row 3** (`RECTANGLE`) | `308.0x42.0` | Fill: #DDE5F1 | Radius: 7.0px
+  - **Head 0** (`TEXT`) | `86.0x20.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "방 코드"
+  - **Selected Room** (`RECTANGLE`) | `685.0x54.0` | Fill: #FAFBFE | Radius: 10.0px
+  - **Head 1** (`TEXT`) | `108.0x20.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "방장"
+  - **Head 2** (`TEXT`) | `58.0x20.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "인원"
+  - **Head 3** (`TEXT`) | `106.0x20.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "단계"
+  - **Head 4** (`TEXT`) | `98.0x20.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "생성"
+  - **Head 5** (`TEXT`) | `68.0x20.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "상태"
+  - **Head 6** (`TEXT`) | `56.0x20.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "관리"
+  - **Code 0** (`TEXT`) | `86.0x20.0` | Fill: #4D63FF | Font: Pretendard 700 12.0px | Text: "R8K2Q1"
+  - **Host 0** (`TEXT`) | `108.0x20.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "김가현"
+  - **Count 0** (`TEXT`) | `58.0x20.0` | Fill: #171A2B | Font: Pretendard 400 12.0px | Text: "4/4"
+  - **Step 0** (`TEXT`) | `106.0x20.0` | Fill: #344054 | Font: Pretendard 400 11.0px | Text: "결과 확인"
+  - **Created 0** (`TEXT`) | `98.0x20.0` | Fill: #667085 | Font: Pretendard 400 11.0px | Text: "14:32"
+  - **UX/Grid/State Badge 0** (`RECTANGLE`) | `55.0x24.0` | Fill: #DDE5F1 | Radius: 12.0px
+  - **State 0** (`TEXT`) | `20.0x13.0` | Fill: #168A63 | Font: Pretendard 500 11.0px | Text: "정상"
+  - **UX/Grid/Manage Button 0** (`RECTANGLE`) | `58.0x24.0` | Fill: #F3F6FC | Radius: 6.0px
+  - **Manage 0** (`TEXT`) | `58.0x24.0` | Fill: #3152C7 | Font: Pretendard 700 11.0px | Text: "열기"
+  - **Code 1** (`TEXT`) | `86.0x20.0` | Fill: #4D63FF | Font: Pretendard 700 12.0px | Text: "M3DP77"
+  - **Host 1** (`TEXT`) | `108.0x20.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "이민수"
+  - **Count 1** (`TEXT`) | `58.0x20.0` | Fill: #171A2B | Font: Pretendard 400 12.0px | Text: "3/5"
+  - **Step 1** (`TEXT`) | `106.0x20.0` | Fill: #344054 | Font: Pretendard 400 11.0px | Text: "투표 진행"
+  - **Created 1** (`TEXT`) | `98.0x20.0` | Fill: #667085 | Font: Pretendard 400 11.0px | Text: "14:28"
+  - **UX/Grid/State Badge 1** (`RECTANGLE`) | `55.0x24.0` | Fill: #DDE5F1 | Radius: 12.0px
+  - **State 1** (`TEXT`) | `20.0x13.0` | Fill: #168A63 | Font: Pretendard 500 11.0px | Text: "정상"
+  - **UX/Grid/Manage Button 1** (`RECTANGLE`) | `58.0x24.0` | Fill: #F3F6FC | Radius: 6.0px
+  - **Manage 1** (`TEXT`) | `58.0x24.0` | Fill: #3152C7 | Font: Pretendard 700 11.0px | Text: "열기"
+  - **Code 2** (`TEXT`) | `86.0x20.0` | Fill: #4D63FF | Font: Pretendard 700 12.0px | Text: "A9CX04"
+  - **Host 2** (`TEXT`) | `108.0x20.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "박서연"
+  - **Count 2** (`TEXT`) | `58.0x20.0` | Fill: #171A2B | Font: Pretendard 400 12.0px | Text: "2/4"
+  - **Step 2** (`TEXT`) | `106.0x20.0` | Fill: #344054 | Font: Pretendard 400 11.0px | Text: "조건 입력"
+  - **Created 2** (`TEXT`) | `98.0x20.0` | Fill: #667085 | Font: Pretendard 400 11.0px | Text: "14:17"
+  - **UX/Grid/State Badge 2** (`RECTANGLE`) | `55.0x24.0` | Fill: #DDE5F1 | Radius: 12.0px
+  - **State 2** (`TEXT`) | `20.0x13.0` | Fill: #667085 | Font: Pretendard 500 11.0px | Text: "대기"
+  - **UX/Grid/Manage Button 2** (`RECTANGLE`) | `58.0x24.0` | Fill: #F3F6FC | Radius: 6.0px
+  - **Manage 2** (`TEXT`) | `58.0x24.0` | Fill: #3152C7 | Font: Pretendard 700 11.0px | Text: "열기"
+  - **Code 3** (`TEXT`) | `86.0x20.0` | Fill: #4D63FF | Font: Pretendard 700 12.0px | Text: "K1ER55"
+  - **Host 3** (`TEXT`) | `108.0x20.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "최준호"
+  - **Count 3** (`TEXT`) | `58.0x20.0` | Fill: #171A2B | Font: Pretendard 400 12.0px | Text: "5/5"
+  - **Step 3** (`TEXT`) | `106.0x20.0` | Fill: #344054 | Font: Pretendard 400 11.0px | Text: "결과 생성"
+  - **Created 3** (`TEXT`) | `98.0x20.0` | Fill: #667085 | Font: Pretendard 400 11.0px | Text: "14:02"
+  - **UX/Grid/State Badge 3** (`RECTANGLE`) | `55.0x24.0` | Fill: #DDE5F1 | Radius: 12.0px
+  - **State 3** (`TEXT`) | `20.0x13.0` | Fill: #D92D20 | Font: Pretendard 500 11.0px | Text: "오류"
+  - **UX/Grid/Manage Button 3** (`RECTANGLE`) | `58.0x24.0` | Fill: #F3F6FC | Radius: 6.0px
+  - **Manage 3** (`TEXT`) | `58.0x24.0` | Fill: #3152C7 | Font: Pretendard 700 11.0px | Text: "열기"
+  - **Code 4** (`TEXT`) | `86.0x20.0` | Fill: #4D63FF | Font: Pretendard 700 12.0px | Text: "P6LS21"
+  - **Host 4** (`TEXT`) | `108.0x20.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "정유진"
+  - **Count 4** (`TEXT`) | `58.0x20.0` | Fill: #171A2B | Font: Pretendard 400 12.0px | Text: "4/6"
+  - **Step 4** (`TEXT`) | `106.0x20.0` | Fill: #344054 | Font: Pretendard 400 11.0px | Text: "투표 진행"
+  - **Created 4** (`TEXT`) | `98.0x20.0` | Fill: #667085 | Font: Pretendard 400 11.0px | Text: "13:48"
+  - **UX/Grid/State Badge 4** (`RECTANGLE`) | `55.0x24.0` | Fill: #DDE5F1 | Radius: 12.0px
+  - **State 4** (`TEXT`) | `20.0x13.0` | Fill: #168A63 | Font: Pretendard 500 11.0px | Text: "정상"
+  - **UX/Grid/Manage Button 4** (`RECTANGLE`) | `58.0x24.0` | Fill: #F3F6FC | Radius: 6.0px
+  - **Manage 4** (`TEXT`) | `58.0x24.0` | Fill: #3152C7 | Font: Pretendard 700 11.0px | Text: "열기"
+  - **Code 5** (`TEXT`) | `86.0x20.0` | Fill: #4D63FF | Font: Pretendard 700 12.0px | Text: "B2NZ88"
+  - **Host 5** (`TEXT`) | `108.0x20.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "오세훈"
+  - **Count 5** (`TEXT`) | `58.0x20.0` | Fill: #171A2B | Font: Pretendard 400 12.0px | Text: "1/4"
+  - **Step 5** (`TEXT`) | `106.0x20.0` | Fill: #344054 | Font: Pretendard 400 11.0px | Text: "대기실"
+  - **Created 5** (`TEXT`) | `98.0x20.0` | Fill: #667085 | Font: Pretendard 400 11.0px | Text: "13:33"
+  - **UX/Grid/State Badge 5** (`RECTANGLE`) | `55.0x24.0` | Fill: #DDE5F1 | Radius: 12.0px
+  - **State 5** (`TEXT`) | `20.0x13.0` | Fill: #667085 | Font: Pretendard 500 11.0px | Text: "대기"
+  - **UX/Grid/Manage Button 5** (`RECTANGLE`) | `58.0x24.0` | Fill: #F3F6FC | Radius: 6.0px
+  - **Manage 5** (`TEXT`) | `58.0x24.0` | Fill: #3152C7 | Font: Pretendard 700 11.0px | Text: "열기"
+  - **Code 6** (`TEXT`) | `86.0x20.0` | Fill: #4D63FF | Font: Pretendard 700 12.0px | Text: "T7WF39"
+  - **Host 6** (`TEXT`) | `108.0x20.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "한소희"
+  - **Count 6** (`TEXT`) | `58.0x20.0` | Fill: #171A2B | Font: Pretendard 400 12.0px | Text: "6/6"
+  - **Step 6** (`TEXT`) | `106.0x20.0` | Fill: #344054 | Font: Pretendard 400 11.0px | Text: "결과 저장"
+  - **Created 6** (`TEXT`) | `98.0x20.0` | Fill: #667085 | Font: Pretendard 400 11.0px | Text: "13:20"
+  - **UX/Grid/State Badge 6** (`RECTANGLE`) | `55.0x24.0` | Fill: #DDE5F1 | Radius: 12.0px
+  - **State 6** (`TEXT`) | `20.0x13.0` | Fill: #B66A00 | Font: Pretendard 500 11.0px | Text: "주의"
+  - **UX/Grid/Manage Button 6** (`RECTANGLE`) | `58.0x24.0` | Fill: #F3F6FC | Radius: 6.0px
+  - **Manage 6** (`TEXT`) | `58.0x24.0` | Fill: #3152C7 | Font: Pretendard 700 11.0px | Text: "열기"
+  - **Pagination** (`TEXT`) | `220.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "‹   1   2   3   4   ›"
+  - **Room Detail** (`RECTANGLE`) | `348.0x578.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Detail Title** (`TEXT`) | `230.0x20.0` | Fill: #252C48 | Font: Pretendard 700 19.0px | Text: "방 상세 · R8K2Q1"
+  - **Detail Meta** (`TEXT`) | `280.0x20.0` | Fill: #66708A | Font: Pretendard 400 11.0px | Text: "생성 14:32 · 마지막 이벤트 14:36:12"
+  - **Progress BG** (`RECTANGLE`) | `296.0x8.0` | Fill: #E5EBF5 | Radius: 999.0px
+  - **Progress** (`RECTANGLE`) | `252.0x8.0` | Fill: #4D63FF | Radius: 999.0px
+  - **Progress Text** (`TEXT`) | `250.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "결과 확인 단계 · 4 / 4 참여"
+  - **Participants Label** (`TEXT`) | `120.0x20.0` | Fill: #171A2B | Font: Pretendard 700 13.0px | Text: "참여자"
+  - **User Avatar 0** (`RECTANGLE`) | `32.0x32.0` | Fill: #EAF0F7 | Radius: 10.0px
+  - **User Initial 0** (`TEXT`) | `10.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "김"
+  - **User Name 0** (`TEXT`) | `100.0x20.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "김가현"
+  - **User State 0** (`TEXT`) | `160.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "방장 · 선택 완료"
+  - **Online 0** (`RECTANGLE`) | `8.0x8.0` | Fill: #0D7A4F | Radius: 999.0px
+  - **User Avatar 1** (`RECTANGLE`) | `32.0x32.0` | Fill: #EAF0F7 | Radius: 10.0px
+  - **User Initial 1** (`TEXT`) | `10.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "이"
+  - **User Name 1** (`TEXT`) | `100.0x20.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "이민수"
+  - **User State 1** (`TEXT`) | `160.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "선택 완료"
+  - **Online 1** (`RECTANGLE`) | `8.0x8.0` | Fill: #0D7A4F | Radius: 999.0px
+  - **User Avatar 2** (`RECTANGLE`) | `32.0x32.0` | Fill: #EAF0F7 | Radius: 10.0px
+  - **User Initial 2** (`TEXT`) | `10.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "박"
+  - **User Name 2** (`TEXT`) | `100.0x20.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "박서연"
+  - **User State 2** (`TEXT`) | `160.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "선택 완료"
+  - **Online 2** (`RECTANGLE`) | `8.0x8.0` | Fill: #0D7A4F | Radius: 999.0px
+  - **User Avatar 3** (`RECTANGLE`) | `32.0x32.0` | Fill: #EAF0F7 | Radius: 10.0px
+  - **User Initial 3** (`TEXT`) | `10.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "정"
+  - **User Name 3** (`TEXT`) | `100.0x20.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "정유진"
+  - **User State 3** (`TEXT`) | `160.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "선택 완료"
+  - **Online 3** (`RECTANGLE`) | `8.0x8.0` | Fill: #0D7A4F | Radius: 999.0px
+  - **Event Label** (`TEXT`) | `140.0x20.0` | Fill: #171A2B | Font: Pretendard 700 13.0px | Text: "최근 이벤트"
+  - **Event Time 0** (`TEXT`) | `70.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "14:36:12"
+  - **Event Text 0** (`TEXT`) | `190.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "추천 결과 생성 완료"
+  - **Event Time 1** (`TEXT`) | `70.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "14:35:48"
+  - **Event Text 1** (`TEXT`) | `190.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "투표 집계 완료"
+  - **Event Time 2** (`TEXT`) | `70.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "14:34:02"
+  - **Event Text 2** (`TEXT`) | `190.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "정유진 참여"
+  - **Force Close** (`RECTANGLE`) | `136.0x38.0` | Fill: #FFF2F3 | Radius: 8.0px
+  - **Force Close Text** (`TEXT`) | `136.0x38.0` | Fill: #D33C4D | Font: Pretendard 500 11.0px | Text: "방 강제 종료"
+  - **Resend** (`RECTANGLE`) | `148.0x38.0` | Fill: #4D63FF | Radius: 8.0px
+  - **Resend Text** (`TEXT`) | `148.0x38.0` | Fill: #FFFFFF | Font: Pretendard 700 11.0px | Text: "결과 재전송"
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **UX/Grid/Column Divider 0** (`RECTANGLE`) | `1.0x470.0` | Fill: #DDE5F1
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+  - **Destination Search Text** (`TEXT`) | `123.0x14.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "6자리 방 코드 또는 닉네임"
+  - **Vector** (`VECTOR`) | `12.0x12.0` | Fill: #171A2B
+
+---
+
+## 3. ADM-07 · 콘텐츠 · 운영 (ID: `2002:6891`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/03_ADM-07 · 콘텐츠 · 운영.png`
+
+### Component Tree & Styles
+- **ADM-07 · 콘텐츠 · 운영** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Top Divider** (`RECTANGLE`) | `1192.0x1.0` | Fill: #DDE5F1
+  - **Title** (`TEXT`) | `142.0x33.0` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "콘텐츠 · 운영"
+  - **Desc** (`TEXT`) | `342.0x17.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "공지사항, 1:1 문의, 신고 콘텐츠와 큐레이션을..."
+  - **Create Notice** (`RECTANGLE`) | `122.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Create Notice Text** (`TEXT`) | `90.0x20.0` | Fill: #EAF0F7 | Font: Pretendard 700 12.0px | Text: "+ 공지 작성"
+  - **Tab Bar** (`RECTANGLE`) | `1092.0x58.0` | Fill: #F2F5FA | Radius: 14.0px
+  - **Active Tab** (`RECTANGLE`) | `160.0x40.0` | Fill: #EAF0F7 | Radius: 14.0px
+  - **Active Tab** (`RECTANGLE`) | `160.0x40.0` | Fill: #EAF0F7 | Radius: 14.0px
+  - **Active Tab** (`RECTANGLE`) | `160.0x40.0` | Fill: #EAF0F7 | Radius: 14.0px
+  - **Active Tab** (`RECTANGLE`) | `160.0x40.0` | Fill: #EAF0F7 | Radius: 14.0px
+  - **Tab 0** (`TEXT`) | `39.0x14.0` | Fill: #5E6E93 | Font: Pretendard 700 12.0px | Text: "1:1 문의"
+  - **Tab Count 0** (`RECTANGLE`) | `28.0x22.0` | Fill: #EAF0F7 | Radius: 999.0px
+  - **Tab Count Text 0** (`TEXT`) | `7.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "7"
+  - **Tab 1** (`TEXT`) | `45.0x14.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "신고 관리"
+  - **Tab Count 1** (`RECTANGLE`) | `28.0x22.0` | Fill: #EAF0F7 | Radius: 999.0px
+  - **Tab Count Text 1** (`TEXT`) | `8.0x13.0` | Fill: #5E6E93 | Font: Pretendard 700 11.0px | Text: "3"
+  - **Tab 2** (`TEXT`) | `42.0x14.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "공지사항"
+  - **Tab Count 2** (`RECTANGLE`) | `29.0x22.0` | Fill: #EAF0F7 | Radius: 999.0px
+  - **Tab Count Text 2** (`TEXT`) | `12.0x13.0` | Fill: #5E6E93 | Font: Pretendard 700 11.0px | Text: "12"
+  - **Tab 3** (`TEXT`) | `42.0x14.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "큐레이션"
+  - **Tab Count 3** (`RECTANGLE`) | `29.0x22.0` | Fill: #EAF0F7 | Radius: 999.0px
+  - **Tab Count Text 3** (`TEXT`) | `14.0x13.0` | Fill: #5E6E93 | Font: Pretendard 700 11.0px | Text: "28"
+  - **Group 1437253505** (`GROUP`) | `260.9x80.0` | Radius: 16.0px
+    - **Metric 0** (`RECTANGLE`) | `260.9x80.0` | Fill: #FFFFFF | Radius: 16.0px
+    - **Metric Label 0** (`TEXT`) | `161.8x20.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "전체 문의"
+    - **Metric Value 0** (`TEXT`) | `55.6x25.0` | Fill: #171A2B | Font: Pretendard 700 21.0px | Text: "142건"
+  - **Group 1437253504** (`GROUP`) | `260.9x80.0`
+    - **Metric 1** (`RECTANGLE`) | `260.9x80.0` | Fill: #FFFFFF | Radius: 16.0px
+    - **Table Polish/Status Pill/101:222** (`RECTANGLE`) | `49.5x24.0` | Fill: #FBE1E5 | Radius: 12.0px
+    - **Metric Label 1** (`TEXT`) | `29.3x13.0` | Fill: #C7485C | Font: Pretendard 500 11.0px | Text: "미답변"
+    - **Metric Value 1** (`TEXT`) | `31.3x25.0` | Fill: #171A2B | Font: Pretendard 700 21.0px | Text: "7건"
+  - **Group 1437253503** (`GROUP`) | `260.9x80.0` | Radius: 16.0px
+    - **Metric 2** (`RECTANGLE`) | `260.9x80.0` | Fill: #FFFFFF | Radius: 16.0px
+    - **Metric Label 2** (`TEXT`) | `161.8x20.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "24시간 초과"
+    - **Metric Value 2** (`TEXT`) | `32.4x25.0` | Fill: #C92A32 | Font: Pretendard 700 21.0px | Text: "3건"
+  - **Group 1437253502** (`GROUP`) | `260.9x80.0` | Radius: 16.0px
+    - **Metric 3** (`RECTANGLE`) | `260.9x80.0` | Fill: #FFFFFF | Radius: 16.0px
+    - **Metric Label 3** (`TEXT`) | `161.8x20.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "오늘 처리"
+    - **Metric Value 3** (`TEXT`) | `42.5x25.0` | Fill: #171A2B | Font: Pretendard 700 21.0px | Text: "18건"
+  - **List Card** (`RECTANGLE`) | `716.0x594.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Filter 0** (`RECTANGLE`) | `114.0x40.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Filter Text 0** (`TEXT`) | `57.0x16.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "상태 전체 ▾"
+  - **Filter 1** (`RECTANGLE`) | `114.0x40.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Filter Text 1** (`TEXT`) | `57.0x16.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "유형 전체 ▾"
+  - **Filter 2** (`RECTANGLE`) | `96.0x40.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Filter Text 2** (`TEXT`) | `42.0x16.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "최신순 ▾"
+  - **Table Polish/Header Band** (`RECTANGLE`) | `680.0x44.0` | Fill: #EEF3FF | Radius: 8.0px
+  - **Head 0** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "문의"
+  - **Head 1** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "회원"
+  - **Head 2** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "등록"
+  - **Head 3** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "상태"
+  - **Head 4** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "담당"
+  - **Head Line** (`RECTANGLE`) | `680.0x1.0` | Fill: #DDE5F1
+  - **Selected Inquiry** (`RECTANGLE`) | `680.0x56.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Selected Inquiry** (`RECTANGLE`) | `680.0x56.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Selected Inquiry** (`RECTANGLE`) | `680.0x56.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Selected Inquiry** (`RECTANGLE`) | `680.0x56.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Selected Inquiry** (`RECTANGLE`) | `680.0x56.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Selected Inquiry** (`RECTANGLE`) | `680.0x56.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Subject 0** (`TEXT`) | `106.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "가챠 결과 저장이 안 돼요"
+  - **Member 0** (`TEXT`) | `29.0x13.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "김가현"
+  - **Created 0** (`TEXT`) | `28.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "14:02"
+  - **Table Polish/Status Pill/101:249** (`RECTANGLE`) | `46.0x24.0` | Fill: #FBE1E5 | Radius: 12.0px
+  - **State 0** (`TEXT`) | `29.0x13.0` | Fill: #C7485C | Font: Pretendard 500 11.0px | Text: "미답변"
+  - **Owner 0** (`TEXT`) | `11.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "—"
+  - **Subject 1** (`TEXT`) | `91.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "그룹방 초대코드 오류"
+  - **Member 1** (`TEXT`) | `29.0x13.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "이민수"
+  - **Created 1** (`TEXT`) | `28.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "13:28"
+  - **Table Polish/Status Pill/101:254** (`RECTANGLE`) | `46.0x24.0` | Fill: #FFF0D8 | Radius: 12.0px
+  - **State 1** (`TEXT`) | `29.0x13.0` | Fill: #A36A1F | Font: Pretendard 500 11.0px | Text: "처리중"
+  - **Owner 1** (`TEXT`) | `29.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "박관리"
+  - **Subject 2** (`TEXT`) | `85.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "지역 필터 기준 문의"
+  - **Member 2** (`TEXT`) | `29.0x13.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "박서연"
+  - **Created 2** (`TEXT`) | `28.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "12:42"
+  - **Table Polish/Status Pill/101:259** (`RECTANGLE`) | `54.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **State 2** (`TEXT`) | `39.0x13.0` | Fill: #267C61 | Font: Pretendard 500 11.0px | Text: "답변완료"
+  - **Owner 2** (`TEXT`) | `29.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "김관리"
+  - **Subject 3** (`TEXT`) | `63.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "회원 탈퇴 요청"
+  - **Member 3** (`TEXT`) | `29.0x13.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "최준호"
+  - **Created 3** (`TEXT`) | `25.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "11:13"
+  - **Table Polish/Status Pill/101:264** (`RECTANGLE`) | `46.0x24.0` | Fill: #FBE1E5 | Radius: 12.0px
+  - **State 3** (`TEXT`) | `29.0x13.0` | Fill: #C7485C | Font: Pretendard 500 11.0px | Text: "미답변"
+  - **Owner 3** (`TEXT`) | `11.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "—"
+  - **Subject 4** (`TEXT`) | `116.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "추천 알림이 너무 자주 와요"
+  - **Member 4** (`TEXT`) | `29.0x13.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "정유진"
+  - **Created 4** (`TEXT`) | `30.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "09:48"
+  - **Table Polish/Status Pill/101:269** (`RECTANGLE`) | `54.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **State 4** (`TEXT`) | `39.0x13.0` | Fill: #267C61 | Font: Pretendard 500 11.0px | Text: "답변완료"
+  - **Owner 4** (`TEXT`) | `29.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "김관리"
+  - **Subject 5** (`TEXT`) | `94.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "저장된 여행 삭제 문의"
+  - **Member 5** (`TEXT`) | `29.0x13.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "오세훈"
+  - **Created 5** (`TEXT`) | `20.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "어제"
+  - **Table Polish/Status Pill/101:274** (`RECTANGLE`) | `46.0x24.0` | Fill: #FFF0D8 | Radius: 12.0px
+  - **State 5** (`TEXT`) | `29.0x13.0` | Fill: #A36A1F | Font: Pretendard 500 11.0px | Text: "처리중"
+  - **Owner 5** (`TEXT`) | `29.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "박관리"
+  - **Pagination** (`TEXT`) | `106.0x14.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "‹   1   2   3   ···   24   ›"
+  - **Detail Panel** (`RECTANGLE`) | `352.0x594.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Detail Title** (`TEXT`) | `180.0x20.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "문의 상세"
+  - **Urgent** (`RECTANGLE`) | `82.0x28.0` | Fill: #EAF0F7 | Radius: 999.0px
+  - **Urgent Text** (`TEXT`) | `55.0x13.0` | Fill: #C92A32 | Font: Pretendard 700 11.0px | Text: "24시간 초과"
+  - **Detail Subject** (`TEXT`) | `270.0x20.0` | Fill: #171A2B | Font: Pretendard 700 15.0px | Text: "가챠 결과 저장이 안 돼요"
+  - **Detail Meta** (`TEXT`) | `286.0x20.0` | Fill: #66708A | Font: Pretendard 400 11.0px | Text: "김가현 · GT-01248 · 2026.09.15..."
+  - **Question Box** (`RECTANGLE`) | `300.0x126.0` | Fill: #F2F5FA | Radius: 14.0px
+  - **Question** (`TEXT`) | `264.0x20.0` | Fill: #171A2B | Font: Pretendard 400 12.0px | Text: "결과를 확인한 뒤 저장 버튼을 눌렀는데 마이트립에..."
+  - **Context** (`TEXT`) | `160.0x20.0` | Fill: #171A2B | Font: Pretendard 700 11.0px | Text: "자동 수집 정보"
+  - **Ctx K 0** (`TEXT`) | `55.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "appVersion"
+  - **Ctx V 0** (`TEXT`) | `23.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "1.0.0"
+  - **Ctx K 1** (`TEXT`) | `33.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "device"
+  - **Ctx V 1** (`TEXT`) | `57.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "Galaxy S24"
+  - **Ctx K 2** (`TEXT`) | `47.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "requestId"
+  - **Ctx V 2** (`TEXT`) | `60.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "req_9F2A81"
+  - **Ctx K 3** (`TEXT`) | `50.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "API status"
+  - **Ctx V 3** (`TEXT`) | `75.0x13.0` | Fill: #C92A32 | Font: Pretendard 500 11.0px | Text: "500 / save-trip"
+  - **Reply Label** (`TEXT`) | `100.0x20.0` | Fill: #171A2B | Font: Pretendard 700 11.0px | Text: "답변"
+  - **Reply Box** (`RECTANGLE`) | `300.0x72.0` | Fill: #F2F5FA | Radius: 12.0px
+  - **Reply Placeholder** (`TEXT`) | `260.0x20.0` | Fill: #66708A | Font: Pretendard 400 11.0px | Text: "답변 내용을 입력하세요."
+  - **Assign** (`RECTANGLE`) | `118.0x34.0` | Fill: #EAF0F7 | Radius: 10.0px
+  - **Assign Text** (`TEXT`) | `80.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "담당자 지정"
+  - **Complete** (`RECTANGLE`) | `170.0x34.0` | Fill: #4D63FF | Radius: 8.0px
+  - **Complete Text** (`TEXT`) | `170.0x34.0` | Fill: #FFFFFF | Font: Pretendard 700 11.0px | Text: "답변 등록 · 완료"
+  - **Prototype/문의 답변** (`RECTANGLE`) | `210.0x170.0` | Fill: #F2F5FA
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #C5FF32
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #C5FF32
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #C5FF32
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+  - **Destination Search** (`RECTANGLE`) | `310.0x40.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Destination Search Text** (`TEXT`) | `75.0x16.0` | Fill: #171A2B | Font: Pretendard 500 13.0px | Text: "문의·회원 검색"
+  - **Vector** (`VECTOR`) | `14.0x14.0` | Fill: #171A2B
+
+---
+
+## 4. ADM-08 · 시스템 · 로그 (ID: `2002:7078`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/04_ADM-08 · 시스템 · 로그.png`
+
+### Component Tree & Styles
+- **ADM-08 · 시스템 · 로그** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Top Divider** (`RECTANGLE`) | `1192.0x1.0` | Fill: #DDE5F1
+  - **Title** (`TEXT`) | `142.0x33.0` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "시스템 · 로그"
+  - **Desc** (`TEXT`) | `357.0x17.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "서버 상태, 배치 작업, 오류 로그와 관리자 변경..."
+  - **Refresh** (`RECTANGLE`) | `120.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Refresh Text** (`TEXT`) | `120.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 12.0px | Text: "↻ 새로고침"
+  - **Metric 0** (`RECTANGLE`) | `261.0x82.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Metric Label 0** (`TEXT`) | `152.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "API 가용성"
+  - **Metric Value 0** (`TEXT`) | `152.0x20.0` | Fill: #171A2B | Font: Pretendard 700 22.0px | Text: "99.98%"
+  - **Metric 1** (`RECTANGLE`) | `261.0x82.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Metric Label 1** (`TEXT`) | `152.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "평균 응답"
+  - **Metric Value 1** (`TEXT`) | `152.0x20.0` | Fill: #171A2B | Font: Pretendard 700 22.0px | Text: "84ms"
+  - **Metric 2** (`RECTANGLE`) | `261.0x82.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Metric Label 2** (`TEXT`) | `152.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "오류율"
+  - **Metric Value 2** (`TEXT`) | `152.0x20.0` | Fill: #A85E00 | Font: Pretendard 700 22.0px | Text: "0.24%"
+  - **Metric 3** (`RECTANGLE`) | `261.0x82.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Metric Label 3** (`TEXT`) | `152.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "대기 작업"
+  - **Metric Value 3** (`TEXT`) | `152.0x20.0` | Fill: #A85E00 | Font: Pretendard 700 22.0px | Text: "18건"
+  - **Health Card** (`RECTANGLE`) | `536.0x248.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Health Title** (`TEXT`) | `200.0x20.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "서비스 상태"
+  - **Health Dot 0** (`RECTANGLE`) | `8.0x8.0` | Fill: #0D7A4F | Radius: 999.0px
+  - **Health Name 0** (`TEXT`) | `126.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "Web API"
+  - **Health Host 0** (`TEXT`) | `130.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "api.gachatrip.app"
+  - **Health State 0** (`TEXT`) | `44.0x20.0` | Fill: #0D7A4F | Font: Pretendard 500 11.0px | Text: "정상"
+  - **Health Ms 0** (`TEXT`) | `54.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "42ms"
+  - **Health Dot 1** (`RECTANGLE`) | `8.0x8.0` | Fill: #0D7A4F | Radius: 999.0px
+  - **Health Name 1** (`TEXT`) | `126.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "Tour API Proxy"
+  - **Health Host 1** (`TEXT`) | `130.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "tour-proxy"
+  - **Health State 1** (`TEXT`) | `44.0x20.0` | Fill: #0D7A4F | Font: Pretendard 500 11.0px | Text: "정상"
+  - **Health Ms 1** (`TEXT`) | `54.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "156ms"
+  - **Health Dot 2** (`RECTANGLE`) | `8.0x8.0` | Fill: #A85E00 | Radius: 999.0px
+  - **Health Name 2** (`TEXT`) | `126.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "Recommendation"
+  - **Health Host 2** (`TEXT`) | `130.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "recommend-v2"
+  - **Health State 2** (`TEXT`) | `44.0x20.0` | Fill: #A85E00 | Font: Pretendard 500 11.0px | Text: "주의"
+  - **Health Ms 2** (`TEXT`) | `54.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "621ms"
+  - **Health Dot 3** (`RECTANGLE`) | `8.0x8.0` | Fill: #0D7A4F | Radius: 999.0px
+  - **Health Name 3** (`TEXT`) | `126.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "WebSocket"
+  - **Health Host 3** (`TEXT`) | `130.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "group-room"
+  - **Health State 3** (`TEXT`) | `44.0x20.0` | Fill: #0D7A4F | Font: Pretendard 500 11.0px | Text: "정상"
+  - **Health Ms 3** (`TEXT`) | `54.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "31ms"
+  - **Queue Card** (`RECTANGLE`) | `532.0x248.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Queue Title** (`TEXT`) | `220.0x20.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "배치 · 큐 상태"
+  - **Queue Name 0** (`TEXT`) | `150.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "tour-api-sync"
+  - **Queue Cycle 0** (`TEXT`) | `64.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "03:00"
+  - **Queue State 0** (`TEXT`) | `54.0x20.0` | Fill: #0D7A4F | Font: Pretendard 500 11.0px | Text: "완료"
+  - **Queue Progress 0** (`TEXT`) | `80.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "86 / 86"
+  - **Queue Action 0** (`TEXT`) | `50.0x20.0` | Fill: #344FC7 | Font: Pretendard 700 11.0px | Text: "상세"
+  - **Queue Name 1** (`TEXT`) | `150.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "recommend-cache"
+  - **Queue Cycle 1** (`TEXT`) | `64.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "10분"
+  - **Queue State 1** (`TEXT`) | `54.0x20.0` | Fill: #A85E00 | Font: Pretendard 500 11.0px | Text: "진행"
+  - **Queue Progress 1** (`TEXT`) | `80.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "72%"
+  - **Queue Action 1** (`TEXT`) | `50.0x20.0` | Fill: #344FC7 | Font: Pretendard 700 11.0px | Text: "상세"
+  - **Queue Name 2** (`TEXT`) | `150.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "inactive-user"
+  - **Queue Cycle 2** (`TEXT`) | `64.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "매일"
+  - **Queue State 2** (`TEXT`) | `54.0x20.0` | Fill: #A85E00 | Font: Pretendard 500 11.0px | Text: "대기"
+  - **Queue Progress 2** (`TEXT`) | `80.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "18건"
+  - **Queue Action 2** (`TEXT`) | `50.0x20.0` | Fill: #344FC7 | Font: Pretendard 700 11.0px | Text: "상세"
+  - **Queue Name 3** (`TEXT`) | `150.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "notification-push"
+  - **Queue Cycle 3** (`TEXT`) | `64.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "실시간"
+  - **Queue State 3** (`TEXT`) | `54.0x20.0` | Fill: #C92A32 | Font: Pretendard 500 11.0px | Text: "오류"
+  - **Queue Progress 3** (`TEXT`) | `80.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "2건"
+  - **Queue Action 3** (`TEXT`) | `50.0x20.0` | Fill: #344FC7 | Font: Pretendard 700 11.0px | Text: "재시도"
+  - **Error Card** (`RECTANGLE`) | `708.0x402.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Error Title** (`TEXT`) | `230.0x20.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "최근 오류 로그"
+  - **Error Filter** (`RECTANGLE`) | `156.0x36.0` | Fill: #EAF0F7 | Radius: 10.0px
+  - **Error Filter Text** (`TEXT`) | `134.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "레벨 전체 · 최근 24시간          ▾"
+  - **EHead 0** (`TEXT`) | `100.0x20.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "시간"
+  - **EHead 1** (`TEXT`) | `64.0x20.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "레벨"
+  - **EHead 2** (`TEXT`) | `112.0x20.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "서비스"
+  - **EHead 3** (`TEXT`) | `242.0x20.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "메시지"
+  - **EHead 4** (`TEXT`) | `90.0x20.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "requestId"
+  - **Error Head Line** (`RECTANGLE`) | `672.0x1.0` | Fill: #DDE5F1
+  - **Group 1437253501** (`GROUP`) | `672.0x50.0` | Radius: 10.0px
+    - **Selected Error** (`RECTANGLE`) | `672.0x50.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **ETime 0** (`TEXT`) | `43.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "14:31:08"
+    - **ELevel 0** (`TEXT`) | `36.0x13.0` | Fill: #C92A32 | Font: Pretendard 700 11.0px | Text: "ERROR"
+    - **EService 0** (`TEXT`) | `45.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "save-trip"
+    - **EMessage 0** (`TEXT`) | `125.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "DB timeout after 3000ms"
+    - **ERequest 0** (`TEXT`) | `41.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "9F2A81"
+  - **Group 1437253500** (`GROUP`) | `672.0x50.0` | Radius: 10.0px
+    - **Selected Error** (`RECTANGLE`) | `672.0x50.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Group 1437253490** (`GROUP`) | `607.0x13.0`
+      - **ETime 1** (`TEXT`) | `44.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "14:26:42"
+      - **ELevel 1** (`TEXT`) | `33.0x13.0` | Fill: #A85E00 | Font: Pretendard 700 11.0px | Text: "WARN"
+      - **EService 1** (`TEXT`) | `78.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "recommend-v2"
+      - **EMessage 1** (`TEXT`) | `131.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "response latency > 600ms"
+      - **ERequest 1** (`TEXT`) | `41.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "A11C04"
+  - **Group 1437253499** (`GROUP`) | `672.0x50.0` | Radius: 10.0px
+    - **Selected Error** (`RECTANGLE`) | `672.0x50.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Group 1437253489** (`GROUP`) | `606.0x13.0`
+      - **ETime 2** (`TEXT`) | `41.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "14:18:19"
+      - **ELevel 2** (`TEXT`) | `36.0x13.0` | Fill: #C92A32 | Font: Pretendard 700 11.0px | Text: "ERROR"
+      - **EService 2** (`TEXT`) | `53.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "tour-proxy"
+      - **EMessage 2** (`TEXT`) | `133.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "image URL validation failed"
+      - **ERequest 2** (`TEXT`) | `40.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "8B7D12"
+  - **Group 1437253498** (`GROUP`) | `672.0x50.0` | Radius: 10.0px
+    - **Selected Error** (`RECTANGLE`) | `672.0x50.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Group 1437253488** (`GROUP`) | `608.0x13.0`
+      - **ETime 3** (`TEXT`) | `44.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "13:55:03"
+      - **ELevel 3** (`TEXT`) | `33.0x13.0` | Fill: #A85E00 | Font: Pretendard 700 11.0px | Text: "WARN"
+      - **EService 3** (`TEXT`) | `60.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "group-room"
+      - **EMessage 3** (`TEXT`) | `129.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "client reconnect threshold"
+      - **ERequest 3** (`TEXT`) | `42.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "7CC031"
+  - **View All Errors** (`RECTANGLE`) | `672.0x28.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **View All Errors Text** (`TEXT`) | `63.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "전체 로그 보기"
+  - **Audit Card** (`RECTANGLE`) | `360.0x402.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Audit Title** (`TEXT`) | `220.0x20.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "관리자 작업 이력"
+  - **Audit Time 0** (`TEXT`) | `46.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "14:28"
+  - **Audit User 0** (`TEXT`) | `54.0x20.0` | Fill: #171A2B | Font: Pretendard 700 11.0px | Text: "김관리"
+  - **Audit Action 0** (`TEXT`) | `184.0x20.0` | Fill: #344FC7 | Font: Pretendard 400 11.0px | Text: "회원 GT-01088 이용 제한"
+  - **Audit Time 1** (`TEXT`) | `46.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "14:20"
+  - **Audit User 1** (`TEXT`) | `54.0x20.0` | Fill: #171A2B | Font: Pretendard 700 11.0px | Text: "박관리"
+  - **Audit Action 1** (`TEXT`) | `184.0x20.0` | Fill: #344FC7 | Font: Pretendard 400 11.0px | Text: "정책 v1.8.3 배포"
+  - **Audit Time 2** (`TEXT`) | `46.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "14:12"
+  - **Audit User 2** (`TEXT`) | `54.0x20.0` | Fill: #171A2B | Font: Pretendard 700 11.0px | Text: "김관리"
+  - **Audit Action 2** (`TEXT`) | `184.0x20.0` | Fill: #344FC7 | Font: Pretendard 400 11.0px | Text: "여행지 2758065 수정"
+  - **Audit Time 3** (`TEXT`) | `46.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "13:54"
+  - **Audit User 3** (`TEXT`) | `54.0x20.0` | Fill: #171A2B | Font: Pretendard 700 11.0px | Text: "이관리"
+  - **Audit Action 3** (`TEXT`) | `184.0x20.0` | Fill: #344FC7 | Font: Pretendard 400 11.0px | Text: "문의 #142 답변 완료"
+  - **Audit Time 4** (`TEXT`) | `46.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "13:31"
+  - **Audit User 4** (`TEXT`) | `54.0x20.0` | Fill: #171A2B | Font: Pretendard 700 11.0px | Text: "박관리"
+  - **Audit Action 4** (`TEXT`) | `184.0x20.0` | Fill: #344FC7 | Font: Pretendard 400 11.0px | Text: "Tour API 수동 동기화"
+  - **Roles** (`RECTANGLE`) | `140.0x44.0` | Fill: #EAF0F7 | Radius: 11.0px
+  - **Roles Text** (`TEXT`) | `41.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "권한 관리"
+  - **Download Logs** (`RECTANGLE`) | `154.0x44.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Download Logs Text** (`TEXT`) | `154.0x44.0` | Fill: #FFFFFF | Font: Pretendard 700 11.0px | Text: "로그 다운로드"
+  - **Prototype/권한 관리** (`RECTANGLE`) | `180.0x100.0` | Fill: #EAF0F7
+  - **Prototype/통계 상세** (`RECTANGLE`) | `190.0x64.0` | Fill: #EAF0F7
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+
+---
+
+## 5. ADM-09 · 여행지 등록 (ID: `2002:7268`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/05_ADM-09 · 여행지 등록.png`
+
+### Component Tree & Styles
+- **ADM-09 · 여행지 등록** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Page Title** (`TEXT`) | `580.0x44.8` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "여행지 추가"
+  - **Page Desc** (`TEXT`) | `700.0x22.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "앱에 노출할 여행지 정보와 추천 조건을 등록합니다."
+  - **Button/destination-add-cancel** (`RECTANGLE`) | `92.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Button Text/destination-add-cancel** (`TEXT`) | `92.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 14.0px | Text: "취소"
+  - **Button/destination-add-draft** (`RECTANGLE`) | `104.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Button Text/destination-add-draft** (`TEXT`) | `104.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 14.0px | Text: "임시 저장"
+  - **Button/destination-add-save** (`RECTANGLE`) | `104.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/destination-add-save** (`TEXT`) | `104.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "여행지 등록"
+  - **Basic Info Card** (`RECTANGLE`) | `730.0x760.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Basic Info Card/Title** (`TEXT`) | `686.0x27.2` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "기본 정보"
+  - **Basic Info Card/Sub** (`TEXT`) | `686.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "* 표시는 필수 입력 항목입니다."
+  - **Image Upload** (`RECTANGLE`) | `220.0x170.0` | Fill: #F2F5FA | Radius: 12.0px
+  - **Upload Icon** (`TEXT`) | `30.0x38.0` | Fill: #5B50F6 | Font: Pretendard 700 32.0px | Text: "＋"
+  - **Upload Help** (`TEXT`) | `114.0x28.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "대표 이미지 업로드 JPG·PNG / 최대 10MB"
+  - **Destination Name/Label** (`TEXT`) | `420.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "여행지명 *"
+  - **Destination Name/Field** (`RECTANGLE`) | `420.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Destination Name/Value** (`TEXT`) | `392.0x22.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "제주도"
+  - **Region/Label** (`TEXT`) | `200.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "지역 *"
+  - **Region/Field** (`RECTANGLE`) | `200.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Region/Value** (`TEXT`) | `172.0x22.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "제주특별자치도"
+  - **City/Label** (`TEXT`) | `200.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "시·군·구 *"
+  - **City/Field** (`RECTANGLE`) | `200.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **City/Value** (`TEXT`) | `172.0x22.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "제주시"
+  - **Short Copy/Label** (`TEXT`) | `670.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "한 줄 소개 *"
+  - **Short Copy/Field** (`RECTANGLE`) | `670.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Short Copy/Value** (`TEXT`) | `160.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "푸른 바다와 유채꽃이 가득한 섬"
+  - **Tour API ID/Label** (`TEXT`) | `320.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "Tour API 콘텐츠 ID"
+  - **Tour API ID/Field** (`RECTANGLE`) | `320.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Tour API ID/Value** (`TEXT`) | `54.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "2758065"
+  - **Map Coordinate/Label** (`TEXT`) | `320.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "위도 / 경도"
+  - **Map Coordinate/Field** (`RECTANGLE`) | `320.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Map Coordinate/Value** (`TEXT`) | `116.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "33.4996 / 126.5312"
+  - **Description Label** (`TEXT`) | `300.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "상세 소개 *"
+  - **Description Area** (`RECTANGLE`) | `670.0x116.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **Description Value** (`TEXT`) | `630.0x22.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "계절마다 다른 풍경과 다양한 액티비티를 즐길 수 ..."
+  - **Tags/Label** (`TEXT`) | `670.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "추천 태그"
+  - **Tags/Field** (`RECTANGLE`) | `670.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Tags/Value** (`TEXT`) | `642.0x22.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "힐링 · 바다 · 맛집 · 감성"
+  - **Publish Settings Card** (`RECTANGLE`) | `350.0x330.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Publish Settings Card/Title** (`TEXT`) | `306.0x27.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "노출 설정"
+  - **Publish Settings Card/Sub** (`TEXT`) | `306.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "저장 후 앱 반영 상태를 관리합니다."
+  - **Publish Label** (`TEXT`) | `180.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "앱 공개"
+  - **Publish Toggle** (`RECTANGLE`) | `42.0x24.0` | Fill: #4D63FF | Radius: 100.0px
+  - **Publish Toggle/Knob** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **Featured Label** (`TEXT`) | `200.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "추천 여행지 지정"
+  - **Featured Toggle** (`RECTANGLE`) | `42.0x24.0` | Fill: #EAF0F7 | Radius: 12.0px
+  - **Featured Toggle/Knob** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **Open Date/Label** (`TEXT`) | `302.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "공개 시작일"
+  - **Open Date/Field** (`RECTANGLE`) | `302.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Open Date/Value** (`TEXT`) | `103.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "2026.09.16 09:00"
+  - **Validation** (`TEXT`) | `125.0x14.0` | Fill: #18A56B | Font: Pretendard 700 12.0px | Text: "✓ 필수 항목 7개 입력 완료"
+  - **Preview Card** (`RECTANGLE`) | `350.0x404.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Preview Card/Title** (`TEXT`) | `78.0x20.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "앱 미리보기"
+  - **Preview Card/Sub** (`TEXT`) | `185.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "등록 전 모바일 노출 내용을 확인하세요."
+  - **Preview Image** (`RECTANGLE`) | `306.0x154.0` | Fill: #F2F5FA | Radius: 14.0px
+  - **Preview Place** (`TEXT`) | `254.0x22.0` | Fill: #5B50F6 | Font: Pretendard 700 11.0px | Text: "JEJU · SOUTH KOREA"
+  - **Preview Title** (`TEXT`) | `203.0x45.0` | Fill: #252C48 | Font: Pretendard 700 28.0px | Text: "제주도"
+  - **Preview Copy** (`TEXT`) | `264.0x22.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "푸른 바다와 유채꽃이 가득한 섬"
+  - **Button/destination-preview** (`RECTANGLE`) | `306.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Button Text/destination-preview** (`TEXT`) | `262.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 14.0px | Text: "앱 화면 미리보기"
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+
+---
+
+## 6. ADM-10 · 여행지 상세·수정 (ID: `2002:7391`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/06_ADM-10 · 여행지 상세·수정.png`
+
+### Component Tree & Styles
+- **ADM-10 · 여행지 상세·수정** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `14.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Page Title** (`TEXT`) | `580.0x44.8` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "여행지 상세 · 수정"
+  - **Page Desc** (`TEXT`) | `700.0x22.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "등록된 여행지의 노출 정보, API 연결 및 변경..."
+  - **Button/destination-edit-back** (`RECTANGLE`) | `96.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Button Text/destination-edit-back** (`TEXT`) | `96.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 14.0px | Text: "목록으로"
+  - **Button/destination-edit-delete** (`RECTANGLE`) | `80.0x42.0` | Fill: #FFF2F3 | Radius: 10.0px
+  - **Button Text/destination-edit-delete** (`TEXT`) | `80.0x42.0` | Fill: #D33C4D | Font: Pretendard 700 14.0px | Text: "삭제"
+  - **Button/destination-edit-save** (`RECTANGLE`) | `120.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/destination-edit-save** (`TEXT`) | `120.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "변경 저장"
+  - **Edit Form Card** (`RECTANGLE`) | `760.0x760.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Edit Form Card/Title** (`TEXT`) | `716.0x27.2` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "제주도 · DST-00084"
+  - **Edit Form Card/Sub** (`TEXT`) | `716.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "마지막 수정 2026.09.15 14:32 · 김관리"
+  - **Current Image** (`RECTANGLE`) | `248.0x184.0` | Fill: #F2F5FA | Radius: 12.0px
+  - **Image Name** (`TEXT`) | `200.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "jeju-main-202609.jpg"
+  - **Button/destination-image-change** (`RECTANGLE`) | `78.0x28.2` | Fill: #F3F6FC | Radius: 6.724137783050537px
+  - **Button Text/destination-image-change** (`TEXT`) | `78.0x28.2` | Fill: #3152C7 | Font: Pretendard 700 9.413792610168457px | Text: "이미지 교체"
+  - **Edit Name/Label** (`TEXT`) | `426.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "여행지명 *"
+  - **Edit Name/Field** (`RECTANGLE`) | `426.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Edit Name/Value** (`TEXT`) | `34.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "제주도"
+  - **Edit Region/Label** (`TEXT`) | `206.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "지역 *"
+  - **Edit Region/Field** (`RECTANGLE`) | `206.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Edit Region/Value** (`TEXT`) | `79.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "제주특별자치도"
+  - **Edit City/Label** (`TEXT`) | `206.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "시·군·구 *"
+  - **Edit City/Field** (`RECTANGLE`) | `206.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Edit City/Value** (`TEXT`) | `34.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "제주시"
+  - **Edit Copy/Label** (`TEXT`) | `704.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "한 줄 소개 *"
+  - **Edit Copy/Field** (`RECTANGLE`) | `704.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Edit Copy/Value** (`TEXT`) | `160.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "푸른 바다와 유채꽃이 가득한 섬"
+  - **Edit API/Label** (`TEXT`) | `340.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "Tour API 콘텐츠 ID"
+  - **Edit API/Field** (`RECTANGLE`) | `340.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Edit API/Value** (`TEXT`) | `112.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "2758065 · 연결 정상"
+  - **Edit Coord/Label** (`TEXT`) | `340.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "위도 / 경도"
+  - **Edit Coord/Field** (`RECTANGLE`) | `340.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Edit Coord/Value** (`TEXT`) | `116.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "33.4996 / 126.5312"
+  - **Edit Desc Label** (`TEXT`) | `200.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "상세 소개"
+  - **Edit Desc Area** (`RECTANGLE`) | `704.0x108.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **Edit Desc** (`TEXT`) | `343.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "계절별 명소, 교통, 추천 시간대와 여행 팁을 포..."
+  - **Edit Tags/Label** (`TEXT`) | `704.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "추천 태그"
+  - **Edit Tags/Field** (`RECTANGLE`) | `704.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Edit Tags/Value** (`TEXT`) | `120.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "힐링 · 바다 · 맛집 · 감성"
+  - **Status Card** (`RECTANGLE`) | `320.0x248.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Status Card/Title** (`TEXT`) | `276.0x27.2` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "운영 상태"
+  - **Status Card/Sub** (`TEXT`) | `276.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "현재 앱 노출 및 추천 상태"
+  - **Status Active** (`TEXT`) | `120.0x22.0` | Fill: #18A56B | Font: Pretendard 700 13.0px | Text: "● 공개 중"
+  - **Status Label** (`TEXT`) | `170.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "가챠 추천 포함"
+  - **Edit Recommend Toggle** (`RECTANGLE`) | `42.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **Edit Recommend Toggle/Knob** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **Api Sync** (`TEXT`) | `220.0x22.0` | Fill: #18A56B | Font: Pretendard 400 12.0px | Text: "Tour API 동기화 정상"
+  - **Change History Card** (`RECTANGLE`) | `320.0x300.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Change History Card/Title** (`TEXT`) | `276.0x27.2` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "최근 변경 이력"
+  - **Change History Card/Sub** (`TEXT`) | `276.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "누가 무엇을 변경했는지 기록됩니다."
+  - **History 0** (`TEXT`) | `150.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "09.15 14:32  대표 이미지 교체"
+  - **History 1** (`TEXT`) | `140.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "09.14 11:08  태그 ‘감성’ 추가"
+  - **History 2** (`TEXT`) | `137.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "09.12 16:40  소개 문구 수정"
+  - **History 3** (`TEXT`) | `132.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "09.10 09:20  API 재동기화"
+  - **Danger Card** (`RECTANGLE`) | `320.0x164.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Danger Card/Title** (`TEXT`) | `276.0x27.2` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "삭제 전 확인"
+  - **Danger Card/Sub** (`TEXT`) | `276.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "삭제하면 추천 결과에서 즉시 제외됩니다."
+  - **Danger Text** (`TEXT`) | `202.0x14.0` | Fill: #E5484D | Font: Pretendard 400 12.0px | Text: "복구가 필요하면 비공개 전환을 권장합니다."
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+
+---
+
+## 7. ADM-11 · 뽑기 결과 관리 (ID: `2002:7512`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/07_ADM-11 · 뽑기 결과 관리.png`
+
+### Component Tree & Styles
+- **ADM-11 · 뽑기 결과 관리** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Page Title** (`TEXT`) | `580.0x44.8` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "뽑기 결과 관리"
+  - **Page Desc** (`TEXT`) | `700.0x22.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "개인·그룹 뽑기 결과와 비정상 실행을 조회하고 처..."
+  - **Button/gacha-result-export** (`RECTANGLE`) | `142.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Button Text/gacha-result-export** (`TEXT`) | `142.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 14.0px | Text: "CSV 내보내기"
+  - **Metric 0** (`RECTANGLE`) | `259.0x112.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Metric 0/Title** (`TEXT`) | `215.0x27.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "오늘 실행"
+  - **Metric V 0** (`TEXT`) | `172.0x38.0` | Fill: #17213B | Font: Pretendard 700 24.0px | Text: "1,482회"
+  - **Metric S 0** (`TEXT`) | `122.0x22.0` | Fill: #18A56B | Font: Pretendard 700 11.0px | Text: "+12%"
+  - **Metric 1** (`RECTANGLE`) | `259.0x112.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Metric 1/Title** (`TEXT`) | `215.0x27.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "완료 결과"
+  - **Metric V 1** (`TEXT`) | `172.0x38.0` | Fill: #17213B | Font: Pretendard 700 24.0px | Text: "1,391건"
+  - **Metric S 1** (`TEXT`) | `121.0x22.0` | Fill: #18A56B | Font: Pretendard 700 11.0px | Text: "93.9%"
+  - **Metric 2** (`RECTANGLE`) | `259.0x112.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Metric 2/Title** (`TEXT`) | `215.0x27.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "재추첨"
+  - **Metric V 2** (`TEXT`) | `173.0x38.0` | Fill: #17213B | Font: Pretendard 700 24.0px | Text: "42건"
+  - **Metric S 2** (`TEXT`) | `122.0x22.0` | Fill: #18A56B | Font: Pretendard 700 11.0px | Text: "2.8%"
+  - **Metric 3** (`RECTANGLE`) | `259.0x112.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Table Polish/Status Pill/145:506** (`RECTANGLE`) | `42.0x21.0` | Fill: #FBE1E5 | Radius: 12.0px
+  - **Metric 3/Title** (`TEXT`) | `25.0x15.0` | Fill: #C7485C | Font: Pretendard 700 11.0px | Text: "오류"
+  - **Metric V 3** (`TEXT`) | `172.0x38.0` | Fill: #17213B | Font: Pretendard 700 24.0px | Text: "7건"
+  - **Metric S 3** (`TEXT`) | `122.0x22.0` | Fill: #E5484D | Font: Pretendard 700 11.0px | Text: "0.47%"
+  - **Result Table Card** (`RECTANGLE`) | `752.0x624.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Result Table Card/Title** (`TEXT`) | `63.0x20.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "실행 내역"
+  - **Result Table Card/Sub** (`TEXT`) | `192.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "조건과 상태를 선택해 결과를 조회합니다."
+  - **Result Search/Label** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "검색"
+  - **Result Search/Field** (`RECTANGLE`) | `297.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Result Search/Value** (`TEXT`) | `93.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "runId·회원·여행지"
+  - **Result Type/Label** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "유형"
+  - **Result Type/Field** (`RECTANGLE`) | `129.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Result Type/Value** (`TEXT`) | `49.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "전체 유형"
+  - **Result Status/Label** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "상태"
+  - **Result Status/Field** (`RECTANGLE`) | `128.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Result Status/Value** (`TEXT`) | `49.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "전체 상태"
+  - **Button/gacha-result-filter** (`RECTANGLE`) | `109.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/gacha-result-filter** (`TEXT`) | `25.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "조회"
+  - **Table Polish/Header Band** (`RECTANGLE`) | `712.0x42.0` | Fill: #EEF3FF | Radius: 8.0px
+  - **Head 0** (`TEXT`) | `36.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "RUN ID"
+  - **Head 1** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "회원"
+  - **Head 2** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "유형"
+  - **Head 3** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "결과"
+  - **Head 4** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "상태"
+  - **Head 5** (`TEXT`) | `41.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "실행 시각"
+  - **Row 0** (`RECTANGLE`) | `712.0x48.0` | Fill: #F6F9FB | Radius: 10.0px
+  - **Cell 0-0** (`TEXT`) | `50.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "R-92841"
+  - **Cell 0-1** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "김하늘"
+  - **Cell 0-2** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "개인"
+  - **Cell 0-3** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "제주도"
+  - **Table Polish/Status Pill/145:534** (`RECTANGLE`) | `41.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **Cell 0-4** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 400 11.0px | Text: "완료"
+  - **Cell 0-5** (`TEXT`) | `46.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "14:31:08"
+  - **Row 1** (`RECTANGLE`) | `712.0x48.0` | Fill: #EAF0F7B8 | Radius: 10.0px
+  - **Cell 1-0** (`TEXT`) | `52.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "R-92840"
+  - **Cell 1-1** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "박민수"
+  - **Cell 1-2** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "그룹"
+  - **Cell 1-3** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "강릉"
+  - **Table Polish/Status Pill/145:541** (`RECTANGLE`) | `41.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **Cell 1-4** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 400 11.0px | Text: "완료"
+  - **Cell 1-5** (`TEXT`) | `48.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "14:29:52"
+  - **Row 2** (`RECTANGLE`) | `712.0x48.0` | Fill: #F3F6FAB8 | Radius: 10.0px
+  - **Cell 2-0** (`TEXT`) | `52.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "R-92839"
+  - **Cell 2-1** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "이유진"
+  - **Cell 2-2** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "개인"
+  - **Cell 2-3** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "부산"
+  - **Cell 2-4** (`TEXT`) | `32.0x14.0` | Fill: #D9822B | Font: Pretendard 400 12.0px | Text: "재추첨"
+  - **Cell 2-5** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "14:27:41"
+  - **Row 3** (`RECTANGLE`) | `712.0x48.0` | Fill: #EAF0F7B8 | Radius: 10.0px
+  - **Cell 3-0** (`TEXT`) | `52.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "R-92838"
+  - **Cell 3-1** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "최서윤"
+  - **Cell 3-2** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "개인"
+  - **Cell 3-3** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "경주"
+  - **Table Polish/Status Pill/145:555** (`RECTANGLE`) | `41.0x24.0` | Fill: #FBE1E5 | Radius: 12.0px
+  - **Cell 3-4** (`TEXT`) | `20.0x13.0` | Fill: #C7485C | Font: Pretendard 400 11.0px | Text: "오류"
+  - **Cell 3-5** (`TEXT`) | `46.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "14:24:10"
+  - **Row 4** (`RECTANGLE`) | `712.0x48.0` | Fill: #F3F6FAB8 | Radius: 10.0px
+  - **Cell 4-0** (`TEXT`) | `51.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "R-92837"
+  - **Cell 4-1** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "정우진"
+  - **Cell 4-2** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "그룹"
+  - **Cell 4-3** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "여수"
+  - **Table Polish/Status Pill/145:562** (`RECTANGLE`) | `41.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **Cell 4-4** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 400 11.0px | Text: "완료"
+  - **Cell 4-5** (`TEXT`) | `48.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "14:20:05"
+  - **Row 5** (`RECTANGLE`) | `712.0x48.0` | Fill: #EAF0F7B8 | Radius: 10.0px
+  - **Cell 5-0** (`TEXT`) | `52.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "R-92836"
+  - **Cell 5-1** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "한지민"
+  - **Cell 5-2** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "개인"
+  - **Cell 5-3** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "속초"
+  - **Table Polish/Status Pill/145:569** (`RECTANGLE`) | `41.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **Cell 5-4** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 400 11.0px | Text: "완료"
+  - **Cell 5-5** (`TEXT`) | `47.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "14:18:44"
+  - **Result Detail Card** (`RECTANGLE`) | `317.0x624.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Result Detail Card/Title** (`TEXT`) | `145.0x20.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "선택 결과 · R-92841"
+  - **Result Detail Card/Sub** (`TEXT`) | `75.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "개인 뽑기 · 완료"
+  - **DL 0** (`TEXT`) | `20.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "회원"
+  - **DV 0** (`TEXT`) | `103.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "김하늘 (USR-10241)"
+  - **DL 1** (`TEXT`) | `41.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "입력 조건"
+  - **DV 1** (`TEXT`) | `95.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "서울 · 2박3일 · 힐링"
+  - **DL 2** (`TEXT`) | `41.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "추천 결과"
+  - **DV 2** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "제주도"
+  - **DL 3** (`TEXT`) | `41.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "정책 버전"
+  - **DV 3** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "v1.8.3"
+  - **DL 4** (`TEXT`) | `41.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "응답 시간"
+  - **DV 4** (`TEXT`) | `36.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "621ms"
+  - **DL 5** (`TEXT`) | `41.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "저장 여부"
+  - **DV 5** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "저장 완료"
+  - **Button/gacha-result-replace** (`RECTANGLE`) | `269.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/gacha-result-replace** (`TEXT`) | `52.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "결과 교체"
+  - **Button/gacha-result-redraw** (`RECTANGLE`) | `269.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/gacha-result-redraw** (`TEXT`) | `64.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "재추첨 처리"
+  - **Button/gacha-result-log** (`RECTANGLE`) | `269.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Button Text/gacha-result-log** (`TEXT`) | `80.0x17.0` | Fill: #3152C7 | Font: Pretendard 700 14.0px | Text: "요청 로그 보기"
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+
+---
+
+## 8. ADM-12 · 뽑기 규칙 편집 (ID: `2002:7685`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/08_ADM-12 · 뽑기 규칙 편집.png`
+
+### Component Tree & Styles
+- **ADM-12 · 뽑기 규칙 편집** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Page Title** (`TEXT`) | `159.0x33.0` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "뽑기 규칙 편집"
+  - **Page Desc** (`TEXT`) | `331.0x17.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "추천 가중치와 제외 조건을 수정하고 새 버전으로 ..."
+  - **Button/gacha-rule-back** (`RECTANGLE`) | `96.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Button Text/gacha-rule-back** (`TEXT`) | `96.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 14.0px | Text: "목록으로"
+  - **Button/gacha-rule-draft** (`RECTANGLE`) | `104.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Button Text/gacha-rule-draft** (`TEXT`) | `104.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 14.0px | Text: "임시 저장"
+  - **Button/gacha-rule-publish** (`RECTANGLE`) | `110.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/gacha-rule-publish** (`TEXT`) | `110.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "검증 후 배포"
+  - **Rule Basics Card** (`RECTANGLE`) | `720.0x196.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Rule Basics Card/Title** (`TEXT`) | `676.0x27.2` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "정책 기본 정보"
+  - **Rule Basics Card/Sub** (`TEXT`) | `216.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "현재 운영 버전 v1.8.3을 기준으로 편집합니다."
+  - **Rule Name/Label** (`TEXT`) | `320.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "정책명 *"
+  - **Rule Name/Field** (`RECTANGLE`) | `320.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Rule Name/Value** (`TEXT`) | `292.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "개인 추천 기본 정책"
+  - **Rule Version/Label** (`TEXT`) | `150.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "새 버전"
+  - **Rule Version/Field** (`RECTANGLE`) | `150.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Rule Version/Value** (`TEXT`) | `122.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "v1.8.4"
+  - **Rule Target/Label** (`TEXT`) | `166.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "적용 대상"
+  - **Rule Target/Field** (`RECTANGLE`) | `166.0x44.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Rule Target/Value** (`TEXT`) | `138.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "개인 가챠"
+  - **Weight Card** (`RECTANGLE`) | `720.0x410.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Weight Card/Title** (`TEXT`) | `676.0x27.2` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "추천 가중치"
+  - **Weight Card/Sub** (`TEXT`) | `180.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "합계가 100%여야 배포할 수 있습니다."
+  - **W Label 0** (`TEXT`) | `150.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "사용자 취향"
+  - **W Track 0** (`RECTANGLE`) | `330.0x8.0` | Fill: #EAF0F7 | Radius: 4.0px
+  - **W Fill 0** (`RECTANGLE`) | `288.8x8.0` | Fill: #5B50F6 | Radius: 4.0px
+  - **Knob 3** (`RECTANGLE`) | `22.0x22.0` | Fill: #FFFFFF | Radius: 999.0px
+  - **W Value 0/Label** (`TEXT`) | `140.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px
+  - **W Value 0/Field** (`RECTANGLE`) | `140.0x38.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **W Value 0/Value** (`TEXT`) | `112.0x22.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "35%"
+  - **W Label 1** (`TEXT`) | `150.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "출발지 거리"
+  - **W Track 1** (`RECTANGLE`) | `330.0x8.0` | Fill: #EAF0F7 | Radius: 4.0px
+  - **W Fill 1** (`RECTANGLE`) | `206.2x8.0` | Fill: #5B50F6 | Radius: 4.0px
+  - **W Value 1/Label** (`TEXT`) | `140.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px
+  - **W Value 1/Field** (`RECTANGLE`) | `140.0x38.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **W Value 1/Value** (`TEXT`) | `112.0x22.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "25%"
+  - **W Label 2** (`TEXT`) | `150.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "현재 날씨"
+  - **W Track 2** (`RECTANGLE`) | `330.0x8.0` | Fill: #EAF0F7 | Radius: 4.0px
+  - **W Fill 2** (`RECTANGLE`) | `123.8x8.0` | Fill: #5B50F6 | Radius: 4.0px
+  - **W Value 2/Label** (`TEXT`) | `140.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px
+  - **W Value 2/Field** (`RECTANGLE`) | `140.0x38.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **W Value 2/Value** (`TEXT`) | `112.0x22.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "15%"
+  - **W Label 3** (`TEXT`) | `150.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "예산 적합도"
+  - **W Track 3** (`RECTANGLE`) | `330.0x8.0` | Fill: #EAF0F7 | Radius: 4.0px
+  - **W Fill 3** (`RECTANGLE`) | `123.8x8.0` | Fill: #5B50F6 | Radius: 4.0px
+  - **W Value 3/Label** (`TEXT`) | `140.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px
+  - **W Value 3/Field** (`RECTANGLE`) | `140.0x38.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **W Value 3/Value** (`TEXT`) | `112.0x22.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "15%"
+  - **W Label 4** (`TEXT`) | `150.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "새로운 발견"
+  - **W Track 4** (`RECTANGLE`) | `330.0x8.0` | Fill: #EAF0F7 | Radius: 4.0px
+  - **W Fill 4** (`RECTANGLE`) | `82.5x8.0` | Fill: #5B50F6 | Radius: 4.0px
+  - **W Value 4/Label** (`TEXT`) | `140.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px
+  - **W Value 4/Field** (`RECTANGLE`) | `140.0x38.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **W Value 4/Value** (`TEXT`) | `112.0x22.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "10%"
+  - **Weight Total** (`TEXT`) | `300.0x22.0` | Fill: #18A56B | Font: Pretendard 700 13.0px | Text: "가중치 합계  100%  ✓"
+  - **Exclusion Card** (`RECTANGLE`) | `360.0x396.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Exclusion Card/Title** (`TEXT`) | `316.0x27.2` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "제외 · 보정 규칙"
+  - **Exclusion Card/Sub** (`TEXT`) | `316.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "운영 상태와 반복 추천을 제어합니다."
+  - **Ex 0** (`TEXT`) | `116.0x16.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "최근 30일 방문지 제외"
+  - **Ex Toggle 0** (`RECTANGLE`) | `42.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **Ex Toggle 0/Knob** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **Ex 1** (`TEXT`) | `250.0x16.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "운영 중단 여행지 제외"
+  - **Ex Toggle 1** (`RECTANGLE`) | `42.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **Ex Toggle 1/Knob** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **Ex 2** (`TEXT`) | `250.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "악천후 지역 감점"
+  - **Ex Toggle 2** (`RECTANGLE`) | `42.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **Ex Toggle 2/Knob** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **Ex 3** (`TEXT`) | `250.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "동일 지역 연속 추천 제한"
+  - **Ex Toggle 3** (`RECTANGLE`) | `42.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **Ex Toggle 3/Knob** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **Ex 4** (`TEXT`) | `250.0x16.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "광역시 편향 보정"
+  - **Ex Toggle 4** (`RECTANGLE`) | `42.0x24.0` | Fill: #EAF0F7 | Radius: 12.0px
+  - **Ex Toggle 4/Knob** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **Validation Card** (`RECTANGLE`) | `360.0x210.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Validation Card/Title** (`TEXT`) | `316.0x27.2` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "배포 전 검증"
+  - **Validation Card/Sub** (`TEXT`) | `130.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "정책 저장 전 자동 점검 결과"
+  - **Check 1** (`TEXT`) | `104.0x14.0` | Fill: #18A56B | Font: Pretendard 700 12.0px | Text: "✓ 가중치 합계 100%"
+  - **Check 2** (`TEXT`) | `105.0x14.0` | Fill: #18A56B | Font: Pretendard 700 12.0px | Text: "✓ 필수 제외 규칙 활성"
+  - **Check 3** (`TEXT`) | `114.0x14.0` | Fill: #D9822B | Font: Pretendard 700 12.0px | Text: "!   시뮬레이션 실행 필요"
+  - **Button/gacha-rule-simulate** (`RECTANGLE`) | `312.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Button Text/gacha-rule-simulate** (`TEXT`) | `312.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 14.0px | Text: "10,000회 시뮬레이션"
+  - **Memo Card** (`RECTANGLE`) | `720.0x106.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Memo Card/Title** (`TEXT`) | `676.0x27.2` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "변경 사유"
+  - **Memo Value** (`TEXT`) | `650.0x22.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "거리 가중치 조정 및 악천후 감점 규칙 보완"
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+  - **Knob 4** (`RECTANGLE`) | `22.0x22.0` | Fill: #FFFFFF | Radius: 999.0px
+  - **Knob 5** (`RECTANGLE`) | `22.0x22.0` | Fill: #FFFFFF | Radius: 999.0px
+  - **Knob 6** (`RECTANGLE`) | `22.0x22.0` | Fill: #FFFFFF | Radius: 999.0px
+  - **Knob 7** (`RECTANGLE`) | `22.0x22.0` | Fill: #FFFFFF | Radius: 999.0px
+
+---
+
+## 9. ADM-13 · 큐레이션 관리 (ID: `2002:7836`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/09_ADM-13 · 큐레이션 관리.png`
+
+### Component Tree & Styles
+- **ADM-13 · 큐레이션 관리** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Title** (`TEXT`) | `650.0x44.8` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "큐레이션 관리"
+  - **Desc** (`TEXT`) | `760.0x22.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "테마별 여행 콘텐츠를 등록하고 앱 노출 순서를 관..."
+  - **Button/curation-add** (`RECTANGLE`) | `146.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Button Text/curation-add** (`TEXT`) | `146.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "＋ 큐레이션 추가"
+  - **Tab 0** (`RECTANGLE`) | `116.0x38.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **Tab T 0** (`TEXT`) | `39.0x14.0` | Fill: #5B50F6 | Font: Pretendard 700 12.0px | Text: "전체 24"
+  - **Tab 1** (`RECTANGLE`) | `116.0x38.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **Tab T 1** (`TEXT`) | `50.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "게시 중 18"
+  - **Tab 2** (`RECTANGLE`) | `116.0x38.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **Tab T 2** (`TEXT`) | `32.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "예약 3"
+  - **Tab 3** (`RECTANGLE`) | `116.0x38.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **Tab T 3** (`TEXT`) | `55.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "임시 저장 3"
+  - **Cur Search/L** (`TEXT`) | `260.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "검색"
+  - **Cur Search/F** (`RECTANGLE`) | `260.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Cur Search/V** (`TEXT`) | `69.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "제목 또는 태그"
+  - **Cur Status/L** (`TEXT`) | `141.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "상태"
+  - **Cur Status/F** (`RECTANGLE`) | `141.0x42.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **Cur Status/V** (`TEXT`) | `46.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "전체 상태"
+  - **Button/curation-filter** (`RECTANGLE`) | `141.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/curation-filter** (`TEXT`) | `141.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "조회"
+  - **Curation Table** (`RECTANGLE`) | `760.0x692.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Curation Table/Title** (`TEXT`) | `716.0x27.2` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "큐레이션 목록"
+  - **Table Polish/Header Band** (`RECTANGLE`) | `720.0x42.0` | Fill: #EEF3FF | Radius: 8.0px
+  - **Curation Table/Sub** (`TEXT`) | `208.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "드래그 순서가 앱 홈 노출 순서에 반영됩니다."
+  - **H1** (`TEXT`) | `120.0x22.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "제목"
+  - **H2** (`TEXT`) | `20.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "테마"
+  - **H3** (`TEXT`) | `29.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "콘텐츠"
+  - **H4** (`TEXT`) | `20.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "상태"
+  - **H5** (`TEXT`) | `43.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "예약/수정"
+  - **Row0** (`RECTANGLE`) | `720.0x54.0` | Fill: #DDE6FA | Radius: 10.0px
+  - **C0-0** (`TEXT`) | `13.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "01"
+  - **C0-1** (`TEXT`) | `102.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "제주도 푸른 바다 코스"
+  - **C0-2** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "힐링"
+  - **C0-3** (`TEXT`) | `18.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "8개"
+  - **C0-4** (`TEXT`) | `35.0x14.0` | Fill: #18A56B | Font: Pretendard 400 12.0px | Text: "게시 중"
+  - **C0-5** (`TEXT`) | `29.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "09.15"
+  - **Row1** (`RECTANGLE`) | `720.0x54.0` | Fill: #EAF0F7B8 | Radius: 10.0px
+  - **C1-0** (`TEXT`) | `15.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "02"
+  - **C1-1** (`TEXT`) | `118.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "비 오는 날 서울 실내 여행"
+  - **C1-2** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "감성"
+  - **C1-3** (`TEXT`) | `18.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "6개"
+  - **C1-4** (`TEXT`) | `35.0x14.0` | Fill: #18A56B | Font: Pretendard 400 12.0px | Text: "게시 중"
+  - **C1-5** (`TEXT`) | `30.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "09.14"
+  - **Row2** (`RECTANGLE`) | `720.0x54.0` | Fill: #F3F6FAB8 | Radius: 10.0px
+  - **C2-0** (`TEXT`) | `15.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "03"
+  - **C2-1** (`TEXT`) | `89.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "가을 단풍 드라이브"
+  - **C2-2** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "계절"
+  - **C2-3** (`TEXT`) | `23.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "10개"
+  - **C2-4** (`TEXT`) | `21.0x14.0` | Fill: #D9822B | Font: Pretendard 400 12.0px | Text: "예약"
+  - **C2-5** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "09.20"
+  - **Row3** (`RECTANGLE`) | `720.0x54.0` | Fill: #EAF0F7B8 | Radius: 10.0px
+  - **C3-0** (`TEXT`) | `15.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "04"
+  - **C3-1** (`TEXT`) | `111.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "부산 로컬 맛집 BEST 5"
+  - **C3-2** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "맛집"
+  - **C3-3** (`TEXT`) | `18.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "5개"
+  - **C3-4** (`TEXT`) | `35.0x14.0` | Fill: #18A56B | Font: Pretendard 400 12.0px | Text: "게시 중"
+  - **C3-5** (`TEXT`) | `29.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "09.12"
+  - **Row4** (`RECTANGLE`) | `720.0x54.0` | Fill: #F3F6FAB8 | Radius: 10.0px
+  - **C4-0** (`TEXT`) | `15.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "05"
+  - **C4-1** (`TEXT`) | `113.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "혼자 떠나는 조용한 도시"
+  - **C4-2** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "혼행"
+  - **C4-3** (`TEXT`) | `17.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "7개"
+  - **C4-4** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "임시 저장"
+  - **C4-5** (`TEXT`) | `29.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "09.10"
+  - **Row5** (`RECTANGLE`) | `720.0x54.0` | Fill: #EAF0F7B8 | Radius: 10.0px
+  - **C5-0** (`TEXT`) | `15.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "06"
+  - **C5-1** (`TEXT`) | `89.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "주말 당일치기 바다"
+  - **C5-2** (`TEXT`) | `42.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "액티비티"
+  - **C5-3** (`TEXT`) | `18.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "9개"
+  - **C5-4** (`TEXT`) | `35.0x14.0` | Fill: #18A56B | Font: Pretendard 400 12.0px | Text: "게시 중"
+  - **C5-5** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "09.08"
+  - **Row6** (`RECTANGLE`) | `720.0x54.0` | Fill: #F3F6FAB8 | Radius: 10.0px
+  - **C6-0** (`TEXT`) | `14.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "07"
+  - **C6-1** (`TEXT`) | `113.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "사진이 잘 나오는 여행지"
+  - **C6-2** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "감성"
+  - **C6-3** (`TEXT`) | `23.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "12개"
+  - **C6-4** (`TEXT`) | `35.0x14.0` | Fill: #18A56B | Font: Pretendard 400 12.0px | Text: "게시 중"
+  - **C6-5** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "09.06"
+  - **Button/curation-order-save** (`RECTANGLE`) | `190.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/curation-order-save** (`TEXT`) | `190.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "노출 순서 저장"
+  - **Curation Side** (`RECTANGLE`) | `308.0x692.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Curation Side/Title** (`TEXT`) | `278.0x27.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "선택 항목 미리보기"
+  - **Curation Side/Sub** (`TEXT`) | `278.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "제주도 푸른 바다 코스"
+  - **Cur Hero** (`RECTANGLE`) | `256.0x144.0` | Fill: #F2F5FA | Radius: 14.0px
+  - **Cur Tag** (`TEXT`) | `232.0x22.0` | Fill: #5B50F6 | Font: Pretendard 700 12.0px | Text: "#힐링  #바다  #제주"
+  - **Cur Title** (`TEXT`) | `232.0x29.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "제주도 푸른 바다 코스"
+  - **Cur Copy** (`TEXT`) | `232.0x22.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "바다를 따라 천천히 걷는 2박 3일 추천 코스"
+  - **Cur Meta** (`TEXT`) | `232.0x22.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "여행지 8개 · 수정 09.15"
+  - **Button/curation-edit** (`RECTANGLE`) | `121.0x45.0` | Fill: #F3F6FC | Radius: 10.762711524963379px
+  - **Button Text/curation-edit** (`TEXT`) | `113.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "편집"
+  - **Button/curation-duplicate** (`RECTANGLE`) | `122.0x45.0` | Fill: #F3F6FC | Radius: 10.762711524963379px
+  - **Button Text/curation-duplicate** (`TEXT`) | `113.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "복제"
+  - **Button/curation-hide** (`RECTANGLE`) | `256.0x45.0` | Fill: #FFF2F3 | Radius: 10.762711524963379px
+  - **Button Text/curation-hide** (`TEXT`) | `238.0x42.0` | Fill: #D33C4D | Font: Pretendard 700 13.0px | Text: "비공개 전환"
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+  - **Vector** (`VECTOR`) | `15.0x15.0` | Fill: #000000
+
+---
+
+## 10. ADM-14 · 큐레이션 등록 (ID: `2002:7994`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/10_ADM-14 · 큐레이션 등록.png`
+
+### Component Tree & Styles
+- **ADM-14 · 큐레이션 등록** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Title** (`TEXT`) | `650.0x44.8` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "큐레이션 추가"
+  - **Desc** (`TEXT`) | `760.0x22.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "테마, 노출 이미지, 여행지 순서를 구성해 새로운..."
+  - **Button/curation-add-cancel** (`RECTANGLE`) | `88.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Button Text/curation-add-cancel** (`TEXT`) | `88.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "취소"
+  - **Button/curation-add-draft** (`RECTANGLE`) | `100.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Button Text/curation-add-draft** (`TEXT`) | `100.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "임시 저장"
+  - **Button/curation-add-save** (`RECTANGLE`) | `104.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/curation-add-save** (`TEXT`) | `104.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "등록 완료"
+  - **Cur Basic** (`RECTANGLE`) | `690.0x366.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Cur Basic/Title** (`TEXT`) | `63.0x20.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "기본 정보"
+  - **Cur Basic/Sub** (`TEXT`) | `161.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "앱 홈 카드에 노출되는 정보입니다."
+  - **Cur Title Field/L** (`TEXT`) | `75.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "큐레이션 제목 *"
+  - **Cur Title Field/F** (`RECTANGLE`) | `636.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Cur Title Field/V** (`TEXT`) | `124.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "제주에서 만나는 푸른 하루"
+  - **Cur Theme/L** (`TEXT`) | `30.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "테마 *"
+  - **Cur Theme/F** (`RECTANGLE`) | `190.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Cur Theme/V** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "힐링"
+  - **Cur Slug/L** (`TEXT`) | `55.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "관리용 코드"
+  - **Cur Slug/F** (`RECTANGLE`) | `220.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Cur Slug/V** (`TEXT`) | `92.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "CUR-JEJU-BLUE"
+  - **Cur Date/L** (`TEXT`) | `194.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "게시 예약"
+  - **Cur Date/F** (`RECTANGLE`) | `194.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Cur Date/V** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "즉시 게시"
+  - **Cur Desc L** (`TEXT`) | `54.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "소개 문구 *"
+  - **Cur Desc A** (`RECTANGLE`) | `636.0x72.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **Cur Desc V** (`TEXT`) | `235.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "바다, 숲, 노을을 따라 제주를 천천히 여행해보세요."
+  - **Cur Media** (`RECTANGLE`) | `390.0x366.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Cur Media/Title** (`TEXT`) | `78.0x20.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "대표 이미지"
+  - **Cur Media/Sub** (`TEXT`) | `139.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "권장 1200×800 · JPG/PNG"
+  - **Cur Upload** (`RECTANGLE`) | `346.0x204.0` | Fill: #F2F5FA | Radius: 12.0px
+  - **Cur Plus** (`TEXT`) | `30.0x38.0` | Fill: #5B50F6 | Font: Pretendard 700 32.0px | Text: "＋"
+  - **Cur Upload T** (`TEXT`) | `172.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "이미지를 업로드하거나 드래그하세요"
+  - **Button/curation-image** (`RECTANGLE`) | `160.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Button Text/curation-image** (`TEXT`) | `160.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "파일 선택"
+  - **Cur Places** (`RECTANGLE`) | `760.0x368.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Cur Places/Title** (`TEXT`) | `716.0x27.2` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "여행지 구성"
+  - **Cur Places/Sub** (`TEXT`) | `247.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "검색해 추가하고 드래그하여 노출 순서를 변경합니다."
+  - **Place Search/L** (`TEXT`) | `55.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "여행지 검색"
+  - **Place Search/F** (`RECTANGLE`) | `470.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Place Search/V** (`TEXT`) | `66.0x14.0` | Fill: #17213B80 | Font: Pretendard 400 12.0px | Text: "여행지명 입력"
+  - **Button/curation-place-add** (`RECTANGLE`) | `122.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Button Text/curation-place-add** (`TEXT`) | `122.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "선택 추가"
+  - **Place 0** (`RECTANGLE`) | `708.0x40.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **Place T 0** (`TEXT`) | `126.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "☰  1  함덕해수욕장  ·  제주"
+  - **Remove 0** (`TEXT`) | `20.0x13.0` | Fill: #E5484D | Font: Pretendard 400 11.0px | Text: "삭제"
+  - **Place 1** (`RECTANGLE`) | `708.0x40.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **Place T 1** (`TEXT`) | `98.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "☰  2  비자림  ·  제주"
+  - **Remove 1** (`TEXT`) | `20.0x13.0` | Fill: #E5484D | Font: Pretendard 400 11.0px | Text: "삭제"
+  - **Place 2** (`RECTANGLE`) | `708.0x40.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **Place T 2** (`TEXT`) | `109.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "☰  3  새별오름  ·  제주"
+  - **Remove 2** (`TEXT`) | `20.0x13.0` | Fill: #E5484D | Font: Pretendard 400 11.0px | Text: "삭제"
+  - **Place 3** (`RECTANGLE`) | `708.0x40.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **Place T 3** (`TEXT`) | `129.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "☰  4  협재해수욕장  ·  제주"
+  - **Remove 3** (`TEXT`) | `20.0x13.0` | Fill: #E5484D | Font: Pretendard 400 11.0px | Text: "삭제"
+  - **Cur Publish** (`RECTANGLE`) | `320.0x368.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Cur Publish/Title** (`TEXT`) | `276.0x27.2` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "게시 설정"
+  - **Cur Publish/Sub** (`TEXT`) | `103.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "노출 위치와 공개 상태"
+  - **Home Label** (`TEXT`) | `180.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "홈 상단 노출"
+  - **Home Toggle** (`RECTANGLE`) | `42.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **Home Toggle/K** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **Gacha Label** (`TEXT`) | `180.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "뽑기 결과 연계"
+  - **Gacha Toggle** (`RECTANGLE`) | `42.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **Gacha Toggle/K** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **Cur Order/L** (`TEXT`) | `272.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "홈 노출 순서"
+  - **Cur Order/F** (`RECTANGLE`) | `272.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Cur Order/V** (`TEXT`) | `246.0x22.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "3"
+  - **Cur Check** (`TEXT`) | `105.0x14.0` | Fill: #18A56B | Font: Pretendard 700 12.0px | Text: "✓ 필수 항목 입력 완료"
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253492** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+
+---
+
+## 11. ADM-15 · 큐레이션 상세·수정 (ID: `2002:8124`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/11_ADM-15 · 큐레이션 상세·수정.png`
+
+### Component Tree & Styles
+- **ADM-15 · 큐레이션 상세·수정** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Title** (`TEXT`) | `650.0x44.8` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "큐레이션 상세 · 수정"
+  - **Desc** (`TEXT`) | `760.0x22.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "게시 중인 큐레이션의 내용과 노출 상태, 변경 이..."
+  - **Button/curation-edit-back** (`RECTANGLE`) | `96.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Button Text/curation-edit-back** (`TEXT`) | `96.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "목록으로"
+  - **Button/curation-edit-delete** (`RECTANGLE`) | `78.0x42.0` | Fill: #FFF2F3 | Radius: 10.0px
+  - **Button Text/curation-edit-delete** (`TEXT`) | `78.0x42.0` | Fill: #D33C4D | Font: Pretendard 700 13.0px | Text: "삭제"
+  - **Button/curation-edit-save** (`RECTANGLE`) | `128.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/curation-edit-save** (`TEXT`) | `128.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "변경 저장"
+  - **Cur Edit Main** (`RECTANGLE`) | `723.0x760.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Cur Edit Main/Title** (`TEXT`) | `244.0x20.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "제주도 푸른 바다 코스 · CUR-0024"
+  - **Cur Edit Main/Sub** (`TEXT`) | `197.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "게시 중 · 마지막 수정 김관리 09.15 13:20"
+  - **Cur Edit Hero** (`RECTANGLE`) | `669.0x208.0` | Fill: #F2F5FA | Radius: 14.0px
+  - **Button/curation-edit-image** (`RECTANGLE`) | `166.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Button Text/curation-edit-image** (`TEXT`) | `85.0x16.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "대표 이미지 교체"
+  - **Cur Edit Title/L** (`TEXT`) | `30.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "제목 *"
+  - **Cur Edit Title/F** (`RECTANGLE`) | `669.0x42.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **Cur Edit Title/V** (`TEXT`) | `103.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "제주도 푸른 바다 코스"
+  - **Cur Edit Theme/L** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "테마"
+  - **Cur Edit Theme/F** (`RECTANGLE`) | `208.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Cur Edit Theme/V** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "힐링"
+  - **Cur Edit Date/L** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "예약 게시"
+  - **Cur Edit Date/F** (`RECTANGLE`) | `208.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Cur Edit Date/V** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "즉시 게시"
+  - **Cur Edit Slug/L** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "관리 코드"
+  - **Cur Edit Slug/F** (`RECTANGLE`) | `222.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Cur Edit Slug/V** (`TEXT`) | `58.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "CUR-0024"
+  - **Cur Edit Desc L** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "소개 문구"
+  - **Cur Edit Desc A** (`RECTANGLE`) | `669.0x80.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **Cur Edit Desc V** (`TEXT`) | `246.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "제주의 바다와 숲을 연결한 2박 3일 추천 코스입니다."
+  - **Cur Edit Tags/L** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "태그"
+  - **Cur Edit Tags/F** (`RECTANGLE`) | `669.0x42.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **Cur Edit Tags/V** (`TEXT`) | `111.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "힐링 · 제주 · 바다 · 감성"
+  - **Cur Edit Status** (`RECTANGLE`) | `347.0x204.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Cur Edit Status/Title** (`TEXT`) | `63.0x20.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "게시 상태"
+  - **Cur Edit Status/Sub** (`TEXT`) | `58.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "앱 노출 여부"
+  - **Cur State** (`TEXT`) | `52.0x16.0` | Fill: #18A56B | Font: Pretendard 700 13.0px | Text: "● 게시 중"
+  - **Cur Home** (`TEXT`) | `63.0x16.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "홈 상단 노출"
+  - **Cur Edit Toggle** (`RECTANGLE`) | `41.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **Cur Edit Toggle/K** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **Cur Views** (`TEXT`) | `99.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "누적 조회  12,482회"
+  - **Cur Edit Places** (`RECTANGLE`) | `347.0x326.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Cur Edit Places/Title** (`TEXT`) | `78.0x20.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "여행지 순서"
+  - **Cur Edit Places/Sub** (`TEXT`) | `82.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "앱 카드 노출 순서"
+  - **EP0** (`RECTANGLE`) | `299.0x38.0` | Fill: #EAF0F7 | Radius: 8.0px
+  - **EPT0** (`TEXT`) | `91.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "☰  1  함덕해수욕장"
+  - **EP1** (`RECTANGLE`) | `299.0x38.0` | Fill: #EAF0F7 | Radius: 8.0px
+  - **EPT1** (`TEXT`) | `62.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "☰  2  비자림"
+  - **EP2** (`RECTANGLE`) | `299.0x38.0` | Fill: #EAF0F7 | Radius: 8.0px
+  - **EPT2** (`TEXT`) | `73.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "☰  3  새별오름"
+  - **EP3** (`RECTANGLE`) | `299.0x38.0` | Fill: #EAF0F7 | Radius: 8.0px
+  - **EPT3** (`TEXT`) | `94.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "☰  4  협재해수욕장"
+  - **Button/curation-edit-places** (`RECTANGLE`) | `259.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Button Text/curation-edit-places** (`TEXT`) | `85.0x16.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "여행지 구성 편집"
+  - **Cur Edit History** (`RECTANGLE`) | `347.0x182.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Cur Edit History/Title** (`TEXT`) | `63.0x20.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "변경 이력"
+  - **Cur Edit History/Sub** (`TEXT`) | `66.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "최근 변경 3건"
+  - **CEH1** (`TEXT`) | `115.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "09.15  대표 이미지 교체"
+  - **CEH2** (`TEXT`) | `114.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "09.14  여행지 순서 변경"
+  - **CEH3** (`TEXT`) | `103.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "09.12  제목 문구 수정"
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253492** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+
+---
+
+## 12. ADM-16 · 회원 상세·편집 (ID: `2002:8246`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/12_ADM-16 · 회원 상세·편집.png`
+
+### Component Tree & Styles
+- **ADM-16 · 회원 상세·편집** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Member Profile** (`RECTANGLE`) | `340.0x288.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Title** (`TEXT`) | `650.0x44.8` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "회원 상세"
+  - **Desc** (`TEXT`) | `760.0x22.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "회원 정보, 서비스 활동, 신고·제재 이력을 확인..."
+  - **Button/member-back** (`RECTANGLE`) | `96.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Button Text/member-back** (`TEXT`) | `96.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "목록으로"
+  - **Button/member-edit** (`RECTANGLE`) | `104.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Button Text/member-edit** (`TEXT`) | `104.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "정보 수정"
+  - **Button/member-restrict** (`RECTANGLE`) | `112.0x42.0` | Fill: #FFF2F3 | Radius: 10.0px
+  - **Button Text/member-restrict** (`TEXT`) | `112.0x42.0` | Fill: #D33C4D | Font: Pretendard 700 13.0px | Text: "이용 제한"
+  - **Member Profile/Title** (`TEXT`) | `296.0x27.2` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "회원 프로필"
+  - **Member Profile/Sub** (`TEXT`) | `296.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "USR-10241"
+  - **Member Avatar** (`ELLIPSE`) | `76.0x76.0` | Fill: #E8E6FF
+  - **Member Initial** (`TEXT`) | `21.0x29.0` | Fill: #5B50F6 | Font: Pretendard 700 24.0px | Text: "김"
+  - **Member Name** (`TEXT`) | `52.0x24.0` | Fill: #17213B | Font: Pretendard 700 20.0px | Text: "김하늘"
+  - **Member Email** (`TEXT`) | `123.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "haneul.kim@email.com"
+  - **Member State** (`TEXT`) | `58.0x14.0` | Fill: #18A56B | Font: Pretendard 700 12.0px | Text: "● 정상 회원"
+  - **PIL0** (`TEXT`) | `29.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "가입일"
+  - **PIV0** (`TEXT`) | `55.0x13.0` | Fill: #17213B | Font: Pretendard 400 11.0px | Text: "2025.03.12"
+  - **PIL1** (`TEXT`) | `51.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "최근 로그인"
+  - **PIV1** (`TEXT`) | `86.0x13.0` | Fill: #17213B | Font: Pretendard 400 11.0px | Text: "2026.09.15 14:28"
+  - **PIL2** (`TEXT`) | `51.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "로그인 방식"
+  - **PIV2** (`TEXT`) | `36.0x13.0` | Fill: #17213B | Font: Pretendard 400 11.0px | Text: "Google"
+  - **PIL3** (`TEXT`) | `51.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "마케팅 수신"
+  - **PIV3** (`TEXT`) | `20.0x13.0` | Fill: #17213B | Font: Pretendard 400 11.0px | Text: "동의"
+  - **MS0** (`RECTANGLE`) | `231.0x132.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **MS0/Title** (`TEXT`) | `64.0x20.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "가챠 실행"
+  - **MS0/Sub** (`TEXT`) | `74.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "최근 30일 기준"
+  - **MSV0** (`TEXT`) | `62.0x33.0` | Fill: #17213B | Font: Pretendard 700 28.0px | Text: "84회"
+  - **MS1** (`RECTANGLE`) | `230.0x132.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **MS1/Title** (`TEXT`) | `64.0x20.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "저장 여행"
+  - **MS1/Sub** (`TEXT`) | `74.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "최근 30일 기준"
+  - **MSV1** (`TEXT`) | `56.0x33.0` | Fill: #17213B | Font: Pretendard 700 28.0px | Text: "12건"
+  - **MS2** (`RECTANGLE`) | `231.0x132.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **MS2/Title** (`TEXT`) | `63.0x20.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "그룹 참여"
+  - **MS2/Sub** (`TEXT`) | `74.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "최근 30일 기준"
+  - **MSV2** (`TEXT`) | `43.0x33.0` | Fill: #17213B | Font: Pretendard 700 28.0px | Text: "6회"
+  - **Member Activity** (`RECTANGLE`) | `729.0x392.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Member Activity/Title** (`TEXT`) | `63.0x20.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "최근 활동"
+  - **Member Activity/Sub** (`TEXT`) | `79.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "서비스 사용 이력"
+  - **Act0** (`RECTANGLE`) | `685.0x42.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **AT0** (`TEXT`) | `81.0x22.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "14:28"
+  - **AA0** (`TEXT`) | `212.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "개인 가챠 실행"
+  - **AD0** (`TEXT`) | `264.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "제주도 추천"
+  - **Act1** (`RECTANGLE`) | `685.0x42.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **AT1** (`TEXT`) | `81.0x22.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "13:52"
+  - **AA1** (`TEXT`) | `212.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "여행 저장"
+  - **AD1** (`TEXT`) | `264.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "강릉 2박3일"
+  - **Act2** (`RECTANGLE`) | `685.0x42.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **AT2** (`TEXT`) | `81.0x22.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "09.14"
+  - **AA2** (`TEXT`) | `212.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "그룹 가챠 참여"
+  - **AD2** (`TEXT`) | `264.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "ROOM-K8K2Q1"
+  - **Act3** (`RECTANGLE`) | `685.0x42.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **AT3** (`TEXT`) | `81.0x22.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "09.12"
+  - **AA3** (`TEXT`) | `212.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "큐레이션 조회"
+  - **AD3** (`TEXT`) | `264.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "가을 단풍 드라이브"
+  - **Member Reports** (`RECTANGLE`) | `340.0x236.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Member Reports/Title** (`TEXT`) | `296.0x27.2` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "신고 · 제재 이력"
+  - **Member Reports/Sub** (`TEXT`) | `114.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "누적 신고 1건 · 제재 0건"
+  - **Report 1** (`TEXT`) | `138.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "09.02  부적절한 닉네임 신고"
+  - **Report State** (`TEXT`) | `99.0x14.0` | Fill: #18A56B | Font: Pretendard 400 12.0px | Text: "검토 완료 · 문제 없음"
+  - **Button/member-report-detail** (`RECTANGLE`) | `287.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Button Text/member-report-detail** (`TEXT`) | `286.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "신고 상세 보기"
+  - **Member Saved** (`RECTANGLE`) | `1092.0x188.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Member Saved/Title** (`TEXT`) | `1048.0x27.0` | Fill: #17213B | Font: Pretendard 700 17.0px | Text: "저장된 여행"
+  - **Member Saved/Sub** (`TEXT`) | `1048.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "최근 저장한 여행지"
+  - **Saved 0** (`RECTANGLE`) | `245.0x92.0` | Fill: #F2F5FA | Radius: 12.0px
+  - **Saved Name 0** (`TEXT`) | `137.0x24.0` | Fill: #17213B | Font: Pretendard 700 20.0px | Text: "강릉"
+  - **Saved Date 0** (`TEXT`) | `127.0x22.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "09.15 저장"
+  - **Saved 1** (`RECTANGLE`) | `245.0x92.0` | Fill: #F2F5FA | Radius: 12.0px
+  - **Saved Name 1** (`TEXT`) | `137.0x24.0` | Fill: #17213B | Font: Pretendard 700 20.0px | Text: "제주도"
+  - **Saved Date 1** (`TEXT`) | `127.0x22.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "09.10 저장"
+  - **Saved 2** (`RECTANGLE`) | `245.0x92.0` | Fill: #F2F5FA | Radius: 12.0px
+  - **Saved Name 2** (`TEXT`) | `137.0x24.0` | Fill: #17213B | Font: Pretendard 700 20.0px | Text: "부산"
+  - **Saved Date 2** (`TEXT`) | `127.0x22.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "08.29 저장"
+  - **Saved 3** (`RECTANGLE`) | `245.0x92.0` | Fill: #F2F5FA | Radius: 12.0px
+  - **Saved Name 3** (`TEXT`) | `137.0x24.0` | Fill: #17213B | Font: Pretendard 700 20.0px | Text: "여수"
+  - **Saved Date 3** (`TEXT`) | `127.0x22.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "08.20 저장"
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253492** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+
+---
+
+## 13. ADM-17 · 회원 정보 수정 (ID: `2002:8386`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/13_ADM-17 · 회원 정보 수정.png`
+
+### Component Tree & Styles
+- **ADM-17 · 회원 정보 수정** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Title** (`TEXT`) | `650.0x44.8` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "회원 정보 수정"
+  - **Desc** (`TEXT`) | `760.0x22.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "운영 목적에 필요한 회원 정보와 내부 관리 메모를..."
+  - **Button/member-edit-cancel** (`RECTANGLE`) | `94.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Button Text/member-edit-cancel** (`TEXT`) | `94.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "취소"
+  - **Button/member-edit-save** (`RECTANGLE`) | `110.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/member-edit-save** (`TEXT`) | `110.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "저장"
+  - **Member Edit** (`RECTANGLE`) | `710.0x646.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Member Edit/T** (`TEXT`) | `666.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "김하늘 · USR-10241"
+  - **Member Edit/S** (`TEXT`) | `666.0x22.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "가입 정보와 연동 계정은 변경이 제한됩니다."
+  - **ME Name/L** (`TEXT`) | `310.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "이름"
+  - **ME Name/F** (`RECTANGLE`) | `310.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **ME Name/V** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "김하늘"
+  - **ME Nick/L** (`TEXT`) | `324.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "닉네임 *"
+  - **ME Nick/F** (`RECTANGLE`) | `324.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **ME Nick/V** (`TEXT`) | `42.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "하늘여행"
+  - **ME Email/L** (`TEXT`) | `656.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "이메일"
+  - **ME Email/F** (`RECTANGLE`) | `656.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **ME Email/V** (`TEXT`) | `123.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "haneul.kim@email.com"
+  - **ME Phone/L** (`TEXT`) | `310.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "연락처"
+  - **ME Phone/F** (`RECTANGLE`) | `310.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **ME Phone/V** (`TEXT`) | `86.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "010-1234-5678"
+  - **ME Birth/L** (`TEXT`) | `324.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "생년월일"
+  - **ME Birth/F** (`RECTANGLE`) | `324.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **ME Birth/V** (`TEXT`) | `59.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "1998.04.12"
+  - **ME Role/L** (`TEXT`) | `310.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "회원 등급"
+  - **ME Role/F** (`RECTANGLE`) | `310.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **ME Role/V** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "일반 회원"
+  - **ME Provider/L** (`TEXT`) | `324.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "로그인 방식"
+  - **ME Provider/F** (`RECTANGLE`) | `324.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **ME Provider/V** (`TEXT`) | `63.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "Google 연동"
+  - **ME Memo L** (`TEXT`) | `200.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "관리자 메모"
+  - **ME Memo A** (`RECTANGLE`) | `656.0x126.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **ME Memo V** (`TEXT`) | `610.0x22.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "고객 문의 #142 처리 완료. 별도 특이사항 없음."
+  - **ME Check** (`TEXT`) | `300.0x22.0` | Fill: #18A56B | Font: Pretendard 700 12.0px | Text: "✓ 변경 가능한 항목 검증 완료"
+  - **Member Consent** (`RECTANGLE`) | `358.0x286.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Member Consent/T** (`TEXT`) | `326.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "동의 · 알림 설정"
+  - **Member Consent/S** (`TEXT`) | `326.0x22.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "회원 요청 시에만 관리자 수정"
+  - **MCL0** (`TEXT`) | `180.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "마케팅 이메일"
+  - **MCV0** (`TEXT`) | `55.0x22.0` | Fill: #18A56B | Font: Pretendard 700 12.0px | Text: "동의"
+  - **MCL1** (`TEXT`) | `180.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "푸시 알림"
+  - **MCV1** (`TEXT`) | `55.0x22.0` | Fill: #18A56B | Font: Pretendard 700 12.0px | Text: "동의"
+  - **MCL2** (`TEXT`) | `180.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "위치정보 활용"
+  - **MCV2** (`TEXT`) | `55.0x22.0` | Fill: #18A56B | Font: Pretendard 700 12.0px | Text: "동의"
+  - **MCL3** (`TEXT`) | `180.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "개인화 추천"
+  - **MCV3** (`TEXT`) | `55.0x22.0` | Fill: #18A56B | Font: Pretendard 700 12.0px | Text: "동의"
+  - **Member Immutable** (`RECTANGLE`) | `358.0x338.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Member Immutable/T** (`TEXT`) | `326.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "변경 불가 정보"
+  - **Member Immutable/S** (`TEXT`) | `326.0x22.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "감사 로그 유지를 위해 직접 수정할 수 없습니다."
+  - **MIL0** (`TEXT`) | `41.0x17.0` | Fill: #77809A | Font: Pretendard 700 14.0px | Text: "회원 ID"
+  - **MIV0** (`TEXT`) | `71.0x17.0` | Fill: #17213B | Font: Pretendard 400 14.0px | Text: "USR-10241"
+  - **MIL1** (`TEXT`) | `37.0x17.0` | Fill: #77809A | Font: Pretendard 700 14.0px | Text: "가입일"
+  - **MIV1** (`TEXT`) | `70.0x17.0` | Fill: #17213B | Font: Pretendard 400 14.0px | Text: "2025.03.12"
+  - **MIL2** (`TEXT`) | `51.0x17.0` | Fill: #77809A | Font: Pretendard 700 14.0px | Text: "연동 UID"
+  - **MIV2** (`TEXT`) | `89.0x17.0` | Fill: #17213B | Font: Pretendard 400 14.0px | Text: "google_92184"
+  - **MIL3** (`TEXT`) | `64.0x17.0` | Fill: #77809A | Font: Pretendard 700 14.0px | Text: "최근 로그인"
+  - **MIV3** (`TEXT`) | `109.0x17.0` | Fill: #17213B | Font: Pretendard 400 14.0px | Text: "2026.09.15 14:28"
+  - **Button/member-edit-log** (`RECTANGLE`) | `318.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Button Text/member-edit-log** (`TEXT`) | `318.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "변경 이력 보기"
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+
+---
+
+## 14. ADM-18 · 회원 이용 제한 확인 (ID: `2002:8507`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/14_ADM-18 · 회원 이용 제한 확인.png`
+
+### Component Tree & Styles
+- **ADM-18 · 회원 이용 제한 확인** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Title** (`TEXT`) | `650.0x44.8` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "회원 상세"
+  - **Desc** (`TEXT`) | `760.0x22.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "제재 적용 전 기간과 사유를 확인합니다."
+  - **Member Background** (`RECTANGLE`) | `1080.0x650.0` | Fill: #F2F5FA | Radius: 16.0px
+  - **Member Background/T** (`TEXT`) | `1036.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "김하늘 · USR-10241"
+  - **Member Background/S** (`TEXT`) | `1036.0x22.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "정상 회원 · 신고 1건 · 기존 제재 0건"
+  - **BG Copy** (`TEXT`) | `620.0x22.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "최근 활동과 신고 내역을 검토한 후 이용 제한을 ..."
+  - **Dim** (`RECTANGLE`) | `1192.0x944.0` | Fill: #1A1D35
+  - **Restriction Modal** (`RECTANGLE`) | `660.0x536.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Restriction Modal/T** (`TEXT`) | `616.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "회원 이용 제한"
+  - **Restriction Modal/S** (`TEXT`) | `226.0x14.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "김하늘 회원에게 적용할 제한 내용을 설정합니다."
+  - **Restrict Type/L** (`TEXT`) | `592.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "제한 유형 *"
+  - **Restrict Type/F** (`RECTANGLE`) | `592.0x42.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **Restrict Type/V** (`TEXT`) | `79.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "서비스 이용 정지"
+  - **Restrict Period/L** (`TEXT`) | `284.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "제한 기간 *"
+  - **Restrict Period/F** (`RECTANGLE`) | `284.0x42.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **Restrict Period/V** (`TEXT`) | `17.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "7일"
+  - **Restrict Start/L** (`TEXT`) | `284.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "시작 시각"
+  - **Restrict Start/F** (`RECTANGLE`) | `284.0x42.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **Restrict Start/V** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "즉시 적용"
+  - **Reason L** (`TEXT`) | `200.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "제한 사유 *"
+  - **Reason A** (`RECTANGLE`) | `592.0x92.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **Reason V** (`TEXT`) | `110.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "커뮤니티 운영정책 위반"
+  - **Notice L** (`TEXT`) | `180.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "회원 알림"
+  - **Notice Copy** (`TEXT`) | `550.0x22.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "앱 알림과 이메일로 제한 사유 및 해제일을 안내합니다."
+  - **Button/member-restrict-cancel** (`RECTANGLE`) | `140.0x42.0` | Fill: #FFF2F3 | Radius: 10.0px
+  - **Button Text/member-restrict-cancel** (`TEXT`) | `140.0x42.0` | Fill: #D33C4D | Font: Pretendard 700 13.0px | Text: "취소"
+  - **Button/member-restrict-confirm** (`RECTANGLE`) | `160.0x42.0` | Fill: #FFC9CF | Radius: 10.0px
+  - **Button Text/member-restrict-confirm** (`TEXT`) | `160.0x42.0` | Fill: #D33C4D | Font: Pretendard 700 13.0px | Text: "7일 제한 적용"
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+
+---
+
+## 15. ADM-19 · 문의 상세·답변 (ID: `2002:8598`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/15_ADM-19 · 문의 상세·답변.png`
+
+### Component Tree & Styles
+- **ADM-19 · 문의 상세·답변** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #C5FF32
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #C5FF32
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #C5FF32
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Title** (`TEXT`) | `650.0x44.8` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "문의 상세 · 답변"
+  - **Desc** (`TEXT`) | `760.0x22.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "문의 내용과 자동 수집된 사용자 환경을 확인하고 ..."
+  - **Button/inquiry-back** (`RECTANGLE`) | `96.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Button Text/inquiry-back** (`TEXT`) | `96.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "목록으로"
+  - **Button/inquiry-temp** (`RECTANGLE`) | `100.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Button Text/inquiry-temp** (`TEXT`) | `100.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "임시 저장"
+  - **Button/inquiry-send** (`RECTANGLE`) | `106.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/inquiry-send** (`TEXT`) | `106.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "답변 발송"
+  - **Inquiry Content** (`RECTANGLE`) | `692.0x350.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Inquiry Content/T** (`TEXT`) | `183.0x20.0` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "문의 #142 · 여행 저장 오류"
+  - **Inquiry Content/S** (`TEXT`) | `157.0x14.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "접수 2026.09.15 13:24 · 김하늘"
+  - **Inquiry Q** (`TEXT`) | `333.0x36.0` | Fill: #17213B | Font: Pretendard 700 15.0px | Text: "제주도 여행을 저장했는데 마이페이지에서 보이지 않..."
+  - **Inquiry Meta** (`TEXT`) | `184.0x14.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "첨부파일 1개 · screenshot_0915.png"
+  - **Inquiry Image** (`RECTANGLE`) | `217.0x116.0` | Fill: #F2F5FA | Radius: 10.0px
+  - **Inquiry Image T** (`TEXT`) | `100.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "첨부 이미지 미리보기"
+  - **Button/inquiry-download** (`RECTANGLE`) | `139.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/inquiry-download** (`TEXT`) | `71.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "원본 다운로드"
+  - **Inquiry Tech** (`RECTANGLE`) | `376.0x350.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Inquiry Tech/T** (`TEXT`) | `96.0x20.0` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "자동 수집 정보"
+  - **Inquiry Tech/S** (`TEXT`) | `124.0x14.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "백엔드 확인용 환경 데이터"
+  - **ITL0** (`TEXT`) | `44.0x18.0` | Fill: #77809A | Font: Pretendard 700 15.0px | Text: "회원 ID"
+  - **ITV0** (`TEXT`) | `76.0x18.0` | Fill: #17213B | Font: Pretendard 400 15.0px | Text: "USR-10241"
+  - **ITL1** (`TEXT`) | `43.0x18.0` | Fill: #77809A | Font: Pretendard 700 15.0px | Text: "앱 버전"
+  - **ITV1** (`TEXT`) | `68.0x18.0` | Fill: #17213B | Font: Pretendard 400 15.0px | Text: "1.4.2 / iOS"
+  - **ITL2** (`TEXT`) | `26.0x18.0` | Fill: #77809A | Font: Pretendard 700 15.0px | Text: "기기"
+  - **ITV2** (`TEXT`) | `66.0x18.0` | Fill: #17213B | Font: Pretendard 400 15.0px | Text: "iPhone 15"
+  - **ITL3** (`TEXT`) | `44.0x18.0` | Fill: #77809A | Font: Pretendard 700 15.0px | Text: "요청 ID"
+  - **ITV3** (`TEXT`) | `55.0x18.0` | Fill: #17213B | Font: Pretendard 700 15.0px | Text: "9F2A81"
+  - **ITL4** (`TEXT`) | `25.0x18.0` | Fill: #77809A | Font: Pretendard 700 15.0px | Text: "API"
+  - **ITV4** (`TEXT`) | `124.0x18.0` | Fill: #17213B | Font: Pretendard 400 15.0px | Text: "POST /saved-trips"
+  - **ITL5** (`TEXT`) | `26.0x18.0` | Fill: #77809A | Font: Pretendard 700 15.0px | Text: "응답"
+  - **ITV5** (`TEXT`) | `113.0x18.0` | Fill: #E5484D | Font: Pretendard 400 15.0px | Text: "500 · DB timeout"
+  - **Inquiry Reply** (`RECTANGLE`) | `1092.0x386.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Inquiry Reply/T** (`TEXT`) | `63.0x20.0` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "답변 작성"
+  - **Inquiry Reply/S** (`TEXT`) | `213.0x14.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "저장된 템플릿을 불러오거나 직접 작성하세요."
+  - **Reply Template/L** (`TEXT`) | `55.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "답변 템플릿"
+  - **Reply Template/F** (`RECTANGLE`) | `297.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Reply Template/V** (`TEXT`) | `69.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "저장 오류 안내"
+  - **Reply Assignee/L** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "담당자"
+  - **Reply Assignee/F** (`RECTANGLE`) | `178.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Reply Assignee/V** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "김관리"
+  - **Reply State/L** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "처리 상태"
+  - **Reply State/F** (`RECTANGLE`) | `178.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Reply State/V** (`TEXT`) | `58.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "답변 후 완료"
+  - **Reply L** (`TEXT`) | `54.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "답변 내용 *"
+  - **Reply A** (`RECTANGLE`) | `1040.0x132.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **Reply V** (`TEXT`) | `419.0x32.0` | Fill: #17213B | Font: Pretendard 400 13.0px | Text: "안녕하세요, 가챠트립입니다. 저장 처리 중 일시적..."
+  - **Reply Check** (`TEXT`) | `162.0x14.0` | Fill: #18A56B | Font: Pretendard 700 12.0px | Text: "✓ 회원 이메일 및 앱 알림으로 발송"
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+
+---
+
+## 16. ADM-20 · 신고 상세·처리 (ID: `2002:8709`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/16_ADM-20 · 신고 상세·처리.png`
+
+### Component Tree & Styles
+- **ADM-20 · 신고 상세·처리** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Title** (`TEXT`) | `173.0x33.0` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "신고 상세 · 처리"
+  - **Desc** (`TEXT`) | `331.0x17.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "신고 대상 콘텐츠와 증거를 검토하고 운영 조치를 ..."
+  - **Button/report-back** (`RECTANGLE`) | `96.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Button Text/report-back** (`TEXT`) | `96.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "목록으로"
+  - **Button/report-dismiss** (`RECTANGLE`) | `100.0x42.0` | Fill: #FFF2F3 | Radius: 10.0px
+  - **Button Text/report-dismiss** (`TEXT`) | `100.0x42.0` | Fill: #D33C4D | Font: Pretendard 700 13.0px | Text: "문제 없음"
+  - **Button/report-action** (`RECTANGLE`) | `104.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/report-action** (`TEXT`) | `104.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "조치 적용"
+  - **Report Summary** (`RECTANGLE`) | `683.0x268.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Report Summary/T** (`TEXT`) | `244.0x20.0` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "신고 #RPT-0314 · 부적절한 닉네임"
+  - **Report Summary/S** (`TEXT`) | `176.0x14.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "접수 2026.09.15 11:42 · 신고자 3명"
+  - **Report Target** (`TEXT`) | `185.0x17.0` | Fill: #17213B | Font: Pretendard 700 14.0px | Text: "대상 회원  박민수 (USR-10982)"
+  - **Report Reason** (`TEXT`) | `188.0x16.0` | Fill: #E5484D | Font: Pretendard 700 13.0px | Text: "신고 사유  욕설·불쾌감을 주는 닉네임"
+  - **Report Context** (`TEXT`) | `208.0x16.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "발견 위치  그룹 가챠방 ROOM-K8K2Q1"
+  - **Report Count** (`TEXT`) | `141.0x14.0` | Fill: #D9822B | Font: Pretendard 700 12.0px | Text: "최근 30일 동일 대상 신고 3건"
+  - **Report Evidence** (`RECTANGLE`) | `386.0x268.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Report Evidence/T** (`TEXT`) | `342.0x27.0` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "신고 증거"
+  - **Report Evidence/S** (`TEXT`) | `342.0x22.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "신고 당시 자동 저장된 화면"
+  - **Evidence Image** (`RECTANGLE`) | `334.0x156.0` | Fill: #F2F5FA | Radius: 12.0px
+  - **Evidence T** (`TEXT`) | `86.0x16.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "그룹 가챠방 캡처"
+  - **Report History** (`RECTANGLE`) | `515.0x468.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Report History/T** (`TEXT`) | `471.0x27.0` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "대상 회원 이력"
+  - **Report History/S** (`TEXT`) | `471.0x22.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "이전 신고 및 제재 기록"
+  - **RH0** (`RECTANGLE`) | `463.0x50.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **RHT00** (`TEXT`) | `29.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "09.15"
+  - **RHT01** (`TEXT`) | `55.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "닉네임 신고"
+  - **RHT02** (`TEXT`) | `35.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "검토 중"
+  - **RH1** (`RECTANGLE`) | `463.0x50.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **RHT10** (`TEXT`) | `29.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "09.10"
+  - **RHT11** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "채팅 신고"
+  - **RHT12** (`TEXT`) | `21.0x14.0` | Fill: #D9822B | Font: Pretendard 400 12.0px | Text: "경고"
+  - **RH2** (`RECTANGLE`) | `463.0x50.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **RHT20** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "08.22"
+  - **RHT21** (`TEXT`) | `55.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "프로필 신고"
+  - **RHT22** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "문제 없음"
+  - **Audit Note** (`TEXT`) | `229.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "처리 결과는 관리자 감사 로그에 영구 기록됩니다."
+  - **Report Decision** (`RECTANGLE`) | `554.0x468.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Report Decision/T** (`TEXT`) | `511.0x27.0` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "처리 결정"
+  - **Report Decision/S** (`TEXT`) | `205.0x14.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "정책 위반 여부와 적용할 조치를 선택하세요."
+  - **Violation/L** (`TEXT`) | `503.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "위반 항목 *"
+  - **Violation/F** (`RECTANGLE`) | `503.0x42.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **Violation/V** (`TEXT`) | `130.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "운영정책 3.2 부적절한 표현"
+  - **Action Type/L** (`TEXT`) | `503.0x22.0` | Fill: #344FC7 | Font: Pretendard 700 12.0px | Text: "조치 유형 *"
+  - **Action Type/F** (`RECTANGLE`) | `503.0x42.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **Action Type/V** (`TEXT`) | `113.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "닉네임 변경 요청 + 경고"
+  - **Action Period/L** (`TEXT`) | `242.0x22.0` | Fill: #344FC7 | Font: Pretendard 700 12.0px | Text: "이용 제한"
+  - **Action Period/F** (`RECTANGLE`) | `242.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Action Period/V** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "제한 없음"
+  - **Action Notice/L** (`TEXT`) | `241.0x22.0` | Fill: #344FC7 | Font: Pretendard 700 12.0px | Text: "회원 안내"
+  - **Action Notice/F** (`RECTANGLE`) | `241.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Action Notice/V** (`TEXT`) | `56.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "앱 + 이메일"
+  - **Action Memo L** (`TEXT`) | `198.0x22.0` | Fill: #344FC7 | Font: Pretendard 700 12.0px | Text: "내부 처리 메모"
+  - **Action Memo** (`RECTANGLE`) | `503.0x72.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **Action Memo V** (`TEXT`) | `150.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "동일 유형 재발 시 7일 이용 제한"
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #C5FF32
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #C5FF32
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #C5FF32
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+
+---
+
+## 17. ADM-21 · 통계 상세 (ID: `2002:8826`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/17_ADM-21 · 통계 상세.png`
+
+### Component Tree & Styles
+- **ADM-21 · 통계 상세** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Title** (`TEXT`) | `650.0x44.8` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "통계"
+  - **Desc** (`TEXT`) | `760.0x22.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "기간별 서비스 사용량과 전환, 인기 여행지를 분석..."
+  - **Button/stats-export-open** (`RECTANGLE`) | `162.0x42.0` | Fill: #4849F9 | Radius: 10.0px
+  - **Button Text/stats-export-open** (`TEXT`) | `162.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "리포트 내보내기"
+  - **Stats Date/L** (`TEXT`) | `260.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "기간"
+  - **Stats Date/F** (`RECTANGLE`) | `260.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Stats Date/V** (`TEXT`) | `101.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "2026.09.01 – 09.15"
+  - **Stats Compare/L** (`TEXT`) | `180.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "비교"
+  - **Stats Compare/F** (`RECTANGLE`) | `180.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Stats Compare/V** (`TEXT`) | `69.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "이전 기간 대비"
+  - **Button/stats-apply** (`RECTANGLE`) | `92.0x42.0` | Fill: #4849F9 | Radius: 10.0px
+  - **Button Text/stats-apply** (`TEXT`) | `92.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "적용"
+  - **Stat M0** (`RECTANGLE`) | `259.0x112.0` | Fill: #FFFFFF | Radius: 18.0px
+  - **Stat M0/T** (`TEXT`) | `212.0x27.2` | Fill: #252C48 | Font: Pretendard 500 14.0px | Text: "전체 회원"
+  - **Stat M0/S** (`TEXT`) | `118.0x18.0` | Fill: #8E95A8 | Font: Pretendard 400 11.0px | Text: "선택 기간 합계"
+  - **Stat MV0** (`TEXT`) | `150.0x34.0` | Fill: #171A2B | Font: Pretendard 700 25.0px | Text: "12,482"
+  - **Stat MS0** (`TEXT`) | `70.0x18.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "+12%"
+  - **Stat M1** (`RECTANGLE`) | `259.0x112.0` | Fill: #FFFFFF | Radius: 18.0px
+  - **Stat M1/T** (`TEXT`) | `212.0x27.2` | Fill: #252C48 | Font: Pretendard 500 14.0px | Text: "가챠 실행"
+  - **Stat M1/S** (`TEXT`) | `118.0x18.0` | Fill: #8E95A8 | Font: Pretendard 400 11.0px | Text: "선택 기간 합계"
+  - **Stat MV1** (`TEXT`) | `150.0x34.0` | Fill: #171A2B | Font: Pretendard 700 25.0px | Text: "34,892"
+  - **Stat MS1** (`TEXT`) | `70.0x18.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "+18%"
+  - **Stat M2** (`RECTANGLE`) | `259.0x112.0` | Fill: #FFFFFF | Radius: 18.0px
+  - **Stat M2/T** (`TEXT`) | `212.0x27.2` | Fill: #252C48 | Font: Pretendard 500 14.0px | Text: "저장 여행"
+  - **Stat M2/S** (`TEXT`) | `118.0x18.0` | Fill: #8E95A8 | Font: Pretendard 400 11.0px | Text: "선택 기간 합계"
+  - **Stat MV2** (`TEXT`) | `150.0x34.0` | Fill: #171A2B | Font: Pretendard 700 25.0px | Text: "8,921"
+  - **Stat MS2** (`TEXT`) | `70.0x18.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "+9%"
+  - **Stat M3** (`RECTANGLE`) | `259.0x112.0` | Fill: #FFFFFF | Radius: 18.0px
+  - **Stat M3/T** (`TEXT`) | `212.0x27.2` | Fill: #252C48 | Font: Pretendard 500 14.0px | Text: "문의"
+  - **Stat M3/S** (`TEXT`) | `118.0x18.0` | Fill: #8E95A8 | Font: Pretendard 400 11.0px | Text: "선택 기간 합계"
+  - **Stat MV3** (`TEXT`) | `150.0x34.0` | Fill: #171A2B | Font: Pretendard 700 25.0px | Text: "248"
+  - **Stat MS3** (`TEXT`) | `70.0x18.0` | Fill: #00A67D | Font: Pretendard 700 11.0px | Text: "-5%"
+  - **Trend Chart** (`RECTANGLE`) | `690.0x282.0` | Fill: #FFFFFF | Radius: 18.0px
+  - **Trend Chart/T** (`TEXT`) | `646.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "신규 가입 · 가챠 실행 추이"
+  - **Trend Chart/S** (`TEXT`) | `646.0x22.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "일 단위"
+  - **Conversion** (`RECTANGLE`) | `378.0x282.0` | Fill: #FFFFFF | Radius: 18.0px
+  - **Conversion/T** (`TEXT`) | `346.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "가챠 전환 퍼널"
+  - **Conversion/S** (`TEXT`) | `346.0x22.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "조건 입력 → 여행 저장"
+  - **FNL0** (`TEXT`) | `100.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "조건 입력"
+  - **FNV0** (`TEXT`) | `80.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "34,892"
+  - **FNP0** (`TEXT`) | `70.0x22.0` | Fill: #5B50F6 | Font: Pretendard 700 11.0px | Text: "100%"
+  - **FNL1** (`TEXT`) | `100.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "결과 확인"
+  - **FNV1** (`TEXT`) | `80.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "27,641"
+  - **FNP1** (`TEXT`) | `70.0x22.0` | Fill: #5B50F6 | Font: Pretendard 700 11.0px | Text: "79.2%"
+  - **FNL2** (`TEXT`) | `100.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "여행 저장"
+  - **FNV2** (`TEXT`) | `80.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "8,921"
+  - **FNP2** (`TEXT`) | `70.0x22.0` | Fill: #5B50F6 | Font: Pretendard 700 11.0px | Text: "25.6%"
+  - **FNL3** (`TEXT`) | `100.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "공유 완료"
+  - **FNV3** (`TEXT`) | `80.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "4,120"
+  - **FNP3** (`TEXT`) | `70.0x22.0` | Fill: #5B50F6 | Font: Pretendard 700 11.0px | Text: "11.8%"
+  - **Rank Place** (`RECTANGLE`) | `520.0x224.0` | Fill: #FFFFFF | Radius: 18.0px
+  - **Rank Place/T** (`TEXT`) | `476.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "인기 여행지 TOP 5"
+  - **Rank Place/S** (`TEXT`) | `476.0x22.0` | Fill: #8E95A8 | Font: Pretendard 400 11.0px | Text: "추천 결과 기준"
+  - **RP0** (`TEXT`) | `468.0x20.0` | Fill: #171A2B | Font: Pretendard 700 11.0px | Text: "1  제주도  3,482"
+  - **RP1** (`TEXT`) | `468.0x20.0` | Fill: #46506A | Font: Pretendard 700 11.0px | Text: "2  부산  2,106"
+  - **RP2** (`TEXT`) | `468.0x20.0` | Fill: #46506A | Font: Pretendard 400 11.0px | Text: "3  강릉  1,958"
+  - **RP3** (`TEXT`) | `468.0x20.0` | Fill: #46506A | Font: Pretendard 400 11.0px | Text: "4  여수  1,423"
+  - **RP4** (`TEXT`) | `468.0x20.0` | Fill: #46506A | Font: Pretendard 400 11.0px | Text: "5  경주  1,286"
+  - **Rank Curation** (`RECTANGLE`) | `548.0x224.0` | Fill: #FFFFFF | Radius: 18.0px
+  - **Rank Curation/T** (`TEXT`) | `516.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "인기 큐레이션 TOP 5"
+  - **Rank Curation/S** (`TEXT`) | `516.0x22.0` | Fill: #8E95A8 | Font: Pretendard 400 11.0px | Text: "조회수 기준"
+  - **RC0** (`TEXT`) | `508.0x20.0` | Fill: #171A2B | Font: Pretendard 700 11.0px | Text: "1  제주도 푸른 바다 코스  4,231"
+  - **RC1** (`TEXT`) | `508.0x20.0` | Fill: #46506A | Font: Pretendard 700 11.0px | Text: "2  가을 단풍 드라이브  3,420"
+  - **RC2** (`TEXT`) | `508.0x20.0` | Fill: #46506A | Font: Pretendard 400 11.0px | Text: "3  부산 로컬 맛집  2,884"
+  - **RC3** (`TEXT`) | `508.0x20.0` | Fill: #46506A | Font: Pretendard 400 11.0px | Text: "4  혼자 떠나는 조용한 도시  2,106"
+  - **RC4** (`TEXT`) | `508.0x20.0` | Fill: #46506A | Font: Pretendard 400 11.0px | Text: "5  주말 당일치기 바다  1,968"
+  - **Stats Chart/Legend A** (`TEXT`) | `105.0x17.0` | Fill: #4D63FF | Font: Pretendard 500 11.0px | Text: "●  가챠 실행"
+  - **Stats Chart/Legend B** (`TEXT`) | `105.0x17.0` | Fill: #A8B7FF | Font: Pretendard 500 11.0px | Text: "●  신규 가입"
+  - **Stats Chart/Grid 0** (`RECTANGLE`) | `596.0x1.0` | Fill: #DDE5F1
+  - **Stats Chart/Y 0** (`TEXT`) | `28.0x14.0` | Fill: #9AA2B5 | Font: Pretendard 400 11.0px | Text: "40k"
+  - **Stats Chart/Grid 1** (`RECTANGLE`) | `596.0x1.0` | Fill: #DDE5F1
+  - **Stats Chart/Y 1** (`TEXT`) | `28.0x14.0` | Fill: #9AA2B5 | Font: Pretendard 400 11.0px | Text: "30k"
+  - **Stats Chart/Grid 2** (`RECTANGLE`) | `596.0x1.0` | Fill: #DDE5F1
+  - **Stats Chart/Y 2** (`TEXT`) | `28.0x14.0` | Fill: #9AA2B5 | Font: Pretendard 400 11.0px | Text: "20k"
+  - **Stats Chart/Grid 3** (`RECTANGLE`) | `596.0x1.0` | Fill: #DDE5F1
+  - **Stats Chart/Y 3** (`TEXT`) | `28.0x14.0` | Fill: #9AA2B5 | Font: Pretendard 400 11.0px | Text: "10k"
+  - **Stats Chart/Baseline** (`RECTANGLE`) | `596.0x1.0` | Fill: #DDE5F1
+  - **Stats Chart/Lines** (`FRAME`) | `596.0x144.0` | Fill: #F2F5FA
+    - **Vector** (`VECTOR`) | `596.0x119.9`
+    - **Vector** (`VECTOR`) | `596.0x99.9`
+    - **Vector** (`VECTOR`) | `596.0x66.9`
+    - **Vector** (`VECTOR`) | `10.0x10.0` | Fill: #FFFFFF
+    - **Vector** (`VECTOR`) | `8.0x8.0` | Fill: #FFFFFF
+  - **Stats Chart/X 0** (`TEXT`) | `48.0x14.0` | Fill: #8E95A8 | Font: Pretendard 400 11.0px | Text: "09/01"
+  - **Stats Chart/X 1** (`TEXT`) | `48.0x14.0` | Fill: #8E95A8 | Font: Pretendard 400 11.0px | Text: "09/04"
+  - **Stats Chart/X 2** (`TEXT`) | `48.0x14.0` | Fill: #8E95A8 | Font: Pretendard 400 11.0px | Text: "09/07"
+  - **Stats Chart/X 3** (`TEXT`) | `48.0x14.0` | Fill: #8E95A8 | Font: Pretendard 400 11.0px | Text: "09/10"
+  - **Stats Chart/Tooltip** (`RECTANGLE`) | `124.0x48.0` | Fill: #171A2B | Radius: 10.0px
+  - **Stats Chart/Tooltip Date** (`TEXT`) | `44.0x14.0` | Fill: #8E95A8 | Font: Pretendard 500 11.0px | Text: "09/10"
+  - **Stats Chart/Tooltip Value** (`TEXT`) | `96.0x18.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "34,892회"
+  - **Stats Chart/Funnel BG 0** (`RECTANGLE`) | `324.0x6.0` | Fill: #E5EBF5 | Radius: 3.0px
+  - **Stats Chart/Funnel Bar 0** (`RECTANGLE`) | `324.0x6.0` | Fill: #4D63FF | Radius: 3.0px
+  - **Stats Chart/Funnel BG 1** (`RECTANGLE`) | `324.0x6.0` | Fill: #E5EBF5 | Radius: 3.0px
+  - **Stats Chart/Funnel Bar 1** (`RECTANGLE`) | `257.0x6.0` | Fill: #4D63FF | Radius: 3.0px
+  - **Stats Chart/Funnel BG 2** (`RECTANGLE`) | `324.0x6.0` | Fill: #E5EBF5 | Radius: 3.0px
+  - **Stats Chart/Funnel Bar 2** (`RECTANGLE`) | `83.0x6.0` | Fill: #4D63FF | Radius: 3.0px
+  - **Stats Chart/Funnel BG 3** (`RECTANGLE`) | `324.0x6.0` | Fill: #E5EBF5 | Radius: 3.0px
+  - **Stats Chart/Funnel Bar 3** (`RECTANGLE`) | `38.0x6.0` | Fill: #4D63FF | Radius: 3.0px
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+
+---
+
+## 18. ADM-22 · 통계 리포트 내보내기 (ID: `2002:8987`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/18_ADM-22 · 통계 리포트 내보내기.png`
+
+### Component Tree & Styles
+- **ADM-22 · 통계 리포트 내보내기** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Title** (`TEXT`) | `650.0x44.8` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "통계"
+  - **Desc** (`TEXT`) | `760.0x22.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "선택한 기간의 운영 통계를 파일로 생성합니다."
+  - **Stats Background** (`RECTANGLE`) | `1080.0x650.0` | Fill: #F2F5FA | Radius: 16.0px
+  - **Stats Background/T** (`TEXT`) | `1036.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "기간별 통계"
+  - **Stats Background/S** (`TEXT`) | `1036.0x22.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "2026.09.01 – 09.15 · 이전 기간 비교"
+  - **Dim** (`RECTANGLE`) | `1192.0x944.0` | Fill: #1A1D35
+  - **Export Modal** (`RECTANGLE`) | `636.0x566.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Export Modal/T** (`TEXT`) | `592.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "리포트 내보내기"
+  - **Export Modal/S** (`TEXT`) | `592.0x22.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "필요한 데이터 범위와 파일 형식을 선택하세요."
+  - **Export Range/L** (`TEXT`) | `568.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "기간 *"
+  - **Export Range/F** (`RECTANGLE`) | `568.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Export Range/V** (`TEXT`) | `101.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "2026.09.01 – 09.15"
+  - **Export Type/L** (`TEXT`) | `270.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "파일 형식 *"
+  - **Export Type/F** (`RECTANGLE`) | `270.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Export Type/V** (`TEXT`) | `64.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "Excel (.xlsx)"
+  - **Export Unit/L** (`TEXT`) | `270.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "집계 단위"
+  - **Export Unit/F** (`RECTANGLE`) | `270.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Export Unit/V** (`TEXT`) | `21.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "일별"
+  - **Export Include L** (`TEXT`) | `200.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "포함 항목"
+  - **Check 0** (`RECTANGLE`) | `18.0x18.0` | Fill: #5B50F6 | Radius: 5.0px
+  - **Check T 0** (`TEXT`) | `69.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "회원·가입 통계"
+  - **Check 1** (`RECTANGLE`) | `18.0x18.0` | Fill: #5B50F6 | Radius: 5.0px
+  - **Check T 1** (`TEXT`) | `69.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "가챠 실행·전환"
+  - **Check 2** (`RECTANGLE`) | `18.0x18.0` | Fill: #5B50F6 | Radius: 5.0px
+  - **Check T 2** (`TEXT`) | `100.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "여행지·큐레이션 순위"
+  - **Check 3** (`RECTANGLE`) | `18.0x18.0` | Fill: #EAF0F7 | Radius: 5.0px
+  - **Check T 3** (`TEXT`) | `72.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "문의·신고 통계"
+  - **Export Notice** (`TEXT`) | `560.0x22.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "생성된 파일은 관리자 감사 로그에 기록되며 24시..."
+  - **Button/stats-export-cancel** (`RECTANGLE`) | `140.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Button Text/stats-export-cancel** (`TEXT`) | `140.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "취소"
+  - **Button/stats-export-download** (`RECTANGLE`) | `152.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/stats-export-download** (`TEXT`) | `152.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "파일 생성"
+  - **PCT00** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 11.0px | Text: "✓"
+  - **PCT00** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 11.0px | Text: "✓"
+  - **PCT00** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 11.0px | Text: "✓"
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+
+---
+
+## 19. ADM-23 · 설정 · 기본 (ID: `2002:9085`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/19_ADM-23 · 설정 · 기본.png`
+
+### Component Tree & Styles
+- **ADM-23 · 설정 · 기본** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Title** (`TEXT`) | `650.0x44.8` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "설정"
+  - **Desc** (`TEXT`) | `760.0x22.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "서비스명, 고객지원 정보와 공통 운영 옵션을 관리..."
+  - **Button/settings-basic-save** (`RECTANGLE`) | `110.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/settings-basic-save** (`TEXT`) | `110.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "저장"
+  - **Settings Nav** (`RECTANGLE`) | `220.0x760.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Settings Nav/T** (`TEXT`) | `176.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "설정"
+  - **Settings Nav/S** (`TEXT`) | `176.0x22.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "서비스 운영 환경"
+  - **SN0** (`RECTANGLE`) | `184.0x42.0` | Fill: #6560FF30 | Radius: 9.0px
+  - **SNT0** (`TEXT`) | `140.0x22.0` | Fill: #5B50F6 | Font: Pretendard 700 13.0px | Text: "기본 설정"
+  - **SN1** (`RECTANGLE`) | `184.0x42.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **SNT1** (`TEXT`) | `140.0x22.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "알림 설정"
+  - **SN2** (`RECTANGLE`) | `184.0x42.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **SNT2** (`TEXT`) | `140.0x22.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "관리자 계정"
+  - **SN3** (`RECTANGLE`) | `184.0x42.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **SNT3** (`TEXT`) | `140.0x22.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "권한 관리"
+  - **SN4** (`RECTANGLE`) | `184.0x42.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **SNT4** (`TEXT`) | `140.0x22.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "시스템 로그"
+  - **Basic Settings** (`RECTANGLE`) | `849.0x494.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Basic Settings/T** (`TEXT`) | `63.0x20.0` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "기본 설정"
+  - **Basic Settings/S** (`TEXT`) | `216.0x14.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "앱과 관리자 화면에 공통 적용되는 정보입니다."
+  - **Service Name/L** (`TEXT`) | `51.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "서비스명 *"
+  - **Service Name/F** (`RECTANGLE`) | `385.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Service Name/V** (`TEXT`) | `58.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "Gacha Trip"
+  - **Service URL/L** (`TEXT`) | `57.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "서비스 URL"
+  - **Service URL/F** (`RECTANGLE`) | `385.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Service URL/V** (`TEXT`) | `116.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "https://gachatrip.com"
+  - **Support Email/L** (`TEXT`) | `85.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "고객센터 이메일 *"
+  - **Support Email/F** (`RECTANGLE`) | `385.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Support Email/V** (`TEXT`) | `111.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "help@gachatrip.com"
+  - **Support Phone/L** (`TEXT`) | `76.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "고객센터 연락처"
+  - **Support Phone/F** (`RECTANGLE`) | `385.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Support Phone/V** (`TEXT`) | `81.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "02-1234-5678"
+  - **Footer L** (`TEXT`) | `68.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "푸터 안내 문구"
+  - **Footer A** (`RECTANGLE`) | `797.0x80.0` | Fill: #F2F5FA | Radius: 9.0px
+  - **Footer V** (`TEXT`) | `352.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "가챠트립은 여행지 추천 서비스이며 실제 운영 정보..."
+  - **Timezone/L** (`TEXT`) | `55.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "기본 시간대"
+  - **Timezone/F** (`RECTANGLE`) | `385.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Timezone/V** (`TEXT`) | `107.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "Asia/Seoul (UTC+9)"
+  - **Language/L** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "기본 언어"
+  - **Language/F** (`RECTANGLE`) | `385.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Language/V** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "한국어"
+  - **Brand Settings** (`RECTANGLE`) | `849.0x242.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Brand Settings/T** (`TEXT`) | `78.0x20.0` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "브랜드 설정"
+  - **Brand Settings/S** (`TEXT`) | `137.0x14.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "관리자 화면 로고와 대표 색상"
+  - **Logo Preview** (`TEXT`) | `169.0x21.0` | Fill: #5B50F6 | Font: Pretendard 700 18.0px | Text: "✦ gachatrip  ADMIN"
+  - **Color L** (`TEXT`) | `41.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "Primary"
+  - **Color Swatch** (`RECTANGLE`) | `42.0x42.0` | Fill: #5B50F6 | Radius: 21.0px
+  - **Color Value** (`TEXT`) | `53.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "#5B50F6"
+  - **Button/settings-logo-change** (`RECTANGLE`) | `171.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Button Text/settings-logo-change** (`TEXT`) | `48.0x16.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "로고 변경"
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+
+---
+
+## 20. ADM-24 · 설정 · 알림 (ID: `2002:9198`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/20_ADM-24 · 설정 · 알림.png`
+
+### Component Tree & Styles
+- **ADM-24 · 설정 · 알림** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Title** (`TEXT`) | `104.0x33.0` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "알림 설정"
+  - **Desc** (`TEXT`) | `319.0x17.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "운영 이벤트별 관리자 알림 채널과 수신 조건을 설..."
+  - **Button/settings-notify-save** (`RECTANGLE`) | `110.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/settings-notify-save** (`TEXT`) | `110.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "저장"
+  - **Settings Nav** (`RECTANGLE`) | `220.0x760.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Settings Nav/T** (`TEXT`) | `176.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "설정"
+  - **Settings Nav/S** (`TEXT`) | `79.0x14.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "서비스 운영 환경"
+  - **SN0** (`RECTANGLE`) | `184.0x42.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **SNT0** (`TEXT`) | `140.0x22.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "기본 설정"
+  - **SN1** (`RECTANGLE`) | `184.0x42.0` | Fill: #6560FF30 | Radius: 9.0px
+  - **SNT1** (`TEXT`) | `140.0x22.0` | Fill: #5B50F6 | Font: Pretendard 700 13.0px | Text: "알림 설정"
+  - **SN2** (`RECTANGLE`) | `184.0x42.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **SNT2** (`TEXT`) | `140.0x22.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "관리자 계정"
+  - **SN3** (`RECTANGLE`) | `184.0x42.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **SNT3** (`TEXT`) | `140.0x22.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "권한 관리"
+  - **SN4** (`RECTANGLE`) | `184.0x42.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **SNT4** (`TEXT`) | `140.0x22.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "시스템 로그"
+  - **Notify Channels** (`RECTANGLE`) | `849.0x236.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Notify Channels/T** (`TEXT`) | `63.0x20.0` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "알림 채널"
+  - **Notify Channels/S** (`TEXT`) | `103.0x14.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "관리자 공통 발송 채널"
+  - **NCL0** (`TEXT`) | `34.0x16.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "이메일"
+  - **NCD0** (`TEXT`) | `124.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "운영 담당자 이메일로 발송"
+  - **NCT0** (`RECTANGLE`) | `41.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **NCT0/K** (`ELLIPSE`) | `17.0x18.0` | Fill: #FFFFFF
+  - **NCL1** (`TEXT`) | `95.0x16.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "Slack Webhook"
+  - **NCD1** (`TEXT`) | `113.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "백엔드 운영 채널로 전송"
+  - **NCT1** (`RECTANGLE`) | `41.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **NCT1/K** (`ELLIPSE`) | `17.0x18.0` | Fill: #FFFFFF
+  - **NCL2** (`TEXT`) | `71.0x16.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "브라우저 알림"
+  - **NCD2** (`TEXT`) | `127.0x14.0` | Fill: #77809A | Font: Pretendard 400 12.0px | Text: "관리자 접속 중 실시간 표시"
+  - **NCT2** (`RECTANGLE`) | `41.0x24.0` | Fill: #EAF0F7 | Radius: 12.0px
+  - **NCT2/K** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **Notify Events** (`RECTANGLE`) | `849.0x500.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Notify Events/T** (`TEXT`) | `93.0x20.0` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "이벤트별 알림"
+  - **Notify Events/S** (`TEXT`) | `182.0x14.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "중요도에 따라 채널을 개별 설정합니다."
+  - **EV0** (`RECTANGLE`) | `809.0x50.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **EVN0** (`TEXT`) | `111.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "API 오류율 임계치 초과"
+  - **EVF0** (`TEXT`) | `20.0x13.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "즉시"
+  - **EVC0** (`TEXT`) | `65.0x13.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "Email + Slack"
+  - **EVT0** (`RECTANGLE`) | `41.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **EVT0/K** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **EV1** (`RECTANGLE`) | `809.0x50.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **EVN1** (`TEXT`) | `106.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "Tour API 동기화 실패"
+  - **EVF1** (`TEXT`) | `20.0x13.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "즉시"
+  - **EVC1** (`TEXT`) | `65.0x13.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "Email + Slack"
+  - **EVT1** (`RECTANGLE`) | `41.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **EVT1/K** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **EV2** (`RECTANGLE`) | `809.0x50.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **EVN2** (`TEXT`) | `117.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "미답변 문의 24시간 초과"
+  - **EVF2** (`TEXT`) | `43.0x13.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "1시간마다"
+  - **EVC2** (`TEXT`) | `39.0x13.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "브라우저"
+  - **EVT2** (`RECTANGLE`) | `41.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **EVT2/K** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **EV3** (`RECTANGLE`) | `809.0x50.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **EVN3** (`TEXT`) | `89.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "신고 누적 3건 이상"
+  - **EVF3** (`TEXT`) | `20.0x13.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "즉시"
+  - **EVC3** (`TEXT`) | `27.0x13.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "Email"
+  - **EVT3** (`RECTANGLE`) | `41.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **EVT3/K** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **EV4** (`RECTANGLE`) | `809.0x50.0` | Fill: #FFFFFF | Radius: 8.0px
+  - **EVN4** (`TEXT`) | `92.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "가챠 정책 배포 완료"
+  - **EVF4** (`TEXT`) | `32.0x13.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "배포 시"
+  - **EVC4** (`TEXT`) | `39.0x13.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "브라우저"
+  - **EVT4** (`RECTANGLE`) | `41.0x24.0` | Fill: #EAF0F7 | Radius: 12.0px
+  - **EVT4/K** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **EV5** (`RECTANGLE`) | `809.0x50.0` | Fill: #F2F5FA | Radius: 8.0px
+  - **EVN5** (`TEXT`) | `79.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "일일 운영 리포트"
+  - **EVF5** (`TEXT`) | `51.0x13.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "매일 09:00"
+  - **EVC5** (`TEXT`) | `27.0x13.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "Email"
+  - **EVT5** (`RECTANGLE`) | `41.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **EVT5/K** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+
+---
+
+## 21. ADM-25 · 관리자 계정 관리 (ID: `2002:9332`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/21_ADM-25 · 관리자 계정 관리.png`
+
+### Component Tree & Styles
+- **ADM-25 · 관리자 계정 관리** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Title** (`TEXT`) | `650.0x44.8` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "관리자 계정"
+  - **Desc** (`TEXT`) | `760.0x22.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "운영자 계정을 초대하고 권한, 상태, 최근 접속을..."
+  - **Button/admin-invite** (`RECTANGLE`) | `144.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/admin-invite** (`TEXT`) | `144.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "＋ 관리자 초대"
+  - **Settings Nav** (`RECTANGLE`) | `220.0x760.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Settings Nav/T** (`TEXT`) | `176.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "설정"
+  - **Table Polish/Header Band** (`RECTANGLE`) | `820.0x42.0` | Fill: #EEF3FF | Radius: 8.0px
+  - **Settings Nav/S** (`TEXT`) | `176.0x22.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "서비스 운영 환경"
+  - **SN0** (`RECTANGLE`) | `184.0x42.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **SNT0** (`TEXT`) | `49.0x16.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "기본 설정"
+  - **SN1** (`RECTANGLE`) | `184.0x42.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **SNT1** (`TEXT`) | `49.0x16.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "알림 설정"
+  - **SN2** (`RECTANGLE`) | `184.0x42.0` | Fill: #6560FF30 | Radius: 9.0px
+  - **SNT2** (`TEXT`) | `60.0x16.0` | Fill: #5B50F6 | Font: Pretendard 700 13.0px | Text: "관리자 계정"
+  - **SN3** (`RECTANGLE`) | `184.0x42.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **SNT3** (`TEXT`) | `49.0x16.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "권한 관리"
+  - **SN4** (`RECTANGLE`) | `184.0x42.0` | Fill: #FFFFFF | Radius: 9.0px
+  - **SNT4** (`TEXT`) | `60.0x16.0` | Fill: #77809A | Font: Pretendard 400 13.0px | Text: "시스템 로그"
+  - **Admin List** (`RECTANGLE`) | `848.0x540.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Admin List/T** (`TEXT`) | `816.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "관리자 목록"
+  - **Admin List/S** (`TEXT`) | `816.0x22.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "총 4명 · 활성 3명 · 초대 대기 1명"
+  - **AH0** (`TEXT`) | `20.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "이름"
+  - **AH1** (`TEXT`) | `29.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "이메일"
+  - **AH2** (`TEXT`) | `20.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "역할"
+  - **AH3** (`TEXT`) | `20.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "상태"
+  - **AH4** (`TEXT`) | `41.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "최근 접속"
+  - **AH5** (`TEXT`) | `20.0x13.0` | Fill: #77809A | Font: Pretendard 700 11.0px | Text: "관리"
+  - **AR0** (`RECTANGLE`) | `806.0x66.0` | Fill: #DDE6FA | Radius: 7.0px
+  - **AC00** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "김관리"
+  - **AC01** (`TEXT`) | `118.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "admin@gachatrip.app"
+  - **AC02** (`TEXT`) | `55.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "최고 관리자"
+  - **Table Polish/Status Pill/148:1017** (`RECTANGLE`) | `42.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **AC03** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 400 11.0px | Text: "활성"
+  - **AC04** (`TEXT`) | `31.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "14:28"
+  - **Admin More0** (`TEXT`) | `16.0x21.0` | Fill: #77809A | Font: Pretendard 700 18.0px | Text: "⋯"
+  - **AR1** (`RECTANGLE`) | `806.0x66.0` | Fill: #EAF0F7B8 | Radius: 3.0px
+  - **AC10** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "박개발"
+  - **AC11** (`TEXT`) | `131.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "backend@gachatrip.app"
+  - **AC12** (`TEXT`) | `55.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "백엔드 운영"
+  - **Table Polish/Status Pill/148:1024** (`RECTANGLE`) | `42.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **AC13** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 400 11.0px | Text: "활성"
+  - **AC14** (`TEXT`) | `30.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "13:52"
+  - **Admin More1** (`TEXT`) | `16.0x21.0` | Fill: #77809A | Font: Pretendard 700 18.0px | Text: "⋯"
+  - **AR2** (`RECTANGLE`) | `806.0x66.0` | Fill: #F3F6FAB8 | Radius: 3.0px
+  - **AC20** (`TEXT`) | `42.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "이콘텐츠"
+  - **AC21** (`TEXT`) | `126.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "content@gachatrip.app"
+  - **AC22** (`TEXT`) | `55.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "콘텐츠 운영"
+  - **Table Polish/Status Pill/148:1031** (`RECTANGLE`) | `42.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **AC23** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 400 11.0px | Text: "활성"
+  - **AC24** (`TEXT`) | `30.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "09.14"
+  - **Admin More2** (`TEXT`) | `16.0x21.0` | Fill: #77809A | Font: Pretendard 700 18.0px | Text: "⋯"
+  - **AR3** (`RECTANGLE`) | `806.0x66.0` | Fill: #EAF0F7B8 | Radius: 3.0px
+  - **AC30** (`TEXT`) | `32.0x14.0` | Fill: #17213B | Font: Pretendard 700 12.0px | Text: "최신입"
+  - **AC31** (`TEXT`) | `108.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "new@gachatrip.app"
+  - **AC32** (`TEXT`) | `45.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "읽기 전용"
+  - **AC33** (`TEXT`) | `45.0x14.0` | Fill: #D9822B | Font: Pretendard 400 12.0px | Text: "초대 대기"
+  - **AC34** (`TEXT`) | `6.0x14.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "-"
+  - **Admin More3** (`TEXT`) | `16.0x21.0` | Fill: #77809A | Font: Pretendard 700 18.0px | Text: "⋯"
+  - **Admin Foot** (`TEXT`) | `263.0x13.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "계정 추가·권한 변경·비활성화는 모두 감사 로그에..."
+  - **Admin Security** (`RECTANGLE`) | `848.0x196.0` | Fill: #FFFFFF | Radius: 16.0px
+  - **Admin Security/T** (`TEXT`) | `816.0x27.2` | Fill: #252C48 | Font: Pretendard 700 17.0px | Text: "보안 정책"
+  - **Admin Security/S** (`TEXT`) | `816.0x22.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "관리자 접근 보호 설정"
+  - **MFA L** (`TEXT`) | `220.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "2단계 인증 필수"
+  - **MFA** (`RECTANGLE`) | `42.0x24.0` | Fill: #5B50F6 | Radius: 12.0px
+  - **MFA/K** (`ELLIPSE`) | `18.0x18.0` | Fill: #FFFFFF
+  - **Session L** (`TEXT`) | `230.0x22.0` | Fill: #17213B | Font: Pretendard 700 13.0px | Text: "미사용 세션 자동 종료"
+  - **Session/L** (`TEXT`) | `186.0x22.0` | Fill: #17213B | Font: Pretendard 700 12.0px
+  - **Session/F** (`RECTANGLE`) | `178.0x42.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Session/V** (`TEXT`) | `160.0x22.0` | Fill: #17213B | Font: Pretendard 400 12.0px | Text: "30분"
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+
+---
+
+## 22. ADM-26 · 권한 관리 (ID: `2002:9464`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/22_ADM-26 · 권한 관리.png`
+
+### Component Tree & Styles
+- **ADM-26 · 권한 관리** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `52.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `69.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `82.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `87.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `26.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+  - **Title** (`TEXT`) | `650.0x44.8` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "권한 관리"
+  - **Desc** (`TEXT`) | `760.0x22.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "역할별 메뉴 접근과 생성·수정·삭제 권한을 설정합니다."
+  - **Button/role-add** (`RECTANGLE`) | `112.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Button Text/role-add** (`TEXT`) | `112.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 13.0px | Text: "＋ 역할 추가"
+  - **Button/role-save** (`RECTANGLE`) | `110.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Button Text/role-save** (`TEXT`) | `110.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "권한 저장"
+  - **Settings Nav** (`RECTANGLE`) | `217.6x751.7` | Fill: #FFFFFF | Radius: 15.82608699798584px
+  - **Settings Nav/T** (`TEXT`) | `30.0x20.0` | Fill: #252C48 | Font: Pretendard 700 16.815217971801758px | Text: "설정"
+  - **Table Polish/Header Band** (`RECTANGLE`) | `546.0x41.5` | Fill: #EEF3FF | Radius: 7.91304349899292px
+  - **Settings Nav/S** (`TEXT`) | `78.0x14.0` | Fill: #66708A | Font: Pretendard 400 11.8695650100708px | Text: "서비스 운영 환경"
+  - **SN0** (`RECTANGLE`) | `182.0x41.5` | Fill: #FFFFFF | Radius: 8.90217399597168px
+  - **SNT0** (`TEXT`) | `48.0x15.0` | Fill: #77809A | Font: Pretendard 400 12.858695983886719px | Text: "기본 설정"
+  - **SN1** (`RECTANGLE`) | `182.0x41.5` | Fill: #FFFFFF | Radius: 8.90217399597168px
+  - **SNT1** (`TEXT`) | `48.0x15.0` | Fill: #77809A | Font: Pretendard 400 12.858695983886719px | Text: "알림 설정"
+  - **SN2** (`RECTANGLE`) | `182.0x41.5` | Fill: #FFFFFF | Radius: 8.90217399597168px
+  - **SNT2** (`TEXT`) | `59.0x15.0` | Fill: #77809A | Font: Pretendard 400 12.858695983886719px | Text: "관리자 계정"
+  - **SN3** (`RECTANGLE`) | `182.0x41.5` | Fill: #6560FF30 | Radius: 8.90217399597168px
+  - **SNT3** (`TEXT`) | `48.0x15.0` | Fill: #5B50F6 | Font: Pretendard 700 12.858695983886719px | Text: "권한 관리"
+  - **SN4** (`RECTANGLE`) | `182.0x41.5` | Fill: #FFFFFF | Radius: 8.90217399597168px
+  - **SNT4** (`TEXT`) | `59.0x15.0` | Fill: #77809A | Font: Pretendard 400 12.858695983886719px | Text: "시스템 로그"
+  - **Role List** (`RECTANGLE`) | `237.4x751.7` | Fill: #FFFFFF | Radius: 15.82608699798584px
+  - **Role List/T** (`TEXT`) | `30.0x20.0` | Fill: #252C48 | Font: Pretendard 700 16.815217971801758px | Text: "역할"
+  - **Role List/S** (`TEXT`) | `112.0x14.0` | Fill: #66708A | Font: Pretendard 400 11.8695650100708px | Text: "역할을 선택해 권한 편집"
+  - **Role 0** (`RECTANGLE`) | `197.8x41.5` | Fill: #FFFFFF | Radius: 8.90217399597168px
+  - **Role T 0** (`TEXT`) | `59.0x15.0` | Fill: #77809A | Font: Pretendard 400 12.858695983886719px | Text: "최고 관리자"
+  - **Role 1** (`RECTANGLE`) | `197.8x41.5` | Fill: #6560FF30 | Radius: 8.90217399597168px
+  - **Role T 1** (`TEXT`) | `59.0x15.0` | Fill: #5B50F6 | Font: Pretendard 700 12.858695983886719px | Text: "백엔드 운영"
+  - **Role 2** (`RECTANGLE`) | `197.8x41.5` | Fill: #FFFFFF | Radius: 8.90217399597168px
+  - **Role T 2** (`TEXT`) | `59.0x15.0` | Fill: #77809A | Font: Pretendard 400 12.858695983886719px | Text: "콘텐츠 운영"
+  - **Role 3** (`RECTANGLE`) | `197.8x41.5` | Fill: #FFFFFF | Radius: 8.90217399597168px
+  - **Role T 3** (`TEXT`) | `43.0x15.0` | Fill: #77809A | Font: Pretendard 400 12.858695983886719px | Text: "CS 운영"
+  - **Role 4** (`RECTANGLE`) | `197.8x41.5` | Fill: #FFFFFF | Radius: 8.90217399597168px
+  - **Role T 4** (`TEXT`) | `48.0x15.0` | Fill: #77809A | Font: Pretendard 400 12.858695983886719px | Text: "읽기 전용"
+  - **Button/role-delete** (`RECTANGLE`) | `197.8x41.5` | Fill: #FFF2F3 | Radius: 9.891304016113281px
+  - **Button Text/role-delete** (`TEXT`) | `197.8x41.5` | Fill: #D33C4D | Font: Pretendard 700 12.858695983886719px | Text: "역할 삭제"
+  - **Permission Matrix** (`RECTANGLE`) | `589.5x751.7` | Fill: #FFFFFF | Radius: 15.82608699798584px
+  - **Permission Matrix/T** (`TEXT`) | `546.0x26.9` | Fill: #252C48 | Font: Pretendard 700 16.815217971801758px | Text: "백엔드 운영 권한"
+  - **Permission Matrix/S** (`TEXT`) | `546.0x21.8` | Fill: #66708A | Font: Pretendard 400 11.8695650100708px | Text: "메뉴별 조회·생성·수정·삭제 권한"
+  - **PH0** (`TEXT`) | `89.0x21.8` | Fill: #77809A | Font: Pretendard 700 10.8804349899292px | Text: "메뉴"
+  - **PH1** (`TEXT`) | `89.0x21.8` | Fill: #77809A | Font: Pretendard 700 10.8804349899292px | Text: "조회"
+  - **PH2** (`TEXT`) | `89.0x21.8` | Fill: #77809A | Font: Pretendard 700 10.8804349899292px | Text: "생성"
+  - **PH3** (`TEXT`) | `89.0x21.8` | Fill: #77809A | Font: Pretendard 700 10.8804349899292px | Text: "수정"
+  - **PH4** (`TEXT`) | `89.0x21.8` | Fill: #77809A | Font: Pretendard 700 10.8804349899292px | Text: "삭제"
+  - **PR0** (`RECTANGLE`) | `546.0x47.5` | Fill: #DDE6FA | Radius: 6.92391300201416px
+  - **PM0** (`TEXT`) | `187.9x21.8` | Fill: #17213B | Font: Pretendard 700 11.8695650100708px | Text: "대시보드"
+  - **PC00** (`RECTANGLE`) | `17.8x17.8` | Fill: #5B50F6 | Radius: 4.945652008056641px
+  - **PCT00** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 10.8804349899292px | Text: "✓"
+  - **PC01** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PC02** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PC03** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PR1** (`RECTANGLE`) | `546.0x47.5` | Fill: #EAF0F7B8 | Radius: 2.9673912525177px
+  - **PM1** (`TEXT`) | `187.9x21.8` | Fill: #17213B | Font: Pretendard 700 11.8695650100708px | Text: "여행지 관리"
+  - **PC10** (`RECTANGLE`) | `17.8x17.8` | Fill: #5B50F6 | Radius: 4.945652008056641px
+  - **PCT10** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 10.8804349899292px | Text: "✓"
+  - **PC11** (`RECTANGLE`) | `17.8x17.8` | Fill: #5B50F6 | Radius: 4.945652008056641px
+  - **PCT11** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 10.8804349899292px | Text: "✓"
+  - **PC12** (`RECTANGLE`) | `17.8x17.8` | Fill: #5B50F6 | Radius: 4.945652008056641px
+  - **PCT12** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 10.8804349899292px | Text: "✓"
+  - **PC13** (`RECTANGLE`) | `17.8x17.8` | Fill: #5B50F6 | Radius: 4.945652008056641px
+  - **PCT13** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 10.8804349899292px | Text: "✓"
+  - **PR2** (`RECTANGLE`) | `546.0x47.5` | Fill: #F3F6FAB8 | Radius: 2.9673912525177px
+  - **PM2** (`TEXT`) | `187.9x21.8` | Fill: #17213B | Font: Pretendard 700 11.8695650100708px | Text: "뽑기 관리"
+  - **PC20** (`RECTANGLE`) | `17.8x17.8` | Fill: #5B50F6 | Radius: 4.945652008056641px
+  - **PCT20** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 10.8804349899292px | Text: "✓"
+  - **PC21** (`RECTANGLE`) | `17.8x17.8` | Fill: #5B50F6 | Radius: 4.945652008056641px
+  - **PCT21** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 10.8804349899292px | Text: "✓"
+  - **PC22** (`RECTANGLE`) | `17.8x17.8` | Fill: #5B50F6 | Radius: 4.945652008056641px
+  - **PCT22** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 10.8804349899292px | Text: "✓"
+  - **PC23** (`RECTANGLE`) | `17.8x17.8` | Fill: #5B50F6 | Radius: 4.945652008056641px
+  - **PCT23** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 10.8804349899292px | Text: "✓"
+  - **PR3** (`RECTANGLE`) | `546.0x47.5` | Fill: #EAF0F7B8 | Radius: 2.9673912525177px
+  - **PM3** (`TEXT`) | `187.9x21.8` | Fill: #17213B | Font: Pretendard 700 11.8695650100708px | Text: "큐레이션 관리"
+  - **PC30** (`RECTANGLE`) | `17.8x17.8` | Fill: #5B50F6 | Radius: 4.945652008056641px
+  - **PCT30** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 10.8804349899292px | Text: "✓"
+  - **PC31** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PC32** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PC33** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PR4** (`RECTANGLE`) | `546.0x47.5` | Fill: #F3F6FAB8 | Radius: 2.9673912525177px
+  - **PM4** (`TEXT`) | `187.9x21.8` | Fill: #17213B | Font: Pretendard 700 11.8695650100708px | Text: "회원 관리"
+  - **PC40** (`RECTANGLE`) | `17.8x17.8` | Fill: #5B50F6 | Radius: 4.945652008056641px
+  - **PCT40** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 10.8804349899292px | Text: "✓"
+  - **PC41** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PC42** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PC43** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PR5** (`RECTANGLE`) | `546.0x47.5` | Fill: #EAF0F7B8 | Radius: 2.9673912525177px
+  - **PM5** (`TEXT`) | `187.9x21.8` | Fill: #17213B | Font: Pretendard 700 11.8695650100708px | Text: "문의/신고"
+  - **PC50** (`RECTANGLE`) | `17.8x17.8` | Fill: #5B50F6 | Radius: 4.945652008056641px
+  - **PCT50** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 10.8804349899292px | Text: "✓"
+  - **PC51** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PC52** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PC53** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PR6** (`RECTANGLE`) | `546.0x47.5` | Fill: #F3F6FAB8 | Radius: 2.9673912525177px
+  - **PM6** (`TEXT`) | `187.9x21.8` | Fill: #17213B | Font: Pretendard 700 11.8695650100708px | Text: "통계"
+  - **PC60** (`RECTANGLE`) | `17.8x17.8` | Fill: #5B50F6 | Radius: 4.945652008056641px
+  - **PCT60** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 10.8804349899292px | Text: "✓"
+  - **PC61** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PC62** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PC63** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PR7** (`RECTANGLE`) | `546.0x47.5` | Fill: #EAF0F7B8 | Radius: 2.9673912525177px
+  - **PM7** (`TEXT`) | `187.9x21.8` | Fill: #17213B | Font: Pretendard 700 11.8695650100708px | Text: "설정"
+  - **PC70** (`RECTANGLE`) | `17.8x17.8` | Fill: #5B50F6 | Radius: 4.945652008056641px
+  - **PCT70** (`TEXT`) | `10.0x13.0` | Fill: #EAF0F7 | Font: Pretendard 700 10.8804349899292px | Text: "✓"
+  - **PC71** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PC72** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **PC73** (`RECTANGLE`) | `17.8x17.8` | Fill: #EAF0F7 | Radius: 4.945652008056641px
+  - **Permission Foot** (`TEXT`) | `514.3x21.8` | Fill: #77809A | Font: Pretendard 400 10.8804349899292px | Text: "변경된 권한은 다음 로그인부터 적용됩니다."
+  - **Permission Warn** (`TEXT`) | `514.3x21.8` | Fill: #D9822B | Font: Pretendard 700 10.8804349899292px | Text: "최고 관리자 권한은 이 화면에서 수정할 수 없습니다."
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+
+---
+
+## 23. ADM-01 · 관리자 로그인 (ID: `2002:9636`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/23_ADM-01 · 관리자 로그인.png`
+
+### Component Tree & Styles
+- **ADM-01 · 관리자 로그인** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Brand Panel** (`RECTANGLE`) | `560.0x1024.0` | Fill: #F2F5FA
+  - **Brand** (`TEXT`) | `260.0x36.0` | Fill: #5B50F6 | Font: Pretendard 700 30.0px | Text: "gachatrip"
+  - **Console** (`TEXT`) | `89.0x13.0` | Fill: #77809A | Font: Pretendard 500 11.0px | Text: "ADMIN CONSOLE"
+  - **Hero** (`TEXT`) | `400.0x96.0` | Fill: #17213B | Font: Pretendard 700 40.0px | Text: "여행 추천 서비스를 안전하게 운영하세요."
+  - **Hero Desc** (`TEXT`) | `302.0x48.0` | Fill: #77809A | Font: Pretendard 400 20.0px | Text: "회원, 여행지, 가챠 정책과 운영 상태를 한 곳에..."
+  - **Feature Badge 0** (`RECTANGLE`) | `42.0x42.0` | Fill: #FFFFFF | Radius: 12.0px
+  - **Feature No 0** (`TEXT`) | `17.0x18.0` | Fill: #4849F9 | Font: Pretendard 700 15.0px | Text: "01"
+  - **Feature Text 0** (`TEXT`) | `330.0x20.0` | Fill: #17213B | Font: Pretendard 600 16.0px | Text: "권한별 관리자 접근 제어"
+  - **Feature Badge 1** (`RECTANGLE`) | `42.0x42.0` | Fill: #FFFFFF | Radius: 12.0px
+  - **Feature No 1** (`TEXT`) | `20.0x18.0` | Fill: #4849F9 | Font: Pretendard 700 15.0px | Text: "02"
+  - **Feature Text 1** (`TEXT`) | `330.0x20.0` | Fill: #17213B | Font: Pretendard 600 16.0px | Text: "모든 변경사항 작업 로그 기록"
+  - **Feature Badge 2** (`RECTANGLE`) | `42.0x42.0` | Fill: #FFFFFF | Radius: 12.0px
+  - **Feature No 2** (`TEXT`) | `20.0x18.0` | Fill: #4849F9 | Font: Pretendard 700 15.0px | Text: "03"
+  - **Feature Text 2** (`TEXT`) | `330.0x20.0` | Fill: #17213B | Font: Pretendard 600 16.0px | Text: "Tour API와 서버 상태 실시간 확인"
+  - **Version** (`TEXT`) | `320.0x20.0` | Fill: #77809A | Font: Pretendard 400 11.0px | Text: "GACHA TRIP ADMIN · v1.0.0"
+  - **Login Card** (`RECTANGLE`) | `520.0x720.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Login Title** (`TEXT`) | `390.0x38.0` | Fill: #252C48 | Font: Pretendard 700 32.0px | Text: "관리자 로그인"
+  - **Login Desc** (`TEXT`) | `390.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 20.0px | Text: "등록된 관리자 계정으로 로그인해주세요."
+  - **Email Label** (`TEXT`) | `200.0x20.0` | Fill: #171A2B | Font: Pretendard 500 16.0px | Text: "이메일"
+  - **Email Field** (`RECTANGLE`) | `416.0x52.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Email Placeholder** (`TEXT`) | `360.0x17.0` | Fill: #66708A | Font: Pretendard 400 14.0px | Text: "admin@gachatrip.app"
+  - **Password Label** (`TEXT`) | `200.0x20.0` | Fill: #171A2B | Font: Pretendard 500 16.0px | Text: "비밀번호"
+  - **Password Field** (`RECTANGLE`) | `416.0x52.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Password Placeholder** (`TEXT`) | `330.0x17.0` | Fill: #66708A | Font: Pretendard 400 14.0px | Text: "••••••••••••"
+  - **Show Password** (`TEXT`) | `25.0x17.0` | Fill: #4D63FF | Font: Pretendard 700 14.0px | Text: "보기"
+  - **Remember Checkbox** (`RECTANGLE`) | `24.0x24.0` | Fill: #4D63FF | Radius: 5.0px
+  - **Remember Check** (`TEXT`) | `14.0x19.0` | Fill: #EAF0F7 | Font: Pretendard 700 16.0px | Text: "✓"
+  - **Remember Label** (`TEXT`) | `280.0x19.0` | Fill: #5E6E93 | Font: Pretendard 600 16.0px | Text: "이 기기에서 관리자 계정 기억하기"
+  - **Login Button** (`RECTANGLE`) | `416.0x54.0` | Fill: #4D63FF | Radius: 12.0px
+  - **Login Button Text** (`TEXT`) | `416.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "로그인"
+  - **Security Notice** (`RECTANGLE`) | `416.0x116.0` | Fill: #F2F5FA | Radius: 14.0px
+  - **Security Title** (`TEXT`) | `260.0x20.0` | Fill: #252C48 | Font: Pretendard 700 15.0px | Text: "보안 인증 안내"
+  - **Security Body** (`TEXT`) | `360.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "로그인 후 등록된 이메일로 6자리 OTP가 전송됩..."
+  - **Support** (`TEXT`) | `109.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "계정 접근 문제가 있나요?"
+
+---
+
+## 24. ADM-02 · 통합 대시보드 (ID: `2002:9671`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/24_ADM-02 · 통합 대시보드.png`
+
+### Component Tree & Styles
+- **ADM-02 · 통합 대시보드** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x12.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Top Divider** (`RECTANGLE`) | `1192.0x1.0` | Fill: #DDE5F1
+  - **Date** (`TEXT`) | `127.0x19.0` | Fill: #35415B | Font: Pretendard 500 16.0px | Text: "2026.09.15 월요일"
+  - **Avatar** (`RECTANGLE`) | `42.0x42.0` | Radius: 13.0px
+  - **Avatar Text** (`TEXT`) | `18.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 20.0px | Text: "관"
+  - **Page Title** (`TEXT`) | `500.0x20.0` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "통합 대시보드"
+  - **Page Desc** (`TEXT`) | `620.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "서비스 핵심 지표와 처리해야 할 운영 항목을 확인..."
+  - **Date Filter** (`RECTANGLE`) | `220.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Date Filter Text** (`TEXT`) | `144.0x17.0` | Fill: #171A2B | Font: Pretendard 500 14.0px | Text: "최근 7일  ·  09.09–09.15"
+  - **Metric/전체 회원** (`INSTANCE`) | `262.0x140.0` | Fill: #FFFFFF | Radius: 16.0px
+    - **Label** (`TEXT`) | `190.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 15.0px | Text: "전체 회원"
+    - **Value** (`TEXT`) | `200.0x20.0` | Fill: #171A2B | Font: Pretendard 700 32.0px | Text: "1,248명"
+    - **Trend** (`TEXT`) | `200.0x20.0` | Fill: #0D7A4F | Font: Pretendard 500 16.0px | Text: "▲ 8.4% · 지난 7일"
+  - **Metric/오늘 가챠 실행** (`INSTANCE`) | `262.0x140.0` | Fill: #FFFFFF | Radius: 16.0px
+    - **Label** (`TEXT`) | `190.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 15.0px | Text: "오늘 가챠 실행"
+    - **Value** (`TEXT`) | `200.0x20.0` | Fill: #171A2B | Font: Pretendard 700 32.0px | Text: "327회"
+    - **Trend** (`TEXT`) | `200.0x20.0` | Fill: #0D7A4F | Font: Pretendard 500 16.0px | Text: "▲ 12.1% · 어제 대비"
+  - **Metric/저장된 여행** (`INSTANCE`) | `262.0x140.0` | Fill: #FFFFFF | Radius: 16.0px
+    - **Label** (`TEXT`) | `190.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 15.0px | Text: "저장된 여행"
+    - **Value** (`TEXT`) | `200.0x20.0` | Fill: #171A2B | Font: Pretendard 700 32.0px | Text: "184건"
+    - **Trend** (`TEXT`) | `200.0x20.0` | Fill: #0D7A4F | Font: Pretendard 500 16.0px | Text: "▲ 5.6% · 지난 7일"
+  - **Metric/미답변 문의** (`INSTANCE`) | `262.0x140.0` | Fill: #FFFFFF | Radius: 16.0px
+    - **Label** (`TEXT`) | `190.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 15.0px | Text: "미답변 문의"
+    - **Value** (`TEXT`) | `200.0x20.0` | Fill: #C92A32 | Font: Pretendard 700 32.0px | Text: "7건"
+    - **Trend** (`TEXT`) | `200.0x20.0` | Fill: #0D7A4F | Font: Pretendard 500 16.0px | Text: "● 3건 · 24시간 초과"
+  - **Usage Chart Card** (`RECTANGLE`) | `706.0x314.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Usage Chart Title** (`TEXT`) | `300.0x20.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "가챠 이용 추이"
+  - **Usage Chart Meta** (`TEXT`) | `350.0x20.0` | Fill: #66708A | Font: Pretendard 400 12.0px | Text: "개인 1,482회  ·  그룹 684회"
+  - **Dashboard Chart/Grid 0** (`RECTANGLE`) | `602.0x1.0` | Fill: #DDE5F1
+  - **Dashboard Chart/Grid 1** (`RECTANGLE`) | `602.0x1.0` | Fill: #DDE5F1
+  - **Dashboard Chart/Grid 2** (`RECTANGLE`) | `602.0x1.0` | Fill: #DDE5F1
+  - **Dashboard Chart/Grid 3** (`RECTANGLE`) | `602.0x1.0` | Fill: #DDE5F1
+  - **Bar Personal 0** (`RECTANGLE`) | `20.0x62.0` | Fill: #4D63FF
+  - **Bar Group 0** (`RECTANGLE`) | `14.0x36.0` | Fill: #C5FF32
+  - **Day 0** (`TEXT`) | `58.0x18.0` | Fill: #7C859B | Font: Pretendard 400 11.0px | Text: "화"
+  - **Bar Personal 1** (`RECTANGLE`) | `20.0x92.0` | Fill: #4D63FF
+  - **Bar Group 1** (`RECTANGLE`) | `14.0x54.0` | Fill: #C5FF32
+  - **Day 1** (`TEXT`) | `58.0x18.0` | Fill: #7C859B | Font: Pretendard 400 11.0px | Text: "수"
+  - **Bar Personal 2** (`RECTANGLE`) | `20.0x78.0` | Fill: #4D63FF
+  - **Bar Group 2** (`RECTANGLE`) | `14.0x45.0` | Fill: #C5FF32
+  - **Day 2** (`TEXT`) | `58.0x18.0` | Fill: #7C859B | Font: Pretendard 400 11.0px | Text: "목"
+  - **Bar Personal 3** (`RECTANGLE`) | `20.0x110.0` | Fill: #4D63FF
+  - **Bar Group 3** (`RECTANGLE`) | `14.0x64.0` | Fill: #C5FF32
+  - **Day 3** (`TEXT`) | `58.0x18.0` | Fill: #7C859B | Font: Pretendard 400 11.0px | Text: "금"
+  - **Bar Personal 4** (`RECTANGLE`) | `20.0x96.0` | Fill: #4D63FF
+  - **Bar Group 4** (`RECTANGLE`) | `14.0x56.0` | Fill: #C5FF32
+  - **Day 4** (`TEXT`) | `58.0x18.0` | Fill: #7C859B | Font: Pretendard 400 11.0px | Text: "토"
+  - **Bar Personal 5** (`RECTANGLE`) | `20.0x136.0` | Fill: #4D63FF
+  - **Bar Group 5** (`RECTANGLE`) | `14.0x78.0` | Fill: #C5FF32
+  - **Day 5** (`TEXT`) | `58.0x18.0` | Fill: #7C859B | Font: Pretendard 400 11.0px | Text: "일"
+  - **Bar Personal 6** (`RECTANGLE`) | `20.0x120.0` | Fill: #4D63FF
+  - **Bar Group 6** (`RECTANGLE`) | `14.0x69.0` | Fill: #C5FF32
+  - **Day 6** (`TEXT`) | `58.0x18.0` | Fill: #7C859B | Font: Pretendard 400 11.0px | Text: "월"
+  - **Funnel Card** (`RECTANGLE`) | `362.0x314.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Funnel Title** (`TEXT`) | `260.0x20.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "오늘의 가챠 전환"
+  - **Dashboard Table/Task Row 4** (`RECTANGLE`) | `323.0x49.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **Dashboard Table/Task Row 5** (`RECTANGLE`) | `323.0x49.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **Dashboard Table/Task Row 6** (`RECTANGLE`) | `323.0x49.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **Dashboard Table/Task Row 7** (`RECTANGLE`) | `323.0x49.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **Funnel L0** (`TEXT`) | `45.0x14.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "조건 입력"
+  - **Funnel V0** (`TEXT`) | `21.0x14.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "412"
+  - **Funnel BG0** (`RECTANGLE`) | `120.0x8.0` | Fill: #E5EBF5 | Radius: 4.0px
+  - **Funnel Bar0** (`RECTANGLE`) | `120.0x8.0` | Fill: #4D63FF | Radius: 4.0px
+  - **Funnel P0** (`TEXT`) | `28.0x13.0` | Fill: #66708A | Font: Pretendard 400 11.0px | Text: "100%"
+  - **Funnel L1** (`TEXT`) | `45.0x14.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "결과 확인"
+  - **Funnel V1** (`TEXT`) | `22.0x14.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "327"
+  - **Funnel BG1** (`RECTANGLE`) | `120.0x8.0` | Fill: #E5EBF5 | Radius: 4.0px
+  - **Funnel Bar1** (`RECTANGLE`) | `95.0x8.0` | Fill: #4D63FF | Radius: 4.0px
+  - **Funnel P1** (`TEXT`) | `32.0x13.0` | Fill: #66708A | Font: Pretendard 400 11.0px | Text: "79.4%"
+  - **Funnel L2** (`TEXT`) | `45.0x14.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "여행 저장"
+  - **Funnel V2** (`TEXT`) | `22.0x14.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "184"
+  - **Funnel BG2** (`RECTANGLE`) | `120.0x8.0` | Fill: #E5EBF5 | Radius: 4.0px
+  - **Funnel Bar2** (`RECTANGLE`) | `54.0x8.0` | Fill: #4D63FF | Radius: 4.0px
+  - **Funnel P2** (`TEXT`) | `32.0x13.0` | Fill: #66708A | Font: Pretendard 400 11.0px | Text: "44.7%"
+  - **Funnel L3** (`TEXT`) | `45.0x14.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "공유 완료"
+  - **Funnel V3** (`TEXT`) | `16.0x14.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "92"
+  - **Funnel BG3** (`RECTANGLE`) | `120.0x8.0` | Fill: #E5EBF5 | Radius: 4.0px
+  - **Funnel Bar3** (`RECTANGLE`) | `27.0x8.0` | Fill: #4D63FF | Radius: 4.0px
+  - **Funnel P3** (`TEXT`) | `32.0x13.0` | Fill: #5577B3 | Font: Pretendard 400 11.0px | Text: "22.3%"
+  - **Health Card** (`RECTANGLE`) | `520.0x266.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Health Title** (`TEXT`) | `280.0x20.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "서비스 · API 상태"
+  - **Health Dot 0** (`RECTANGLE`) | `8.0x8.0` | Fill: #0D7A4F | Radius: 999.0px
+  - **Health Dot 1** (`RECTANGLE`) | `8.0x8.0` | Fill: #0D7A4F | Radius: 999.0px
+  - **Health Dot 2** (`RECTANGLE`) | `8.0x8.0` | Fill: #A85E00 | Radius: 999.0px
+  - **Health Dot 3** (`RECTANGLE`) | `8.0x8.0` | Fill: #0D7A4F | Radius: 999.0px
+  - **Tasks Card** (`RECTANGLE`) | `548.0x266.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Tasks Title** (`TEXT`) | `300.0x20.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "지금 확인할 항목"
+  - **Dashboard Chart/Legend A** (`TEXT`) | `92.0x15.0` | Fill: #6574DC | Font: Pretendard 500 11.0px | Text: "●  개인 가챠"
+  - **Dashboard Chart/Legend B** (`TEXT`) | `92.0x15.0` | Fill: #A7D82C | Font: Pretendard 500 11.0px | Text: "●  그룹 가챠"
+  - **Dashboard Chart/Y 0** (`TEXT`) | `30.0x14.0` | Fill: #9AA2B5 | Font: Pretendard 400 11.0px | Text: "400"
+  - **Dashboard Chart/Y 1** (`TEXT`) | `30.0x14.0` | Fill: #9AA2B5 | Font: Pretendard 400 11.0px | Text: "300"
+  - **Dashboard Chart/Y 2** (`TEXT`) | `30.0x14.0` | Fill: #9AA2B5 | Font: Pretendard 400 11.0px | Text: "200"
+  - **Dashboard Chart/Y 3** (`TEXT`) | `30.0x14.0` | Fill: #9AA2B5 | Font: Pretendard 400 11.0px | Text: "100"
+  - **Dashboard Chart/Baseline** (`RECTANGLE`) | `602.0x1.0` | Fill: #DDE5F1
+  - **Dashboard Chart/Tooltip** (`RECTANGLE`) | `108.0x46.0` | Fill: #171A2B | Radius: 10.0px
+  - **Dashboard Chart/Tooltip Date** (`TEXT`) | `50.0x14.0` | Fill: #C9CFDC | Font: Pretendard 500 11.0px | Text: "일요일"
+  - **Dashboard Chart/Tooltip Value** (`TEXT`) | `70.0x20.0` | Fill: #EAF0F7 | Font: Pretendard 800 13.0px | Text: "327회"
+  - **Dashboard Table/Health Header** (`RECTANGLE`) | `472.0x32.0` | Fill: #EEF3FF | Radius: 7.0px
+  - **Dashboard Table/Health H Service** (`TEXT`) | `150.0x16.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "서비스"
+  - **Dashboard Table/Health H State** (`TEXT`) | `64.0x16.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "상태"
+  - **Dashboard Table/Health H Time** (`TEXT`) | `92.0x16.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "응답 시간"
+  - **Dashboard Table/Health Row 0** (`RECTANGLE`) | `472.0x34.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **Dashboard Table/Health Status 0** (`RECTANGLE`) | `58.0x22.0` | Fill: #DDF3EA | Radius: 11.0px
+  - **Dashboard Table/Health Row 1** (`RECTANGLE`) | `472.0x34.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **Dashboard Table/Health Status 1** (`RECTANGLE`) | `58.0x22.0` | Fill: #DDF3EA | Radius: 11.0px
+  - **Dashboard Table/Health Row 2** (`RECTANGLE`) | `472.0x34.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **Dashboard Table/Health Status 2** (`RECTANGLE`) | `58.0x22.0` | Fill: #FFF0D8 | Radius: 11.0px
+  - **Dashboard Table/Health Row 3** (`RECTANGLE`) | `472.0x34.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **Dashboard Table/Health Status 3** (`RECTANGLE`) | `58.0x22.0` | Fill: #DDF3EA | Radius: 11.0px
+  - **Dashboard Table/Task Header** (`RECTANGLE`) | `500.0x32.0` | Fill: #EEF3FF | Radius: 7.0px
+  - **Dashboard Table/Task H Item** (`TEXT`) | `200.0x16.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "확인 항목"
+  - **Dashboard Table/Task H Area** (`TEXT`) | `92.0x16.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "관리 영역"
+  - **Dashboard Table/Task H Action** (`TEXT`) | `88.0x16.0` | Fill: #344FC7 | Font: Pretendard 700 11.0px | Text: "바로가기"
+  - **Dashboard Table/Task Row 0** (`RECTANGLE`) | `500.0x34.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **Dashboard Table/Task Action 0** (`RECTANGLE`) | `96.0x22.0` | Fill: #E1E9FA | Radius: 11.0px
+  - **Dashboard Table/Task Row 1** (`RECTANGLE`) | `500.0x34.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **Dashboard Table/Task Action 1** (`RECTANGLE`) | `96.0x22.0` | Fill: #E1E9FA | Radius: 11.0px
+  - **Dashboard Table/Task Row 2** (`RECTANGLE`) | `500.0x34.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **Dashboard Table/Task Action 2** (`RECTANGLE`) | `96.0x22.0` | Fill: #E1E9FA | Radius: 11.0px
+  - **Dashboard Table/Task Row 3** (`RECTANGLE`) | `500.0x34.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **Dashboard Table/Task Action 3** (`RECTANGLE`) | `96.0x22.0` | Fill: #E1E9FA | Radius: 11.0px
+  - **Health Name 0** (`TEXT`) | `76.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "Application API"
+  - **Health State 0** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 700 11.0px | Text: "정상"
+  - **Health Latency 0** (`TEXT`) | `28.0x13.0` | Fill: #5F6C84 | Font: Pretendard 400 11.0px | Text: "42ms"
+  - **Task 0** (`TEXT`) | `69.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "미답변 문의 7건"
+  - **Task Area 0** (`TEXT`) | `41.0x13.0` | Fill: #6F7890 | Font: Pretendard 400 11.0px | Text: "운영 관리"
+  - **Task CTA 0** (`TEXT`) | `39.0x13.0` | Fill: #344FC7 | Font: Pretendard 700 11.0px | Text: "답변하기"
+  - **Health Name 1** (`TEXT`) | `61.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "Tour API 4.0"
+  - **Health State 1** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 700 11.0px | Text: "정상"
+  - **Health Latency 1** (`TEXT`) | `33.0x13.0` | Fill: #5F6C84 | Font: Pretendard 400 11.0px | Text: "156ms"
+  - **Task 1** (`TEXT`) | `114.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "Tour API 동기화 실패 2건"
+  - **Task Area 1** (`TEXT`) | `51.0x13.0` | Fill: #6F7890 | Font: Pretendard 400 11.0px | Text: "여행지 관리"
+  - **Task CTA 1** (`TEXT`) | `29.0x13.0` | Fill: #344FC7 | Font: Pretendard 700 11.0px | Text: "재시도"
+  - **Health Name 2** (`TEXT`) | `41.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "추천 엔진"
+  - **Health State 2** (`TEXT`) | `20.0x13.0` | Fill: #A36A1F | Font: Pretendard 700 11.0px | Text: "주의"
+  - **Health Latency 2** (`TEXT`) | `33.0x13.0` | Fill: #5F6C84 | Font: Pretendard 400 11.0px | Text: "621ms"
+  - **Task 2** (`TEXT`) | `91.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "신고 누적 콘텐츠 3건"
+  - **Task Area 2** (`TEXT`) | `51.0x13.0` | Fill: #6F7890 | Font: Pretendard 400 11.0px | Text: "콘텐츠 관리"
+  - **Task CTA 2** (`TEXT`) | `39.0x13.0` | Fill: #344FC7 | Font: Pretendard 700 11.0px | Text: "검토하기"
+  - **Health Name 3** (`TEXT`) | `52.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "DB / Redis"
+  - **Health State 3** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 700 11.0px | Text: "정상"
+  - **Health Latency 3** (`TEXT`) | `27.0x13.0` | Fill: #5F6C84 | Font: Pretendard 400 11.0px | Text: "18ms"
+  - **Task 3** (`TEXT`) | `99.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "장기 미접속 관리자 1명"
+  - **Task Area 3** (`TEXT`) | `51.0x13.0` | Fill: #6F7890 | Font: Pretendard 400 11.0px | Text: "시스템 관리"
+  - **Task CTA 3** (`TEXT`) | `41.0x13.0` | Fill: #344FC7 | Font: Pretendard 700 11.0px | Text: "권한 확인"
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+
+---
+
+## 25. ADM-03 · 회원 관리 (ID: `2002:9865`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/25_ADM-03 · 회원 관리.png`
+
+### Component Tree & Styles
+- **ADM-03 · 회원 관리** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Top Divider** (`RECTANGLE`) | `1192.0x1.0` | Fill: #DDE5F1
+  - **Title** (`TEXT`) | `400.0x20.0` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "회원 관리"
+  - **Desc** (`TEXT`) | `620.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "회원 계정, 이용 기록, 신고 및 접근 상태를 관..."
+  - **Export** (`RECTANGLE`) | `105.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Export Text** (`TEXT`) | `105.0x42.0` | Fill: #3152C7 | Font: Pretendard 500 12.0px | Text: "CSV 내보내기"
+  - **Add Admin** (`RECTANGLE`) | `102.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Add Admin Text** (`TEXT`) | `102.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관리자 추가"
+  - **Summary 0** (`RECTANGLE`) | `258.0x86.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Summary Label 0** (`TEXT`) | `49.0x16.0` | Fill: #5E6E93 | Font: Pretendard 600 13.0px | Text: "전체 회원"
+  - **Summary Value 0** (`TEXT`) | `63.0x29.0` | Fill: #171A2B | Font: Pretendard 700 24.0px | Text: "1,248"
+  - **Summary 1** (`RECTANGLE`) | `258.0x86.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Summary Label 1** (`TEXT`) | `49.0x16.0` | Fill: #5E6E93 | Font: Pretendard 600 13.0px | Text: "활성 회원"
+  - **Summary Value 1** (`TEXT`) | `57.0x29.0` | Fill: #171A2B | Font: Pretendard 700 24.0px | Text: "1,102"
+  - **Summary 2** (`RECTANGLE`) | `258.0x86.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Summary Label 2** (`TEXT`) | `49.0x16.0` | Fill: #5E6E93 | Font: Pretendard 600 13.0px | Text: "휴면 예정"
+  - **Summary Value 2** (`TEXT`) | `32.0x29.0` | Fill: #171A2B | Font: Pretendard 700 24.0px | Text: "84"
+  - **Summary 3** (`RECTANGLE`) | `258.0x86.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Summary Label 3** (`TEXT`) | `49.0x16.0` | Fill: #5E6E93 | Font: Pretendard 600 13.0px | Text: "이용 제한"
+  - **Summary Value 3** (`TEXT`) | `26.0x29.0` | Fill: #171A2B | Font: Pretendard 700 24.0px | Text: "12"
+  - **Filter Card** (`RECTANGLE`) | `1092.0x82.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Member Search** (`RECTANGLE`) | `390.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Member Search Text** (`TEXT`) | `127.0x14.0` | Fill: #5E6E93 | Font: Pretendard 400 12.0px | Text: "닉네임·이메일·회원 ID 검색"
+  - **Filter 0** (`RECTANGLE`) | `150.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Filter Text 0** (`TEXT`) | `113.0x18.0` | Fill: #171A2B | Font: Pretendard 500 15.0px | Text: "가입경로: 전체      ▾"
+  - **Filter 1** (`RECTANGLE`) | `130.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Filter Text 1** (`TEXT`) | `95.0x18.0` | Fill: #171A2B | Font: Pretendard 500 15.0px | Text: "상태: 전체        ▾"
+  - **Filter 2** (`RECTANGLE`) | `122.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Filter Text 2** (`TEXT`) | `89.0x18.0` | Fill: #171A2B | Font: Pretendard 500 15.0px | Text: "가입일            ▾"
+  - **Filter Apply** (`RECTANGLE`) | `98.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Filter Apply** (`RECTANGLE`) | `98.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **Filter Apply Text** (`TEXT`) | `98.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "검색"
+  - **Reset** (`TEXT`) | `29.0x13.0` | Fill: #4D63FF | Font: Pretendard 600 11.0px | Text: "초기화"
+  - **Table Card** (`RECTANGLE`) | `750.0x564.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Table Polish/Header Band** (`RECTANGLE`) | `714.0x44.0` | Fill: #EEF3FF | Radius: 8.0px
+  - **Head 0** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "회원"
+  - **Head 1** (`TEXT`) | `39.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "가입경로"
+  - **Head 2** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "가챠"
+  - **Head 3** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "저장"
+  - **Head 4** (`TEXT`) | `41.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "최근 접속"
+  - **Head 5** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "상태"
+  - **Head 6** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "관리"
+  - **User 0** (`TEXT`) | `160.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "GT-01248 · 김가현"
+  - **Provider 0** (`TEXT`) | `90.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "카카오"
+  - **Gacha 0** (`TEXT`) | `60.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "42"
+  - **Saved 0** (`TEXT`) | `60.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "8"
+  - **Last 0** (`TEXT`) | `100.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "09.15 14:22"
+  - **Table Polish/Status Pill/97:124** (`RECTANGLE`) | `42.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **State 0** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 700 11.0px | Text: "정상"
+  - **Manage 0** (`TEXT`) | `50.0x20.0` | Fill: #344FC7 | Font: Pretendard 700 11.0px | Text: "상세"
+  - **Row BG 1** (`RECTANGLE`) | `714.0x71.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **User 1** (`TEXT`) | `160.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "GT-01247 · 이민수"
+  - **Provider 1** (`TEXT`) | `90.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "Google"
+  - **Gacha 1** (`TEXT`) | `60.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "18"
+  - **Saved 1** (`TEXT`) | `60.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "3"
+  - **Last 1** (`TEXT`) | `100.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "09.15 12:08"
+  - **Table Polish/Status Pill/97:132** (`RECTANGLE`) | `42.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **State 1** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 700 11.0px | Text: "정상"
+  - **Manage 1** (`TEXT`) | `50.0x20.0` | Fill: #344FC7 | Font: Pretendard 700 11.0px | Text: "상세"
+  - **User 2** (`TEXT`) | `160.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "GT-01231 · 박서연"
+  - **Provider 2** (`TEXT`) | `90.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "이메일"
+  - **Gacha 2** (`TEXT`) | `60.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "5"
+  - **Saved 2** (`TEXT`) | `60.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "1"
+  - **Last 2** (`TEXT`) | `100.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "09.12 22:14"
+  - **Table Polish/Status Pill/97:139** (`RECTANGLE`) | `42.0x24.0` | Fill: #FFF0D8 | Radius: 12.0px
+  - **State 2** (`TEXT`) | `20.0x13.0` | Fill: #A36A1F | Font: Pretendard 700 11.0px | Text: "주의"
+  - **Manage 2** (`TEXT`) | `50.0x20.0` | Fill: #344FC7 | Font: Pretendard 700 11.0px | Text: "상세"
+  - **Row BG 3** (`RECTANGLE`) | `714.0x60.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **User 3** (`TEXT`) | `160.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "GT-01198 · 최준호"
+  - **Provider 3** (`TEXT`) | `90.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "Apple"
+  - **Gacha 3** (`TEXT`) | `60.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "0"
+  - **Saved 3** (`TEXT`) | `60.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "0"
+  - **Last 3** (`TEXT`) | `100.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "08.24 10:31"
+  - **Table Polish/Status Pill/97:147** (`RECTANGLE`) | `42.0x24.0` | Fill: #E4E9F1 | Radius: 12.0px
+  - **State 3** (`TEXT`) | `20.0x13.0` | Fill: #66718A | Font: Pretendard 700 11.0px | Text: "휴면"
+  - **Manage 3** (`TEXT`) | `50.0x20.0` | Fill: #344FC7 | Font: Pretendard 700 11.0px | Text: "상세"
+  - **User 4** (`TEXT`) | `160.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "GT-01172 · 정유진"
+  - **Provider 4** (`TEXT`) | `90.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "카카오"
+  - **Gacha 4** (`TEXT`) | `60.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "31"
+  - **Saved 4** (`TEXT`) | `60.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "12"
+  - **Last 4** (`TEXT`) | `100.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "09.14 18:42"
+  - **Table Polish/Status Pill/97:154** (`RECTANGLE`) | `42.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **State 4** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 700 11.0px | Text: "정상"
+  - **Manage 4** (`TEXT`) | `50.0x20.0` | Fill: #344FC7 | Font: Pretendard 700 11.0px | Text: "상세"
+  - **Row BG 5** (`RECTANGLE`) | `714.0x60.0` | Fill: #FAFBFE | Radius: 6.0px
+  - **User 5** (`TEXT`) | `160.0x20.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "GT-01088 · 오세훈"
+  - **Provider 5** (`TEXT`) | `90.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "Google"
+  - **Gacha 5** (`TEXT`) | `60.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "67"
+  - **Saved 5** (`TEXT`) | `60.0x20.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "21"
+  - **Last 5** (`TEXT`) | `100.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "09.15 09:16"
+  - **Table Polish/Status Pill/97:162** (`RECTANGLE`) | `42.0x24.0` | Fill: #FBE1E5 | Radius: 12.0px
+  - **State 5** (`TEXT`) | `20.0x13.0` | Fill: #C7485C | Font: Pretendard 700 11.0px | Text: "제한"
+  - **Manage 5** (`TEXT`) | `50.0x20.0` | Fill: #344FC7 | Font: Pretendard 700 11.0px | Text: "상세"
+  - **Pagination** (`TEXT`) | `104.0x14.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "‹   1   2   3   ···   21   ›"
+  - **Detail Panel** (`RECTANGLE`) | `318.0x564.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Detail Title** (`TEXT`) | `190.0x20.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "회원 상세"
+  - **Detail ID** (`TEXT`) | `160.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "GT-01248"
+  - **Profile** (`RECTANGLE`) | `56.0x56.0` | Fill: #EAF0F7 | Radius: 18.0px
+  - **Profile Initial** (`TEXT`) | `20.0x20.0` | Fill: #4D63FF | Font: Pretendard 700 18.0px | Text: "김"
+  - **Profile Name** (`TEXT`) | `160.0x20.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "김가현"
+  - **Profile Email** (`TEXT`) | `180.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "gahyun@email.com"
+  - **Detail Label 0** (`TEXT`) | `37.0x17.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "가입일"
+  - **Detail Value 0** (`TEXT`) | `71.0x17.0` | Fill: #171A2B | Font: Pretendard 500 14.0px | Text: "2026.08.12"
+  - **Detail Label 1** (`TEXT`) | `37.0x17.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "로그인"
+  - **Detail Value 1** (`TEXT`) | `37.0x17.0` | Fill: #171A2B | Font: Pretendard 500 14.0px | Text: "카카오"
+  - **Detail Label 2** (`TEXT`) | `65.0x17.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "여행 스타일"
+  - **Detail Value 2** (`TEXT`) | `59.0x17.0` | Fill: #171A2B | Font: Pretendard 500 14.0px | Text: "감성 · 맛집"
+  - **Detail Label 3** (`TEXT`) | `52.0x17.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "출발 지역"
+  - **Detail Value 3** (`TEXT`) | `25.0x17.0` | Fill: #171A2B | Font: Pretendard 500 14.0px | Text: "인천"
+  - **Detail Label 4** (`TEXT`) | `52.0x17.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "신고 누적"
+  - **Detail Value 4** (`TEXT`) | `21.0x17.0` | Fill: #171A2B | Font: Pretendard 500 14.0px | Text: "0건"
+  - **Detail Label 5** (`TEXT`) | `52.0x17.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "마지막 IP"
+  - **Detail Value 5** (`TEXT`) | `84.0x17.0` | Fill: #171A2B | Font: Pretendard 500 14.0px | Text: "211.34.***.82"
+  - **View Activity** (`RECTANGLE`) | `270.0x42.0` | Fill: #F3F6FC | Radius: 10.0px
+  - **View Activity Text** (`TEXT`) | `270.0x42.0` | Fill: #3152C7 | Font: Pretendard 700 12.0px | Text: "전체 이용 기록 보기"
+  - **Restrict** (`RECTANGLE`) | `130.0x38.0` | Fill: #FFF2F3 | Radius: 8.0px
+  - **Restrict Text** (`TEXT`) | `130.0x38.0` | Fill: #D33C4D | Font: Pretendard 500 11.0px | Text: "이용 제한"
+  - **Edit** (`RECTANGLE`) | `130.0x38.0` | Fill: #F3F6FC | Radius: 8.0px
+  - **Edit Text** (`TEXT`) | `130.0x38.0` | Fill: #3152C7 | Font: Pretendard 700 11.0px | Text: "정보 수정"
+  - **Prototype/회원 상세** (`RECTANGLE`) | `210.0x150.0` | Fill: #F2F5FA
+  - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `56.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `11.0x14.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x12.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x18.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+  - **Group 1437253491** (`GROUP`) | `430.0x42.0`
+    - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+    - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+    - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+
+---
+
+## 26. ADM-04 · 여행지 · Tour API (ID: `2002:10048`)
+- **Screen Size**: `1440.0px × 1024.0px`
+- **Screen Image**: `screens/26_ADM-04 · 여행지 · Tour API.png`
+
+### Component Tree & Styles
+- **ADM-04 · 여행지 · Tour API** (`FRAME`) | `1440.0x1024.0` | Fill: #F4F7FC
+  - **Top Bar** (`RECTANGLE`) | `1192.0x80.0` | Fill: #FFFFFF
+  - **Top Divider** (`RECTANGLE`) | `1192.0x1.0` | Fill: #DDE5F1
+  - **Title** (`TEXT`) | `500.0x20.0` | Fill: #171A2B | Font: Pretendard 700 28.0px | Text: "여행지 · Tour API"
+  - **Desc** (`TEXT`) | `700.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 14.0px | Text: "Tour API 데이터를 동기화하고 앱에 노출할 ..."
+  - **Manual Add** (`RECTANGLE`) | `118.0x42.0` | Fill: #EAF0F7 | Radius: 12.0px
+  - **Manual Add Text** (`TEXT`) | `55.0x14.0` | Fill: #171A2B | Font: Pretendard 500 12.0px | Text: "+ 직접 등록"
+  - **Sync Button** (`RECTANGLE`) | `116.0x42.0` | Fill: #4D63FF | Radius: 10.0px
+  - **Sync Button Text** (`TEXT`) | `116.0x42.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "↻ API 동기화"
+  - **Summary 0** (`RECTANGLE`) | `258.0x82.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Summary Label 0** (`TEXT`) | `150.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "전체 여행지"
+  - **Summary Value 0** (`TEXT`) | `150.0x20.0` | Fill: #171A2B | Font: Pretendard 700 22.0px | Text: "86곳"
+  - **Summary 1** (`RECTANGLE`) | `258.0x82.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Summary Label 1** (`TEXT`) | `150.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "정상 노출"
+  - **Summary Value 1** (`TEXT`) | `150.0x20.0` | Fill: #171A2B | Font: Pretendard 700 22.0px | Text: "82곳"
+  - **Summary 2** (`RECTANGLE`) | `258.0x82.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Summary Label 2** (`TEXT`) | `150.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "검수 필요"
+  - **Summary Value 2** (`TEXT`) | `150.0x20.0` | Fill: #171A2B | Font: Pretendard 700 22.0px | Text: "4곳"
+  - **Summary 3** (`RECTANGLE`) | `258.0x82.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Summary Label 3** (`TEXT`) | `150.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "동기화 실패"
+  - **Summary Value 3** (`TEXT`) | `150.0x20.0` | Fill: #C92A32 | Font: Pretendard 700 22.0px | Text: "2건"
+  - **Sync Status Card** (`RECTANGLE`) | `1092.0x94.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Sync Status Title** (`TEXT`) | `240.0x20.0` | Fill: #252C48 | Font: Pretendard 700 14.0px | Text: "Tour API 4.0 동기화"
+  - **Status Dot** (`RECTANGLE`) | `9.0x9.0` | Fill: #0D7A4F | Radius: 999.0px
+  - **Sync Status** (`TEXT`) | `330.0x20.0` | Fill: #0D7A4F | Font: Pretendard 500 12.0px | Text: "정상 · 마지막 성공 2026.09.15 14:30"
+  - **Sync Info** (`TEXT`) | `360.0x20.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "areaCode · category · locat..."
+  - **Schedule** (`TEXT`) | `190.0x20.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "자동 동기화  매일 03:00"
+  - **List Card** (`RECTANGLE`) | `740.0x556.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Destination Search** (`RECTANGLE`) | `310.0x40.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Destination Search Text** (`TEXT`) | `260.0x14.0` | Fill: #5E6E93 | Font: Pretendard 400 12.0px | Text: "여행지·지역 검색"
+  - **Filter 0** (`RECTANGLE`) | `112.0x40.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Filter Text 0** (`TEXT`) | `48.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "지역 전체 ▾"
+  - **Filter 1** (`RECTANGLE`) | `112.0x40.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Filter Text 1** (`TEXT`) | `48.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "테마 전체 ▾"
+  - **Filter 2** (`RECTANGLE`) | `112.0x40.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Filter Text 2** (`TEXT`) | `48.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "상태 전체 ▾"
+  - **Table Polish/Header Band** (`RECTANGLE`) | `704.0x44.0` | Fill: #EEF3FF | Radius: 8.0px
+  - **Head 0** (`TEXT`) | `29.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "여행지"
+  - **Head 1** (`TEXT`) | `51.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "contentId"
+  - **Head 2** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "지역"
+  - **Head 3** (`TEXT`) | `29.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "수정일"
+  - **Head 4** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "상태"
+  - **Head 5** (`TEXT`) | `20.0x13.0` | Fill: #50617D | Font: Pretendard 700 11.0px | Text: "관리"
+  - **Head Line** (`RECTANGLE`) | `704.0x1.0` | Fill: #DDE5F1
+  - **Selected Row** (`RECTANGLE`) | `704.0x54.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Selected Row** (`RECTANGLE`) | `704.0x54.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Selected Row** (`RECTANGLE`) | `704.0x54.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Selected Row** (`RECTANGLE`) | `704.0x54.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Selected Row** (`RECTANGLE`) | `704.0x54.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Selected Row** (`RECTANGLE`) | `704.0x54.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Thumb 0** (`RECTANGLE`) | `44.0x34.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Place 0** (`TEXT`) | `51.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "강화도 노을"
+  - **CID 0** (`TEXT`) | `46.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "2758065"
+  - **Region 0** (`TEXT`) | `20.0x13.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "인천"
+  - **Modified 0** (`TEXT`) | `57.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "09.15 14:30"
+  - **Table Polish/Status Pill/98:156** (`RECTANGLE`) | `42.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **State 0** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 700 11.0px | Text: "정상"
+  - **Edit 0** (`TEXT`) | `20.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "수정"
+  - **Thumb 1** (`RECTANGLE`) | `44.0x34.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Place 1** (`TEXT`) | `41.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "성수 골목"
+  - **CID 1** (`TEXT`) | `38.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "126508"
+  - **Region 1** (`TEXT`) | `20.0x13.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "서울"
+  - **Modified 1** (`TEXT`) | `57.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "09.15 14:30"
+  - **Table Polish/Status Pill/98:163** (`RECTANGLE`) | `42.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **State 1** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 700 11.0px | Text: "정상"
+  - **Edit 1** (`TEXT`) | `20.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "수정"
+  - **Thumb 2** (`RECTANGLE`) | `44.0x34.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Place 2** (`TEXT`) | `51.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "대부도 바다"
+  - **CID 2** (`TEXT`) | `39.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "125454"
+  - **Region 2** (`TEXT`) | `20.0x13.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "경기"
+  - **Modified 2** (`TEXT`) | `57.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "09.15 14:30"
+  - **Table Polish/Status Pill/98:170** (`RECTANGLE`) | `42.0x24.0` | Fill: #FFF0D8 | Radius: 12.0px
+  - **State 2** (`TEXT`) | `20.0x13.0` | Fill: #A36A1F | Font: Pretendard 700 11.0px | Text: "주의"
+  - **Edit 2** (`TEXT`) | `20.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "수정"
+  - **Thumb 3** (`RECTANGLE`) | `44.0x34.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Place 3** (`TEXT`) | `60.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "전주 한옥마을"
+  - **CID 3** (`TEXT`) | `37.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "126109"
+  - **Region 3** (`TEXT`) | `20.0x13.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "전북"
+  - **Modified 3** (`TEXT`) | `57.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "09.14 03:01"
+  - **Table Polish/Status Pill/98:177** (`RECTANGLE`) | `42.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **State 3** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 700 11.0px | Text: "정상"
+  - **Edit 3** (`TEXT`) | `20.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "수정"
+  - **Thumb 4** (`RECTANGLE`) | `44.0x34.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Place 4** (`TEXT`) | `51.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "부산 흰여울"
+  - **CID 4** (`TEXT`) | `39.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "193043"
+  - **Region 4** (`TEXT`) | `20.0x13.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "부산"
+  - **Modified 4** (`TEXT`) | `57.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "09.14 03:01"
+  - **Table Polish/Status Pill/98:184** (`RECTANGLE`) | `42.0x24.0` | Fill: #FBE1E5 | Radius: 12.0px
+  - **State 4** (`TEXT`) | `20.0x13.0` | Fill: #C7485C | Font: Pretendard 700 11.0px | Text: "오류"
+  - **Edit 4** (`TEXT`) | `20.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "수정"
+  - **Thumb 5** (`RECTANGLE`) | `44.0x34.0` | Fill: #EAF0F7 | Radius: 9.0px
+  - **Place 5** (`TEXT`) | `60.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "제주 사려니숲"
+  - **CID 5** (`TEXT`) | `39.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "188428"
+  - **Region 5** (`TEXT`) | `20.0x13.0` | Fill: #171A2B | Font: Pretendard 400 11.0px | Text: "제주"
+  - **Modified 5** (`TEXT`) | `57.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "09.14 03:01"
+  - **Table Polish/Status Pill/98:191** (`RECTANGLE`) | `42.0x24.0` | Fill: #DDF3EA | Radius: 12.0px
+  - **State 5** (`TEXT`) | `20.0x13.0` | Fill: #267C61 | Font: Pretendard 700 11.0px | Text: "정상"
+  - **Edit 5** (`TEXT`) | `20.0x13.0` | Fill: #4D63FF | Font: Pretendard 700 11.0px | Text: "수정"
+  - **Pagination** (`TEXT`) | `104.0x14.0` | Fill: #5E6E93 | Font: Pretendard 500 12.0px | Text: "‹   1   2   3   ···   15   ›"
+  - **Edit Panel** (`RECTANGLE`) | `328.0x556.0` | Fill: #FFFFFF | Radius: 14.0px
+  - **Panel Title** (`TEXT`) | `220.0x20.0` | Fill: #252C48 | Font: Pretendard 700 18.0px | Text: "여행지 상세 · 수정"
+  - **Panel ID** (`TEXT`) | `96.0x13.0` | Fill: #5E6E93 | Font: Pretendard 400 11.0px | Text: "contentId 2758065"
+  - **Hero Placeholder** (`RECTANGLE`) | `280.0x94.0` | Fill: #F2F5FA | Radius: 14.0px
+  - **Hero Placeholder Text** (`TEXT`) | `100.0x14.0` | Fill: #66708A | Font: Pretendard 500 12.0px | Text: "대표 이미지 미리보기"
+  - **Field Label 0** (`TEXT`) | `39.0x13.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "여행지명"
+  - **Field 0** (`RECTANGLE`) | `280.0x34.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Field Value 0** (`TEXT`) | `51.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "강화도 노을"
+  - **Field Label 1** (`TEXT`) | `20.0x13.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "지역"
+  - **Field 1** (`RECTANGLE`) | `280.0x34.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Field Value 1** (`TEXT`) | `51.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "인천 강화군"
+  - **Field Label 2** (`TEXT`) | `20.0x13.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "테마"
+  - **Field 2** (`RECTANGLE`) | `280.0x34.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Field Value 2** (`TEXT`) | `93.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "자연 · 노을 · 당일치기"
+  - **Field Label 3** (`TEXT`) | `41.0x13.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "노출 상태"
+  - **Field 3** (`RECTANGLE`) | `280.0x34.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Field Value 3** (`TEXT`) | `32.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "노출 중"
+  - **Field Label 4** (`TEXT`) | `51.0x13.0` | Fill: #5E6E93 | Font: Pretendard 500 11.0px | Text: "데이터 출처"
+  - **Field 4** (`RECTANGLE`) | `280.0x34.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Field Value 4** (`TEXT`) | `61.0x13.0` | Fill: #171A2B | Font: Pretendard 500 11.0px | Text: "Tour API 4.0"
+  - **Preview Button** (`RECTANGLE`) | `128.0x38.0` | Fill: #F3F6FC | Radius: 8.0px
+  - **Preview Text** (`TEXT`) | `128.0x38.0` | Fill: #3152C7 | Font: Pretendard 500 11.0px | Text: "앱 미리보기"
+  - **Save Button** (`RECTANGLE`) | `142.0x38.0` | Fill: #4D63FF | Radius: 8.0px
+  - **Save Text** (`TEXT`) | `142.0x38.0` | Fill: #FFFFFF | Font: Pretendard 700 11.0px | Text: "변경사항 저장"
+  - **Prototype/여행지 추가** (`RECTANGLE`) | `160.0x62.0` | Fill: #EAF0F7
+  - **Prototype/여행지 상세수정** (`RECTANGLE`) | `210.0x150.0` | Fill: #F2F5FA
+  - **Admin** (`TEXT`) | `130.0x16.0` | Fill: #35415B | Font: Pretendard 400 13.0px | Text: "관리자 · Backend Team"
+  - **Global Search** (`RECTANGLE`) | `430.0x42.0` | Fill: #FFFFFF | Radius: 10.0px
+  - **Search Placeholder** (`TEXT`) | `370.0x16.0` | Fill: #59657D | Font: Pretendard 400 13.0px | Text: "검색어를 입력하세요."
+  - **Vector** (`VECTOR`) | `17.4x17.4` | Fill: #000000
+  - **Vector** (`VECTOR`) | `14.0x14.0` | Fill: #5E6E93
+  - **Admin/Sidebar** (`FRAME`) | `248.0x1024.0` | Fill: #171A2B
+    - **Sidebar Accent Line** (`RECTANGLE`) | `3.0x1024.0` | Fill: #4D63FF
+    - **Brand** (`TEXT`) | `180.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 22.0px | Text: "gachatrip"
+    - **Admin Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 500 10.0px | Text: "ADMIN CONSOLE"
+    - **Section Label** (`TEXT`) | `180.0x20.0` | Fill: #8FA0BF | Font: Pretendard 700 10.0px | Text: "MENU"
+    - **Nav/Dashboard** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "대시보드"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x6.9`
+        - **Vector** (`VECTOR`) | `12.8x8.7`
+    - **Nav/Destinations** (`FRAME`) | `204.0x48.0` | Fill: #4D63FF | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 15.0px | Text: "여행지 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x17.4`
+        - **Vector** (`VECTOR`) | `4.6x4.6`
+    - **Nav/Gacha** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "뽑기 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `14.7x14.7`
+        - **Vector** (`VECTOR`) | `11.9x4.6`
+    - **Nav/Curation** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "큐레이션 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `12.8x16.5`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+    - **Nav/Members** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "회원 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `7.3x7.3`
+        - **Vector** (`VECTOR`) | `14.7x6.0`
+    - **Nav/Operations** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "문의/신고 관리"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `16.5x14.1`
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+        - **Vector** (`VECTOR`) | `1.8x1.8` | Fill: #93A1BC
+    - **Nav/Statistics** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "통계"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `13.8x14.7`
+    - **Divider** (`RECTANGLE`) | `200.0x1.0` | Fill: #DDE5F1
+    - **Admin Avatar** (`ELLIPSE`) | `34.0x34.0` | Fill: #4D63FF
+    - **Avatar Initial** (`TEXT`) | `14.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "관"
+    - **Admin Name** (`TEXT`) | `110.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "관리자"
+    - **Admin Role** (`TEXT`) | `110.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 400 10.0px | Text: "Backend Team"
+    - **Logout** (`TEXT`) | `100.0x20.0` | Fill: #9DAAC2 | Font: Pretendard 500 12.0px | Text: "로그아웃"
+    - **Nav/Settings** (`FRAME`) | `204.0x48.0` | Radius: 12.0px
+      - **Label** (`TEXT`) | `142.0x20.0` | Fill: #D3DBEB | Font: Pretendard 500 15.0px | Text: "설정"
+      - **Nav Icon** (`FRAME`) | `22.0x22.0`
+        - **Vector** (`VECTOR`) | `5.5x5.5`
+        - **Vector** (`VECTOR`) | `16.9x16.9`
+    - **Sidebar Footer/Slogan 1** (`TEXT`) | `82.0x14.0` | Fill: #9DAAC2 | Font: Pretendard 400 12.0px | Text: "더 많은 사람에게,"
+    - **Sidebar Footer/Slogan 2** (`TEXT`) | `80.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "특별한 여행을."
+    - **Sidebar Footer/Copyright** (`TEXT`) | `84.0x32.0` | Fill: #71809D | Font: Pretendard 400 10.0px | Text: "© 2026 Gachatrip. All right..."
+    - **Sidebar Art/Plane 3D** (`RECTANGLE`) | `88.0x88.0`
+
+---

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>가챠트립 - 01_스플래시</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Pretendard 폰트 CDN -->
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+      background-color: #EEF2F9;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      min-height: 100dvh;
+    }
+
+    /* 📱 모바일 퍼스트 반응형 컨테이너 */
+    .app-viewport {
+      width: 100%;
+      height: 100vh;
+      height: 100dvh;
+      background-color: #FAFBFF;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (min-width: 768px) {
+      .app-viewport {
+        width: 393px;
+        height: 844px;
+        border-radius: 44px;
+        box-shadow: 0 25px 65px -12px rgba(18, 31, 66, 0.22), 0 0 0 10px #1E293B;
+      }
+    }
+
+    /* 중앙 방사형 소프트 블루 글로우 */
+    .center-glow-effect {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(140, 175, 255, 0.35) 0%, rgba(180, 205, 255, 0.18) 45%, rgba(250, 251, 255, 0) 72%);
+      filter: blur(16px);
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    /* 부드러운 스플래시 인트로 애니메이션 */
+    @keyframes splashPop {
+      0% {
+        opacity: 0;
+        transform: scale(0.92) translateY(12px);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+      }
+    }
+
+    .animate-splash {
+      animation: splashPop 0.85s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 앱 메인 컨테이너 -->
+  <main class="app-viewport select-none">
+    
+    <!-- 중앙 방사형 소프트 블루 글로우 배경 -->
+    <div class="center-glow-effect"></div>
+
+    <!-- 중앙 브랜드 콘텐츠 블록 -->
+    <div class="relative z-10 flex flex-col items-center animate-splash px-6">
+      
+      <!-- 1. 상단 3색 캐릭터 캡슐 -->
+      <div class="mb-4 flex items-center justify-center">
+        <img 
+          src="./assets/character_capsules.png" 
+          alt="가챠트립 캐릭터" 
+          class="w-[102px] h-auto object-contain drop-shadow-sm" 
+        />
+      </div>
+
+      <!-- 2. 중앙 브랜드 로고 -->
+      <div class="mb-3.5 flex items-center justify-center">
+        <img 
+          src="./assets/gachatrip_logo.png" 
+          alt="gachatrip" 
+          class="w-[210px] h-auto object-contain" 
+        />
+      </div>
+
+      <!-- 3. 하단 슬로건 순수 텍스트 & Pretendard 스타일 적용 -->
+      <p class="text-[14.5px] font-bold text-[#121F42] tracking-[-0.02em] text-center leading-none mt-1">
+        어디로 갈지 고민될 땐, 가챠트립
+      </p>
+
+    </div>
+
+    <!-- 하단 모바일 인디케이터 바 -->
+    <div class="absolute bottom-2.5 z-20 w-32 h-1 bg-[#121F42]/15 rounded-full"></div>
+
+  </main>
+
+</body>
+</html>

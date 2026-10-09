@@ -1,0 +1,1070 @@
+# 온보딩 및 메인화면 (01_onboarding_main) Design Specifications
+
+> 이 문서는 Figma의 모든 요소 세팅값(좌표, 크기, 색상, 타이포그래피, 패딩, 갭, 텍스트)을 100% 보존한 완벽한 스펙입니다.
+
+## 1. 06 · Sign Up (ID: `2002:118`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/01_06 · Sign Up.png`
+
+### Component Tree & Styles
+- **06 · Sign Up** (`FRAME`) | `390.0x844.0`
+  - **가챠트립 시작하기** (`TEXT`) | `179.0x30.0` | Fill: #11183D | Font: Pretendard 700 25.0px | Text: "가챠트립 시작하기"
+  - **여행을 뽑는 새로운 방법** (`TEXT`) | `123.0x16.0` | Fill: #747B9C | Font: Pretendard 400 13.0px | Text: "여행을 뽑는 새로운 방법"
+  - **닉네임** (`TEXT`) | `29.0x13.0` | Fill: #747B9C | Font: Pretendard 700 11.0px | Text: "닉네임"
+  - **Frame** (`FRAME`) | `342.0x64.0` | Fill: #FFFFFF | Radius: 20.0px
+    - **여행자 이름을 입력해주세요** (`TEXT`) | `153.0x17.0` | Fill: #747B9C | Font: Pretendard 500 14.0px | Text: "여행자 이름을 입력해주세요"
+  - **이메일** (`TEXT`) | `29.0x13.0` | Fill: #747B9C | Font: Pretendard 700 11.0px | Text: "이메일"
+  - **Frame** (`FRAME`) | `342.0x64.0` | Fill: #FFFFFF | Radius: 20.0px
+    - **example@gachatrip.app** (`TEXT`) | `155.0x17.0` | Fill: #747B9C | Font: Pretendard 500 14.0px | Text: "example@gachatrip.app"
+  - **비밀번호** (`TEXT`) | `39.0x13.0` | Fill: #747B9C | Font: Pretendard 700 11.0px | Text: "비밀번호"
+  - **Frame** (`FRAME`) | `342.0x64.0` | Fill: #FFFFFF | Radius: 20.0px
+    - **8자 이상 입력해주세요** (`TEXT`) | `125.0x17.0` | Fill: #747B9C | Font: Pretendard 500 14.0px | Text: "8자 이상 입력해주세요"
+  - **CTA / Sign Up** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **회원가입** (`TEXT`) | `56.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "회원가입"
+  - **Line** (`LINE`) | `126.0x1.0`
+  - **또는** (`TEXT`) | `20.0x13.0` | Fill: #969DBB | Font: Pretendard 500 11.0px | Text: "또는"
+  - **Line** (`LINE`) | `126.0x1.0`
+  - **Frame** (`FRAME`) | `342.0x48.0` | Fill: #FEE502 | Radius: 17.0px
+    - **카카오로 계속하기** (`TEXT`) | `93.0x16.0` | Fill: #11183D | Font: Pretendard 700 13.0px | Text: "카카오로 계속하기"
+  - **Frame** (`FRAME`) | `342.0x48.0` | Fill: #FFFFFF | Radius: 17.0px
+    - **Google로 계속하기** (`TEXT`) | `103.0x16.0` | Fill: #11183D | Font: Pretendard 700 13.0px | Text: "Google로 계속하기"
+  - **Frame** (`FRAME`) | `342.0x48.0` | Fill: #000000 | Radius: 17.0px
+    - **Apple로 계속하기** (`TEXT`) | `96.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "Apple로 계속하기"
+  - **이미 계정이 있나요? 로그인** (`TEXT`) | `132.0x14.0` | Fill: #747B9C | Font: Pretendard 500 12.0px | Text: "이미 계정이 있나요?  로그인"
+  - **Group 1437253429** (`GROUP`) | `39.1x40.0`
+    - **Ellipse** (`ELLIPSE`) | `37.3x37.3`
+    - **Ellipse** (`ELLIPSE`) | `39.1x39.1`
+    - **Ellipse** (`ELLIPSE`) | `3.4x5.9` | Fill: #FFFFFF
+    - **Ellipse** (`ELLIPSE`) | `3.4x5.9` | Fill: #FFFFFF
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+
+---
+
+## 2. 08 · Detail · Profile Edit (ID: `2002:148`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/02_08 · Detail · Profile Edit.png`
+
+### Component Tree & Styles
+- **08 · Detail · Profile Edit** (`FRAME`) | `390.0x844.0` | Fill: #F7F8FA
+  - **Frame** (`FRAME`) | `96.0x96.0` | Fill: #EFF1FF | Radius: 48.0px
+  - **Group 1437253429** (`GROUP`) | `96.0x98.2`
+    - **Ellipse** (`ELLIPSE`) | `91.6x91.6`
+    - **Ellipse** (`ELLIPSE`) | `96.0x96.0`
+    - **Ellipse** (`ELLIPSE`) | `8.3x14.4` | Fill: #FFFFFF
+    - **Ellipse** (`ELLIPSE`) | `8.3x14.4` | Fill: #FFFFFF
+  - **사진을 눌러 변경할 수 있어요** (`TEXT`) | `210.0x14.0` | Fill: #697293 | Font: Pretendard 400 12.0px | Text: "사진을 눌러 변경할 수 있어요"
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #FFFFFF | Radius: 18.0px
+    - **닉네임** (`TEXT`) | `300.0x16.0` | Fill: #697293 | Font: Pretendard 700 10.0px | Text: "닉네임"
+    - **여행자 이은지** (`TEXT`) | `292.0x22.0` | Fill: #171F4B | Font: Pretendard 500 14.0px | Text: "여행자 이은지"
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #FFFFFF | Radius: 18.0px
+    - **한 줄 소개** (`TEXT`) | `300.0x16.0` | Fill: #697293 | Font: Pretendard 700 10.0px | Text: "한 줄 소개"
+    - **가챠트립으로 새로운 여행지 탐험 중!** (`TEXT`) | `292.0x22.0` | Fill: #171F4B | Font: Pretendard 500 14.0px | Text: "가챠트립으로 새로운 여행지 탐험 중!"
+  - **Frame** (`FRAME`) | `342.0x116.0` | Fill: #FFFFFF | Radius: 22.0px
+    - **관심 여행 스타일 최대 2개** (`TEXT`) | `300.0x18.0` | Fill: #697293 | Font: Pretendard 700 11.0px | Text: "관심 여행 스타일  최대 2개"
+    - **Frame** (`FRAME`) | `68.0x38.0` | Fill: #EFF1FF | Radius: 19.0px
+      - **힐링** (`TEXT`) | `68.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "힐링"
+    - **Frame** (`FRAME`) | `68.0x38.0` | Fill: #EFF1FF | Radius: 19.0px
+      - **맛집** (`TEXT`) | `68.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "맛집"
+    - **Frame** (`FRAME`) | `76.0x38.0` | Fill: #FFFFFF | Radius: 19.0px
+      - **액티비티** (`TEXT`) | `76.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "액티비티"
+    - **Frame** (`FRAME`) | `68.0x38.0` | Fill: #FFFFFF | Radius: 19.0px
+      - **감성** (`TEXT`) | `68.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "감성"
+  - **Frame** (`FRAME`) | `342.0x104.0` | Fill: #FFFFFF | Radius: 22.0px
+    - **자주 출발하는 지역** (`TEXT`) | `300.0x18.0` | Fill: #697293 | Font: Pretendard 700 11.0px | Text: "자주 출발하는 지역"
+    - **Frame** (`FRAME`) | `96.0x38.0` | Fill: #EFF1FF | Radius: 19.0px
+      - **서울/경기** (`TEXT`) | `96.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "서울/경기"
+    - **Frame** (`FRAME`) | `82.0x38.0` | Fill: #FFFFFF | Radius: 19.0px
+      - **강원도** (`TEXT`) | `82.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "강원도"
+    - **Frame** (`FRAME`) | `82.0x38.0` | Fill: #FFFFFF | Radius: 19.0px
+      - **제주도** (`TEXT`) | `82.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "제주도"
+  - **CTA / 저장하기** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **저장하기** (`TEXT`) | `342.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "저장하기"
+  - **category-list** (`FRAME`) | `390.0x59.0` | Fill: #FAFBFF
+    - **프로필 수정** (`TEXT`) | `78.0x26.0` | Fill: #171F4B | Font: Pretendard 700 17.0px | Text: "프로필 수정"
+    - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Icon** (`FRAME`) | `18.0x18.0`
+        - **Vector** (`VECTOR`) | `4.5x9.0`
+    - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+      - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+      - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #171F4B
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+
+---
+
+## 3. 09 · Detail · Nickname (ID: `2002:191`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/03_09 · Detail · Nickname.png`
+
+### Component Tree & Styles
+- **09 · Detail · Nickname** (`FRAME`) | `390.0x844.0` | Fill: #F7F8FA
+  - **여행에서 사용할 이름을 정해주세요** (`TEXT`) | `342.0x35.0` | Fill: #171F4B | Font: Pretendard 700 22.0px | Text: "여행에서 사용할 이름을 정해주세요"
+  - **2–10자, 한글·영문·숫자를 사용할 수 있어요.** (`TEXT`) | `342.0x19.0` | Fill: #697293 | Font: Pretendard 400 12.0px | Text: "2–10자, 한글·영문·숫자를 사용할 수 있어요."
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #FFFFFF | Radius: 18.0px
+    - **현재 닉네임** (`TEXT`) | `300.0x16.0` | Fill: #697293 | Font: Pretendard 700 10.0px | Text: "현재 닉네임"
+    - **여행자 이은지** (`TEXT`) | `292.0x22.0` | Fill: #171F4B | Font: Pretendard 500 14.0px | Text: "여행자 이은지"
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #FFFFFF | Radius: 18.0px
+    - **새 닉네임** (`TEXT`) | `300.0x16.0` | Fill: #697293 | Font: Pretendard 700 10.0px | Text: "새 닉네임"
+    - **은지의 여행상자** (`TEXT`) | `292.0x22.0` | Fill: #171F4B | Font: Pretendard 500 14.0px | Text: "은지의 여행상자"
+  - **사용 가능한 닉네임이에요** (`TEXT`) | `300.0x19.0` | Fill: #635BFF | Font: Pretendard 500 12.0px | Text: "사용 가능한 닉네임이에요"
+  - **Frame** (`FRAME`) | `342.0x104.0` | Fill: #FFFFFF | Radius: 22.0px
+    - **닉네임은 30일에 한 번 변경할 수 있어요.** (`TEXT`) | `306.0x21.0` | Fill: #3742A8 | Font: Pretendard 700 13.0px | Text: "닉네임은 30일에 한 번 변경할 수 있어요."
+    - **다른 여행자에게 프로필과 여행 기록에 표시됩니다.** (`TEXT`) | `306.0x19.0` | Fill: #697293 | Font: Pretendard 400 12.0px | Text: "다른 여행자에게 프로필과 여행 기록에 표시됩니다."
+  - **CTA / 닉네임 저장** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **닉네임 저장** (`TEXT`) | `342.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "닉네임 저장"
+  - **category-list** (`FRAME`) | `390.0x59.0` | Fill: #FAFBFF
+    - **닉네임 변경** (`TEXT`) | `78.0x26.0` | Fill: #171F4B | Font: Pretendard 700 17.0px | Text: "닉네임 변경"
+    - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Icon** (`FRAME`) | `18.0x18.0`
+        - **Vector** (`VECTOR`) | `4.5x9.0`
+    - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+      - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+      - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #171F4B
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+
+---
+
+## 4. 10 · Detail · Password (ID: `2002:215`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/04_10 · Detail · Password.png`
+
+### Component Tree & Styles
+- **10 · Detail · Password** (`FRAME`) | `390.0x844.0` | Fill: #F7F8FA
+  - **안전한 비밀번호로 계정을 보호하세요** (`TEXT`) | `342.0x35.0` | Fill: #171F4B | Font: Pretendard 700 22.0px | Text: "안전한 비밀번호로 계정을 보호하세요"
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #FFFFFF | Radius: 18.0px
+    - **현재 비밀번호** (`TEXT`) | `300.0x16.0` | Fill: #697293 | Font: Pretendard 700 10.0px | Text: "현재 비밀번호"
+    - **••••••••** (`TEXT`) | `292.0x22.0` | Fill: #171F4B | Font: Pretendard 500 14.0px | Text: "••••••••"
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #FFFFFF | Radius: 18.0px
+    - **새 비밀번호** (`TEXT`) | `300.0x16.0` | Fill: #697293 | Font: Pretendard 700 10.0px | Text: "새 비밀번호"
+    - **••••••••** (`TEXT`) | `292.0x22.0` | Fill: #171F4B | Font: Pretendard 500 14.0px | Text: "••••••••"
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #FFFFFF | Radius: 18.0px
+    - **새 비밀번호 확인** (`TEXT`) | `300.0x16.0` | Fill: #697293 | Font: Pretendard 700 10.0px | Text: "새 비밀번호 확인"
+    - **••••••••** (`TEXT`) | `292.0x22.0` | Fill: #171F4B | Font: Pretendard 500 14.0px | Text: "••••••••"
+  - **Frame** (`FRAME`) | `342.0x142.0` | Fill: #FFFFFF | Radius: 22.0px
+    - **비밀번호 조건** (`TEXT`) | `300.0x21.0` | Fill: #3742A8 | Font: Pretendard 700 13.0px | Text: "비밀번호 조건"
+    - **✓ 8자 이상** (`TEXT`) | `290.0x19.0` | Fill: #3742A8 | Font: Pretendard 500 12.0px | Text: "✓  8자 이상"
+    - **✓ 영문과 숫자 조합** (`TEXT`) | `290.0x19.0` | Fill: #3742A8 | Font: Pretendard 500 12.0px | Text: "✓  영문과 숫자 조합"
+    - **○ 특수문자 1개 이상** (`TEXT`) | `290.0x19.0` | Fill: #697293 | Font: Pretendard 500 12.0px | Text: "○  특수문자 1개 이상"
+  - **CTA / 비밀번호 변경** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **비밀번호 변경** (`TEXT`) | `342.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "비밀번호 변경"
+  - **category-list** (`FRAME`) | `390.0x59.0` | Fill: #FAFBFF
+    - **비밀번호 변경** (`TEXT`) | `93.0x26.0` | Fill: #171F4B | Font: Pretendard 700 17.0px | Text: "비밀번호 변경"
+    - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Icon** (`FRAME`) | `18.0x18.0`
+        - **Vector** (`VECTOR`) | `4.5x9.0`
+    - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+      - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+      - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #171F4B
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+
+---
+
+## 5. 11 · Detail · Linked Accounts (ID: `2002:242`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/05_11 · Detail · Linked Accounts.png`
+
+### Component Tree & Styles
+- **11 · Detail · Linked Accounts** (`FRAME`) | `390.0x844.0` | Fill: #F7F8FA
+  - **로그인에 사용할 계정을 연결하세요** (`TEXT`) | `342.0x35.0` | Fill: #171F4B | Font: Pretendard 700 22.0px | Text: "로그인에 사용할 계정을 연결하세요"
+  - **Frame** (`FRAME`) | `342.0x246.0` | Fill: #FFFFFF | Radius: 22.0px
+    - **Kakao** (`TEXT`) | `160.0x24.0` | Fill: #171F4B | Font: Pretendard 700 15.0px | Text: "Kakao"
+    - **eunji****@kakao.com** (`TEXT`) | `210.0x18.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "eunji****@kakao.com"
+    - **Frame** (`FRAME`) | `76.0x38.0` | Fill: #635BFF | Radius: 19.0px
+      - **연결됨** (`TEXT`) | `76.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "연결됨"
+    - **Rectangle** (`RECTANGLE`) | `310.0x1.0` | Fill: #F0EEEA
+    - **Google** (`TEXT`) | `160.0x24.0` | Fill: #171F4B | Font: Pretendard 700 15.0px | Text: "Google"
+    - **간편 로그인을 사용할 수 있어요** (`TEXT`) | `210.0x18.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "간편 로그인을 사용할 수 있어요"
+    - **Frame** (`FRAME`) | `76.0x38.0` | Fill: #F0EEEA | Radius: 19.0px
+      - **연결** (`TEXT`) | `76.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "연결"
+    - **Rectangle** (`RECTANGLE`) | `310.0x1.0` | Fill: #F0EEEA
+    - **Apple** (`TEXT`) | `160.0x24.0` | Fill: #171F4B | Font: Pretendard 700 15.0px | Text: "Apple"
+    - **개인정보 보호 로그인을 지원해요** (`TEXT`) | `210.0x18.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "개인정보 보호 로그인을 지원해요"
+    - **Frame** (`FRAME`) | `76.0x38.0` | Fill: #F0EEEA | Radius: 19.0px
+      - **연결** (`TEXT`) | `76.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "연결"
+  - **Frame** (`FRAME`) | `342.0x104.0` | Fill: #FFFFFF | Radius: 22.0px
+    - **계정 연결 안내** (`TEXT`) | `306.0x21.0` | Fill: #3742A8 | Font: Pretendard 700 13.0px | Text: "계정 연결 안내"
+    - **연결된 계정으로 동일한 여행 기록과 키링을 안전하게 불러올 수 있어요.** (`TEXT`) | `306.0x19.0` | Fill: #697293 | Font: Pretendard 400 12.0px | Text: "연결된 계정으로 동일한 여행 기록과 키링을 안전하..."
+  - **CTA / 연결 정보 저장** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **연결 정보 저장** (`TEXT`) | `342.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "연결 정보 저장"
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Fill: #FAFBFF | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+  - **category-list** (`FRAME`) | `390.0x59.0` | Fill: #FAFBFF
+    - **연결 계정 변경** (`TEXT`) | `96.0x26.0` | Fill: #1C1C14 | Font: Pretendard 700 17.0px | Text: "연결 계정 변경"
+    - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Icon** (`FRAME`) | `18.0x18.0`
+        - **Vector** (`VECTOR`) | `4.5x9.0`
+    - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+      - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+      - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #1C1B1F
+
+---
+
+## 6. 12 · Detail · Departure Region (ID: `2002:273`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/06_12 · Detail · Departure Region.png`
+
+### Component Tree & Styles
+- **12 · Detail · Departure Region** (`FRAME`) | `390.0x844.0` | Fill: #F7F8FA
+  - **기본 출발 지역** (`TEXT`) | `342.0x20.0` | Fill: #697293 | Font: Pretendard 700 12.0px | Text: "기본 출발 지역"
+  - **Frame** (`FRAME`) | `342.0x92.0` | Radius: 22.0px
+    - **현재 설정** (`TEXT`) | `300.0x13.0` | Fill: #CDD4FF | Font: Pretendard 700 11.0px | Text: "현재 설정"
+    - **인천광역시** (`TEXT`) | `300.0x24.0` | Fill: #FFFFFF | Font: Pretendard 700 20.0px | Text: "인천광역시"
+  - **지역을 선택해주세요** (`TEXT`) | `342.0x29.0` | Fill: #171F4B | Font: Pretendard 700 18.0px | Text: "지역을 선택해주세요"
+  - **Frame** (`FRAME`) | `167.0x40.0` | Fill: #FFFFFF | Radius: 20.0px
+    - **서울/경기** (`TEXT`) | `167.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "서울/경기"
+  - **Frame** (`FRAME`) | `167.0x40.0` | Fill: #EFF1FF | Radius: 20.0px
+    - **인천** (`TEXT`) | `167.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "인천"
+  - **Frame** (`FRAME`) | `167.0x40.0` | Fill: #FFFFFF | Radius: 20.0px
+    - **강원도** (`TEXT`) | `167.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "강원도"
+  - **Frame** (`FRAME`) | `167.0x40.0` | Fill: #FFFFFF | Radius: 20.0px
+    - **충청도** (`TEXT`) | `167.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "충청도"
+  - **Frame** (`FRAME`) | `167.0x40.0` | Fill: #FFFFFF | Radius: 20.0px
+    - **전라도** (`TEXT`) | `167.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "전라도"
+  - **Frame** (`FRAME`) | `167.0x40.0` | Fill: #FFFFFF | Radius: 20.0px
+    - **경상도** (`TEXT`) | `167.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "경상도"
+  - **Frame** (`FRAME`) | `167.0x40.0` | Fill: #FFFFFF | Radius: 20.0px
+    - **제주도** (`TEXT`) | `167.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "제주도"
+  - **Frame** (`FRAME`) | `167.0x40.0` | Fill: #FFFFFF | Radius: 20.0px
+    - **직접 입력** (`TEXT`) | `167.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "직접 입력"
+  - **Frame** (`FRAME`) | `342.0x82.0` | Fill: #FFFFFF | Radius: 22.0px
+    - **현재 위치로 자동 설정** (`TEXT`) | `240.0x23.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "현재 위치로 자동 설정"
+    - **앱을 열 때 출발 지역을 업데이트** (`TEXT`) | `240.0x18.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "앱을 열 때 출발 지역을 업데이트"
+    - **Frame** (`FRAME`) | `50.0x28.0` | Fill: #635BFF | Radius: 14.0px
+      - **Ellipse** (`ELLIPSE`) | `22.0x22.0` | Fill: #FFFFFF
+  - **CTA / 출발 지역 저장** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **출발 지역 저장** (`TEXT`) | `342.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "출발 지역 저장"
+  - **category-list** (`FRAME`) | `390.0x59.0` | Fill: #FAFBFF
+    - **출발 지역 설정** (`TEXT`) | `96.0x26.0` | Fill: #171F4B | Font: Pretendard 700 17.0px | Text: "출발 지역 설정"
+    - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Icon** (`FRAME`) | `18.0x18.0`
+        - **Vector** (`VECTOR`) | `4.5x9.0`
+    - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+      - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+      - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #171F4B
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+
+---
+
+## 7. 13 · Detail · Travel Style (ID: `2002:311`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/07_13 · Detail · Travel Style.png`
+
+### Component Tree & Styles
+- **13 · Detail · Travel Style** (`FRAME`) | `390.0x844.0` | Fill: #F7F8FA
+  - **나에게 맞는 여행 스타일을 골라주세요** (`TEXT`) | `342.0x32.0` | Fill: #171F4B | Font: Pretendard 700 20.0px | Text: "나에게 맞는 여행 스타일을 골라주세요"
+  - **최대 2개까지 선택할 수 있어요.** (`TEXT`) | `342.0x20.0` | Fill: #697293 | Font: Pretendard 400 12.0px | Text: "최대 2개까지 선택할 수 있어요."
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #EFF1FF | Radius: 18.0px
+    - **Ellipse** (`ELLIPSE`) | `22.0x22.0` | Fill: #635BFF
+    - **Ellipse** (`ELLIPSE`) | `8.0x8.0` | Fill: #FFFFFF
+    - **힐링** (`TEXT`) | `250.0x17.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "힐링"
+    - **조용한 자연과 여유로운 쉼** (`TEXT`) | `250.0x13.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "조용한 자연과 여유로운 쉼"
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #FFFFFF | Radius: 18.0px
+    - **Ellipse** (`ELLIPSE`) | `22.0x22.0` | Fill: #FFFFFF
+    - **액티비티** (`TEXT`) | `250.0x17.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "액티비티"
+    - **몸을 움직이는 짜릿한 경험** (`TEXT`) | `250.0x13.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "몸을 움직이는 짜릿한 경험"
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #EFF1FF | Radius: 18.0px
+    - **Ellipse** (`ELLIPSE`) | `22.0x22.0` | Fill: #635BFF
+    - **Ellipse** (`ELLIPSE`) | `8.0x8.0` | Fill: #FFFFFF
+    - **맛집** (`TEXT`) | `250.0x17.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "맛집"
+    - **지역의 맛을 따라가는 여행** (`TEXT`) | `250.0x13.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "지역의 맛을 따라가는 여행"
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #FFFFFF | Radius: 18.0px
+    - **Ellipse** (`ELLIPSE`) | `22.0x22.0` | Fill: #FFFFFF
+    - **감성** (`TEXT`) | `250.0x17.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "감성"
+    - **사진과 분위기를 담는 여행** (`TEXT`) | `250.0x13.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "사진과 분위기를 담는 여행"
+  - **Frame** (`FRAME`) | `342.0x92.0` | Fill: #635BFF | Radius: 22.0px
+    - **선택한 스타일** (`TEXT`) | `306.0x13.0` | Fill: #CDD4FF | Font: Pretendard 700 11.0px | Text: "선택한 스타일"
+    - **힐링 + 맛집** (`TEXT`) | `306.0x21.0` | Fill: #FFFFFF | Font: Pretendard 700 18.0px | Text: "힐링  +  맛집"
+  - **CTA / 스타일 저장** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **스타일 저장** (`TEXT`) | `342.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "스타일 저장"
+  - **category-list** (`FRAME`) | `390.0x59.0` | Fill: #FAFBFF
+    - **기본 여행 스타일** (`TEXT`) | `111.0x26.0` | Fill: #171F4B | Font: Pretendard 700 17.0px | Text: "기본 여행 스타일"
+    - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Icon** (`FRAME`) | `18.0x18.0`
+        - **Vector** (`VECTOR`) | `4.5x9.0`
+    - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+      - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+      - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #171F4B
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+
+---
+
+## 8. 14 · Detail · Budget (ID: `2002:346`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/08_14 · Detail · Budget.png`
+
+### Component Tree & Styles
+- **14 · Detail · Budget** (`FRAME`) | `390.0x844.0` | Fill: #F7F8FA
+  - **한 번의 여행에서 사용할 예산을 골라주세요** (`TEXT`) | `342.0x32.0` | Fill: #171F4B | Font: Pretendard 700 20.0px | Text: "한 번의 여행에서 사용할 예산을 골라주세요"
+  - **추천 결과의 숙소·맛집 범위를 조정해요.** (`TEXT`) | `342.0x20.0` | Fill: #697293 | Font: Pretendard 400 12.0px | Text: "추천 결과의 숙소·맛집 범위를 조정해요."
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #FFFFFF | Radius: 18.0px
+    - **Ellipse** (`ELLIPSE`) | `22.0x22.0` | Fill: #FFFFFF
+    - **10만원 이하** (`TEXT`) | `250.0x17.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "10만원 이하"
+    - **가볍게 떠나는 근거리 여행** (`TEXT`) | `250.0x13.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "가볍게 떠나는 근거리 여행"
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #FFFFFF | Radius: 18.0px
+    - **Ellipse** (`ELLIPSE`) | `22.0x22.0` | Fill: #FFFFFF
+    - **10–20만원** (`TEXT`) | `250.0x17.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "10–20만원"
+    - **당일치기 또는 1박 여행** (`TEXT`) | `250.0x13.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "당일치기 또는 1박 여행"
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #EFF1FF | Radius: 18.0px
+    - **Ellipse** (`ELLIPSE`) | `22.0x22.0` | Fill: #635BFF
+    - **Ellipse** (`ELLIPSE`) | `8.0x8.0` | Fill: #FFFFFF
+    - **20–30만원** (`TEXT`) | `250.0x17.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "20–30만원"
+    - **여유 있는 1박 2일** (`TEXT`) | `250.0x13.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "여유 있는 1박 2일"
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #FFFFFF | Radius: 18.0px
+    - **Ellipse** (`ELLIPSE`) | `22.0x22.0` | Fill: #FFFFFF
+    - **30–50만원** (`TEXT`) | `250.0x17.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "30–50만원"
+    - **숙소까지 즐기는 여행** (`TEXT`) | `250.0x13.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "숙소까지 즐기는 여행"
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #FFFFFF | Radius: 18.0px
+    - **Ellipse** (`ELLIPSE`) | `22.0x22.0` | Fill: #FFFFFF
+    - **제한 없음** (`TEXT`) | `250.0x17.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "제한 없음"
+    - **예산보다 취향을 우선** (`TEXT`) | `250.0x13.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "예산보다 취향을 우선"
+  - **Frame** (`FRAME`) | `342.0x64.0` | Fill: #212B61 | Radius: 18.0px
+    - **현재 기본 예산 30만원 이하** (`TEXT`) | `306.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "현재 기본 예산  30만원 이하"
+  - **CTA / 예산 저장** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **예산 저장** (`TEXT`) | `342.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "예산 저장"
+  - **category-list** (`FRAME`) | `390.0x59.0` | Fill: #FAFBFF
+    - **기본 예산** (`TEXT`) | `63.0x26.0` | Fill: #171F4B | Font: Pretendard 700 17.0px | Text: "기본 예산"
+    - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Icon** (`FRAME`) | `18.0x18.0`
+        - **Vector** (`VECTOR`) | `4.5x9.0`
+    - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+      - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+      - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #171F4B
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+
+---
+
+## 9. 15 · Detail · Recommendation Alerts (ID: `2002:383`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/09_15 · Detail · Recommendation Alerts.png`
+
+### Component Tree & Styles
+- **15 · Detail · Recommendation Alerts** (`FRAME`) | `390.0x844.0` | Fill: #F7F8FA
+  - **여행 기회를 놓치지 않도록 알려드릴게요** (`TEXT`) | `342.0x32.0` | Fill: #171F4B | Font: Pretendard 700 20.0px | Text: "여행 기회를 놓치지 않도록 알려드릴게요"
+  - **Frame** (`FRAME`) | `342.0x90.0` | Radius: 22.0px
+    - **여행 추천 알림** (`TEXT`) | `230.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "여행 추천 알림"
+    - **새 여행지와 시즌 추천을 받아요** (`TEXT`) | `230.0x13.0` | Fill: #FFFFFF | Font: Pretendard 400 11.0px | Text: "새 여행지와 시즌 추천을 받아요"
+    - **Frame** (`FRAME`) | `50.0x28.0` | Fill: #CDFF35 | Radius: 14.0px
+      - **Ellipse** (`ELLIPSE`) | `22.0x22.0` | Fill: #FFFFFF
+  - **Frame** (`FRAME`) | `342.0x252.0` | Fill: #FFFFFF | Radius: 22.0px
+    - **알림 받을 날** (`TEXT`) | `250.0x20.0` | Fill: #697293 | Font: Pretendard 700 12.0px | Text: "알림 받을 날"
+    - **Frame 1000003481** (`FRAME`) | `304.0x42.0` | Layout: HORIZONTAL (Gap: 4.0px, Pad: 0/0/0/0)
+      - **Frame** (`FRAME`) | `40.0x40.0` | Fill: #F0EEEA | Radius: 20.0px | Layout: VERTICAL (Gap: 10.0px, Pad: 12.0/0/12.0/0)
+        - **월** (`TEXT`) | `40.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "월"
+      - **Frame** (`FRAME`) | `40.0x40.0` | Fill: #F0EEEA | Radius: 20.0px | Layout: VERTICAL (Gap: 10.0px, Pad: 12.0/0/12.0/0)
+        - **화** (`TEXT`) | `40.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "화"
+      - **Frame** (`FRAME`) | `40.0x40.0` | Fill: #F0EEEA | Radius: 20.0px | Layout: VERTICAL (Gap: 10.0px, Pad: 12.0/0/12.0/0)
+        - **수** (`TEXT`) | `40.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "수"
+      - **Frame** (`FRAME`) | `40.0x40.0` | Fill: #F0EEEA | Radius: 20.0px | Layout: VERTICAL (Gap: 10.0px, Pad: 12.0/0/12.0/0)
+        - **목** (`TEXT`) | `40.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "목"
+      - **Frame** (`FRAME`) | `40.0x42.0` | Fill: #635BFF | Radius: 20.0px | Layout: VERTICAL (Gap: 10.0px, Pad: 12.0/0/12.0/0)
+        - **금** (`TEXT`) | `38.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "금"
+      - **Frame** (`FRAME`) | `40.0x42.0` | Fill: #635BFF | Radius: 20.0px | Layout: VERTICAL (Gap: 10.0px, Pad: 12.0/0/12.0/0)
+        - **토** (`TEXT`) | `38.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "토"
+      - **Frame** (`FRAME`) | `40.0x40.0` | Fill: #F0EEEA | Radius: 20.0px | Layout: VERTICAL (Gap: 10.0px, Pad: 12.0/0/12.0/0)
+        - **일** (`TEXT`) | `40.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "일"
+    - **알림 시간** (`TEXT`) | `250.0x20.0` | Fill: #697293 | Font: Pretendard 700 12.0px | Text: "알림 시간"
+    - **Frame** (`FRAME`) | `128.0x40.0` | Fill: #635BFF | Radius: 20.0px
+      - **오후 7:30** (`TEXT`) | `128.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "오후 7:30"
+    - **Frame** (`FRAME`) | `116.0x40.0` | Fill: #F0EEEA | Radius: 20.0px
+      - **직접 설정** (`TEXT`) | `116.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "직접 설정"
+    - **추천 종류** (`TEXT`) | `250.0x20.0` | Fill: #697293 | Font: Pretendard 700 12.0px | Text: "추천 종류"
+    - **시즌 여행지 · 내 취향 업데이트** (`TEXT`) | `290.0x21.0` | Fill: #171F4B | Font: Pretendard 500 13.0px | Text: "시즌 여행지 · 내 취향 업데이트"
+  - **Frame** (`FRAME`) | `342.0x84.0` | Fill: #FFFFFF | Radius: 22.0px
+    - **방해 금지 시간 적용** (`TEXT`) | `240.0x17.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "방해 금지 시간 적용"
+    - **오후 10시부터 오전 8시까지** (`TEXT`) | `240.0x13.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "오후 10시부터 오전 8시까지"
+    - **Frame** (`FRAME`) | `50.0x28.0` | Fill: #635BFF | Radius: 14.0px
+      - **Ellipse** (`ELLIPSE`) | `22.0x22.0` | Fill: #FFFFFF
+  - **CTA / 알림 설정 저장** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **알림 설정 저장** (`TEXT`) | `342.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "알림 설정 저장"
+  - **category-list** (`FRAME`) | `390.0x59.0` | Fill: #FAFBFF
+    - **여행 추천 알림** (`TEXT`) | `96.0x26.0` | Fill: #171F4B | Font: Pretendard 700 17.0px | Text: "여행 추천 알림"
+    - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Icon** (`FRAME`) | `18.0x18.0`
+        - **Vector** (`VECTOR`) | `4.5x9.0`
+    - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+      - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+      - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #171F4B
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+
+---
+
+## 10. 16 · Detail · Location Recommendation (ID: `2002:430`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/10_16 · Detail · Location Recommendation.png`
+
+### Component Tree & Styles
+- **16 · Detail · Location Recommendation** (`FRAME`) | `390.0x844.0` | Fill: #F7F8FA
+  - **Frame** (`FRAME`) | `342.0x150.0` | Radius: 26.0px
+    - **현재 위치** (`TEXT`) | `290.0x18.0` | Fill: #FFFFFF | Font: Pretendard 700 11.0px | Text: "현재 위치"
+    - **인천광역시** (`TEXT`) | `290.0x39.0` | Fill: #FFFFFF | Font: Pretendard 700 24.0px | Text: "인천광역시"
+    - **내 주변 150km 안의 여행지를 추천해요** (`TEXT`) | `290.0x20.0` | Fill: #FFFFFF | Font: Pretendard 400 12.0px | Text: "내 주변 150km 안의 여행지를 추천해요"
+    - **Frame** (`FRAME`) | `104.0x28.0` | Fill: #F0EEEA | Radius: 20.0px
+      - **위치 다시 확인** (`TEXT`) | `63.0x13.0` | Fill: #171F4B | Font: Pretendard 700 11.0px | Text: "위치 다시 확인"
+  - **Frame** (`FRAME`) | `342.0x88.0` | Fill: #FFFFFF | Radius: 22.0px
+    - **위치 기반 추천 사용** (`TEXT`) | `240.0x23.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "위치 기반 추천 사용"
+    - **앱을 열 때 가까운 여행지를 우선 표시** (`TEXT`) | `250.0x18.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "앱을 열 때 가까운 여행지를 우선 표시"
+    - **Frame** (`FRAME`) | `50.0x28.0` | Fill: #CDFF35 | Radius: 14.0px
+      - **Ellipse** (`ELLIPSE`) | `22.0x22.0` | Fill: #FFFFFF
+  - **추천 반경** (`TEXT`) | `342.0x20.0` | Fill: #697293 | Font: Pretendard 700 12.0px | Text: "추천 반경"
+  - **Frame** (`FRAME`) | `78.0x40.0` | Fill: #F0EEEA | Radius: 20.0px
+    - **50km** (`TEXT`) | `78.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "50km"
+  - **Frame** (`FRAME`) | `78.0x40.0` | Fill: #F0EEEA | Radius: 20.0px
+    - **100km** (`TEXT`) | `78.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "100km"
+  - **Frame** (`FRAME`) | `78.0x40.0` | Fill: #635BFF | Radius: 20.0px
+    - **150km** (`TEXT`) | `78.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "150km"
+  - **Frame** (`FRAME`) | `78.0x40.0` | Fill: #F0EEEA | Radius: 20.0px
+    - **전국** (`TEXT`) | `78.0x16.0` | Fill: #171F4B | Font: Pretendard 700 13.0px | Text: "전국"
+  - **Frame** (`FRAME`) | `342.0x93.0` | Fill: #EFF1FF | Radius: 22.0px
+    - **위치 정보는 추천을 위해서만 사용돼요.** (`TEXT`) | `306.0x21.0` | Fill: #3742A8 | Font: Pretendard 700 13.0px | Text: "위치 정보는 추천을 위해서만 사용돼요."
+    - **정확한 주소는 저장하지 않으며 언제든지 설정에서 권한을 끌 수 있어요.** (`TEXT`) | `306.0x20.0` | Fill: #697293 | Font: Pretendard 400 12.0px | Text: "정확한 주소는 저장하지 않으며 언제든지 설정에서 ..."
+  - **CTA / 위치 설정 저장** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **위치 설정 저장** (`TEXT`) | `342.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "위치 설정 저장"
+  - **category-list** (`FRAME`) | `390.0x59.0` | Fill: #FAFBFF
+    - **위치 기반 설정** (`TEXT`) | `96.0x26.0` | Fill: #171F4B | Font: Pretendard 700 17.0px | Text: "위치 기반 설정"
+    - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Icon** (`FRAME`) | `18.0x18.0`
+        - **Vector** (`VECTOR`) | `4.5x9.0`
+    - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+      - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+      - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #171F4B
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+
+---
+
+## 11. 17 · Detail · Language (ID: `2002:465`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/11_17 · Detail · Language.png`
+
+### Component Tree & Styles
+- **17 · Detail · Language** (`FRAME`) | `390.0x844.0` | Fill: #F7F8FA
+  - **앱에서 사용할 언어를 선택하세요** (`TEXT`) | `342.0x24.0` | Fill: #171F4B | Font: Pretendard 700 20.0px | Text: "앱에서 사용할 언어를 선택하세요"
+  - **Frame** (`FRAME`) | `342.0x76.0` | Fill: #EFF1FF | Radius: 18.0px
+    - **한국어** (`TEXT`) | `250.0x17.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "한국어"
+    - **기본 언어** (`TEXT`) | `250.0x13.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "기본 언어"
+    - **Ellipse** (`ELLIPSE`) | `24.0x24.0` | Fill: #635BFF
+    - **✓** (`TEXT`) | `24.0x21.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "✓"
+  - **Frame** (`FRAME`) | `342.0x76.0` | Fill: #FFFFFF | Radius: 18.0px
+    - **English** (`TEXT`) | `250.0x17.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "English"
+    - **English** (`TEXT`) | `250.0x13.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "English"
+    - **Ellipse** (`ELLIPSE`) | `24.0x24.0` | Fill: #FFFFFF
+  - **Frame** (`FRAME`) | `342.0x76.0` | Fill: #FFFFFF | Radius: 18.0px
+    - **日本語** (`TEXT`) | `250.0x17.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "日本語"
+    - **日本語** (`TEXT`) | `250.0x13.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "日本語"
+    - **Ellipse** (`ELLIPSE`) | `24.0x24.0` | Fill: #FFFFFF
+  - **Frame** (`FRAME`) | `342.0x96.0` | Fill: #EFF1FF | Radius: 22.0px
+    - **언어를 변경하면 앱이 다시 시작돼요.** (`TEXT`) | `306.0x21.0` | Fill: #3742A8 | Font: Pretendard 700 13.0px | Text: "언어를 변경하면 앱이 다시 시작돼요."
+    - **여행지 이름과 추천 콘텐츠도 선택한 언어로 표시됩니다.** (`TEXT`) | `306.0x18.0` | Fill: #697293 | Font: Pretendard 400 11.0px | Text: "여행지 이름과 추천 콘텐츠도 선택한 언어로 표시됩니다."
+  - **CTA / 언어 저장** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **언어 저장** (`TEXT`) | `342.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "언어 저장"
+  - **category-list** (`FRAME`) | `390.0x59.0` | Fill: #FAFBFF
+    - **언어** (`TEXT`) | `30.0x26.0` | Fill: #171F4B | Font: Pretendard 700 17.0px | Text: "언어"
+    - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Icon** (`FRAME`) | `18.0x18.0`
+        - **Vector** (`VECTOR`) | `4.5x9.0`
+    - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+      - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+      - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #171F4B
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+
+---
+
+## 12. 18 · Detail · App Version (ID: `2002:494`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/12_18 · Detail · App Version.png`
+
+### Component Tree & Styles
+- **18 · Detail · App Version** (`FRAME`) | `390.0x844.0` | Fill: #F7F8FA
+  - **Back / My Page** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 20.0px
+    - **‹** (`TEXT`) | `40.0x40.0` | Fill: #3742A8 | Font: Pretendard 500 25.0px | Text: "‹"
+  - **앱 버전** (`TEXT`) | `238.0x32.0` | Fill: #171F4B | Font: Pretendard 700 20.0px | Text: "앱 버전"
+  - **Frame** (`FRAME`) | `120.0x120.0` | Radius: 36.0px
+    - **배경** (`RECTANGLE`) | `120.0x120.0`
+  - **가챠트립 1.0.0** (`TEXT`) | `342.0x36.0` | Fill: #171F4B | Font: Pretendard 700 22.0px | Text: "가챠트립 1.0.0"
+  - **현재 최신 버전을 사용하고 있어요** (`TEXT`) | `342.0x20.0` | Fill: #697293 | Font: Pretendard 400 12.0px | Text: "현재 최신 버전을 사용하고 있어요"
+  - **Frame** (`FRAME`) | `342.0x72.0` | Fill: #EFF1FF | Radius: 22.0px
+    - **✓ 최신 버전** (`TEXT`) | `306.0x17.0` | Fill: #3742A8 | Font: Pretendard 700 14.0px | Text: "✓  최신 버전"
+  - **Frame** (`FRAME`) | `342.0x140.0` | Fill: #FFFFFF | Radius: 22.0px
+    - **이번 업데이트** (`TEXT`) | `306.0x21.0` | Fill: #697293 | Font: Pretendard 700 13.0px | Text: "이번 업데이트"
+    - **• 블루 톤 디자인 시스템 개선 • AI 여행 코스 추천 정확도 향상 • 키링 컬렉션 정렬 기능 추가** (`TEXT`) | `306.0x21.0` | Fill: #171F4B | Font: Pretendard 500 13.0px | Text: "•  블루 톤 디자인 시스템 개선 •  AI 여행..."
+  - **Frame** (`FRAME`) | `342.0x96.0` | Fill: #FFFFFF | Radius: 22.0px
+    - **이용약관** (`TEXT`) | `200.0x23.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "이용약관"
+    - **›** (`TEXT`) | `24.0x32.0` | Fill: #CCCCCC | Font: Pretendard 500 20.0px | Text: "›"
+    - **개인정보 처리방침** (`TEXT`) | `220.0x23.0` | Fill: #171F4B | Font: Pretendard 700 14.0px | Text: "개인정보 처리방침"
+    - **›** (`TEXT`) | `24.0x32.0` | Fill: #CCCCCC | Font: Pretendard 500 20.0px | Text: "›"
+  - **CTA / 업데이트 확인** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **업데이트 확인** (`TEXT`) | `342.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "업데이트 확인"
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+
+---
+
+## 13. 06 · Home — Reference Redesign (ID: `2002:519`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/13_06 · Home — Reference Redesign.png`
+
+### Component Tree & Styles
+- **06 · Home — Reference Redesign** (`FRAME`) | `390.0x844.0`
+  - **06 · Home — Reference Redesign** (`FRAME`) | `390.0x844.0` | Fill: #F6F9FF
+    - **Group 1437253435** (`GROUP`) | `695.0x660.0`
+      - **Hero / Soft Halo** (`ELLIPSE`) | `216.0x216.0`
+      - **Background / Blue Glow** (`ELLIPSE`) | `440.0x440.0`
+      - **Background / Violet Glow** (`ELLIPSE`) | `300.0x300.0`
+    - **Eyebrow** (`TEXT`) | `79.0x14.0` | Fill: #0A1F47 | Font: Pretendard 700 12.0px | Text: "오늘의 랜덤 여행"
+    - **Headline** (`TEXT`) | `196.0x76.0` | Font: Partial Sans KR 400 30.0px | Text: "어디로 떠나볼까요?"
+    - **Hero Subtitle** (`TEXT`) | `189.0x17.0` | Fill: #5E708F | Font: Pretendard 400 12.0px | Text: "여행 가챠가 오늘의 목적지를 골라드려요"
+    - **ChatGPT Image 2026년 9월 17일 오후 04_33_22 1** (`RECTANGLE`) | `187.0x181.0`
+    - **Gacha / Main Action** (`FRAME`) | `342.0x205.0` | Fill: #FFFFFFE5 | Radius: 28.0px
+      - **Gacha / Title** (`TEXT`) | `92.0x24.0` | Fill: #0A1F47 | Font: Pretendard 700 20.0px | Text: "여행지 뽑기"
+      - **Gacha / Description** (`TEXT`) | `170.0x26.0` | Fill: #5E708F | Font: Pretendard 400 11.0px | Text: "조건을 고르고 가챠 뽑기를 하면 AI가 맞춤 여행..."
+      - **Gacha / Ring 1** (`ELLIPSE`) | `112.0x112.0` | Fill: #4D6BFF0E
+      - **Gacha / Ring 2** (`ELLIPSE`) | `86.0x86.0` | Fill: #4D6BFF14
+      - **Gacha / Ring 3** (`ELLIPSE`) | `60.0x60.0` | Fill: #4D6BFF1B
+      - **3D / Blue Gacha Capsule** (`RECTANGLE`) | `118.0x118.0`
+      - **CTA / Draw** (`FRAME`) | `302.0x50.0` | Radius: 17.0px
+        - **CTA / Label** (`TEXT`) | `302.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "여행지 뽑기"
+      - **Frame** (`FRAME`) | `78.0x24.0` | Fill: #EFF1FF | Radius: 12.0px
+        - **GACHA GO!** (`TEXT`) | `51.0x11.0` | Fill: #635BFF | Font: Pretendard 700 9.0px | Text: "GACHA GO!"
+      - **ChatGPT Image 2026년 9월 17일 오후 01_51_19 1** (`RECTANGLE`) | `120.0x120.0`
+    - **Menu / Asymmetric Mosaic** (`FRAME`) | `342.0x126.0`
+      - **Menu Feature / 내 키링** (`FRAME`) | `160.0x126.0` | Fill: #FDFDFE | Radius: 24.0px
+        - **Keyring / Eyebrow** (`TEXT`) | `65.0x10.0` | Fill: #4052D1 | Font: Pretendard 700 8.0px | Text: "MY COLLECTION"
+        - **Keyring / Count** (`TEXT`) | `41.0x11.0` | Fill: #3D4F7A | Font: Noto Sans KR 400 9.0px | Text: "8 / 12 수집"
+        - **Keyring / Progress Track** (`RECTANGLE`) | `131.0x5.0` | Fill: #EAF0F7 | Radius: 3.0px
+        - **Keyring / Progress** (`RECTANGLE`) | `86.0x5.0` | Fill: #C4F84B | Radius: 3.0px
+        - **Keyring / Link** (`TEXT`) | `41.0x11.0` | Fill: #384AD9 | Font: Pretendard 700 9.0px | Text: "모두 보기  ›"
+        - **Keyring / Title** (`TEXT`) | `48.0x20.0` | Fill: #0A1F47 | Font: Pretendard 700 17.0px | Text: "내 키링"
+        - **image 1981** (`RECTANGLE`) | `57.0x57.0`
+      - **Menu Action / AI 여행 코스** (`FRAME`) | `174.0x59.0` | Fill: #FFFFFFE5 | Radius: 20.0px
+        - **AI / Title** (`TEXT`) | `59.0x14.0` | Fill: #0A1F47 | Font: Pretendard 700 12.0px | Text: "AI 여행 코스"
+        - **AI / Subtitle** (`TEXT`) | `70.0x11.0` | Fill: #5E708F | Font: Pretendard 400 9.0px | Text: "맞춤 여행 코스 보기"
+        - **ChatGPT Image 2026년 9월 16일 오전 11_28_46 2** (`RECTANGLE`) | `39.0x40.0` | Radius: 33.0px
+      - **Menu Action / 여행 지도** (`FRAME`) | `174.0x59.0` | Fill: #FFFFFFE5 | Radius: 20.0px
+        - **Map / Title** (`TEXT`) | `45.0x14.0` | Fill: #0A1F47 | Font: Pretendard 700 12.0px | Text: "여행 지도"
+        - **Map / Subtitle** (`TEXT`) | `59.0x11.0` | Fill: #5E708F | Font: Pretendard 400 9.0px | Text: "다녀온 지역 보기"
+        - **ChatGPT Image 2026년 9월 17일 오후 04_33_34 1** (`RECTANGLE`) | `51.0x51.0`
+    - **Nearby / Recommendation** (`FRAME`) | `342.0x76.0` | Fill: #FDFDFE | Radius: 20.0px
+      - **Nearby / Eyebrow** (`TEXT`) | `69.0x11.0` | Fill: #4754FF | Font: Pretendard 700 9.0px | Text: "지금 떠나기 좋은 곳"
+      - **Nearby / Place** (`TEXT`) | `85.0x14.0` | Fill: #0A1F47 | Font: Pretendard 700 12.0px | Text: "강화도 · 노을 산책"
+      - **Nearby / Meta** (`TEXT`) | `76.0x11.0` | Fill: #5E708F | Font: Pretendard 400 9.0px | Text: "차로 58분 · 맑음 24°"
+      - **Nearby / Arrow** (`ELLIPSE`) | `38.0x38.0` | Fill: #FFFFFF
+      - **Icon / Chevron** (`FRAME`) | `16.0x16.0`
+        - **Vector** (`VECTOR`) | `4.5x9.0`
+      - **Mask group** (`GROUP`) | `56.0x56.0` | Radius: 13.0px
+        - **03_female_traveler_tile 1** (`RECTANGLE`) | `56.0x56.0` | Radius: 13.0px
+    - **Bottom Nav / Home v2** (`FRAME`) | `390.0x74.0` | Fill: #FFFFFFF7
+      - **Nav / Active** (`RECTANGLE`) | `76.0x56.0` | Fill: #EDF2FF | Radius: 18.0px
+      - **Nav Icon / home** (`FRAME`) | `20.0x20.0`
+        - **Vector** (`VECTOR`) | `14.0x14.0`
+        - **Vector 141** (`VECTOR`) | `14.0x14.0` | Fill: #4A55FF
+      - **Nav Label / 홈** (`TEXT`) | `76.0x13.0` | Fill: #4A54FF | Font: Pretendard 700 10.0px | Text: "홈"
+      - **Nav Label / 뽑기** (`TEXT`) | `76.0x13.0` | Fill: #99A3BD | Font: Pretendard 600 10.0px | Text: "뽑기"
+      - **Nav Label / 큐레이션** (`TEXT`) | `76.0x13.0` | Fill: #99A3BD | Font: Pretendard 600 10.0px | Text: "마이트립"
+      - **Nav Icon / user** (`FRAME`) | `21.0x21.0`
+        - **Vector** (`VECTOR`) | `6.3x6.3`
+        - **Vector** (`VECTOR`) | `12.6x5.2`
+      - **Nav Label / 마이** (`TEXT`) | `76.0x13.0` | Fill: #99A3BD | Font: Pretendard 600 10.0px | Text: "마이"
+      - **Vector** (`VECTOR`) | `16.0x20.0`
+      - **Group 1437253430** (`GROUP`) | `39.1x40.0`
+        - **Ellipse** (`ELLIPSE`) | `37.3x37.3`
+        - **Ellipse** (`ELLIPSE`) | `39.1x39.1`
+        - **Ellipse** (`ELLIPSE`) | `3.4x5.9` | Fill: #FFFFFF
+        - **Ellipse** (`ELLIPSE`) | `3.4x5.9` | Fill: #FFFFFF
+      - **Italic Text** (`FRAME`) | `22.0x22.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Icon** (`FRAME`) | `22.0x22.0`
+          - **Vector** (`VECTOR`) | `17.9x17.9` | Fill: #9FA3B3
+  - **Container** (`FRAME`) | `44.0x44.0` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+    - **Italic Text** (`FRAME`) | `24.0x26.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Icon** (`VECTOR`) | `16.0x18.0`
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+  - **Vector** (`VECTOR`) | `24.6x31.3`
+  - **로고 이미지** (`RECTANGLE`) | `100.6x26.8`
+  - **Group 1437253477** (`GROUP`) | `15.6x15.6`
+    - **Vector** (`VECTOR`) | `15.6x15.6` | Fill: #FFFFFF
+
+---
+
+## 14. 온보딩 - 5 (ID: `2002:596`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/14_온보딩 - 5.png`
+
+### Component Tree & Styles
+- **온보딩 - 5** (`FRAME`) | `390.0x844.0` | Fill: #FCFCFE
+  - **ChatGPT Image 2026년 9월 18일 오후 11_14_02 1** (`RECTANGLE`) | `397.0x859.0`
+  - **Ellipse** (`ELLIPSE`) | `520.0x520.0`
+  - **Frame** (`FRAME`) | `112.9x101.5` | Fill: #FFFFFFF5 | Radius: 24.0px
+    - **Ellipse** (`ELLIPSE`) | `42.0x42.0`
+    - **≈** (`TEXT`) | `13.1x21.6` | Fill: #635BFF | Font: Pretendard 700 18.0px | Text: "≈"
+    - **힐링** (`TEXT`) | `23.8x17.2` | Fill: #11183D | Font: Pretendard 700 13.0px | Text: "힐링"
+  - **Frame** (`FRAME`) | `112.9x101.5` | Fill: #EFF1FFF5 | Radius: 24.0px
+    - **Ellipse** (`ELLIPSE`) | `42.0x42.0`
+    - **↗** (`TEXT`) | `18.1x21.9` | Fill: #635BFF | Font: Pretendard 700 18.0px | Text: "↗"
+    - **액티비티** (`TEXT`) | `45.8x18.3` | Fill: #11183D | Font: Pretendard 700 13.0px | Text: "액티비티"
+  - **Frame** (`FRAME`) | `112.9x101.5` | Fill: #CDD4FFF5 | Radius: 24.0px
+    - **Ellipse** (`ELLIPSE`) | `42.0x42.0`
+    - **●** (`TEXT`) | `18.1x21.9` | Fill: #635BFF | Font: Pretendard 700 18.0px | Text: "●"
+    - **맛집** (`TEXT`) | `23.8x17.2` | Fill: #11183D | Font: Pretendard 700 13.0px | Text: "맛집"
+  - **Frame** (`FRAME`) | `112.9x101.5` | Fill: #CDD4FFF5 | Radius: 24.0px
+    - **Ellipse** (`ELLIPSE`) | `42.0x42.0`
+    - **✦** (`TEXT`) | `17.1x21.8` | Fill: #635BFF | Font: Pretendard 700 18.0px | Text: "✦"
+    - **감성** (`TEXT`) | `23.8x17.2` | Fill: #11183D | Font: Pretendard 700 13.0px | Text: "감성"
+  - **CTA / Next** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **다음** (`TEXT`) | `28.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "다음"
+  - **Onboarding 02 — Travel Preferences** (`FRAME`) | `342.0x370.0`
+    - **Preferences — Unique 3D Objects** (`RECTANGLE`) | `342.0x370.0` | Radius: 28.0px
+    - **Mosaic / Capsule** (`RECTANGLE`) | `166.0x148.0` | Radius: 26.0px
+    - **Mosaic / Airplane Keyring** (`RECTANGLE`) | `164.0x153.0` | Radius: 26.0px
+    - **Mosaic / Male Traveler** (`RECTANGLE`) | `166.0x210.0` | Radius: 26.0px
+  - **인더케이터** (`FRAME`) | `51.0x5.0` | Layout: HORIZONTAL (Gap: 8.0px, Pad: 0/0/0/0)
+    - **Ellipse 9** (`ELLIPSE`) | `5.0x5.0` | Fill: #D9DDF0
+    - **Frame** (`FRAME`) | `12.0x5.0` | Fill: #635BFF | Radius: 99.0px
+    - **Ellipse 10** (`ELLIPSE`) | `5.0x5.0` | Fill: #D9DDF0
+    - **Ellipse 11** (`ELLIPSE`) | `5.0x5.0` | Fill: #D9DDF0
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+  - **건너뛰기** (`TEXT`) | `45.0x16.0` | Fill: #687091 | Font: Pretendard 700 13.0px | Text: "건너뛰기"
+  - **ChatGPT Image 2026년 9월 18일 오후 10_36_50 (4) 1** (`RECTANGLE`) | `339.0x371.0`
+  - **다녀온 여행을 기록하고 지도와 키링으로 소중한 추억을 모아보세요.** (`TEXT`) | `269.0x42.0` | Fill: #454545 | Font: Pretendard 400 16.0px | Text: "다녀온 여행을 기록하고 지도와 키링으로 소중한 추..."
+  - **뽑은 여행이 나만의 컬렉션이 돼요!** (`TEXT`) | `257.0x75.0` | Fill: #151B3F | Font: Pretendard 700 27.0px | Text: "뽑은 여행이 나만의 컬렉션이 돼요!"
+  - **반짝임** (`STAR`) | `16.9x16.9` | Fill: #734FFF
+
+---
+
+## 15. 01 · Onboarding · Logo (ID: `2002:633`)
+- **Screen Size**: `393.0px × 844.0px`
+- **Screen Image**: `screens/15_01 · Onboarding · Logo.png`
+
+### Component Tree & Styles
+- **01 · Onboarding · Logo** (`FRAME`) | `393.0x844.0` | Fill: #FAFBFF
+  - **Brand Glow** (`ELLIPSE`) | `260.0x260.0`
+  - **Tagline** (`TEXT`) | `353.0x30.0` | Fill: #121F42 | Font: Pretendard 500 16.0px | Text: "어디로 갈지 고민될 땐, 가챠트립"
+  - **로고 이미지** (`RECTANGLE`) | `189.0x50.0`
+  - **gachatrip** (`TEXT`) | `300.0x46.0` | Font: Inter 700 38.0px | Text: "gachatrip"
+  - **Container** (`FRAME`) | `98.0x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+    - **Group 1437253446** (`GROUP`) | `98.0x36.0`
+      - **Group 1437253442** (`GROUP`) | `36.0x36.0`
+        - **Ellipse** (`ELLIPSE`) | `34.4x33.6`
+        - **Ellipse** (`ELLIPSE`) | `36.0x35.2` | Fill: #4D63FF
+        - **Ellipse** (`ELLIPSE`) | `3.1x5.3` | Fill: #FFFFFF
+        - **Ellipse** (`ELLIPSE`) | `3.1x5.3` | Fill: #FFFFFF
+      - **Group 1437253441** (`GROUP`) | `36.0x36.0`
+        - **Ellipse** (`ELLIPSE`) | `34.4x33.6`
+        - **Ellipse** (`ELLIPSE`) | `36.0x35.2` | Fill: #4FA6FE
+        - **Ellipse** (`ELLIPSE`) | `3.1x5.3` | Fill: #FFFFFF
+        - **Ellipse** (`ELLIPSE`) | `3.1x5.3` | Fill: #FFFFFF
+      - **Group 1437253443** (`GROUP`) | `36.0x36.0`
+        - **Ellipse** (`ELLIPSE`) | `34.4x33.6`
+        - **Ellipse** (`ELLIPSE`) | `36.0x35.2` | Fill: #C2EA3A
+        - **Ellipse** (`ELLIPSE`) | `3.1x5.3` | Fill: #FFFFFF
+        - **Ellipse** (`ELLIPSE`) | `3.1x5.3` | Fill: #FFFFFF
+
+---
+
+## 16. 07 · My Page (ID: `2002:655`)
+- **Screen Size**: `390.0px × 1160.0px`
+- **Screen Image**: `screens/16_07 · My Page.png`
+
+### Component Tree & Styles
+- **07 · My Page** (`FRAME`) | `390.0x1160.0` | Fill: #F6F9FF
+  - **9:41** (`TEXT`) | `25.0x14.0` | Fill: #0A1F47 | Font: Pretendard 700 12.0px | Text: "9:41"
+  - **Scrollable Content** (`FRAME`) | `390.0x1160.0` | Fill: #F6F9FF
+    - **Background / Blue Glow** (`ELLIPSE`) | `380.0x380.0`
+    - **Background / Violet Glow** (`ELLIPSE`) | `320.0x320.0`
+    - **Frame** (`FRAME`) | `342.0x164.0` | Radius: 30.0px
+      - **여행자 이은지** (`TEXT`) | `98.0x21.0` | Fill: #0A1F47 | Font: Pretendard 700 18.0px | Text: "여행자 이은지"
+      - **eunji****@email.com** (`TEXT`) | `113.0x14.0` | Fill: #5E708F | Font: Pretendard 400 12.0px | Text: "eunji****@email.com"
+      - **Frame** (`FRAME`) | `44.0x32.0` | Radius: 14.0px
+        - **수정** (`TEXT`) | `20.0x13.0` | Fill: #FFFFFF | Font: Pretendard 700 11.0px | Text: "수정"
+      - **Frame** (`FRAME`) | `71.0x44.0` | Fill: #D6E0FF29 | Radius: 14.0px
+        - **12회** (`TEXT`) | `28.0x17.0` | Fill: #0A1F47 | Font: Pretendard 700 14.0px | Text: "12회"
+        - **총 여행** (`TEXT`) | `26.0x11.0` | Fill: #5E708F | Font: Pretendard 500 9.0px | Text: "총 여행"
+      - **Frame** (`FRAME`) | `71.0x44.0` | Fill: #D6E0FF29 | Radius: 14.0px
+        - **3곳** (`TEXT`) | `22.0x17.0` | Fill: #0A1F47 | Font: Pretendard 700 14.0px | Text: "3곳"
+        - **방문 지역** (`TEXT`) | `34.0x11.0` | Fill: #5E708F | Font: Pretendard 500 9.0px | Text: "방문 지역"
+      - **Frame** (`FRAME`) | `71.0x44.0` | Fill: #D6E0FF29 | Radius: 14.0px
+        - **3개** (`TEXT`) | `22.0x17.0` | Fill: #0A1F47 | Font: Pretendard 700 14.0px | Text: "3개"
+        - **배지** (`TEXT`) | `16.0x11.0` | Fill: #5E708F | Font: Pretendard 500 9.0px | Text: "배지"
+      - **Frame** (`FRAME`) | `71.0x44.0` | Fill: #D6E0FF29 | Radius: 14.0px
+        - **2회** (`TEXT`) | `21.0x17.0` | Fill: #0A1F47 | Font: Pretendard 700 14.0px | Text: "2회"
+        - **그룹 여행** (`TEXT`) | `34.0x11.0` | Fill: #5E708F | Font: Pretendard 500 9.0px | Text: "그룹 여행"
+      - **Group 1437253429** (`GROUP`) | `72.5x74.2`
+        - **Ellipse** (`ELLIPSE`) | `69.2x69.2`
+        - **Ellipse** (`ELLIPSE`) | `72.5x72.5`
+        - **Ellipse** (`ELLIPSE`) | `6.3x10.9` | Fill: #FFFFFF
+        - **Ellipse** (`ELLIPSE`) | `6.3x10.9` | Fill: #FFFFFF
+    - **계정** (`TEXT`) | `21.0x14.0` | Fill: #6E7DA6 | Font: Pretendard 700 12.0px | Text: "계정"
+    - **Frame** (`FRAME`) | `342.0x232.0` | Fill: #FFFFFFEB | Radius: 24.0px
+      - **Line** (`LINE`) | `306.0x1.0`
+      - **Line** (`LINE`) | `306.0x1.0`
+      - **Line** (`LINE`) | `306.0x1.0`
+      - **Link / Profile Edit** (`FRAME`) | `342.0x58.0`
+        - **프로필 수정** (`TEXT`) | `60.0x16.0` | Fill: #0A1F47 | Font: Pretendard 700 13.0px | Text: "프로필 수정"
+        - **›** (`TEXT`) | `7.0x21.0` | Fill: #8796B8 | Font: Pretendard 400 18.0px | Text: "›"
+      - **Link / Nickname** (`FRAME`) | `342.0x58.0`
+        - **닉네임 변경** (`TEXT`) | `60.0x16.0` | Fill: #0A1F47 | Font: Pretendard 700 13.0px | Text: "닉네임 변경"
+        - **›** (`TEXT`) | `7.0x21.0` | Fill: #8796B8 | Font: Pretendard 400 18.0px | Text: "›"
+      - **Link / Password** (`FRAME`) | `342.0x58.0`
+        - **비밀번호 변경** (`TEXT`) | `71.0x16.0` | Fill: #0A1F47 | Font: Pretendard 700 13.0px | Text: "비밀번호 변경"
+        - **›** (`TEXT`) | `7.0x21.0` | Fill: #8796B8 | Font: Pretendard 400 18.0px | Text: "›"
+      - **Link / Linked Accounts** (`FRAME`) | `342.0x58.0`
+        - **연결 계정 관리** (`TEXT`) | `74.0x16.0` | Fill: #0A1F47 | Font: Pretendard 700 13.0px | Text: "연결 계정 관리"
+        - **›** (`TEXT`) | `7.0x21.0` | Fill: #8796B8 | Font: Pretendard 400 18.0px | Text: "›"
+    - **여행 설정** (`TEXT`) | `45.0x14.0` | Fill: #6E7DA6 | Font: Pretendard 700 12.0px | Text: "여행 설정"
+    - **Frame** (`FRAME`) | `342.0x174.0` | Fill: #FFFFFFEB | Radius: 24.0px
+      - **Line** (`LINE`) | `306.0x1.0`
+      - **Line** (`LINE`) | `306.0x1.0`
+      - **Link / Departure Region** (`FRAME`) | `342.0x58.0`
+        - **출발 지역 설정** (`TEXT`) | `74.0x16.0` | Fill: #0A1F47 | Font: Pretendard 700 13.0px | Text: "출발 지역 설정"
+        - **인천** (`TEXT`) | `20.0x13.0` | Fill: #8796B8 | Font: Pretendard 500 11.0px | Text: "인천"
+      - **Link / Travel Style** (`FRAME`) | `342.0x58.0`
+        - **기본 여행 스타일** (`TEXT`) | `85.0x16.0` | Fill: #0A1F47 | Font: Pretendard 700 13.0px | Text: "기본 여행 스타일"
+        - **힐링** (`TEXT`) | `20.0x13.0` | Fill: #8796B8 | Font: Pretendard 500 11.0px | Text: "힐링"
+      - **Link / Budget** (`FRAME`) | `342.0x58.0`
+        - **기본 예산** (`TEXT`) | `48.0x16.0` | Fill: #0A1F47 | Font: Pretendard 700 13.0px | Text: "기본 예산"
+        - **30만원 이하** (`TEXT`) | `55.0x13.0` | Fill: #8796B8 | Font: Pretendard 500 11.0px | Text: "30만원 이하"
+    - **알림 · 앱 설정** (`TEXT`) | `64.0x14.0` | Fill: #6E7DA6 | Font: Pretendard 700 12.0px | Text: "알림 · 앱 설정"
+    - **Frame** (`FRAME`) | `342.0x232.0` | Fill: #FFFFFFEB | Radius: 24.0px
+      - **Line** (`LINE`) | `306.0x1.0`
+      - **Line** (`LINE`) | `306.0x1.0`
+      - **Line** (`LINE`) | `306.0x1.0`
+      - **Link / Recommendation Alerts** (`FRAME`) | `342.0x58.0`
+        - **여행 추천 알림** (`TEXT`) | `74.0x16.0` | Fill: #0A1F47 | Font: Pretendard 700 13.0px | Text: "여행 추천 알림"
+        - **Toggle / On** (`FRAME`) | `50.0x28.0` | Radius: 14.0px
+          - **Knob** (`ELLIPSE`) | `22.0x22.0` | Fill: #FFFFFF
+      - **Link / Location Recommendation** (`FRAME`) | `342.0x58.0`
+        - **Toggle / On** (`FRAME`) | `50.0x28.0` | Radius: 14.0px
+          - **Knob** (`ELLIPSE`) | `22.0x22.0` | Fill: #FFFFFF
+        - **위치 기반 추천** (`TEXT`) | `74.0x16.0` | Fill: #0A1F47 | Font: Pretendard 700 13.0px | Text: "위치 기반 추천"
+      - **Link / Language** (`FRAME`) | `342.0x58.0`
+        - **언어** (`TEXT`) | `23.0x16.0` | Fill: #0A1F47 | Font: Pretendard 700 13.0px | Text: "언어"
+        - **한국어** (`TEXT`) | `29.0x13.0` | Fill: #8796B8 | Font: Pretendard 500 11.0px | Text: "한국어"
+      - **Link / App Version** (`FRAME`) | `342.0x58.0`
+        - **앱 버전** (`TEXT`) | `37.0x16.0` | Fill: #0A1F47 | Font: Pretendard 700 13.0px | Text: "앱 버전"
+        - **1.0.0** (`TEXT`) | `23.0x13.0` | Fill: #8796B8 | Font: Pretendard 500 11.0px | Text: "1.0.0"
+    - **Bottom Nav / Home v2** (`FRAME`) | `390.0x74.0` | Fill: #FFFFFFF7
+      - **Nav / Active** (`RECTANGLE`) | `76.0x56.0` | Fill: #EDF2FF | Radius: 18.0px
+      - **Nav Icon / home** (`FRAME`) | `20.0x20.0`
+        - **Vector** (`VECTOR`) | `14.0x14.0`
+        - **Vector 141** (`VECTOR`) | `14.0x14.0` | Fill: #4A55FF
+      - **Nav Label / 홈** (`TEXT`) | `76.0x13.0` | Fill: #4A54FF | Font: Pretendard 700 10.0px | Text: "홈"
+      - **Nav Label / 뽑기** (`TEXT`) | `76.0x13.0` | Fill: #99A3BD | Font: Pretendard 600 10.0px | Text: "뽑기"
+      - **Nav Label / 큐레이션** (`TEXT`) | `76.0x13.0` | Fill: #99A3BD | Font: Pretendard 600 10.0px | Text: "마이트립"
+      - **Nav Icon / user** (`FRAME`) | `21.0x21.0`
+        - **Vector** (`VECTOR`) | `6.3x6.3`
+        - **Vector** (`VECTOR`) | `12.6x5.2`
+      - **Nav Label / 마이** (`TEXT`) | `76.0x13.0` | Fill: #99A3BD | Font: Pretendard 600 10.0px | Text: "마이"
+      - **Vector** (`VECTOR`) | `16.0x20.0`
+      - **Group 1437253430** (`GROUP`) | `39.1x40.0`
+        - **Ellipse** (`ELLIPSE`) | `37.3x37.3`
+        - **Ellipse** (`ELLIPSE`) | `39.1x39.1`
+        - **Ellipse** (`ELLIPSE`) | `3.4x5.9` | Fill: #FFFFFF
+        - **Ellipse** (`ELLIPSE`) | `3.4x5.9` | Fill: #FFFFFF
+      - **Italic Text** (`FRAME`) | `22.0x22.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Icon** (`FRAME`) | `22.0x22.0`
+          - **Vector** (`VECTOR`) | `17.9x17.9` | Fill: #9FA3B3
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+  - **Container** (`FRAME`) | `44.0x44.0` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+    - **Italic Text** (`FRAME`) | `24.0x26.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Icon** (`VECTOR`) | `16.0x18.0`
+  - **Group 1437253506** (`GROUP`) | `133.0x31.3`
+    - **Vector** (`VECTOR`) | `24.6x31.3`
+    - **로고 이미지** (`RECTANGLE`) | `100.6x26.8`
+    - **Group 1437253477** (`GROUP`) | `15.6x15.6`
+      - **Vector** (`VECTOR`) | `15.6x15.6` | Fill: #FFFFFF
+
+---
+
+## 17. 온보딩 - 2 (ID: `2002:761`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/17_온보딩 - 2.png`
+
+### Component Tree & Styles
+- **온보딩 - 2** (`FRAME`) | `390.0x844.0`
+  - **배경** (`RECTANGLE`) | `444.0x959.0`
+  - **개체** (`RECTANGLE`) | `102.0x132.0`
+  - **개체** (`RECTANGLE`) | `119.0x127.0`
+  - **개체** (`RECTANGLE`) | `103.0x126.0`
+  - **개체** (`RECTANGLE`) | `119.0x127.0`
+  - **인더케이터** (`FRAME`) | `57.0x6.0` | Layout: HORIZONTAL (Gap: 8.0px, Pad: 0/0/0/0)
+    - **Frame** (`FRAME`) | `15.0x6.0` | Fill: #635BFF | Radius: 99.0px
+    - **Ellipse 9** (`ELLIPSE`) | `6.0x6.0` | Fill: #D9DDF0
+    - **Ellipse 10** (`ELLIPSE`) | `6.0x6.0` | Fill: #D9DDF0
+    - **Ellipse 11** (`ELLIPSE`) | `6.0x6.0` | Fill: #D9DDF0
+  - **건너뛰기** (`TEXT`) | `45.0x16.0` | Fill: #687091 | Font: Pretendard 700 13.0px | Text: "건너뛰기"
+  - **버튼** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **다음** (`TEXT`) | `28.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "다음"
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+  - **조건을 선택하면 새로운 여행지를 뽑아드려요.** (`TEXT`) | `178.0x42.0` | Fill: #454545 | Font: Pretendard 400 16.0px | Text: "조건을 선택하면 새로운 여행지를 뽑아드려요."
+  - **어디로 갈지 고민될 땐, 가챠트립** (`TEXT`) | `237.0x79.0` | Fill: #151B3F | Font: Pretendard 700 27.0px | Text: "어디로 갈지 고민될 땐, 가챠트립"
+  - **반짝임** (`STAR`) | `16.9x16.9` | Fill: #734FFF
+
+---
+
+## 18. 온보딩 - 3 (ID: `2002:779`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/18_온보딩 - 3.png`
+
+### Component Tree & Styles
+- **온보딩 - 3** (`FRAME`) | `390.0x844.0` | Fill: #F9FAFD
+  - **ChatGPT Image 2026년 9월 18일 오후 11_11_35 1** (`RECTANGLE`) | `406.0x877.0`
+  - **배경** (`RECTANGLE`) | `397.0x574.0`
+  - **인더케이터** (`FRAME`) | `57.0x6.0` | Layout: HORIZONTAL (Gap: 8.0px, Pad: 0/0/0/0)
+    - **Ellipse 9** (`ELLIPSE`) | `6.0x6.0` | Fill: #D9DDF0
+    - **Frame** (`FRAME`) | `15.0x6.0` | Fill: #635BFF | Radius: 99.0px
+    - **Ellipse 10** (`ELLIPSE`) | `6.0x6.0` | Fill: #D9DDF0
+    - **Ellipse 11** (`ELLIPSE`) | `6.0x6.0` | Fill: #D9DDF0
+  - **건너뛰기** (`TEXT`) | `45.0x16.0` | Fill: #687091 | Font: Pretendard 700 13.0px | Text: "건너뛰기"
+  - **버튼** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **다음** (`TEXT`) | `28.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "다음"
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+  - **뽑힌 여행지에 맞춰 맞춤 여행 코스를 추천해드려요.** (`TEXT`) | `196.0x42.0` | Fill: #454545 | Font: Pretendard 400 16.0px | Text: "뽑힌 여행지에 맞춰 맞춤 여행 코스를 추천해드려요."
+  - **AI가 여행 코스까지 만들어드려요** (`TEXT`) | `203.0x79.0` | Fill: #151B3F | Font: Pretendard 700 27.0px | Text: "AI가 여행 코스까지 만들어드려요"
+  - **반짝임** (`STAR`) | `16.9x16.9` | Fill: #734FFF
+  - **그룹 _ 뽑기 결과 2** (`RECTANGLE`) | `222.7x392.9` | Fill: #FFFFFF | Radius: 22.0px
+  - **여행계획_일정 1** (`RECTANGLE`) | `218.0x590.6` | Radius: 17.0px
+  - **여행계획_일정 (3) 2** (`RECTANGLE`) | `197.3x369.3` | Radius: 17.0px
+  - **여행계획_일정 (3) 1** (`RECTANGLE`) | `204.9x239.3` | Radius: 17.0px
+
+---
+
+## 19. 온보딩 - 4 (ID: `2002:798`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/19_온보딩 - 4.png`
+
+### Component Tree & Styles
+- **온보딩 - 4** (`FRAME`) | `390.0x844.0` | Fill: #F9FAFD
+  - **배경** (`RECTANGLE`) | `390.0x332.0`
+  - **배경** (`RECTANGLE`) | `276.0x332.0`
+  - **개체** (`RECTANGLE`) | `129.9x244.8`
+  - **개체** (`RECTANGLE`) | `93.0x94.0`
+  - **개체** (`RECTANGLE`) | `70.0x96.0`
+  - **개체** (`RECTANGLE`) | `221.0x407.0`
+  - **건너뛰기** (`TEXT`) | `45.0x16.0` | Fill: #687091 | Font: Pretendard 700 13.0px | Text: "건너뛰기"
+  - **버튼** (`FRAME`) | `342.0x58.0` | Radius: 20.0px
+    - **다음** (`TEXT`) | `28.0x19.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "다음"
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x54.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+  - **인더케이터** (`FRAME`) | `57.0x6.0` | Layout: HORIZONTAL (Gap: 8.0px, Pad: 0/0/0/0)
+    - **Ellipse 9** (`ELLIPSE`) | `6.0x6.0` | Fill: #D9DDF0
+    - **Ellipse 10** (`ELLIPSE`) | `6.0x6.0` | Fill: #D9DDF0
+    - **Frame** (`FRAME`) | `15.0x6.0` | Fill: #635BFF | Radius: 99.0px
+    - **Ellipse 11** (`ELLIPSE`) | `6.0x6.0` | Fill: #D9DDF0
+  - **뽑은 여행이 하나씩 쌓여 나만의 여행 컬렉션이 만들어져요.** (`TEXT`) | `210.0x42.0` | Fill: #454545 | Font: Pretendard 400 16.0px | Text: "뽑은 여행이 하나씩 쌓여 나만의 여행 컬렉션이 만..."
+  - **여행할수록 나만의 지도가 완성돼요!** (`TEXT`) | `283.0x75.0` | Fill: #151B3F | Font: Pretendard 700 27.0px | Text: "여행할수록 나만의 지도가 완성돼요!"
+  - **반짝임** (`STAR`) | `16.9x16.9` | Fill: #734FFF
+  - **개체** (`RECTANGLE`) | `80.0x113.0`
+  - **Group 1437253507** (`GROUP`) | `111.8x106.3`
+    - **독도 3** (`RECTANGLE`) | `101.0x101.0`
+    - **독도 4** (`RECTANGLE`) | `101.0x101.0`
+  - **그룹 _ 뽑기 결과 2** (`RECTANGLE`) | `217.8x397.2` | Fill: #FFFFFF | Radius: 25.0px
+  - **01 · 여행 지도 1** (`RECTANGLE`) | `192.8x370.4` | Radius: 16.0px
+  - **image 2029** (`RECTANGLE`) | `14.0x15.0`
+  - **image 2030** (`RECTANGLE`) | `14.0x15.0`
+  - **image 2031** (`RECTANGLE`) | `14.0x15.0`
+  - **화살표** (`RECTANGLE`) | `21.0x21.0`
+  - **화살표** (`RECTANGLE`) | `21.0x21.0`
+  - **화살표** (`RECTANGLE`) | `21.0x21.0`
+  - **화살표** (`RECTANGLE`) | `21.0x21.0`
+  - **Onboarding 04 / New Glass Korea Map** (`RECTANGLE`) | `235.2x235.2` | Radius: 32.0px
+  - **Destination / 부산** (`FRAME`) | `83.0x45.1` | Fill: #FFFFFFF5 | Radius: 18.0px
+    - **Ellipse** (`ELLIPSE`) | `10.5x10.5` | Fill: #CDFF35
+    - **서울** (`TEXT`) | `21.7x15.1` | Fill: #141F47 | Font: Pretendard 700 12.0px | Text: "서울"
+    - **5회 여행** (`TEXT`) | `28.5x11.4` | Fill: #6B759E | Font: Pretendard 400 8.0px | Text: "5회 여행"
+  - **Destination / 부산** (`FRAME`) | `83.0x45.1` | Fill: #FFFFFFF5 | Radius: 18.0px
+    - **Ellipse** (`ELLIPSE`) | `10.5x10.5` | Fill: #CDFF35
+    - **제주도** (`TEXT`) | `32.7x15.6` | Fill: #141F47 | Font: Pretendard 700 12.0px | Text: "제주도"
+    - **3회 여행** (`TEXT`) | `28.5x11.4` | Fill: #6B759E | Font: Pretendard 400 8.0px | Text: "3회 여행"
+
+---

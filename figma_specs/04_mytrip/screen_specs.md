@@ -1,0 +1,2185 @@
+# 마이트립 및 여행 기록 (04_mytrip) Design Specifications
+
+> 이 문서는 Figma의 모든 요소 세팅값(좌표, 크기, 색상, 타이포그래피, 패딩, 갭, 텍스트)을 100% 보존한 완벽한 스펙입니다.
+
+## 1. 01 · 여행 지도 (ID: `2002:895`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/01_01 · 여행 지도.png`
+
+### Component Tree & Styles
+- **01 · 여행 지도** (`FRAME`) | `390.0x844.0` | Fill: #F9FAFB | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x50.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+  - **Container** (`FRAME`) | `390.0x124.1` | Fill: #F9FAFB | Layout: VERTICAL (Gap: 0px, Pad: 20.0/21.0/0/19.0)
+    - **Heading 1** (`FRAME`) | `350.0x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+      - **마이트립** (`TEXT`) | `66.0x30.0` | Fill: #171A2B | Font: Pretendard 800 20.0px | Text: "마이트립"
+    - **Container:margin** (`FRAME`) | `350.0x74.1` | Layout: VERTICAL (Gap: 0px, Pad: 22.8799991607666/0/0/0)
+      - **Container** (`FRAME`) | `350.0x51.2` | Fill: #F5F5F5 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 4.159999847412109/4.159999847412109/4.159999847412109/4.159999847412109)
+        - **Container** (`FRAME`) | `168.8x42.9` | Fill: #FFFFFF | Radius: 12.0px | Layout: VERTICAL (Gap: 0px, Pad: 11.4399995803833/0/11.4399995803833/0)
+          - **여행 지도** (`TEXT`) | `52.0x20.0` | Fill: #5667FD | Font: Pretendard 700 14.0px | Text: "여행 지도"
+        - **Container** (`FRAME`) | `168.8x42.9` | Radius: 12.0px | Layout: VERTICAL (Gap: 0px, Pad: 11.4399995803833/0/11.4399995803833/0)
+          - **여행 기록** (`TEXT`) | `52.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "여행 기록"
+  - **Container** (`FRAME`) | `390.0x585.9` | Layout: VERTICAL (Gap: 0px, Pad: 22.8799991607666/17.0/22.8799991607666/19.0)
+    - **Container** (`FRAME`) | `348.4x49.3` | Layout: HORIZONTAL (Gap: 10.399999618530273px, Pad: 0/0/16.639999389648438/0)
+      - **Paragraph** (`FRAME`) | `192.4x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **여행한 지역을 눌러 추억을 확인해보세요** (`TEXT`) | `233.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "여행한 지역을 눌러 추억을 확인해보세요"
+      - **Container** (`FRAME`) | `76.3x32.6` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 8.319999694824219/11.4399995803833/8.319999694824219/11.4399995803833)
+        - **Container** (`FRAME`) | `53.4x16.0` | Layout: HORIZONTAL (Gap: 6.239999771118164px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `5.2x5.2` | Fill: #CFFF3D | Radius: 2.5px
+          - **Text** (`FRAME`) | `42.0x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **4곳 방문** (`TEXT`) | `42.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "4곳 방문"
+    - **Container:margin** (`FRAME`) | `348.0x377.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/17.0/0)
+      - **Container** (`FRAME`) | `348.0x352.0` | Radius: 28.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Icon** (`FRAME`) | `333.0x350.1` | Fill: #FFFFFF00
+          - **korea-map-group** (`GROUP`) | `253.6x269.2`
+            - **제주특별자치도** (`VECTOR`) | `32.6x18.0` | Fill: #AAA8FF
+            - **경상남도** (`VECTOR`) | `66.0x63.8` | Fill: #E4E5EE
+            - **경상북도** (`VECTOR`) | `125.5x99.3` | Fill: #E4E5EE
+            - **전라남도** (`VECTOR`) | `109.2x74.2` | Fill: #E4E5EE
+            - **전라북도** (`VECTOR`) | `66.7x42.4` | Fill: #E4E5EE
+            - **충청남도** (`VECTOR`) | `61.8x54.4` | Fill: #E4E5EE
+            - **충청북도** (`VECTOR`) | `55.2x62.3` | Fill: #E4E5EE
+            - **강원도** (`VECTOR`) | `90.7x80.7` | Fill: #E4E5EE
+            - **경기도** (`VECTOR`) | `53.7x70.9` | Fill: #E4E5EE
+            - **세종특별자치시** (`VECTOR`) | `11.0x16.3` | Fill: #E4E5EE
+            - **울산광역시** (`VECTOR`) | `19.9x19.5` | Fill: #E4E5EE
+            - **대전광역시** (`VECTOR`) | `12.3x15.5` | Fill: #E4E5EE
+            - **광주광역시** (`VECTOR`) | `14.8x10.1` | Fill: #E4E5EE
+            - **인천광역시** (`VECTOR`) | `87.7x45.7` | Fill: #E4E5EE
+            - **대구광역시** (`VECTOR`) | `16.6x20.2` | Fill: #AAA8FF
+            - **부산광역시** (`VECTOR`) | `20.5x18.4` | Fill: #AAA8FF
+            - **서울특별시** (`VECTOR`) | `16.7x13.8` | Fill: #AAA8FF
+          - **islands-group** (`GROUP`) | `209.1x52.6`
+            - **백령도** (`VECTOR`) | `7.4x7.4` | Fill: #E4E5EE
+            - **울릉도** (`VECTOR`) | `7.4x7.4` | Fill: #E4E5EE
+            - **독도** (`VECTOR`) | `7.4x7.4` | Fill: #E4E5EE
+            - **백령도** (`TEXT`) | `24.0x11.0` | Fill: #777B8B | Font: Pretendard 500 9.0px | Text: "백령도"
+            - **울릉도** (`TEXT`) | `24.0x11.0` | Fill: #777B8B | Font: Pretendard 500 9.0px | Text: "울릉도"
+            - **독도** (`TEXT`) | `16.0x11.0` | Fill: #777B8B | Font: Pretendard 500 9.0px | Text: "독도"
+    - **Container** (`FRAME`) | `348.0x97.6` | Fill: #FFFFFF | Radius: 24.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 10.399999618530273/6.239999771118164/10.399999618530273/6.239999771118164)
+      - **Container** (`FRAME`) | `111.2x76.8` | Layout: VERTICAL (Gap: 0px, Pad: 14.559999465942383/0/14.559999465942383/0)
+        - **Container** (`FRAME`) | `111.2x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **4곳** (`TEXT`) | `31.0x30.0` | Fill: #171A2B | Font: Pretendard 800 20.0px | Text: "4곳"
+        - **Container** (`FRAME`) | `111.3x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/0/0/0)
+          - **방문 지역** (`TEXT`) | `45.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "방문 지역"
+      - **Container** (`FRAME`) | `112.2x76.8` | Layout: VERTICAL (Gap: 0px, Pad: 14.559999465942383/0/14.559999465942383/0)
+        - **Container** (`FRAME`) | `111.2x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **10회** (`TEXT`) | `41.0x30.0` | Fill: #171A2B | Font: Pretendard 800 20.0px | Text: "10회"
+        - **Container** (`FRAME`) | `111.3x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/0/0/0)
+          - **총 여행** (`TEXT`) | `35.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "총 여행"
+      - **Container** (`FRAME`) | `112.2x76.8` | Layout: VERTICAL (Gap: 0px, Pad: 14.559999465942383/0/14.559999465942383/0)
+        - **Container** (`FRAME`) | `111.2x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **4개** (`TEXT`) | `31.0x30.0` | Fill: #171A2B | Font: Pretendard 800 20.0px | Text: "4개"
+        - **Container** (`FRAME`) | `111.3x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/0/0/0)
+          - **획득 키링** (`TEXT`) | `45.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "획득 키링"
+  - **하단 네비게이션** (`FRAME`) | `390.0x84.0` | Fill: #FFFFFFF7
+    - **Nav Icon / user** (`FRAME`) | `21.0x21.0`
+      - **Vector** (`VECTOR`) | `6.3x6.3`
+      - **Vector** (`VECTOR`) | `12.6x5.2`
+    - **Nav Label / 마이** (`TEXT`) | `18.0x12.0` | Fill: #9AA4BD | Font: Pretendard 600 10.0px | Text: "마이"
+    - **Nav / Active** (`RECTANGLE`) | `76.0x56.0` | Fill: #EDF2FF | Radius: 18.0px
+    - **Nav Label / 뽑기** (`TEXT`) | `35.0x12.0` | Fill: #4A55FF | Font: Pretendard 700 10.0px | Text: "마이트립"
+    - **location_on** (`GROUP`) | `24.0x24.0`
+      - **Bounding box** (`RECTANGLE`) | `24.0x24.0` | Fill: #D9D9D9
+      - **location_on** (`VECTOR`) | `15.1x18.4` | Fill: #4A55FF
+    - **Nav Label / 뽑기** (`TEXT`) | `35.0x12.0` | Fill: #9AA4BD | Font: Pretendard 600 10.0px | Text: "큐레이션"
+    - **explore** (`GROUP`) | `22.0x22.0`
+      - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+      - **explore** (`VECTOR`) | `17.4x17.4` | Fill: #9AA4BD
+    - **Nav Label / 홈** (`TEXT`) | `9.0x12.0` | Fill: #9AA4BD | Font: Pretendard 600 10.0px | Text: "홈"
+    - **home** (`GROUP`) | `24.0x24.0`
+      - **Bounding box** (`RECTANGLE`) | `24.0x24.0` | Fill: #D9D9D9
+      - **home** (`VECTOR`) | `15.0x16.4` | Fill: #9AA4BD
+
+---
+
+## 2. 09 · 여행 기록 (ID: `2002:977`)
+- **Screen Size**: `390.0px × 1148.0px`
+- **Screen Image**: `screens/02_09 · 여행 기록.png`
+
+### Component Tree & Styles
+- **09 · 여행 기록** (`FRAME`) | `390.0x1148.0` | Fill: #F9FAFB | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x50.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+  - **Container** (`FRAME`) | `390.0x124.1` | Fill: #F9FAFB | Layout: VERTICAL (Gap: 0px, Pad: 20.0/24.959999084472656/0/19.0)
+    - **Heading 1** (`FRAME`) | `346.0x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+      - **마이트립** (`TEXT`) | `66.0x30.0` | Fill: #171A2B | Font: Pretendard 800 20.0px | Text: "마이트립"
+    - **Container:margin** (`FRAME`) | `346.0x74.1` | Layout: VERTICAL (Gap: 0px, Pad: 22.8799991607666/0/0/0)
+      - **Container** (`FRAME`) | `340.1x51.2` | Fill: #F5F5F5 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 4.159999847412109/4.159999847412109/4.159999847412109/4.159999847412109)
+        - **Container** (`FRAME`) | `163.8x42.9` | Radius: 12.0px | Layout: VERTICAL (Gap: 0px, Pad: 11.4399995803833/0/11.4399995803833/0)
+          - **여행 지도** (`TEXT`) | `52.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "여행 지도"
+        - **Container** (`FRAME`) | `163.8x42.9` | Fill: #FFFFFF | Radius: 12.0px | Layout: VERTICAL (Gap: 0px, Pad: 11.4399995803833/0/11.4399995803833/0)
+          - **여행 기록** (`TEXT`) | `52.0x20.0` | Fill: #5667FD | Font: Pretendard 700 14.0px | Text: "여행 기록"
+  - **Container** (`FRAME`) | `390.0x889.9` | Layout: VERTICAL (Gap: 0px, Pad: 22.8799991607666/20.799999237060547/22.8799991607666/19.0)
+    - **Container** (`FRAME`) | `348.4x70.7` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/24.959999084472656/0)
+      - **Container** (`FRAME`) | `173.4x50.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Heading 2** (`FRAME`) | `173.4x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **나의 여행 기록** (`TEXT`) | `113.0x30.0` | Fill: #171A2B | Font: Pretendard 800 20.0px | Text: "나의 여행 기록"
+        - **Paragraph** (`FRAME`) | `173.4x20.8` | Layout: VERTICAL (Gap: 0px, Pad: 7.279999732971191/0/0/0)
+          - **지금까지 10번의 여행을 다녀왔어요.** (`TEXT`) | `170.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "지금까지 10번의 여행을 다녀왔어요."
+      - **Button** (`FRAME`) | `71.4x40.8` | Radius: 100.0px | Layout: VERTICAL (Gap: 0px, Pad: 10.399999618530273/18.719999313354492/10.399999618530273/18.719999313354492)
+        - **+ 기록** (`TEXT`) | `34.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "+ 기록"
+    - **Container** (`FRAME`) | `350.2x3970.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Container** (`FRAME`) | `350.2x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **2026** (`TEXT`) | `52.0x30.0` | Fill: #171A2B | Font: Pretendard 800 20.0px | Text: "2026"
+      - **Container:margin** (`FRAME`) | `350.2x371.5` | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/0/0/0)
+        - **Container** (`FRAME`) | `350.2x354.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `350.2x166.4` | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x48.1` | Layout: VERTICAL (Gap: 2.0799999237060547px, Pad: 0/0/0/0)
+              - **Text** (`FRAME`) | `308.6x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **JUL** (`TEXT`) | `23.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "JUL"
+              - **Text** (`FRAME`) | `308.6x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **04** (`TEXT`) | `28.0x30.0` | Fill: #FFFFFF | Font: Pretendard 900 20.0px | Text: "04"
+            - **Container** (`FRAME`) | `48.0x30.5` | Fill: #FFFFFF26 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 6.239999771118164/12.479999542236328/6.239999771118164/12.479999542236328)
+              - **서울** (`TEXT`) | `21.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "서울"
+          - **Container** (`FRAME`) | `350.2x185.8` | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x28.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **비 오는 날의 서울** (`TEXT`) | `117.0x28.0` | Fill: #171A2B | Font: Pretendard 700 18.0px | Text: "비 오는 날의 서울"
+            - **Container** (`FRAME`) | `306.8x37.4` | Layout: VERTICAL (Gap: 0px, Pad: 6.239999771118164/0/16.639999389648438/0)
+              - **서울 · 당일치기 · 혼자** (`TEXT`) | `102.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "서울 · 당일치기 · 혼자"
+            - **Container** (`FRAME`) | `308.6x60.5`
+              - **Container** (`FRAME`) | `257.8x43.9` | Fill: #F3F5F8 | Radius: 12.0px
+                - **"비가 와서 오히려 천천히 걸었던 하루."** (`TEXT`) | `197.0x20.0` | Fill: #555B66 | Font: Pretendard 400 13.0px | Text: ""비가 와서 오히려 천천히 걸었던 하루.""
+            - **Container** (`FRAME`) | `308.6x18.2` | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `62.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **사진 5장** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "사진 5장"
+              - **Container** (`FRAME`) | `62.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **방문 2곳** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "방문 2곳"
+      - **Container:margin** (`FRAME`) | `350.2x379.8` | Layout: VERTICAL (Gap: 0px, Pad: 24.959999084472656/0/0/0)
+        - **Container** (`FRAME`) | `350.2x354.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `350.2x166.4` | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x48.1` | Layout: VERTICAL (Gap: 2.0799999237060547px, Pad: 0/0/0/0)
+              - **Text** (`FRAME`) | `308.6x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **APR** (`TEXT`) | `25.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "APR"
+              - **Text** (`FRAME`) | `308.6x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **08** (`TEXT`) | `28.0x30.0` | Fill: #FFFFFF | Font: Pretendard 900 20.0px | Text: "08"
+            - **Container** (`FRAME`) | `48.0x30.5` | Fill: #FFFFFF26 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 6.239999771118164/12.479999542236328/6.239999771118164/12.479999542236328)
+              - **서울** (`TEXT`) | `21.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "서울"
+          - **Container** (`FRAME`) | `350.2x185.8` | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x28.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **봄날의 북촌 산책** (`TEXT`) | `114.0x28.0` | Fill: #171A2B | Font: Pretendard 700 18.0px | Text: "봄날의 북촌 산책"
+            - **Container** (`FRAME`) | `306.8x37.4` | Layout: VERTICAL (Gap: 0px, Pad: 6.239999771118164/0/16.639999389648438/0)
+              - **서울 · 당일치기 · 혼자** (`TEXT`) | `102.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "서울 · 당일치기 · 혼자"
+            - **Container** (`FRAME`) | `308.6x60.5`
+              - **Container** (`FRAME`) | `274.1x43.9` | Fill: #F3F5F8 | Radius: 12.0px
+                - **"벚꽃이 지기 전에 나온 게 잘한 일이었다."** (`TEXT`) | `212.0x20.0` | Fill: #555B66 | Font: Pretendard 400 13.0px | Text: ""벚꽃이 지기 전에 나온 게 잘한 일이었다.""
+            - **Container** (`FRAME`) | `308.6x18.2` | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `62.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **사진 6장** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "사진 6장"
+              - **Container** (`FRAME`) | `62.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **방문 2곳** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "방문 2곳"
+      - **Container:margin** (`FRAME`) | `350.2x379.8` | Layout: VERTICAL (Gap: 0px, Pad: 24.959999084472656/0/0/0)
+        - **Container** (`FRAME`) | `350.2x354.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `350.2x166.4` | Fill: #FAFAF8 | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x48.1` | Layout: VERTICAL (Gap: 2.0799999237060547px, Pad: 0/0/0/0)
+              - **Text** (`FRAME`) | `308.6x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **FEB** (`TEXT`) | `23.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "FEB"
+              - **Text** (`FRAME`) | `308.6x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **15** (`TEXT`) | `23.0x30.0` | Fill: #171A2B | Font: Pretendard 900 20.0px | Text: "15"
+            - **Container** (`FRAME`) | `45.8x45.8` | Radius: 12.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Italic Text** (`FRAME`) | `25.0x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Icon** (`FRAME`) | `25.0x25.0`
+            - **Container** (`FRAME`) | `48.0x30.5` | Fill: #5667FD26 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 6.239999771118164/12.479999542236328/6.239999771118164/12.479999542236328)
+              - **대구** (`TEXT`) | `21.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "대구"
+          - **Container** (`FRAME`) | `350.2x185.8` | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x28.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **대구 식도락 여행** (`TEXT`) | `114.0x28.0` | Fill: #171A2B | Font: Pretendard 700 18.0px | Text: "대구 식도락 여행"
+            - **Container** (`FRAME`) | `306.8x37.4` | Layout: VERTICAL (Gap: 0px, Pad: 6.239999771118164/0/16.639999389648438/0)
+              - **대구 · 당일치기 · 친구와 함께** (`TEXT`) | `136.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "대구 · 당일치기 · 친구와 함께"
+            - **Container** (`FRAME`) | `308.6x60.5`
+              - **Container** (`FRAME`) | `171.9x43.9` | Fill: #F0F5FF | Radius: 12.0px
+                - **"막창이 정말 맛있었다."** (`TEXT`) | `120.0x20.0` | Fill: #171A2B | Font: Pretendard 700 13.0px | Text: ""막창이 정말 맛있었다.""
+            - **Container** (`FRAME`) | `308.6x18.2` | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `68.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **사진 13장** (`TEXT`) | `48.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "사진 13장"
+              - **Container** (`FRAME`) | `62.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **방문 3곳** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "방문 3곳"
+      - **Container:margin** (`FRAME`) | `350.2x379.8` | Layout: VERTICAL (Gap: 0px, Pad: 24.959999084472656/0/0/0)
+        - **Container** (`FRAME`) | `350.2x354.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `350.2x166.4` | Fill: #FAFAF8 | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x48.1` | Layout: VERTICAL (Gap: 2.0799999237060547px, Pad: 0/0/0/0)
+              - **Text** (`FRAME`) | `308.6x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **JAN** (`TEXT`) | `25.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "JAN"
+              - **Text** (`FRAME`) | `308.6x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **20** (`TEXT`) | `27.0x30.0` | Fill: #171A2B | Font: Pretendard 900 20.0px | Text: "20"
+            - **Container** (`FRAME`) | `45.8x45.8` | Radius: 12.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Italic Text** (`FRAME`) | `25.0x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Icon** (`FRAME`) | `25.0x25.0`
+            - **Container** (`FRAME`) | `48.0x30.5` | Fill: #5667FD26 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 6.239999771118164/12.479999542236328/6.239999771118164/12.479999542236328)
+              - **서울** (`TEXT`) | `21.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "서울"
+          - **Container** (`FRAME`) | `350.2x185.8` | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x28.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **겨울 한강 피크닉** (`TEXT`) | `114.0x28.0` | Fill: #171A2B | Font: Pretendard 700 18.0px | Text: "겨울 한강 피크닉"
+            - **Container** (`FRAME`) | `306.8x37.4` | Layout: VERTICAL (Gap: 0px, Pad: 6.239999771118164/0/16.639999389648438/0)
+              - **서울 · 당일치기 · 친구와 함께** (`TEXT`) | `136.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "서울 · 당일치기 · 친구와 함께"
+            - **Container** (`FRAME`) | `308.6x60.5`
+              - **Container** (`FRAME`) | `196.7x43.9` | Fill: #F0F5FF | Radius: 12.0px
+                - **"추웠지만 라면은 맛있었다."** (`TEXT`) | `142.0x20.0` | Fill: #171A2B | Font: Pretendard 700 13.0px | Text: ""추웠지만 라면은 맛있었다.""
+            - **Container** (`FRAME`) | `308.6x18.2` | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `62.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **사진 6장** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "사진 6장"
+              - **Container** (`FRAME`) | `62.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **방문 2곳** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "방문 2곳"
+      - **Container** (`FRAME`) | `348.4x49.9` | Layout: VERTICAL (Gap: 0px, Pad: 24.959999084472656/0/0/0)
+        - **2025** (`TEXT`) | `53.0x30.0` | Fill: #171A2B | Font: Pretendard 900 20.0px | Text: "2025"
+      - **Container:margin** (`FRAME`) | `350.2x371.5` | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/0/0/0)
+        - **Container** (`FRAME`) | `350.2x354.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `350.2x166.4` | Fill: #FAFAF8 | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x48.1` | Layout: VERTICAL (Gap: 2.0799999237060547px, Pad: 0/0/0/0)
+              - **Text** (`FRAME`) | `308.6x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **OCT** (`TEXT`) | `27.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "OCT"
+              - **Text** (`FRAME`) | `308.6x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **15** (`TEXT`) | `23.0x30.0` | Fill: #171A2B | Font: Pretendard 900 20.0px | Text: "15"
+            - **Container** (`FRAME`) | `45.8x45.8` | Radius: 12.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Italic Text** (`FRAME`) | `25.0x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Icon** (`FRAME`) | `25.0x25.0`
+            - **Container** (`FRAME`) | `48.0x30.5` | Fill: #5667FD26 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 6.239999771118164/12.479999542236328/6.239999771118164/12.479999542236328)
+              - **서울** (`TEXT`) | `21.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "서울"
+          - **Container** (`FRAME`) | `350.2x185.8` | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x28.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **가을밤의 남산 타워** (`TEXT`) | `129.0x28.0` | Fill: #171A2B | Font: Pretendard 700 18.0px | Text: "가을밤의 남산 타워"
+            - **Container** (`FRAME`) | `306.8x37.4` | Layout: VERTICAL (Gap: 0px, Pad: 6.239999771118164/0/16.639999389648438/0)
+              - **서울 · 당일치기 · 혼자** (`TEXT`) | `102.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "서울 · 당일치기 · 혼자"
+            - **Container** (`FRAME`) | `308.6x60.5`
+              - **Container** (`FRAME`) | `257.8x43.9` | Fill: #F0F5FF | Radius: 12.0px
+                - **"야경 보며 생각 정리하기 좋았던 시간."** (`TEXT`) | `197.0x20.0` | Fill: #171A2B | Font: Pretendard 400 13.0px | Text: ""야경 보며 생각 정리하기 좋았던 시간.""
+            - **Container** (`FRAME`) | `308.6x18.2` | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `61.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **사진 7장** (`TEXT`) | `41.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "사진 7장"
+              - **Container** (`FRAME`) | `62.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **방문 2곳** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "방문 2곳"
+      - **Container:margin** (`FRAME`) | `350.2x379.8` | Layout: VERTICAL (Gap: 0px, Pad: 24.959999084472656/0/0/0)
+        - **Container** (`FRAME`) | `350.2x354.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `350.2x166.4` | Fill: #FAFAF8 | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x48.1` | Layout: VERTICAL (Gap: 2.0799999237060547px, Pad: 0/0/0/0)
+              - **Text** (`FRAME`) | `308.6x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **JUN** (`TEXT`) | `25.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "JUN"
+              - **Text** (`FRAME`) | `308.6x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **10** (`TEXT`) | `24.0x30.0` | Fill: #171A2B | Font: Pretendard 900 20.0px | Text: "10"
+            - **Container** (`FRAME`) | `45.8x45.8` | Radius: 12.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Italic Text** (`FRAME`) | `25.0x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Icon** (`FRAME`) | `25.0x25.0`
+            - **Container** (`FRAME`) | `48.0x30.5` | Fill: #5667FD26 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 6.239999771118164/12.479999542236328/6.239999771118164/12.479999542236328)
+              - **부산** (`TEXT`) | `21.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "부산"
+          - **Container** (`FRAME`) | `350.2x185.8` | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x28.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **부산 우정 가득 힐링 여행** (`TEXT`) | `166.0x28.0` | Fill: #171A2B | Font: Pretendard 700 18.0px | Text: "부산 우정 가득 힐링 여행"
+            - **Container** (`FRAME`) | `306.8x37.4` | Layout: VERTICAL (Gap: 0px, Pad: 6.239999771118164/0/16.639999389648438/0)
+              - **부산 · 2박 3일 · 친구와 함께** (`TEXT`) | `132.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "부산 · 2박 3일 · 친구와 함께"
+            - **Container** (`FRAME`) | `308.6x60.5`
+              - **Container** (`FRAME`) | `266.5x43.9` | Fill: #F0F5FF | Radius: 12.0px
+                - **"해운대 바닷바람이 모든 걸 날려주었다."** (`TEXT`) | `205.0x20.0` | Fill: #171A2B | Font: Pretendard 400 13.0px | Text: ""해운대 바닷바람이 모든 걸 날려주었다.""
+            - **Container** (`FRAME`) | `308.6x18.2` | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `66.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **사진 11장** (`TEXT`) | `46.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "사진 11장"
+              - **Container** (`FRAME`) | `62.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **방문 4곳** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "방문 4곳"
+      - **Container:margin** (`FRAME`) | `350.2x380.3` | Layout: VERTICAL (Gap: 0px, Pad: 24.959999084472656/0/0/0)
+        - **Container** (`FRAME`) | `350.2x355.4` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `350.2x166.4` | Fill: #FAFAF8 | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x48.1` | Layout: VERTICAL (Gap: 2.0799999237060547px, Pad: 0/0/0/0)
+              - **Text** (`FRAME`) | `308.6x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **APR** (`TEXT`) | `25.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "APR"
+              - **Text** (`FRAME`) | `308.6x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **10** (`TEXT`) | `24.0x30.0` | Fill: #171A2B | Font: Pretendard 900 20.0px | Text: "10"
+            - **Container** (`FRAME`) | `45.8x45.8` | Radius: 12.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Italic Text** (`FRAME`) | `25.0x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Icon** (`FRAME`) | `25.0x25.0`
+            - **Container** (`FRAME`) | `48.0x30.5` | Fill: #5667FD26 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 6.239999771118164/12.479999542236328/6.239999771118164/12.479999542236328)
+              - **제주** (`TEXT`) | `21.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "제주"
+          - **Container** (`FRAME`) | `350.2x185.8` | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x28.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **제주도 우정 여행🍊** (`TEXT`) | `131.0x28.0` | Fill: #171A2B | Font: Pretendard 700 18.0px | Text: "제주도 우정 여행🍊"
+            - **Container** (`FRAME`) | `306.8x37.4` | Layout: VERTICAL (Gap: 0px, Pad: 6.239999771118164/0/16.639999389648438/0)
+              - **제주 · 2박 3일 · 친구와 함께** (`TEXT`) | `132.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "제주 · 2박 3일 · 친구와 함께"
+            - **Container** (`FRAME`) | `308.6x60.5`
+              - **Container** (`FRAME`) | `261.6x43.9` | Fill: #F0F5FF | Radius: 12.0px
+                - **"파란 하늘 아래 제주가 더 넓어 보였다."** (`TEXT`) | `201.0x20.0` | Fill: #171A2B | Font: Pretendard 400 13.0px | Text: ""파란 하늘 아래 제주가 더 넓어 보였다.""
+            - **Container** (`FRAME`) | `308.6x18.2` | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `67.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **사진 12장** (`TEXT`) | `47.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "사진 12장"
+              - **Container** (`FRAME`) | `62.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **방문 2곳** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "방문 2곳"
+      - **Container** (`FRAME`) | `348.4x49.9` | Layout: VERTICAL (Gap: 0px, Pad: 24.959999084472656/0/0/0)
+        - **2024** (`TEXT`) | `53.0x30.0` | Fill: #171A2B | Font: Pretendard 900 20.0px | Text: "2024"
+      - **Container:margin** (`FRAME`) | `350.2x371.5` | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/0/0/0)
+        - **Container** (`FRAME`) | `350.2x354.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `350.2x166.4` | Fill: #FAFAF8 | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x48.1` | Layout: VERTICAL (Gap: 2.0799999237060547px, Pad: 0/0/0/0)
+              - **Text** (`FRAME`) | `308.6x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **NOV** (`TEXT`) | `27.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "NOV"
+              - **Text** (`FRAME`) | `308.6x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **22** (`TEXT`) | `26.0x30.0` | Fill: #171A2B | Font: Pretendard 900 20.0px | Text: "22"
+            - **Container** (`FRAME`) | `45.8x45.8` | Radius: 12.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Italic Text** (`FRAME`) | `25.0x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Icon** (`FRAME`) | `25.0x25.0`
+            - **Container** (`FRAME`) | `48.0x30.5` | Fill: #5667FD26 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 6.239999771118164/12.479999542236328/6.239999771118164/12.479999542236328)
+              - **부산** (`TEXT`) | `21.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "부산"
+          - **Container** (`FRAME`) | `350.2x185.8` | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x28.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **광안리 밤바다 산책** (`TEXT`) | `129.0x28.0` | Fill: #171A2B | Font: Pretendard 700 18.0px | Text: "광안리 밤바다 산책"
+            - **Container** (`FRAME`) | `306.8x37.4` | Layout: VERTICAL (Gap: 0px, Pad: 6.239999771118164/0/16.639999389648438/0)
+              - **부산 · 1박 2일 · 혼자** (`TEXT`) | `96.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "부산 · 1박 2일 · 혼자"
+            - **Container** (`FRAME`) | `308.6x60.5`
+              - **Container** (`FRAME`) | `216.7x43.9` | Fill: #F0F5FF | Radius: 12.0px
+                - **"조용히 파도 소리만 들었던 밤."** (`TEXT`) | `160.0x20.0` | Fill: #171A2B | Font: Pretendard 400 13.0px | Text: ""조용히 파도 소리만 들었던 밤.""
+            - **Container** (`FRAME`) | `308.6x18.2` | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `61.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **사진 7장** (`TEXT`) | `41.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "사진 7장"
+              - **Container** (`FRAME`) | `62.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **방문 4곳** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "방문 4곳"
+      - **Container:margin** (`FRAME`) | `350.2x379.8` | Layout: VERTICAL (Gap: 0px, Pad: 24.959999084472656/0/0/0)
+        - **Container** (`FRAME`) | `350.2x354.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `350.2x166.4` | Fill: #FAFAF8 | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x48.1` | Layout: VERTICAL (Gap: 2.0799999237060547px, Pad: 0/0/0/0)
+              - **Text** (`FRAME`) | `308.6x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **OCT** (`TEXT`) | `27.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "OCT"
+              - **Text** (`FRAME`) | `308.6x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **05** (`TEXT`) | `28.0x30.0` | Fill: #171A2B | Font: Pretendard 900 20.0px | Text: "05"
+            - **Container** (`FRAME`) | `45.8x45.8` | Radius: 12.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Italic Text** (`FRAME`) | `25.0x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Icon** (`FRAME`) | `25.0x25.0`
+            - **Container** (`FRAME`) | `48.0x30.5` | Fill: #5667FD26 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 6.239999771118164/12.479999542236328/6.239999771118164/12.479999542236328)
+              - **제주** (`TEXT`) | `21.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "제주"
+          - **Container** (`FRAME`) | `350.2x185.8` | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x28.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **한라산 등반** (`TEXT`) | `80.0x28.0` | Fill: #171A2B | Font: Pretendard 700 18.0px | Text: "한라산 등반"
+            - **Container** (`FRAME`) | `306.8x37.4` | Layout: VERTICAL (Gap: 0px, Pad: 6.239999771118164/0/16.639999389648438/0)
+              - **제주 · 3박 4일 · 가족과 함께** (`TEXT`) | `133.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "제주 · 3박 4일 · 가족과 함께"
+            - **Container** (`FRAME`) | `308.6x60.5`
+              - **Container** (`FRAME`) | `266.5x43.9` | Fill: #F0F5FF | Radius: 12.0px
+                - **"힘들었지만 백록담을 본 순간 잊혀졌다."** (`TEXT`) | `205.0x20.0` | Fill: #171A2B | Font: Pretendard 400 13.0px | Text: ""힘들었지만 백록담을 본 순간 잊혀졌다.""
+            - **Container** (`FRAME`) | `308.6x18.2` | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `68.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **사진 14장** (`TEXT`) | `48.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "사진 14장"
+              - **Container** (`FRAME`) | `62.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **방문 4곳** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "방문 4곳"
+      - **Container** (`FRAME`) | `348.4x49.9` | Layout: VERTICAL (Gap: 0px, Pad: 24.959999084472656/0/0/0)
+        - **2023** (`TEXT`) | `53.0x30.0` | Fill: #171A2B | Font: Pretendard 900 20.0px | Text: "2023"
+      - **Container:margin** (`FRAME`) | `350.2x396.4` | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/0/24.959999084472656/0)
+        - **Container** (`FRAME`) | `350.2x354.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `350.2x166.4` | Fill: #FAFAF8 | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x48.1` | Layout: VERTICAL (Gap: 2.0799999237060547px, Pad: 0/0/0/0)
+              - **Text** (`FRAME`) | `308.6x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **AUG** (`TEXT`) | `27.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "AUG"
+              - **Text** (`FRAME`) | `308.6x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **15** (`TEXT`) | `23.0x30.0` | Fill: #171A2B | Font: Pretendard 900 20.0px | Text: "15"
+            - **Container** (`FRAME`) | `45.8x45.8` | Radius: 12.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Italic Text** (`FRAME`) | `25.0x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Icon** (`FRAME`) | `25.0x25.0`
+            - **Container** (`FRAME`) | `48.0x30.5` | Fill: #5667FD26 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 6.239999771118164/12.479999542236328/6.239999771118164/12.479999542236328)
+              - **제주** (`TEXT`) | `21.0x16.0` | Fill: #171A2B | Font: Pretendard 700 12.0px | Text: "제주"
+          - **Container** (`FRAME`) | `350.2x185.8` | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `308.6x28.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **우도 자전거 투어** (`TEXT`) | `114.0x28.0` | Fill: #171A2B | Font: Pretendard 700 18.0px | Text: "우도 자전거 투어"
+            - **Container** (`FRAME`) | `306.8x37.4` | Layout: VERTICAL (Gap: 0px, Pad: 6.239999771118164/0/16.639999389648438/0)
+              - **제주 · 2박 3일 · 혼자** (`TEXT`) | `98.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "제주 · 2박 3일 · 혼자"
+            - **Container** (`FRAME`) | `308.6x60.5`
+              - **Container** (`FRAME`) | `229.8x43.9` | Fill: #F0F5FF | Radius: 12.0px
+                - **"바람을 가르며 달리는 기분 최고!"** (`TEXT`) | `173.0x20.0` | Fill: #171A2B | Font: Pretendard 400 13.0px | Text: ""바람을 가르며 달리는 기분 최고!""
+            - **Container** (`FRAME`) | `308.6x18.2` | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `68.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **사진 14장** (`TEXT`) | `48.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "사진 14장"
+              - **Container** (`FRAME`) | `62.8x18.2` | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+                - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **방문 4곳** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "방문 4곳"
+  - **하단 네비게이션** (`FRAME`) | `390.0x84.0` | Fill: #FFFFFFF7
+    - **Nav Icon / user** (`FRAME`) | `21.0x21.0`
+      - **Vector** (`VECTOR`) | `6.3x6.3`
+      - **Vector** (`VECTOR`) | `12.6x5.2`
+    - **Nav Label / 마이** (`TEXT`) | `18.0x12.0` | Fill: #9AA4BD | Font: Pretendard 600 10.0px | Text: "마이"
+    - **Nav / Active** (`RECTANGLE`) | `76.0x56.0` | Fill: #EDF2FF | Radius: 18.0px
+    - **Nav Label / 뽑기** (`TEXT`) | `35.0x12.0` | Fill: #4A55FF | Font: Pretendard 700 10.0px | Text: "마이트립"
+    - **location_on** (`GROUP`) | `24.0x24.0`
+      - **Bounding box** (`RECTANGLE`) | `24.0x24.0` | Fill: #D9D9D9
+      - **location_on** (`VECTOR`) | `15.1x18.4` | Fill: #4A55FF
+    - **Nav Label / 뽑기** (`TEXT`) | `35.0x12.0` | Fill: #9AA4BD | Font: Pretendard 600 10.0px | Text: "큐레이션"
+    - **explore** (`GROUP`) | `22.0x22.0`
+      - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+      - **explore** (`VECTOR`) | `17.4x17.4` | Fill: #9AA4BD
+    - **Nav Label / 홈** (`TEXT`) | `9.0x12.0` | Fill: #9AA4BD | Font: Pretendard 600 10.0px | Text: "홈"
+    - **home** (`GROUP`) | `24.0x24.0`
+      - **Bounding box** (`RECTANGLE`) | `24.0x24.0` | Fill: #D9D9D9
+      - **home** (`VECTOR`) | `15.0x16.4` | Fill: #9AA4BD
+
+---
+
+## 3. 04 · 방문한 지역 (ID: `2002:1346`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/03_04 · 방문한 지역.png`
+
+### Component Tree & Styles
+- **04 · 방문한 지역** (`FRAME`) | `390.0x844.0` | Fill: #F9FAFB
+  - **Container** (`FRAME`) | `390.0x844.5` | Fill: #F9FAFB | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+    - **Container:margin** (`FRAME`) | `390.0x109.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Status Bar - iPhone** (`INSTANCE`) | `390.0x50.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+        - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+          - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+            - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+          - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+            - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+            - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+            - **Battery** (`GROUP`) | `27.3x13.0`
+              - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+              - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+              - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+      - **category-list** (`FRAME`) | `390.0x59.0`
+        - **방문한 지역** (`TEXT`) | `78.0x26.0` | Fill: #1C1C14 | Font: Pretendard 700 17.0px | Text: "방문한 지역"
+        - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Icon** (`FRAME`) | `18.0x18.0`
+            - **Vector** (`VECTOR`) | `4.5x9.0`
+        - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+          - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+          - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #1C1B1F
+    - **Container** (`FRAME`) | `390.0x735.5` | Fill: #F7F8FA | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/41.599998474121094/20.799999237060547)
+      - **Container:margin** (`FRAME`) | `348.4x99.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/16.639999389648438/0)
+        - **Container** (`FRAME`) | `348.4x83.2` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 16.639999389648438/20.799999237060547/16.639999389648438/20.799999237060547)
+          - **Container** (`FRAME`) | `49.9x49.9` | Fill: #EEF6FF | Radius: 56.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **서울 4** (`RECTANGLE`) | `36.0x36.0`
+          - **Container** (`FRAME`) | `207.0x44.2` | Layout: VERTICAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `207.0x24.0` | Layout: HORIZONTAL (Gap: 6.239999771118164px, Pad: 0/0/0/0)
+              - **서울** (`TEXT`) | `28.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "서울"
+              - **Container** (`FRAME`) | `0.0x0.0`
+            - **Container** (`FRAME`) | `207.0x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **4회 방문 · 최근 2026.07.04** (`TEXT`) | `135.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "4회 방문 · 최근 2026.07.04"
+          - **Italic Text** (`FRAME`) | `16.6x16.6`
+            - **Icon** (`FRAME`) | `16.6x16.6`
+              - **Vector** (`VECTOR`) | `6.8x12.0` | Fill: #CCCCCC
+      - **Container:margin** (`FRAME`) | `348.4x99.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/16.639999389648438/0)
+        - **Container** (`FRAME`) | `348.4x83.2` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 16.639999389648438/20.799999237060547/16.639999389648438/20.799999237060547)
+          - **Container** (`FRAME`) | `49.9x49.9` | Fill: #EEF6FF | Radius: 56.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **부산 5** (`RECTANGLE`) | `36.0x36.0`
+          - **Container** (`FRAME`) | `207.0x44.2` | Layout: VERTICAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `207.0x24.0` | Layout: HORIZONTAL (Gap: 6.239999771118164px, Pad: 0/0/0/0)
+              - **부산** (`TEXT`) | `28.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "부산"
+            - **Container** (`FRAME`) | `207.0x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **2회 방문 · 최근 2025.06.10** (`TEXT`) | `134.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "2회 방문 · 최근 2025.06.10"
+          - **Italic Text** (`FRAME`) | `16.6x16.6`
+            - **Icon** (`FRAME`) | `16.6x16.6`
+              - **Vector** (`VECTOR`) | `6.8x12.0` | Fill: #CCCCCC
+      - **Container:margin** (`FRAME`) | `348.4x99.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/16.639999389648438/0)
+        - **Container** (`FRAME`) | `348.4x83.2` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 16.639999389648438/20.799999237060547/16.639999389648438/20.799999237060547)
+          - **Container** (`FRAME`) | `49.9x49.9` | Fill: #EEF6FF | Radius: 56.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **제주도 5** (`RECTANGLE`) | `36.0x36.0`
+          - **Container** (`FRAME`) | `207.0x44.2` | Layout: VERTICAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `207.0x24.0` | Layout: HORIZONTAL (Gap: 6.239999771118164px, Pad: 0/0/0/0)
+              - **제주** (`TEXT`) | `28.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "제주"
+            - **Container** (`FRAME`) | `207.0x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **3회 방문 · 최근 2025.04.10** (`TEXT`) | `134.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "3회 방문 · 최근 2025.04.10"
+          - **Italic Text** (`FRAME`) | `16.6x16.6`
+            - **Icon** (`FRAME`) | `16.6x16.6`
+              - **Vector** (`VECTOR`) | `6.8x12.0` | Fill: #CCCCCC
+      - **Container:margin** (`FRAME`) | `348.4x99.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/16.639999389648438/0)
+        - **Container** (`FRAME`) | `348.4x83.2` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 16.639999389648438/20.799999237060547/16.639999389648438/20.799999237060547)
+          - **Container** (`FRAME`) | `49.9x49.9` | Fill: #EEF6FF | Radius: 56.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **대구 5** (`RECTANGLE`) | `36.0x36.0`
+          - **Container** (`FRAME`) | `207.0x44.2` | Layout: VERTICAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `207.0x24.0` | Layout: HORIZONTAL (Gap: 6.239999771118164px, Pad: 0/0/0/0)
+              - **대구** (`TEXT`) | `28.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "대구"
+            - **Container** (`FRAME`) | `207.0x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **1회 방문 · 최근 2026.02.15** (`TEXT`) | `132.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "1회 방문 · 최근 2026.02.15"
+          - **Italic Text** (`FRAME`) | `16.6x16.6`
+            - **Icon** (`FRAME`) | `16.6x16.6`
+              - **Vector** (`VECTOR`) | `6.8x12.0` | Fill: #CCCCCC
+
+---
+
+## 4. 05 · 전체 여행 히스토리 (ID: `2002:1408`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/04_05 · 전체 여행 히스토리.png`
+
+### Component Tree & Styles
+- **05 · 전체 여행 히스토리** (`FRAME`) | `390.0x844.0` | Fill: #F7F8FA
+  - **Container** (`FRAME`) | `390.0x844.5` | Fill: #F9FAFB | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+    - **Container:margin** (`FRAME`) | `390.0x129.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/20.799999237060547/0)
+      - **Status Bar - iPhone** (`INSTANCE`) | `390.0x50.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+        - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+          - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+            - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+          - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+            - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+            - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+            - **Battery** (`GROUP`) | `27.3x13.0`
+              - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+              - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+              - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+      - **category-list** (`FRAME`) | `390.0x59.0`
+        - **전체 여행 히스토리** (`TEXT`) | `126.0x26.0` | Fill: #1C1C14 | Font: Pretendard 700 17.0px | Text: "전체 여행 히스토리"
+        - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Icon** (`FRAME`) | `18.0x18.0`
+            - **Vector** (`VECTOR`) | `4.5x9.0`
+        - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+          - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+          - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #1C1B1F
+    - **Container** (`FRAME`) | `390.0x714.7` | Layout: VERTICAL (Gap: -12.0px, Pad: 0/20.799999237060547/41.599998474121094/20.799999237060547)
+      - **Container:margin** (`FRAME`) | `160.2x69.9` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/24.959999084472656/0)
+        - **Container** (`FRAME`) | `160.2x45.0` | Fill: #F5F5F5 | Radius: 24.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 4.159999847412109/4.159999847412109/4.159999847412109/4.159999847412109)
+          - **Container** (`FRAME`) | `74.4x36.6` | Fill: #FFFFFF | Radius: 20.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 8.319999694824219/18.719999313354492/8.319999694824219/18.719999313354492)
+            - **Container** (`FRAME`) | `0.0x0.0`
+            - **최신순** (`TEXT`) | `37.0x20.0` | Fill: #5667FD | Font: Pretendard 700 14.0px | Text: "최신순"
+          - **Container** (`FRAME`) | `74.4x36.6` | Radius: 20.0px | Layout: HORIZONTAL (Gap: 6.239999771118164px, Pad: 8.319999694824219/18.719999313354492/8.319999694824219/18.719999313354492)
+            - **과거순** (`TEXT`) | `37.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "과거순"
+      - **Container** (`FRAME`) | `348.4x1539.4` | Layout: VERTICAL (Gap: 16.639999389648438px, Pad: 0/0/0/0)
+        - **Container** (`FRAME`) | `348.4x145.4` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+          - **Container** (`FRAME`) | `99.8x112.1` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `198.6x112.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container:margin** (`FRAME`) | `198.6x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **Container** (`FRAME`) | `198.6x13.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **2026.07.04** (`TEXT`) | `68.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "2026.07.04"
+            - **Container:margin** (`FRAME`) | `198.6x23.9` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **Container** (`FRAME`) | `198.6x19.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **비 오는 날의 서울** (`TEXT`) | `108.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "비 오는 날의 서울"
+            - **Container:margin** (`FRAME`) | `198.6x21.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/8.319999694824219/0)
+              - **Container** (`FRAME`) | `198.6x13.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **서울 · 당일치기 · 혼자** (`TEXT`) | `102.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "서울 · 당일치기 · 혼자"
+            - **Container** (`FRAME`) | `198.6x48.6` | Fill: #F3F5F8 | Radius: 10.0px | Layout: VERTICAL (Gap: 0px, Pad: 8.319999694824219/12.479999542236328/8.319999694824219/12.479999542236328)
+              - **"비가 와서 오히려 천천히 걸었던 하루."** (`TEXT`) | `173.7x32.0` | Fill: #555B66 | Font: Pretendard 400 12.0px | Text: ""비가 와서 오히려 천천히 걸었던 하루.""
+        - **Container** (`FRAME`) | `348.4x145.4` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+          - **Container** (`FRAME`) | `99.8x112.1` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `198.6x112.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container:margin** (`FRAME`) | `198.6x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **Container** (`FRAME`) | `198.6x13.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **2026.04.08** (`TEXT`) | `71.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "2026.04.08"
+            - **Container:margin** (`FRAME`) | `198.6x23.9` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **Container** (`FRAME`) | `198.6x19.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **봄날의 북촌 산책** (`TEXT`) | `105.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "봄날의 북촌 산책"
+            - **Container:margin** (`FRAME`) | `198.6x21.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/8.319999694824219/0)
+              - **Container** (`FRAME`) | `198.6x13.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **서울 · 당일치기 · 혼자** (`TEXT`) | `102.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "서울 · 당일치기 · 혼자"
+            - **Container** (`FRAME`) | `198.6x48.6` | Fill: #F3F5F8 | Radius: 10.0px | Layout: VERTICAL (Gap: 0px, Pad: 8.319999694824219/12.479999542236328/8.319999694824219/12.479999542236328)
+              - **"벚꽃이 지기 전에 나온 게 잘한 일이었다."** (`TEXT`) | `173.7x32.0` | Fill: #555B66 | Font: Pretendard 400 12.0px | Text: ""벚꽃이 지기 전에 나온 게 잘한 일이었다.""
+        - **Container** (`FRAME`) | `348.4x129.4` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+          - **Container** (`FRAME`) | `99.8x96.1` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Italic Text** (`FRAME`) | `33.3x33.3` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `198.6x96.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `198.6x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **2026.02.15** (`TEXT`) | `67.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "2026.02.15"
+            - **Container** (`FRAME`) | `198.6x23.9` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **대구 식도락 여행** (`TEXT`) | `105.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "대구 식도락 여행"
+            - **Container** (`FRAME`) | `198.6x21.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/8.319999694824219/0)
+              - **대구 · 당일치기 · 친구와 함께** (`TEXT`) | `136.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "대구 · 당일치기 · 친구와 함께"
+            - **Container** (`FRAME`) | `198.6x32.6` | Fill: #F3F5F8 | Radius: 10.0px | Layout: VERTICAL (Gap: 0px, Pad: 8.319999694824219/12.479999542236328/8.319999694824219/12.479999542236328)
+              - **"막창이 정말 맛있었다."** (`TEXT`) | `111.0x16.0` | Fill: #555B66 | Font: Pretendard 400 12.0px | Text: ""막창이 정말 맛있었다.""
+        - **Container** (`FRAME`) | `348.4x129.4` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+          - **Container** (`FRAME`) | `99.8x96.1` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Italic Text** (`FRAME`) | `33.3x33.3` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Icon** (`FRAME`) | `33.3x33.3`
+                - **Vector** (`VECTOR`) | `27.0x23.9` | Fill: #FFFFFF26
+          - **Container** (`FRAME`) | `198.6x96.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `198.6x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **2026.01.20** (`TEXT`) | `68.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "2026.01.20"
+            - **Container** (`FRAME`) | `198.6x23.9` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **겨울 한강 피크닉** (`TEXT`) | `105.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "겨울 한강 피크닉"
+            - **Container** (`FRAME`) | `198.6x21.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/8.319999694824219/0)
+              - **서울 · 당일치기 · 친구와 함께** (`TEXT`) | `136.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "서울 · 당일치기 · 친구와 함께"
+            - **Container** (`FRAME`) | `198.6x32.6` | Fill: #F3F5F8 | Radius: 10.0px | Layout: VERTICAL (Gap: 0px, Pad: 8.319999694824219/12.479999542236328/8.319999694824219/12.479999542236328)
+              - **"추웠지만 라면은 맛있었다."** (`TEXT`) | `132.0x16.0` | Fill: #555B66 | Font: Pretendard 400 12.0px | Text: ""추웠지만 라면은 맛있었다.""
+        - **Container** (`FRAME`) | `348.4x145.4` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+          - **Container** (`FRAME`) | `99.8x112.1` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Italic Text** (`FRAME`) | `33.3x33.3` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Icon** (`FRAME`) | `33.3x33.3`
+                - **Vector** (`VECTOR`) | `27.0x23.9` | Fill: #FFFFFF26
+          - **Container** (`FRAME`) | `198.6x112.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container:margin** (`FRAME`) | `198.6x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **Container** (`FRAME`) | `198.6x13.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **2025.10.15** (`TEXT`) | `64.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "2025.10.15"
+            - **Container:margin** (`FRAME`) | `198.6x23.9` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **Container** (`FRAME`) | `198.6x19.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **가을밤의 남산 타워** (`TEXT`) | `118.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "가을밤의 남산 타워"
+            - **Container:margin** (`FRAME`) | `198.6x21.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/8.319999694824219/0)
+              - **Container** (`FRAME`) | `198.6x13.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **서울 · 당일치기 · 혼자** (`TEXT`) | `102.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "서울 · 당일치기 · 혼자"
+            - **Container** (`FRAME`) | `198.6x48.6` | Fill: #F3F5F8 | Radius: 10.0px | Layout: VERTICAL (Gap: 0px, Pad: 8.319999694824219/12.479999542236328/8.319999694824219/12.479999542236328)
+              - **"야경 보며 생각 정리하기 좋았던 시간."** (`TEXT`) | `173.7x32.0` | Fill: #171A2B | Font: Pretendard 400 12.0px | Text: ""야경 보며 생각 정리하기 좋았던 시간.""
+        - **Container** (`FRAME`) | `348.4x145.4` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+          - **Container** (`FRAME`) | `99.8x112.1` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Italic Text** (`FRAME`) | `33.3x33.3` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Icon** (`FRAME`) | `33.3x33.3`
+                - **Vector** (`VECTOR`) | `27.0x23.9` | Fill: #FFFFFF26
+          - **Container** (`FRAME`) | `198.6x112.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container:margin** (`FRAME`) | `198.6x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **Container** (`FRAME`) | `198.6x13.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **2025.06.10** (`TEXT`) | `67.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "2025.06.10"
+            - **Container:margin** (`FRAME`) | `198.6x23.9` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **Container** (`FRAME`) | `198.6x19.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **부산 우정 가득 힐링 여행** (`TEXT`) | `154.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "부산 우정 가득 힐링 여행"
+            - **Container:margin** (`FRAME`) | `198.6x21.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/8.319999694824219/0)
+              - **Container** (`FRAME`) | `198.6x13.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **부산 · 2박 3일 · 친구와 함께** (`TEXT`) | `132.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "부산 · 2박 3일 · 친구와 함께"
+            - **Container** (`FRAME`) | `198.6x48.6` | Fill: #F3F5F8 | Radius: 10.0px | Layout: VERTICAL (Gap: 0px, Pad: 8.319999694824219/12.479999542236328/8.319999694824219/12.479999542236328)
+              - **"해운대 바닷바람이 모든 걸 날려주었다."** (`TEXT`) | `173.7x32.0` | Fill: #171A2B | Font: Pretendard 400 12.0px | Text: ""해운대 바닷바람이 모든 걸 날려주었다.""
+        - **Container** (`FRAME`) | `348.4x145.4` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+          - **Container** (`FRAME`) | `99.8x112.1` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Italic Text** (`FRAME`) | `33.3x33.3` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Icon** (`FRAME`) | `33.3x33.3`
+                - **Vector** (`VECTOR`) | `27.0x23.9` | Fill: #FFFFFF26
+          - **Container** (`FRAME`) | `198.6x112.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container:margin** (`FRAME`) | `198.6x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **Container** (`FRAME`) | `198.6x13.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **2025.04.10** (`TEXT`) | `68.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "2025.04.10"
+            - **Container:margin** (`FRAME`) | `198.6x23.9` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **Container** (`FRAME`) | `198.6x19.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **제주도 우정 여행🍊** (`TEXT`) | `121.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "제주도 우정 여행🍊"
+            - **Container:margin** (`FRAME`) | `198.6x21.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/8.319999694824219/0)
+              - **Container** (`FRAME`) | `198.6x13.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **제주 · 2박 3일 · 친구와 함께** (`TEXT`) | `132.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "제주 · 2박 3일 · 친구와 함께"
+            - **Container** (`FRAME`) | `198.6x48.6` | Fill: #F3F5F8 | Radius: 10.0px | Layout: VERTICAL (Gap: 0px, Pad: 8.319999694824219/12.479999542236328/8.319999694824219/12.479999542236328)
+              - **"파란 하늘 아래 제주가 더 넓어 보였다."** (`TEXT`) | `173.7x32.0` | Fill: #171A2B | Font: Pretendard 400 12.0px | Text: ""파란 하늘 아래 제주가 더 넓어 보였다.""
+        - **Container** (`FRAME`) | `348.4x129.4` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+          - **Container** (`FRAME`) | `99.8x96.1` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Italic Text** (`FRAME`) | `33.3x33.3` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Icon** (`FRAME`) | `33.3x33.3`
+                - **Vector** (`VECTOR`) | `27.0x23.9` | Fill: #FFFFFF26
+          - **Container** (`FRAME`) | `198.6x96.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `198.6x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **2024.11.22** (`TEXT`) | `65.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "2024.11.22"
+            - **Container** (`FRAME`) | `198.6x23.9` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **광안리 밤바다 산책** (`TEXT`) | `118.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "광안리 밤바다 산책"
+            - **Container** (`FRAME`) | `198.6x21.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/8.319999694824219/0)
+              - **부산 · 1박 2일 · 혼자** (`TEXT`) | `96.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "부산 · 1박 2일 · 혼자"
+            - **Container** (`FRAME`) | `198.6x32.6` | Fill: #F3F5F8 | Radius: 10.0px | Layout: VERTICAL (Gap: 0px, Pad: 8.319999694824219/12.479999542236328/8.319999694824219/12.479999542236328)
+              - **"조용히 파도 소리만 들었던 밤."** (`TEXT`) | `148.0x16.0` | Fill: #171A2B | Font: Pretendard 400 12.0px | Text: ""조용히 파도 소리만 들었던 밤.""
+        - **Container** (`FRAME`) | `348.4x145.4` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+          - **Container** (`FRAME`) | `99.8x112.1` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Italic Text** (`FRAME`) | `33.3x33.3` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Icon** (`FRAME`) | `33.3x33.3`
+                - **Vector** (`VECTOR`) | `27.0x23.9` | Fill: #FFFFFF26
+          - **Container** (`FRAME`) | `198.6x112.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container:margin** (`FRAME`) | `198.6x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **Container** (`FRAME`) | `198.6x13.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **2024.10.05** (`TEXT`) | `67.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "2024.10.05"
+            - **Container:margin** (`FRAME`) | `198.6x23.9` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **Container** (`FRAME`) | `198.6x19.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **한라산 등반** (`TEXT`) | `73.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "한라산 등반"
+            - **Container:margin** (`FRAME`) | `198.6x21.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/8.319999694824219/0)
+              - **Container** (`FRAME`) | `198.6x13.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **제주 · 3박 4일 · 가족과 함께** (`TEXT`) | `133.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "제주 · 3박 4일 · 가족과 함께"
+            - **Container** (`FRAME`) | `198.6x48.6` | Fill: #F3F5F8 | Radius: 10.0px | Layout: VERTICAL (Gap: 0px, Pad: 8.319999694824219/12.479999542236328/8.319999694824219/12.479999542236328)
+              - **"힘들었지만 백록담을 본 순간 잊혀졌다."** (`TEXT`) | `173.7x32.0` | Fill: #171A2B | Font: Pretendard 400 12.0px | Text: ""힘들었지만 백록담을 본 순간 잊혀졌다.""
+        - **Container** (`FRAME`) | `348.4x129.4` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+          - **Container** (`FRAME`) | `99.8x96.1` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Italic Text** (`FRAME`) | `33.3x33.3` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Icon** (`FRAME`) | `33.3x33.3`
+                - **Vector** (`VECTOR`) | `27.0x23.9` | Fill: #FFFFFF26
+          - **Container** (`FRAME`) | `198.6x96.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container:margin** (`FRAME`) | `198.6x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **Container** (`FRAME`) | `198.6x13.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **2023.08.15** (`TEXT`) | `67.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "2023.08.15"
+            - **Container:margin** (`FRAME`) | `198.6x23.9` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **Container** (`FRAME`) | `198.6x19.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **우도 자전거 투어** (`TEXT`) | `105.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "우도 자전거 투어"
+            - **Container:margin** (`FRAME`) | `198.6x21.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/8.319999694824219/0)
+              - **Container** (`FRAME`) | `198.6x13.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **제주 · 2박 3일 · 혼자** (`TEXT`) | `98.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "제주 · 2박 3일 · 혼자"
+            - **Container** (`FRAME`) | `198.6x32.6` | Fill: #F3F5F8 | Radius: 10.0px | Layout: VERTICAL (Gap: 0px, Pad: 8.319999694824219/12.479999542236328/8.319999694824219/12.479999542236328)
+              - **"바람을 가르며 달리는 기분 최고!"** (`TEXT`) | `173.7x16.0` | Fill: #171A2B | Font: Pretendard 400 12.0px | Text: ""바람을 가르며 달리는 기분 최고!""
+
+---
+
+## 5. 날짜 선택 (ID: `2002:1582`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/05_날짜 선택.png`
+
+### Component Tree & Styles
+- **날짜 선택** (`FRAME`) | `390.0x844.0` | Fill: #F9FAFB
+  - **Container** (`FRAME`) | `390.0x844.5` | Fill: #F9FAFB | Layout: VERTICAL (Gap: -21.0px, Pad: 0/0/0/0)
+    - **Container:margin** (`FRAME`) | `390.0x129.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/20.799999237060547/0)
+      - **Status Bar - iPhone** (`INSTANCE`) | `390.0x50.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+        - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+          - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+            - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+          - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+            - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+            - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+            - **Battery** (`GROUP`) | `27.3x13.0`
+              - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+              - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+              - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+      - **category-list** (`FRAME`) | `390.0x59.0`
+        - **날짜 선택** (`TEXT`) | `63.0x26.0` | Fill: #1C1C14 | Font: Pretendard 700 17.0px | Text: "날짜 선택"
+        - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Icon** (`FRAME`) | `18.0x18.0`
+            - **Vector** (`VECTOR`) | `4.5x9.0`
+        - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+          - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+          - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #1C1B1F
+    - **Container** (`FRAME`) | `390.0x735.7` | Fill: #F7F8FA | Layout: VERTICAL (Gap: 0px, Pad: 0/20.799999237060547/41.599998474121094/20.799999237060547)
+      - **Container** (`FRAME`) | `348.4x467.5` | Layout: VERTICAL (Gap: 12.0px, Pad: 20.0/20.0/40.0/20.0)
+        - **Container** (`FRAME`) | `308.4x26.0` | Layout: HORIZONTAL (Gap: 109.80000305175781px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `26.0x26.0` | Layout: VERTICAL (Gap: 0px, Pad: 4.0/4.0/4.0/4.0)
+            - **Container** (`FRAME`) | `18.0x18.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Icon** (`FRAME`) | `18.0x18.0`
+                - **Vector** (`VECTOR`) | `7.3x12.9` | Fill: #222222
+          - **Container** (`FRAME`) | `79.0x21.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **2026. 09** (`TEXT`) | `79.0x21.0` | Fill: #222222 | Font: Pretendard 800 18.0px | Text: "2026. 09"
+          - **Container** (`FRAME`) | `26.0x26.0` | Layout: VERTICAL (Gap: 0px, Pad: 4.0/4.0/4.0/4.0)
+            - **Container** (`FRAME`) | `18.0x18.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Icon** (`FRAME`) | `18.0x18.0`
+                - **Vector** (`VECTOR`) | `7.3x12.9` | Fill: #222222
+        - **Container** (`FRAME`) | `308.4x22.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 8.0/0/0/0)
+          - **Container** (`FRAME`) | `44.1x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **일** (`TEXT`) | `11.0x14.0` | Fill: #A3A3A3 | Font: Pretendard 700 12.0px | Text: "일"
+          - **Container** (`FRAME`) | `44.1x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **월** (`TEXT`) | `11.0x14.0` | Fill: #A3A3A3 | Font: Pretendard 700 12.0px | Text: "월"
+          - **Container** (`FRAME`) | `44.1x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **화** (`TEXT`) | `11.0x14.0` | Fill: #A3A3A3 | Font: Pretendard 700 12.0px | Text: "화"
+          - **Container** (`FRAME`) | `44.1x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **수** (`TEXT`) | `11.0x14.0` | Fill: #A3A3A3 | Font: Pretendard 700 12.0px | Text: "수"
+          - **Container** (`FRAME`) | `44.1x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **목** (`TEXT`) | `11.0x14.0` | Fill: #A3A3A3 | Font: Pretendard 700 12.0px | Text: "목"
+          - **Container** (`FRAME`) | `44.1x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **금** (`TEXT`) | `11.0x14.0` | Fill: #A3A3A3 | Font: Pretendard 700 12.0px | Text: "금"
+          - **Container** (`FRAME`) | `44.1x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **토** (`TEXT`) | `11.0x14.0` | Fill: #A3A3A3 | Font: Pretendard 700 12.0px | Text: "토"
+        - **Container** (`FRAME`) | `308.4x272.0` | Layout: GRID (Gap: 0px, Pad: 0/0/28.0/0)
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Rectangle** (`RECTANGLE`) | `36.0x36.0` | Radius: 18.0px
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Rectangle** (`RECTANGLE`) | `36.0x36.0` | Radius: 18.0px
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **1** (`TEXT`) | `7.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "1"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **2** (`TEXT`) | `9.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "2"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **3** (`TEXT`) | `10.0x17.0` | Fill: #222222 | Font: Pretendard 800 14.0px | Text: "3"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **4** (`TEXT`) | `10.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "4"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **5** (`TEXT`) | `9.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "5"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **6** (`TEXT`) | `9.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "6"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **7** (`TEXT`) | `8.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "7"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **8** (`TEXT`) | `9.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "8"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **9** (`TEXT`) | `9.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "9"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **10** (`TEXT`) | `16.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "10"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **11** (`TEXT`) | `13.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "11"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **12** (`TEXT`) | `15.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "12"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **13** (`TEXT`) | `16.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "13"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **14** (`TEXT`) | `16.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "14"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **15** (`TEXT`) | `16.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "15"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **16** (`TEXT`) | `16.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "16"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **17** (`TEXT`) | `15.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "17"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **18** (`TEXT`) | `16.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "18"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **19** (`TEXT`) | `16.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "19"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **20** (`TEXT`) | `18.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "20"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **21** (`TEXT`) | `15.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "21"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **22** (`TEXT`) | `17.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "22"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **23** (`TEXT`) | `18.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "23"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **24** (`TEXT`) | `18.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "24"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **25** (`TEXT`) | `18.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "25"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **26** (`TEXT`) | `18.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "26"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **27** (`TEXT`) | `17.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "27"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **28** (`TEXT`) | `18.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "28"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **29** (`TEXT`) | `18.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "29"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **30** (`TEXT`) | `18.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "30"
+        - **Button** (`FRAME`) | `308.4x51.5` | Radius: 20.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 16.0/16.0/17.5/16.0)
+          - **선택 완료** (`TEXT`) | `56.0x18.0` | Fill: #FFFFFF | Font: Apple SD Gothic Neo 800 15.0px | Text: "선택 완료"
+
+---
+
+## 6. 10 · 여행 기록 상세 (ID: `2002:1689`)
+- **Screen Size**: `390.0px × 1296.0px`
+- **Screen Image**: `screens/06_10 · 여행 기록 상세.png`
+
+### Component Tree & Styles
+- **10 · 여행 기록 상세** (`FRAME`) | `390.0x1296.0` | Fill: #F9FAFB
+  - **Container** (`FRAME`) | `390.0x1294.6` | Fill: #F9FAFB | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+    - **Container** (`FRAME`) | `390.0x353.6` | Layout: VERTICAL (Gap: 0px, Pad: 24.959999084472656/24.959999084472656/58.23999786376953/24.959999084472656)
+      - **Container** (`FRAME`) | `340.1x174.7` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Container:margin** (`FRAME`) | `340.1x58.2` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `58.2x58.2` | Fill: #00000033 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Italic Text** (`FRAME`) | `25.0x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Icon** (`FRAME`) | `25.0x25.0`
+                - **Vector** (`VECTOR`) | `20.3x17.9` | Fill: #FFFFFF4D
+        - **Container** (`FRAME`) | `340.1x47.8` | Layout: VERTICAL (Gap: 0px, Pad: 33.279998779296875/0/0/0)
+          - **2026.07.04** (`TEXT`) | `65.0x16.0` | Fill: #FFFFFF99 | Font: Pretendard 700 12.0px | Text: "2026.07.04"
+        - **Container** (`FRAME`) | `340.1x43.7` | Layout: VERTICAL (Gap: 0px, Pad: 8.319999694824219/0/0/0)
+          - **비 오는 날의 서울** (`TEXT`) | `202.0x38.0` | Fill: #FFFFFF | Font: Pretendard 900 30.0px | Text: "비 오는 날의 서울"
+        - **Container** (`FRAME`) | `340.1x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 8.319999694824219/0/0/0)
+          - **서울 · 혼자** (`TEXT`) | `55.0x20.0` | Fill: #FFFFFFCC | Font: Pretendard 400 13.0px | Text: "서울 · 혼자"
+      - **Container** (`FRAME`) | `390.0x112.3` | Layout: HORIZONTAL (Gap: 0px, Pad: 49.91999816894531/24.959999084472656/16.639999389648438/24.959999084472656)
+    - **Container:margin** (`FRAME`) | `390.0x941.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Container** (`FRAME`) | `390.0x975.0` | Fill: #F7F8FA | Layout: VERTICAL (Gap: 0px, Pad: 24.959999084472656/24.959999084472656/24.959999084472656/24.959999084472656)
+        - **Container** (`FRAME`) | `340.1x62.4` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+          - **"비가 와서 오히려 천천히 걸었던 하루."** (`TEXT`) | `213.0x20.0` | Fill: #171A2B | Font: Pretendard 400 14.0px | Text: ""비가 와서 오히려 천천히 걸었던 하루.""
+          - **Text** (`FRAME`) | `4.2x62.4` | Fill: #CFFF3D
+        - **Container** (`FRAME`) | `340.1x53.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 33.279998779296875/0/0/0)
+          - **Heading 3** (`FRAME`) | `59.0x24.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **여행 사진** (`TEXT`) | `59.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "여행 사진"
+          - **Text** (`FRAME`) | `19.0x20.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **7장** (`TEXT`) | `19.0x20.0` | Fill: #888888 | Font: Pretendard 400 13.0px | Text: "7장"
+        - **Container:margin** (`FRAME`) | `340.1x356.7` | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/0/0/0)
+          - **Container** (`FRAME`) | `340.1x340.1` | Layout: GRID (Gap: 0px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `105.0x105.0` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `105.0x105.0` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `105.0x105.0` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `105.0x105.0` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `105.0x105.0` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `105.0x105.0` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `105.0x105.0` | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Italic Text** (`FRAME`) | `18.7x18.7` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Container:margin** (`FRAME`) | `340.1x205.1` | Layout: VERTICAL (Gap: 0px, Pad: 33.279998779296875/0/0/0)
+          - **Container** (`FRAME`) | `340.1x171.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `298.5x20.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **이번 여행에서 다녀온 곳** (`TEXT`) | `131.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "이번 여행에서 다녀온 곳"
+            - **List** (`FRAME`) | `298.5x110.2` | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/0/0/0)
+              - **List Item** (`FRAME`) | `298.5x22.9` | Layout: HORIZONTAL (Gap: 12.479999542236328px, Pad: 0/0/0/0)
+                - **Container** (`FRAME`) | `22.9x22.9` | Fill: #CFFF3D | Radius: 11.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+                - **북촌한옥마을** (`TEXT`) | `73.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "북촌한옥마을"
+              - **List Item** (`FRAME`) | `298.5x35.4` | Layout: HORIZONTAL (Gap: 12.479999542236328px, Pad: 12.479999542236328/0/0/0)
+                - **Container** (`FRAME`) | `22.9x22.9` | Fill: #CFFF3D | Radius: 11.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+                - **경복궁** (`TEXT`) | `37.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "경복궁"
+              - **List Item** (`FRAME`) | `298.5x35.4` | Layout: HORIZONTAL (Gap: 12.479999542236328px, Pad: 12.479999542236328/0/0/0)
+                - **Container** (`FRAME`) | `22.9x22.9` | Fill: #CFFF3D | Radius: 11.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+                - **인사동** (`TEXT`) | `37.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "인사동"
+        - **Container:margin** (`FRAME`) | `340.1x139.3` | Layout: VERTICAL (Gap: 0px, Pad: 33.279998779296875/0/0/0)
+          - **Container** (`FRAME`) | `340.1x106.0` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Frame 1000003480** (`FRAME`) | `298.5x67.0` | Layout: VERTICAL (Gap: 12.0px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `298.5x20.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **여행 만족도** (`TEXT`) | `64.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "여행 만족도"
+              - **Frame 1000003479** (`FRAME`) | `297.0x35.0` | Layout: HORIZONTAL (Gap: 38.0px, Pad: 0/0/0/0)
+                - **Text** (`FRAME`) | `29.0x35.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Text** (`FRAME`) | `29.0x35.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Text** (`FRAME`) | `29.0x35.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Text** (`FRAME`) | `29.0x35.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Text** (`FRAME`) | `29.0x35.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Container:margin** (`FRAME`) | `340.1x108.2` | Layout: VERTICAL (Gap: 0px, Pad: 24.959999084472656/0/0/0)
+          - **Container** (`FRAME`) | `340.1x83.2` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 16.639999389648438/20.799999237060547/16.639999389648438/20.799999237060547)
+            - **Container** (`FRAME`) | `157.0x49.9` | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `49.9x49.9` | Fill: #EEF6FF | Radius: 56.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+                - **서울 4** (`RECTANGLE`) | `36.0x36.0`
+              - **Container** (`FRAME`) | `90.5x39.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Text** (`FRAME`) | `90.5x15.6` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+                - **Container** (`FRAME`) | `90.5x23.9`
+  - **category-list** (`FRAME`) | `390.0x59.0`
+    - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Icon** (`FRAME`) | `18.0x18.0`
+        - **Vector** (`VECTOR`) | `4.5x9.0`
+    - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+      - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+      - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #FFFFFF
+
+---
+
+## 7. 11 · 여행 기록 작성 (ID: `2002:1775`)
+- **Screen Size**: `390.0px × 1637.0px`
+- **Screen Image**: `screens/07_11 · 여행 기록 작성.png`
+
+### Component Tree & Styles
+- **11 · 여행 기록 작성** (`FRAME`) | `390.0x1637.0` | Fill: #F9FAFB
+  - **Container** (`FRAME`) | `390.0x1637.5` | Fill: #F9FAFB | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+    - **Container:margin** (`FRAME`) | `390.0x135.2` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+    - **Container** (`FRAME`) | `390.0x1391.0` | Fill: #F7F8FA | Layout: VERTICAL (Gap: 0px, Pad: 0/24.959999084472656/24.959999084472656/24.959999084472656)
+      - **Container:margin** (`FRAME`) | `340.1x118.6` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/24.959999084472656/0)
+        - **Container** (`FRAME`) | `340.1x93.6` | Fill: #222B63 | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 20.0/22.8799991607666/22.8799991607666/22.8799991607666)
+          - **Container** (`FRAME`) | `294.3x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **이번 여행은 어땠나요?** (`TEXT`) | `176.0x30.0` | Fill: #FFFFFF | Font: Pretendard 800 20.0px | Text: "이번 여행은 어땠나요?"
+          - **Container** (`FRAME`) | `294.3x22.9` | Layout: VERTICAL (Gap: 0px, Pad: 8.319999694824219/0/0/0)
+            - **여행의 순간을 기록으로 남겨보세요.** (`TEXT`) | `168.0x16.0` | Fill: #D5D8F1 | Font: Pretendard 400 12.0px | Text: "여행의 순간을 기록으로 남겨보세요."
+      - **Container** (`FRAME`) | `340.1x205.9` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/29.119998931884766/0)
+        - **Label** (`FRAME`) | `340.1x23.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **대표 사진** (`TEXT`) | `56.0x23.0` | Fill: #171A2B | Font: Pretendard 700 15.0px | Text: "대표 사진"
+        - **Container:margin** (`FRAME`) | `340.1x158.1` | Layout: VERTICAL (Gap: 0px, Pad: 12.479999542236328/0/0/0)
+          - **Container** (`FRAME`) | `340.1x145.6` | Fill: #FFFFFF | Radius: 18.0px | Layout: VERTICAL (Gap: 8.319999694824219px, Pad: 0/0/0/0)
+            - **📷** (`TEXT`) | `25.0x25.0` | Fill: #CCCCCC | Font: Pretendard 700 24.959999084472656px | Text: "📷"
+            - **대표 사진 선택** (`TEXT`) | `74.0x20.0` | Fill: #888888 | Font: Pretendard 700 13.0px | Text: "대표 사진 선택"
+      - **Container** (`FRAME`) | `340.1x139.4` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/29.119998931884766/0)
+        - **Label** (`FRAME`) | `340.1x22.9`
+          - **여행 사진** (`TEXT`) | `56.0x23.0` | Fill: #171A2B | Font: Pretendard 700 15.0px | Text: "여행 사진"
+          - **최대 10장** (`TEXT`) | `47.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "최대 10장"
+        - **Container:margin** (`FRAME`) | `340.1x87.4` | Layout: VERTICAL (Gap: 0px, Pad: 12.479999542236328/0/0/0)
+          - **Container** (`FRAME`) | `340.1x74.9` | Layout: HORIZONTAL (Gap: 12.479999542236328px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `74.9x74.9` | Fill: #FFFFFF | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **+** (`TEXT`) | `14.0x25.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "+"
+            - **Mask group** (`GROUP`) | `74.9x74.9`
+              - **Rectangle 5015** (`RECTANGLE`) | `74.9x74.9` | Fill: #D9D9D9 | Radius: 12.0px
+              - **image 2004** (`RECTANGLE`) | `114.4x75.9`
+      - **Container** (`FRAME`) | `340.1x116.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/29.119998931884766/0)
+        - **Label:margin** (`FRAME`) | `340.1x35.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+          - **Label** (`FRAME`) | `340.1x23.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **여행 날짜** (`TEXT`) | `56.0x23.0` | Fill: #171A2B | Font: Pretendard 700 15.0px | Text: "여행 날짜"
+        - **Text Input** (`FRAME`) | `340.1x56.2` | Fill: #FFFFFF | Radius: 18.0px | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/18.719999313354492/16.639999389648438/18.719999313354492)
+          - **Container** (`FRAME`) | `301.7x17.0` | Layout: HORIZONTAL (Gap: 6.0px, Pad: 0/0/0/0)
+            - **Frame 1000003472** (`FRAME`) | `301.7x17.0` | Layout: HORIZONTAL (Gap: 197.0px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `91.0x17.0` | Layout: HORIZONTAL (Gap: 6.0px, Pad: 0/0/0/0)
+                - **Container** (`FRAME`) | `14.0x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **2025.07.28** (`TEXT`) | `71.0x17.0` | Fill: #222222 | Font: Pretendard 400 14.0px | Text: "2025.07.28"
+              - **Container** (`FRAME`) | `14.0x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Container** (`FRAME`) | `14.0x14.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Container** (`FRAME`) | `340.1x116.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/29.119998931884766/0)
+        - **Label:margin** (`FRAME`) | `340.1x35.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+          - **Label** (`FRAME`) | `340.1x23.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **여행 제목** (`TEXT`) | `56.0x23.0` | Fill: #171A2B | Font: Pretendard 700 15.0px | Text: "여행 제목"
+        - **Text Input** (`FRAME`) | `340.1x56.2` | Fill: #FFFFFF | Radius: 18.0px | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/18.719999313354492/16.639999389648438/18.719999313354492)
+          - **이번 여행을 한 줄로 표현해볼까요?** (`TEXT`) | `300.6x20.0` | Fill: #BBBBBB | Font: Pretendard 400 14.0px | Text: "이번 여행을 한 줄로 표현해볼까요?"
+      - **Container** (`FRAME`) | `340.1x169.3` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/29.119998931884766/0)
+        - **Label:margin** (`FRAME`) | `340.1x35.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+          - **Label** (`FRAME`) | `340.1x23.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **여행 이야기** (`TEXT`) | `69.0x23.0` | Fill: #171A2B | Font: Pretendard 700 15.0px | Text: "여행 이야기"
+        - **Container** (`FRAME`) | `340.1x108.9`
+          - **Text Area** (`FRAME`) | `340.1x104.0` | Fill: #FFFFFF | Radius: 18.0px | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/18.719999313354492/16.639999389648438/18.719999313354492)
+            - **여행하면서 느꼈던 순간들을 자유롭게 적어보세요.** (`TEXT`) | `300.6x20.0` | Fill: #BBBBBB | Font: Pretendard 400 14.0px | Text: "여행하면서 느꼈던 순간들을 자유롭게 적어보세요."
+      - **Container** (`FRAME`) | `340.1x116.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/29.119998931884766/0)
+        - **Label:margin** (`FRAME`) | `340.1x35.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+          - **Label** (`FRAME`) | `340.1x23.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **함께한 사람** (`TEXT`) | `69.0x23.0` | Fill: #171A2B | Font: Pretendard 700 15.0px | Text: "함께한 사람"
+        - **Text Input** (`FRAME`) | `340.1x56.2` | Fill: #FFFFFF | Radius: 18.0px | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/18.719999313354492/16.639999389648438/18.719999313354492)
+          - **예: 혼자 / 민지, 수현** (`TEXT`) | `300.6x20.0` | Fill: #BBBBBB | Font: Pretendard 500 14.0px | Text: "예: 혼자 / 민지, 수현"
+      - **Container** (`FRAME`) | `340.1x283.0` | Layout: VERTICAL (Gap: -21.0px, Pad: 0/0/0/0)
+        - **Label** (`FRAME`) | `340.1x68.6`
+          - **실제 방문한 장소** (`TEXT`) | `98.0x45.0` | Fill: #171A2B | Font: Pretendard 700 15.0px | Text: "실제 방문한 장소"
+          - **Text** (`FRAME`) | `332.8x41.6`
+            - **AI 큐레이션에서 저장한 장소 중 실제로 방문한 곳을 체크해주세요** (`TEXT`) | `333.8x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "AI 큐레이션에서 저장한 장소 중 실제로 방문한 ..."
+        - **Container:margin** (`FRAME`) | `340.1x203.8` | Layout: VERTICAL (Gap: 0px, Pad: 12.479999542236328/0/0/0)
+          - **Container** (`FRAME`) | `340.1x191.4` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+            - **Container** (`FRAME`) | `298.5x25.0` | Layout: HORIZONTAL (Gap: 12.479999542236328px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `25.0x25.0` | Fill: #F3F5F8 | Radius: 12.0px
+              - **Container** (`FRAME`) | `85.0x20.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **아침고요수목원** (`TEXT`) | `85.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "아침고요수목원"
+            - **Container** (`FRAME`) | `298.5x41.6` | Layout: HORIZONTAL (Gap: 12.479999542236328px, Pad: 16.639999389648438/0/0/0)
+              - **Container** (`FRAME`) | `25.0x25.0` | Fill: #F3F5F8 | Radius: 12.0px
+              - **Container** (`FRAME`) | `80.0x20.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **가평 카페 거리** (`TEXT`) | `80.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "가평 카페 거리"
+            - **Container** (`FRAME`) | `298.5x41.6` | Layout: HORIZONTAL (Gap: 12.479999542236328px, Pad: 16.639999389648438/0/0/0)
+              - **Container** (`FRAME`) | `25.0x25.0` | Fill: #F3F5F8 | Radius: 12.0px
+              - **Container** (`FRAME`) | `37.0x20.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **남이섬** (`TEXT`) | `37.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "남이섬"
+            - **Container** (`FRAME`) | `298.5x41.6` | Layout: HORIZONTAL (Gap: 12.479999542236328px, Pad: 16.639999389648438/0/0/0)
+              - **Container** (`FRAME`) | `22.9x22.9` | Fill: #CFFF3D | Radius: 11.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+                - **✓** (`TEXT`) | `10.0x15.0` | Fill: #222B63 | Font: Noto Sans KR 900 12.479999542236328px | Text: "✓"
+              - **Container** (`FRAME`) | `37.0x20.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **자라섬** (`TEXT`) | `37.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "자라섬"
+      - **Container** (`FRAME`) | `340.1x101.6` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Label** (`FRAME`) | `340.1x23.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **여행 만족도** (`TEXT`) | `69.0x23.0` | Fill: #171A2B | Font: Pretendard 700 15.0px | Text: "여행 만족도"
+        - **Container:margin** (`FRAME`) | `340.1x78.6` | Layout: VERTICAL (Gap: 0px, Pad: 12.479999542236328/0/0/0)
+          - **Container** (`FRAME`) | `340.1x66.1` | Fill: #FFFFFF | Radius: 18.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 14.559999465942383/20.799999237060547/14.559999465942383/20.799999237060547)
+            - **Text** (`FRAME`) | `29.0x35.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **★** (`TEXT`) | `29.0x35.0` | Fill: #4A63FF | Font: Pretendard 400 29.119998931884766px | Text: "★"
+            - **Text** (`FRAME`) | `29.0x35.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **★** (`TEXT`) | `29.0x35.0` | Fill: #F3F5F8 | Font: Pretendard 400 29.119998931884766px | Text: "★"
+            - **Text** (`FRAME`) | `29.0x35.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **★** (`TEXT`) | `29.0x35.0` | Fill: #F3F5F8 | Font: Pretendard 400 29.119998931884766px | Text: "★"
+            - **Text** (`FRAME`) | `29.0x35.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **★** (`TEXT`) | `29.0x35.0` | Fill: #F3F5F8 | Font: Pretendard 400 29.119998931884766px | Text: "★"
+            - **Text** (`FRAME`) | `29.0x35.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **★** (`TEXT`) | `29.0x35.0` | Fill: #F3F5F8 | Font: Pretendard 400 29.119998931884766px | Text: "★"
+    - **Container** (`FRAME`) | `390.0x111.3`
+      - **Button** (`FRAME`) | `340.1x61.4` | Radius: 20.0px
+        - **기록 저장하기** (`TEXT`) | `87.0x24.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "기록 저장하기"
+  - **Status Bar - iPhone** (`INSTANCE`) | `390.0x50.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+    - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+      - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+        - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+      - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+        - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+        - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+        - **Battery** (`GROUP`) | `27.3x13.0`
+          - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+          - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+          - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+  - **category-list** (`FRAME`) | `390.0x59.0`
+    - **여행 기록 작성** (`TEXT`) | `96.0x26.0` | Fill: #1C1C14 | Font: Pretendard 700 17.0px | Text: "여행 기록 작성"
+    - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Icon** (`FRAME`) | `18.0x18.0`
+        - **Vector** (`VECTOR`) | `4.5x9.0`
+    - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+      - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+      - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #1C1B1F
+
+---
+
+## 8. 02 · 방문 지역 상세 (ID: `2002:1890`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/08_02 · 방문 지역 상세.png`
+
+### Component Tree & Styles
+- **02 · 방문 지역 상세** (`FRAME`) | `390.0x844.0` | Fill: #F9FAFB | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+  - **Container** (`FRAME`) | `390.0x154.0` | Fill: #F9FAFB | Layout: VERTICAL (Gap: 0px, Pad: 49.91999816894531/24.959999084472656/0/24.959999084472656)
+    - **Heading 1** (`FRAME`) | `340.1x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+      - **마이트립** (`TEXT`) | `66.0x30.0` | Fill: #171A2B | Font: Pretendard 900 20.0px | Text: "마이트립"
+    - **Container:margin** (`FRAME`) | `340.1x74.1` | Layout: VERTICAL (Gap: 0px, Pad: 22.8799991607666/0/0/0)
+      - **Container** (`FRAME`) | `340.1x51.2` | Fill: #F9F7F6 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 4.159999847412109/4.159999847412109/4.159999847412109/4.159999847412109)
+        - **Container** (`FRAME`) | `163.8x42.9` | Fill: #FFFFFF | Radius: 12.0px | Layout: VERTICAL (Gap: 0px, Pad: 11.4399995803833/0/11.4399995803833/0)
+          - **여행 지도** (`TEXT`) | `52.0x20.0` | Fill: #5667FD | Font: Pretendard 700 14.0px | Text: "여행 지도"
+        - **Container** (`FRAME`) | `163.8x42.9` | Radius: 12.0px | Layout: VERTICAL (Gap: 0px, Pad: 11.4399995803833/0/11.4399995803833/0)
+          - **여행 기록** (`TEXT`) | `52.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "여행 기록"
+  - **Container** (`FRAME`) | `390.0x604.7` | Layout: VERTICAL (Gap: 0px, Pad: 22.8799991607666/20.799999237060547/22.8799991607666/20.799999237060547)
+    - **Container** (`FRAME`) | `348.4x49.3` | Layout: HORIZONTAL (Gap: 10.399999618530273px, Pad: 0/0/16.639999389648438/0)
+      - **Paragraph** (`FRAME`) | `192.4x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **여행한 지역을 눌러 추억을 확인해보세요** (`TEXT`) | `192.4x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "여행한 지역을 눌러 추억을 확인해보세요"
+      - **Container** (`FRAME`) | `76.3x32.6` | Fill: #222B63 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 8.319999694824219/11.4399995803833/8.319999694824219/11.4399995803833)
+        - **Container** (`FRAME`) | `53.4x16.0` | Layout: HORIZONTAL (Gap: 6.239999771118164px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `5.2x5.2` | Fill: #CFFF3D | Radius: 2.5px
+          - **Text** (`FRAME`) | `42.0x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **4곳 방문** (`TEXT`) | `42.0x16.0` | Fill: #CFFF3D | Font: Pretendard 700 12.0px | Text: "4곳 방문"
+    - **Container:margin** (`FRAME`) | `348.4x412.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/18.719999313354492/0)
+      - **Container** (`FRAME`) | `348.4x366.2` | Radius: 28.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Icon** (`FRAME`) | `346.3x364.1` | Fill: #FFFFFF00
+          - **korea-map-group** (`GROUP`) | `263.7x280.0`
+            - **제주특별자치도** (`VECTOR`) | `33.9x18.7` | Fill: #AAA8FF
+            - **경상남도** (`VECTOR`) | `68.7x66.3` | Fill: #E4E5EE
+            - **경상북도** (`VECTOR`) | `130.5x103.2` | Fill: #E4E5EE
+            - **전라남도** (`VECTOR`) | `113.6x77.2` | Fill: #E4E5EE
+            - **전라북도** (`VECTOR`) | `69.4x44.1` | Fill: #E4E5EE
+            - **충청남도** (`VECTOR`) | `64.2x56.6` | Fill: #E4E5EE
+            - **충청북도** (`VECTOR`) | `57.4x64.8` | Fill: #E4E5EE
+            - **강원도** (`VECTOR`) | `94.3x83.9` | Fill: #E4E5EE
+            - **경기도** (`VECTOR`) | `55.8x73.8` | Fill: #E4E5EE
+            - **세종특별자치시** (`VECTOR`) | `11.5x16.9` | Fill: #E4E5EE
+            - **울산광역시** (`VECTOR`) | `20.7x20.3` | Fill: #E4E5EE
+            - **대전광역시** (`VECTOR`) | `12.8x16.1` | Fill: #E4E5EE
+            - **광주광역시** (`VECTOR`) | `15.4x10.6` | Fill: #E4E5EE
+            - **인천광역시** (`VECTOR`) | `91.2x47.5` | Fill: #E4E5EE
+            - **대구광역시** (`VECTOR`) | `17.2x21.0` | Fill: #AAA8FF
+            - **부산광역시** (`VECTOR`) | `21.3x19.2` | Fill: #AAA8FF
+            - **서울특별시** (`VECTOR`) | `17.3x14.4` | Fill: #AAA8FF
+          - **islands-group** (`GROUP`) | `223.8x54.7`
+            - **백령도** (`VECTOR`) | `7.7x7.7` | Fill: #E4E5EE
+            - **울릉도** (`VECTOR`) | `7.7x7.7` | Fill: #E4E5EE
+            - **독도** (`VECTOR`) | `7.7x7.7` | Fill: #E4E5EE
+            - **백령도** (`TEXT`) | `32.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "백령도"
+            - **울릉도** (`TEXT`) | `32.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "울릉도"
+            - **독도** (`TEXT`) | `21.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "독도"
+    - **Container** (`FRAME`) | `348.4x97.6` | Fill: #222B63 | Radius: 24.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 10.399999618530273/6.239999771118164/10.399999618530273/6.239999771118164)
+      - **Container** (`FRAME`) | `111.3x76.8` | Layout: VERTICAL (Gap: 0px, Pad: 14.559999465942383/0/14.559999465942383/0)
+        - **Container** (`FRAME`) | `111.3x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **4곳** (`TEXT`) | `31.0x30.0` | Fill: #FFFFFF | Font: Pretendard 900 20.0px | Text: "4곳"
+        - **Container** (`FRAME`) | `111.3x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/0/0/0)
+          - **방문 지역** (`TEXT`) | `45.0x16.0` | Fill: #E7EAF3 | Font: Pretendard 500 12.0px | Text: "방문 지역"
+      - **Container** (`FRAME`) | `112.3x76.8` | Layout: VERTICAL (Gap: 0px, Pad: 14.559999465942383/0/14.559999465942383/0)
+        - **Container** (`FRAME`) | `111.3x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **10회** (`TEXT`) | `42.0x30.0` | Fill: #FFFFFF | Font: Pretendard 900 20.0px | Text: "10회"
+        - **Container** (`FRAME`) | `111.3x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/0/0/0)
+          - **총 여행** (`TEXT`) | `35.0x16.0` | Fill: #E7EAF3 | Font: Pretendard 500 12.0px | Text: "총 여행"
+      - **Container** (`FRAME`) | `112.3x76.8` | Layout: VERTICAL (Gap: 0px, Pad: 14.559999465942383/0/14.559999465942383/0)
+        - **Container** (`FRAME`) | `111.3x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **4개** (`TEXT`) | `31.0x30.0` | Fill: #CFFF3D | Font: Pretendard 900 20.0px | Text: "4개"
+        - **Container** (`FRAME`) | `111.3x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/0/0/0)
+          - **획득 배지** (`TEXT`) | `45.0x16.0` | Fill: #E7EAF3 | Font: Pretendard 500 12.0px | Text: "획득 배지"
+  - **Container** (`FRAME`) | `390.0x85.3` | Fill: #FFFFFF
+    - **Container** (`FRAME`) | `25.0x43.1` | Layout: VERTICAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+      - **Italic Text** (`FRAME`) | `25.0x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Icon** (`FRAME`) | `25.0x25.0`
+          - **Vector** (`VECTOR`) | `18.7x19.5` | Fill: #AAAAAA
+      - **홈** (`TEXT`) | `9.0x14.0` | Fill: #AAAAAA | Font: Pretendard 700 10.0px | Text: "홈"
+    - **Container** (`FRAME`) | `35.0x43.1` | Layout: VERTICAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+      - **Italic Text** (`FRAME`) | `25.0x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Icon** (`FRAME`) | `25.0x25.0`
+          - **Vector** (`VECTOR`) | `20.3x20.3` | Fill: #AAAAAA
+      - **큐레이션** (`TEXT`) | `35.0x14.0` | Fill: #AAAAAA | Font: Pretendard 700 10.0px | Text: "큐레이션"
+    - **Container** (`FRAME`) | `58.2x43.1` | Layout: VERTICAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+      - **Italic Text:margin** (`FRAME`) | `58.2x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Italic Text** (`FRAME`) | `58.2x35.4` | Fill: #EEF6FF | Radius: 18.0px | Layout: VERTICAL (Gap: 0px, Pad: 5.199999809265137/16.639999389648438/5.199999809265137/16.639999389648438)
+          - **Icon** (`FRAME`) | `25.0x25.0`
+            - **Vector** (`VECTOR`) | `17.2x21.8` | Fill: #5667FD
+      - **마이트립** (`TEXT`) | `35.0x14.0` | Fill: #5667FD | Font: Pretendard 700 10.0px | Text: "마이트립"
+    - **Container** (`FRAME`) | `25.0x43.1` | Layout: VERTICAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+      - **Italic Text** (`FRAME`) | `25.0x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Icon** (`FRAME`) | `25.0x25.0`
+          - **Vector** (`VECTOR`) | `20.3x19.5` | Fill: #AAAAAA
+      - **마이** (`TEXT`) | `18.0x14.0` | Fill: #AAAAAA | Font: Pretendard 700 10.0px | Text: "마이"
+  - **Container** (`FRAME`) | `390.0x844.5` | Fill: #15264159
+  - **Container** (`FRAME`) | `390.0x671.8` | Fill: #FFFFFF | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/24.959999084472656/24.959999084472656/24.959999084472656)
+    - **Container:margin** (`FRAME`) | `41.6x30.2` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/24.959999084472656/0)
+      - **Container** (`FRAME`) | `41.6x5.2` | Fill: #E5E7EB | Radius: 3.0px
+    - **Container** (`FRAME`) | `340.1x58.2` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/24.959999084472656/0)
+      - **Container** (`FRAME`) | `117.4x30.0` | Layout: HORIZONTAL (Gap: 12.479999542236328px, Pad: 0/0/0/0)
+        - **Heading 2** (`FRAME`) | `35.0x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **서울** (`TEXT`) | `35.0x30.0` | Fill: #171A2B | Font: Pretendard 800 20.0px | Text: "서울"
+        - **Container** (`FRAME`) | `70.0x26.4` | Radius: 12.0px | Layout: VERTICAL (Gap: 0px, Pad: 5.199999809265137/12.479999542236328/5.199999809265137/12.479999542236328)
+          - **방문 완료** (`TEXT`) | `45.0x16.0` | Fill: #FFFFFF | Font: Pretendard 700 12.0px | Text: "방문 완료"
+    - **Container** (`FRAME`) | `340.1x541.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Container:margin** (`FRAME`) | `340.1x112.3` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/20.799999237060547/0)
+        - **Container** (`FRAME`) | `340.1x91.5` | Layout: GRID (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `163.8x91.5` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+            - **Bold Text** (`FRAME`) | `130.5x29.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **4회** (`TEXT`) | `31.0x30.0` | Fill: #171A2B | Font: Pretendard 800 20.0px | Text: "4회"
+            - **Container** (`FRAME`) | `128.5x23.9`
+              - **방문 횟수** (`TEXT`) | `45.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "방문 횟수"
+          - **Container** (`FRAME`) | `163.8x91.5` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+            - **Bold Text** (`FRAME`) | `130.5x29.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+              - **2026.07.04** (`TEXT`) | `111.0x30.0` | Fill: #171A2B | Font: Pretendard 800 20.0px | Text: "2026.07.04"
+            - **Container** (`FRAME`) | `128.5x23.9`
+              - **최근 방문** (`TEXT`) | `45.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "최근 방문"
+      - **Container:margin** (`FRAME`) | `340.1x110.2` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/24.959999084472656/0)
+        - **Container** (`FRAME`) | `340.1x85.2` | Fill: #EEF6FF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+          - **Container** (`FRAME`) | `168.5x49.9` | Layout: HORIZONTAL (Gap: 16.639999389648438px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `49.9x49.9` | Fill: #EEF6FF | Radius: 56.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **서울 4** (`RECTANGLE`) | `36.0x36.0`
+            - **Container** (`FRAME`) | `101.9x42.6` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Bold Text** (`FRAME`) | `101.9x20.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/4.159999847412109/0)
+                - **남산타워** (`TEXT`) | `52.0x23.0` | Fill: #171A2B | Font: Pretendard 700 15.0px | Text: "남산타워"
+              - **Container** (`FRAME`) | `101.9x23.9`
+                - **지역 키링 획득 완료** (`TEXT`) | `93.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "지역 키링 획득 완료"
+          - **Container** (`FRAME`) | `22.9x22.9` | Fill: #CFFF3D | Radius: 11.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **✓** (`TEXT`) | `11.0x17.0` | Fill: #171A2B | Font: Noto Sans KR 900 14.559999465942383px | Text: "✓"
+      - **Container** (`FRAME`) | `340.1x35.4` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/16.639999389648438/0)
+        - **Heading 3** (`FRAME`) | `150.0x23.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **서울특별시에서 남긴 기록** (`TEXT`) | `150.0x23.0` | Fill: #171A2B | Font: Pretendard 700 15.0px | Text: "서울특별시에서 남긴 기록"
+        - **Text** (`FRAME`) | `20.0x20.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **4개** (`TEXT`) | `20.0x20.0` | Fill: #888888 | Font: Pretendard 400 13.0px | Text: "4개"
+      - **Container** (`FRAME`) | `340.1x284.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Container** (`FRAME`) | `340.1x199.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `340.1x93.5` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 12.479999542236328px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+            - **tjdn 1** (`RECTANGLE`) | `58.2x58.2` | Radius: 12.0px
+            - **Container** (`FRAME`) | `205.0x37.7` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Heading 4** (`FRAME`) | `205.0x20.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **비 오는 날의 서울** (`TEXT`) | `95.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "비 오는 날의 서울"
+              - **Paragraph** (`FRAME`) | `207.0x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/0/0/0)
+                - **2026.07.04 · 당일치기 · 혼자** (`TEXT`) | `141.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "2026.07.04 · 당일치기 · 혼자"
+            - **Italic Text** (`FRAME`) | `16.6x16.6`
+              - **Icon** (`FRAME`) | `16.6x16.6`
+                - **Vector** (`VECTOR`) | `6.8x12.0` | Fill: #CCCCCC
+          - **Container:margin** (`FRAME`) | `340.1x106.0` | Layout: VERTICAL (Gap: 0px, Pad: 12.479999542236328/0/0/0)
+            - **Container** (`FRAME`) | `340.1x93.5` | Fill: #FFFFFF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 12.479999542236328px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+              - **Mask group** (`GROUP`) | `58.2x58.2`
+                - **Rectangle 5015** (`RECTANGLE`) | `58.2x58.2` | Fill: #D9D9D9 | Radius: 12.0px
+                - **image 2004** (`RECTANGLE`) | `89.0x59.0`
+              - **Container** (`FRAME`) | `205.0x37.7` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Heading 4** (`FRAME`) | `205.0x20.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **Paragraph** (`FRAME`) | `207.0x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/0/0/0)
+              - **Italic Text** (`FRAME`) | `16.6x16.6`
+                - **Icon** (`FRAME`) | `16.6x16.6`
+        - **Link:margin** (`FRAME`) | `340.1x82.4` | Layout: VERTICAL (Gap: 0px, Pad: 29.119998931884766/0/0/0)
+          - **Link** (`FRAME`) | `340.1x53.3` | Fill: #1C1C14 | Radius: 12.0px | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/0/16.639999389648438/0)
+            - **서울 여행 기록 전체보기 →** (`TEXT`) | `137.0x20.0` | Fill: #FFFFFF | Font: Pretendard 700 13.0px | Text: "서울 여행 기록 전체보기 →"
+
+---
+
+## 9. 03 · 미방문 지역 (ID: `2002:2043`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/09_03 · 미방문 지역.png`
+
+### Component Tree & Styles
+- **03 · 미방문 지역** (`FRAME`) | `390.0x844.0` | Fill: #F9FAFB | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+  - **Container** (`FRAME`) | `390.0x154.0` | Fill: #F9FAFB | Layout: VERTICAL (Gap: 0px, Pad: 49.91999816894531/24.959999084472656/0/24.959999084472656)
+    - **Heading 1** (`FRAME`) | `340.1x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+      - **마이트립** (`TEXT`) | `66.0x30.0` | Fill: #171A2B | Font: Pretendard 900 20.0px | Text: "마이트립"
+    - **Container:margin** (`FRAME`) | `340.1x74.1` | Layout: VERTICAL (Gap: 0px, Pad: 22.8799991607666/0/0/0)
+      - **Container** (`FRAME`) | `340.1x51.2` | Fill: #F9F7F6 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 4.159999847412109/4.159999847412109/4.159999847412109/4.159999847412109)
+        - **Container** (`FRAME`) | `163.8x42.9` | Fill: #FFFFFF | Radius: 12.0px | Layout: VERTICAL (Gap: 0px, Pad: 11.4399995803833/0/11.4399995803833/0)
+          - **여행 지도** (`TEXT`) | `52.0x20.0` | Fill: #5667FD | Font: Pretendard 700 14.0px | Text: "여행 지도"
+        - **Container** (`FRAME`) | `163.8x42.9` | Radius: 12.0px | Layout: VERTICAL (Gap: 0px, Pad: 11.4399995803833/0/11.4399995803833/0)
+          - **여행 기록** (`TEXT`) | `52.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "여행 기록"
+  - **Container** (`FRAME`) | `390.0x604.7` | Layout: VERTICAL (Gap: 0px, Pad: 22.8799991607666/20.799999237060547/22.8799991607666/20.799999237060547)
+    - **Container** (`FRAME`) | `348.4x49.3` | Layout: HORIZONTAL (Gap: 10.399999618530273px, Pad: 0/0/16.639999389648438/0)
+      - **Paragraph** (`FRAME`) | `192.4x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **여행한 지역을 눌러 추억을 확인해보세요** (`TEXT`) | `192.4x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "여행한 지역을 눌러 추억을 확인해보세요"
+      - **Container** (`FRAME`) | `76.3x32.6` | Fill: #222B63 | Radius: 16.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 8.319999694824219/11.4399995803833/8.319999694824219/11.4399995803833)
+        - **Container** (`FRAME`) | `53.4x16.0` | Layout: HORIZONTAL (Gap: 6.239999771118164px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `5.2x5.2` | Fill: #CFFF3D | Radius: 2.5px
+          - **Text** (`FRAME`) | `42.0x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **4곳 방문** (`TEXT`) | `42.0x16.0` | Fill: #CFFF3D | Font: Pretendard 700 12.0px | Text: "4곳 방문"
+    - **Container:margin** (`FRAME`) | `348.4x412.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/18.719999313354492/0)
+      - **Container** (`FRAME`) | `348.4x366.2` | Radius: 28.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Icon** (`FRAME`) | `346.3x364.1` | Fill: #FFFFFF00
+          - **korea-map-group** (`GROUP`) | `263.7x280.0`
+            - **제주특별자치도** (`VECTOR`) | `33.9x18.7` | Fill: #AAA8FF
+            - **경상남도** (`VECTOR`) | `68.7x66.3` | Fill: #E4E5EE
+            - **경상북도** (`VECTOR`) | `130.5x103.2` | Fill: #E4E5EE
+            - **전라남도** (`VECTOR`) | `113.6x77.2` | Fill: #E4E5EE
+            - **전라북도** (`VECTOR`) | `69.4x44.1` | Fill: #E4E5EE
+            - **충청남도** (`VECTOR`) | `64.2x56.6` | Fill: #E4E5EE
+            - **충청북도** (`VECTOR`) | `57.4x64.8` | Fill: #E4E5EE
+            - **강원도** (`VECTOR`) | `94.3x83.9` | Fill: #E4E5EE
+            - **경기도** (`VECTOR`) | `55.8x73.8` | Fill: #E4E5EE
+            - **세종특별자치시** (`VECTOR`) | `11.5x16.9` | Fill: #E4E5EE
+            - **울산광역시** (`VECTOR`) | `20.7x20.3` | Fill: #E4E5EE
+            - **대전광역시** (`VECTOR`) | `12.8x16.1` | Fill: #E4E5EE
+            - **광주광역시** (`VECTOR`) | `15.4x10.6` | Fill: #E4E5EE
+            - **인천광역시** (`VECTOR`) | `91.2x47.5`
+            - **대구광역시** (`VECTOR`) | `17.2x21.0` | Fill: #AAA8FF
+            - **부산광역시** (`VECTOR`) | `21.3x19.2` | Fill: #AAA8FF
+            - **서울특별시** (`VECTOR`) | `17.3x14.4` | Fill: #AAA8FF
+          - **islands-group** (`GROUP`) | `223.8x54.7`
+            - **백령도** (`VECTOR`) | `7.7x7.7` | Fill: #E4E5EE
+            - **울릉도** (`VECTOR`) | `7.7x7.7` | Fill: #E4E5EE
+            - **독도** (`VECTOR`) | `7.7x7.7` | Fill: #E4E5EE
+            - **백령도** (`TEXT`) | `32.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "백령도"
+            - **울릉도** (`TEXT`) | `32.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "울릉도"
+            - **독도** (`TEXT`) | `21.0x16.0` | Fill: #888888 | Font: Pretendard 400 12.0px | Text: "독도"
+    - **Container** (`FRAME`) | `348.4x97.6` | Fill: #222B63 | Radius: 24.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 10.399999618530273/6.239999771118164/10.399999618530273/6.239999771118164)
+      - **Container** (`FRAME`) | `111.3x76.8` | Layout: VERTICAL (Gap: 0px, Pad: 14.559999465942383/0/14.559999465942383/0)
+        - **Container** (`FRAME`) | `111.3x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **4곳** (`TEXT`) | `31.0x30.0` | Fill: #FFFFFF | Font: Pretendard 900 20.0px | Text: "4곳"
+        - **Container** (`FRAME`) | `111.3x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/0/0/0)
+          - **방문 지역** (`TEXT`) | `45.0x16.0` | Fill: #E7EAF3 | Font: Pretendard 500 12.0px | Text: "방문 지역"
+      - **Container** (`FRAME`) | `112.3x76.8` | Layout: VERTICAL (Gap: 0px, Pad: 14.559999465942383/0/14.559999465942383/0)
+        - **Container** (`FRAME`) | `111.3x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **10회** (`TEXT`) | `42.0x30.0` | Fill: #FFFFFF | Font: Pretendard 900 20.0px | Text: "10회"
+        - **Container** (`FRAME`) | `111.3x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/0/0/0)
+          - **총 여행** (`TEXT`) | `35.0x16.0` | Fill: #E7EAF3 | Font: Pretendard 500 12.0px | Text: "총 여행"
+      - **Container** (`FRAME`) | `112.3x76.8` | Layout: VERTICAL (Gap: 0px, Pad: 14.559999465942383/0/14.559999465942383/0)
+        - **Container** (`FRAME`) | `111.3x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **4개** (`TEXT`) | `31.0x30.0` | Fill: #CFFF3D | Font: Pretendard 900 20.0px | Text: "4개"
+        - **Container** (`FRAME`) | `111.3x17.7` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/0/0/0)
+          - **획득 배지** (`TEXT`) | `45.0x16.0` | Fill: #E7EAF3 | Font: Pretendard 500 12.0px | Text: "획득 배지"
+  - **Container** (`FRAME`) | `390.0x85.3` | Fill: #FFFFFF
+    - **Container** (`FRAME`) | `25.0x43.1` | Layout: VERTICAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+      - **Italic Text** (`FRAME`) | `25.0x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Icon** (`FRAME`) | `25.0x25.0`
+          - **Vector** (`VECTOR`) | `18.7x19.5` | Fill: #AAAAAA
+      - **홈** (`TEXT`) | `9.0x14.0` | Fill: #AAAAAA | Font: Pretendard 700 10.0px | Text: "홈"
+    - **Container** (`FRAME`) | `35.0x43.1` | Layout: VERTICAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+      - **Italic Text** (`FRAME`) | `25.0x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Icon** (`FRAME`) | `25.0x25.0`
+          - **Vector** (`VECTOR`) | `20.3x20.3` | Fill: #AAAAAA
+      - **큐레이션** (`TEXT`) | `35.0x14.0` | Fill: #AAAAAA | Font: Pretendard 700 10.0px | Text: "큐레이션"
+    - **Container** (`FRAME`) | `58.2x43.1` | Layout: VERTICAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+      - **Italic Text:margin** (`FRAME`) | `58.2x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Italic Text** (`FRAME`) | `58.2x35.4` | Fill: #EEF6FF | Radius: 18.0px | Layout: VERTICAL (Gap: 0px, Pad: 5.199999809265137/16.639999389648438/5.199999809265137/16.639999389648438)
+          - **Icon** (`FRAME`) | `25.0x25.0`
+            - **Vector** (`VECTOR`) | `17.2x21.8` | Fill: #5667FD
+      - **마이트립** (`TEXT`) | `35.0x14.0` | Fill: #5667FD | Font: Pretendard 700 10.0px | Text: "마이트립"
+    - **Container** (`FRAME`) | `25.0x43.1` | Layout: VERTICAL (Gap: 4.159999847412109px, Pad: 0/0/0/0)
+      - **Italic Text** (`FRAME`) | `25.0x25.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Icon** (`FRAME`) | `25.0x25.0`
+          - **Vector** (`VECTOR`) | `20.3x19.5` | Fill: #AAAAAA
+      - **마이** (`TEXT`) | `18.0x14.0` | Fill: #AAAAAA | Font: Pretendard 700 10.0px | Text: "마이"
+  - **Container** (`FRAME`) | `390.0x844.5` | Fill: #15264159
+  - **Container** (`FRAME`) | `390.0x506.5` | Fill: #FFFFFF | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/24.959999084472656/24.959999084472656/24.959999084472656)
+    - **Container:margin** (`FRAME`) | `41.6x30.2` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/24.959999084472656/0)
+      - **Container** (`FRAME`) | `41.6x5.2` | Fill: #E5E7EB | Radius: 3.0px
+    - **Container** (`FRAME`) | `340.1x58.2` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/24.959999084472656/0)
+      - **Container** (`FRAME`) | `104.4x30.0` | Layout: HORIZONTAL (Gap: 12.479999542236328px, Pad: 0/0/0/0)
+        - **Heading 2** (`FRAME`) | `35.0x30.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **인천** (`TEXT`) | `35.0x30.0` | Fill: #171A2B | Font: Pretendard 800 20.0px | Text: "인천"
+        - **Container** (`FRAME`) | `57.0x26.4` | Fill: #E4E5EE | Radius: 12.0px | Layout: VERTICAL (Gap: 0px, Pad: 5.199999809265137/12.479999542236328/5.199999809265137/12.479999542236328)
+          - **미방문** (`TEXT`) | `32.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "미방문"
+    - **Container** (`FRAME`) | `340.1x376.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+      - **Container** (`FRAME`) | `340.1x167.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Container:margin** (`FRAME`) | `74.9x91.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/16.639999389648438/0)
+          - **Container** (`FRAME`) | `74.9x74.9` | Fill: #F9F7F6 | Radius: 36.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `28.0x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `28.0x27.0` | Fill: #AAAAAA | Font: Pretendard 400 27.03999900817871px | Text: "🔒"
+        - **Container:margin** (`FRAME`) | `215.0x36.3` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/8.319999694824219/0)
+          - **아직 발견하지 못한 지역이에요** (`TEXT`) | `215.0x28.0` | Fill: #171A2B | Font: Pretendard 700 18.0px | Text: "아직 발견하지 못한 지역이에요"
+        - **새로운 여행을 떠나 이 지역을 지도에 채워보세요.** (`TEXT`) | `160.0x40.0` | Fill: #888888 | Font: Pretendard 400 14.0px | Text: "새로운 여행을 떠나 이 지역을 지도에 채워보세요."
+      - **Container:align** (`FRAME`) | `167.4x147.2` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Container** (`FRAME`) | `167.4x73.4` | Fill: #EEF6FF | Radius: 22.0px | Layout: HORIZONTAL (Gap: 12.479999542236328px, Pad: 16.639999389648438/20.799999237060547/16.639999389648438/20.799999237060547)
+          - **Container** (`FRAME`) | `33.3x33.3` | Fill: #F9F7F6 | Radius: 8.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **🔒** (`TEXT`) | `15.0x15.0` | Fill: #AAAAAA | Font: Pretendard 400 14.559999465942383px | Text: "🔒"
+          - **Container** (`FRAME`) | `79.0x38.1` | Layout: VERTICAL (Gap: 2.0799999237060547px, Pad: 0/0/0/0)
+            - **Text** (`FRAME`) | `79.0x16.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **획득 가능한 키링** (`TEXT`) | `79.0x16.0` | Fill: #888888 | Font: Pretendard 700 12.0px | Text: "획득 가능한 키링"
+            - **Bold Text** (`FRAME`) | `79.0x20.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **인천대교** (`TEXT`) | `49.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "인천대교"
+      - **Button** (`FRAME`) | `340.1x61.4` | Radius: 20.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/18.719999313354492/18.719999313354492/18.719999313354492)
+        - **여행지 뽑으러 가기** (`TEXT`) | `118.0x24.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "여행지 뽑으러 가기"
+
+---
+
+## 10. 06 · 배지 컬렉션 (ID: `2002:2158`)
+- **Screen Size**: `390.0px × 1498.0px`
+- **Screen Image**: `screens/10_06 · 배지 컬렉션.png`
+
+### Component Tree & Styles
+- **06 · 배지 컬렉션** (`FRAME`) | `390.0x1498.0` | Fill: #F7F8FA
+  - **Container** (`FRAME`) | `390.0x1497.6` | Fill: #F9FAFB | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+    - **Container:margin** (`FRAME`) | `390.0x129.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/20.799999237060547/0)
+      - **Status Bar - iPhone** (`INSTANCE`) | `390.0x50.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+        - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+          - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+            - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+          - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+            - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+            - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+            - **Battery** (`GROUP`) | `27.3x13.0`
+              - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+              - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+              - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+      - **category-list** (`FRAME`) | `390.0x59.0`
+        - **키링 컬렉션** (`TEXT`) | `78.0x26.0` | Fill: #1C1C14 | Font: Pretendard 700 17.0px | Text: "키링 컬렉션"
+        - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Icon** (`FRAME`) | `18.0x18.0`
+            - **Vector** (`VECTOR`) | `4.5x9.0`
+        - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+          - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+          - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #1C1B1F
+    - **Container** (`FRAME`) | `390.0x1362.4` | Layout: VERTICAL (Gap: 0px, Pad: 0/20.799999237060547/41.599998474121094/20.799999237060547)
+      - **Container:margin** (`FRAME`) | `348.4x140.4` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/24.959999084472656/0)
+        - **Container** (`FRAME`) | `348.4x115.4` | Radius: 24.0px | Layout: VERTICAL (Gap: 0px, Pad: 23.919998168945312/20.799999237060547/23.919998168945312/20.799999237060547)
+          - **Container** (`FRAME`) | `306.8x48.8` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `133.1x48.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Heading 2** (`FRAME`) | `133.1x28.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **나의 키링 컬렉션** (`TEXT`) | `118.0x28.0` | Fill: #FFFFFF | Font: Pretendard 700 18.0px | Text: "나의 키링 컬렉션"
+              - **Paragraph** (`FRAME`) | `133.1x20.8` | Layout: VERTICAL (Gap: 0px, Pad: 7.279999732971191/0/0/0)
+                - **여행할수록 키링이 채워져요!** (`TEXT`) | `134.0x16.0` | Fill: #E7EAF3 | Font: Pretendard 500 12.0px | Text: "여행할수록 키링이 채워져요!"
+            - **Container** (`FRAME`) | `49.0x37.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **4 / 17** (`TEXT`) | `49.0x37.0` | Fill: #CDFF35 | Font: Noto Sans KR 900 31.19999885559082px | Text: "4 / 17"
+          - **Container:margin** (`FRAME`) | `306.8x23.9` | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/0/0/0)
+            - **Container** (`FRAME`) | `306.8x7.3` | Fill: #FFFFFF4A | Radius: 5.0px | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `71.8x7.3` | Fill: #FFFFFF | Radius: 5.0px
+      - **Container** (`FRAME`) | `348.4x1186.6` | Layout: GRID (Gap: 0px, Pad: 0/0/0/0)
+        - **Container** (`FRAME`) | `109.2x189.3` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **인천** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "인천"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **인천대교** (`TEXT`) | `42.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "인천대교"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **경기** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "경기"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **수원화성** (`TEXT`) | `42.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "수원화성"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **강원** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "강원"
+          - **Container** (`FRAME`) | `29.1x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **설악산** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "설악산"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **충북** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "충북"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **법주사** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "법주사"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **충남** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "충남"
+          - **Container** (`FRAME`) | `51.0x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **공주 공산성** (`TEXT`) | `55.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "공주 공산성"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **대전** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "대전"
+          - **Container** (`FRAME`) | `47.8x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **한빛탑** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "한빛탑"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **세종** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "세종"
+          - **Container** (`FRAME`) | `58.2x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **세종대왕 동상** (`TEXT`) | `66.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "세종대왕 동상"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **전북** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "전북"
+          - **Container** (`FRAME`) | `60.3x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **전주 한옥마을** (`TEXT`) | `66.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "전주 한옥마을"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **전남** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "전남"
+          - **Container** (`FRAME`) | `47.8x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **여수 오동도** (`TEXT`) | `55.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "여수 오동도"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **광주** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "광주"
+          - **Container** (`FRAME`) | `29.1x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **무등산** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "무등산"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **경북** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "경북"
+          - **Container** (`FRAME`) | `51.0x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **경주 불국사** (`TEXT`) | `55.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "경주 불국사"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **경남** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "경남"
+          - **Container** (`FRAME`) | `51.0x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **통영 거북선** (`TEXT`) | `55.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "통영 거북선"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #EEF6FF | Radius: 31.0px | Layout: GRID (Gap: 0px, Pad: 0/0/0/0)
+              - **서울 3** (`RECTANGLE`) | `62.5x62.5`
+              - **Text** (`FRAME`) | `45.8x27.0` | Radius: 16.911535263061523px
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **서울** (`TEXT`) | `25.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "서울"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **남산타워** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "남산타워"
+          - **Container** (`FRAME`) | `50.1x26.4` | Fill: #CFFF3D | Radius: 12.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 5.199999809265137/10.399999618530273/5.199999809265137/10.399999618530273)
+            - **Container** (`FRAME`) | `4.2x4.2` | Fill: #222B63
+            - **획득** (`TEXT`) | `21.0x16.0` | Fill: #222B63 | Font: Pretendard 700 12.0px | Text: "획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #EEF6FF | Radius: 31.0px | Layout: GRID (Gap: 0px, Pad: 0/0/0/0)
+              - **대구 3** (`RECTANGLE`) | `1300.0x1296.0`
+              - **Text** (`FRAME`) | `45.8x27.0` | Radius: 16.911535263061523px
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **대구** (`TEXT`) | `25.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "대구"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **83타워** (`TEXT`) | `36.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "83타워"
+          - **Container** (`FRAME`) | `50.1x26.4` | Fill: #CFFF3D | Radius: 12.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 5.199999809265137/10.399999618530273/5.199999809265137/10.399999618530273)
+            - **Container** (`FRAME`) | `4.2x4.2` | Fill: #222B63
+            - **획득** (`TEXT`) | `21.0x16.0` | Fill: #222B63 | Font: Pretendard 700 12.0px | Text: "획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **울산** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "울산"
+          - **Container** (`FRAME`) | `29.1x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **태화강 십리대숲** (`TEXT`) | `76.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "태화강 십리대숲"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #EEF6FF | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Text** (`FRAME`) | `45.8x27.0` | Radius: 16.911535263061523px
+              - **부산 3** (`RECTANGLE`) | `52.0x52.0`
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **부산** (`TEXT`) | `25.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "부산"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **광안대교** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "광안대교"
+          - **Container** (`FRAME`) | `50.1x26.4` | Fill: #CFFF3D | Radius: 12.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 5.199999809265137/10.399999618530273/5.199999809265137/10.399999618530273)
+            - **Container** (`FRAME`) | `4.2x4.2` | Fill: #222B63
+            - **획득** (`TEXT`) | `21.0x16.0` | Fill: #222B63 | Font: Pretendard 700 12.0px | Text: "획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #EEF6FF | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **제주도 3** (`RECTANGLE`) | `46.0x46.0`
+              - **Text** (`FRAME`) | `45.8x27.0` | Radius: 16.911535263061523px
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **제주** (`TEXT`) | `25.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "제주"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **성산일출봉** (`TEXT`) | `52.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "성산일출봉"
+          - **Container** (`FRAME`) | `50.1x26.4` | Fill: #CFFF3D | Radius: 12.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 5.199999809265137/10.399999618530273/5.199999809265137/10.399999618530273)
+            - **Container** (`FRAME`) | `4.2x4.2` | Fill: #222B63
+            - **획득** (`TEXT`) | `21.0x16.0` | Fill: #222B63 | Font: Pretendard 700 12.0px | Text: "획득"
+
+---
+
+## 11. 06 · 배지 컬렉션 (ID: `2002:2363`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/11_06 · 배지 컬렉션.png`
+
+### Component Tree & Styles
+- **06 · 배지 컬렉션** (`FRAME`) | `390.0x844.0` | Fill: #F9FAFB
+  - **Container** (`FRAME`) | `390.0x1497.6` | Fill: #F9FAFB | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+    - **Container:margin** (`FRAME`) | `390.0x129.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/20.799999237060547/0)
+      - **Status Bar - iPhone** (`INSTANCE`) | `390.0x50.0` | Fill: #FFFFFF | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+        - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+          - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+            - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+          - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+            - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+            - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+            - **Battery** (`GROUP`) | `27.3x13.0`
+              - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+              - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+              - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+      - **category-list** (`FRAME`) | `390.0x59.0` | Fill: #FFFFFF
+        - **키링 컬렉션** (`TEXT`) | `78.0x26.0` | Fill: #1C1C14 | Font: Pretendard 700 17.0px | Text: "키링 컬렉션"
+        - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Icon** (`FRAME`) | `18.0x18.0`
+            - **Vector** (`VECTOR`) | `4.5x9.0`
+        - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+          - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+          - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #1C1B1F
+    - **Container** (`FRAME`) | `390.0x1362.4` | Layout: VERTICAL (Gap: 0px, Pad: 0/20.799999237060547/41.599998474121094/20.799999237060547)
+      - **Container:margin** (`FRAME`) | `348.4x140.4` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/24.959999084472656/0)
+        - **Container** (`FRAME`) | `348.4x115.4` | Radius: 24.0px | Layout: VERTICAL (Gap: 0px, Pad: 23.919998168945312/20.799999237060547/23.919998168945312/20.799999237060547)
+          - **Container** (`FRAME`) | `306.8x48.8` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `133.1x48.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Heading 2** (`FRAME`) | `133.1x28.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **나의 키링 컬렉션** (`TEXT`) | `118.0x28.0` | Fill: #FFFFFF | Font: Pretendard 700 18.0px | Text: "나의 키링 컬렉션"
+              - **Paragraph** (`FRAME`) | `133.1x20.8` | Layout: VERTICAL (Gap: 0px, Pad: 7.279999732971191/0/0/0)
+                - **여행할수록 키링이 채워져요!** (`TEXT`) | `134.0x16.0` | Fill: #E7EAF3 | Font: Pretendard 500 12.0px | Text: "여행할수록 키링이 채워져요!"
+            - **Container** (`FRAME`) | `49.0x37.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **4 / 17** (`TEXT`) | `49.0x37.0` | Fill: #CDFF35 | Font: Noto Sans KR 900 31.19999885559082px | Text: "4 / 17"
+          - **Container:margin** (`FRAME`) | `306.8x23.9` | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/0/0/0)
+            - **Container** (`FRAME`) | `306.8x7.3` | Fill: #FFFFFF4A | Radius: 5.0px | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `71.8x7.3` | Fill: #FFFFFF | Radius: 5.0px
+      - **Container** (`FRAME`) | `348.4x1186.6` | Layout: GRID (Gap: 0px, Pad: 0/0/0/0)
+        - **Container** (`FRAME`) | `109.2x189.3` | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **📍** (`TEXT`) | `30.0x29.0` | Fill: #FFFFFF | Font: Pretendard 400 29.119998931884766px | Text: "📍"
+              - **Text** (`FRAME`) | `45.8x27.0` | Radius: 16.911535263061523px
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **서울** (`TEXT`) | `25.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "서울"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **남산타워** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "남산타워"
+          - **Container** (`FRAME`) | `50.1x26.4` | Fill: #CFFF3D | Radius: 12.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 5.199999809265137/10.399999618530273/5.199999809265137/10.399999618530273)
+            - **Container** (`FRAME`) | `4.2x4.2` | Fill: #222B63
+            - **획득** (`TEXT`) | `21.0x16.0` | Fill: #222B63 | Font: Pretendard 700 12.0px | Text: "획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **인천** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "인천"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **인천대교** (`TEXT`) | `42.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "인천대교"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **경기** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "경기"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **수원화성** (`TEXT`) | `42.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "수원화성"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **강원** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "강원"
+          - **Container** (`FRAME`) | `29.1x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **설악산** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "설악산"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **충북** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "충북"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **법주사** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "법주사"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **충남** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "충남"
+          - **Container** (`FRAME`) | `51.0x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **공주 공산성** (`TEXT`) | `55.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "공주 공산성"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **대전** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "대전"
+          - **Container** (`FRAME`) | `47.8x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **한빛탑** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "한빛탑"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **세종** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "세종"
+          - **Container** (`FRAME`) | `58.2x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **세종대왕 동상** (`TEXT`) | `66.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "세종대왕 동상"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **전북** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "전북"
+          - **Container** (`FRAME`) | `60.3x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **전주 한옥마을** (`TEXT`) | `66.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "전주 한옥마을"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **전남** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "전남"
+          - **Container** (`FRAME`) | `47.8x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **여수 오동도** (`TEXT`) | `55.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "여수 오동도"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **광주** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "광주"
+          - **Container** (`FRAME`) | `29.1x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **무등산** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "무등산"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **경북** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "경북"
+          - **Container** (`FRAME`) | `51.0x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **경주 불국사** (`TEXT`) | `55.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "경주 불국사"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **경남** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "경남"
+          - **Container** (`FRAME`) | `51.0x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **통영 거북선** (`TEXT`) | `55.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "통영 거북선"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🥟** (`TEXT`) | `30.0x29.0` | Fill: #FFFFFF | Font: Pretendard 400 29.119998931884766px | Text: "🥟"
+              - **Text** (`FRAME`) | `45.8x27.0` | Radius: 16.911535263061523px
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **대구** (`TEXT`) | `25.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "대구"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **83타워** (`TEXT`) | `36.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "83타워"
+          - **Container** (`FRAME`) | `50.1x26.4` | Fill: #CFFF3D | Radius: 12.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 5.199999809265137/10.399999618530273/5.199999809265137/10.399999618530273)
+            - **Container** (`FRAME`) | `4.2x4.2` | Fill: #222B63
+            - **획득** (`TEXT`) | `21.0x16.0` | Fill: #222B63 | Font: Pretendard 700 12.0px | Text: "획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **울산** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "울산"
+          - **Container** (`FRAME`) | `29.1x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **태화강 십리대숲** (`TEXT`) | `76.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "태화강 십리대숲"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🌉** (`TEXT`) | `30.0x29.0` | Fill: #FFFFFF | Font: Pretendard 400 29.119998931884766px | Text: "🌉"
+              - **Text** (`FRAME`) | `45.8x27.0` | Radius: 16.911535263061523px
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **부산** (`TEXT`) | `25.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "부산"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **광안대교** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "광안대교"
+          - **Container** (`FRAME`) | `50.1x26.4` | Fill: #CFFF3D | Radius: 12.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 5.199999809265137/10.399999618530273/5.199999809265137/10.399999618530273)
+            - **Container** (`FRAME`) | `4.2x4.2` | Fill: #222B63
+            - **획득** (`TEXT`) | `21.0x16.0` | Fill: #222B63 | Font: Pretendard 700 12.0px | Text: "획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🗿** (`TEXT`) | `30.0x29.0` | Fill: #FFFFFF | Font: Pretendard 400 29.119998931884766px | Text: "🗿"
+              - **Text** (`FRAME`) | `45.8x27.0` | Radius: 16.911535263061523px
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **제주** (`TEXT`) | `25.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "제주"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **성산일출봉** (`TEXT`) | `52.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "성산일출봉"
+          - **Container** (`FRAME`) | `50.1x26.4` | Fill: #CFFF3D | Radius: 12.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 5.199999809265137/10.399999618530273/5.199999809265137/10.399999618530273)
+            - **Container** (`FRAME`) | `4.2x4.2` | Fill: #222B63
+            - **획득** (`TEXT`) | `21.0x16.0` | Fill: #222B63 | Font: Pretendard 700 12.0px | Text: "획득"
+  - **Container** (`FRAME`) | `390.0x844.5` | Fill: #15264159
+  - **Container** (`FRAME`) | `390.0x491.9` | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/24.959999084472656/33.279998779296875/24.959999084472656)
+    - **Container:margin** (`FRAME`) | `41.6x38.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/33.279998779296875/0)
+      - **Container** (`FRAME`) | `41.6x5.2` | Fill: #E5E7EB | Radius: 3.0px
+    - **Container:margin** (`FRAME`) | `116.5x139.4` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/22.8799991607666/0)
+      - **Container** (`FRAME`) | `116.5x116.5` | Fill: #EEF6FF | Radius: 56.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Container** (`FRAME`) | `90.0x90.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **서울 4** (`RECTANGLE`) | `90.0x90.0`
+        - **Text** (`FRAME`) | `83.5x50.3` | Radius: 31.17138671875px
+    - **Container:margin** (`FRAME`) | `34.0x36.2` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/6.239999771118164/0)
+      - **서울** (`TEXT`) | `34.0x30.0` | Fill: #171A2B | Font: Pretendard 800 20.0px | Text: "서울"
+    - **Container:margin** (`FRAME`) | `49.0x45.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/24.959999084472656/0)
+      - **남산타워** (`TEXT`) | `49.0x20.0` | Fill: #888888 | Font: Pretendard 500 14.0px | Text: "남산타워"
+    - **Container:margin** (`FRAME`) | `340.1x120.9` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/24.959999084472656/0)
+      - **Container** (`FRAME`) | `340.1x95.9` | Fill: #EEF6FF | Radius: 20.0px | Layout: VERTICAL (Gap: 8.319999694824219px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+        - **Container** (`FRAME`) | `84.0x24.0` | Layout: HORIZONTAL (Gap: 6.239999771118164px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `18.7x18.7` | Fill: #CFFF3D | Radius: 9.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **✓** (`TEXT`) | `8.0x12.0` | Fill: #171A2B | Font: Noto Sans KR 900 10.399999618530273px | Text: "✓"
+          - **Container** (`FRAME`) | `59.0x24.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **획득 완료** (`TEXT`) | `59.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "획득 완료"
+        - **서울 4회 방문 · 최근 2026.07.04** (`TEXT`) | `172.0x20.0` | Fill: #888888 | Font: Pretendard 400 13.0px | Text: "서울 4회 방문 · 최근 2026.07.04"
+    - **Container** (`FRAME`) | `340.1x57.3` | Radius: 20.0px | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+      - **닫기** (`TEXT`) | `28.0x24.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "닫기"
+
+---
+
+## 12. 06 · 배지 컬렉션 (ID: `2002:2591`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/12_06 · 배지 컬렉션.png`
+
+### Component Tree & Styles
+- **06 · 배지 컬렉션** (`FRAME`) | `390.0x844.0` | Fill: #F9FAFB
+  - **Container** (`FRAME`) | `390.0x1497.6` | Fill: #F9FAFB | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+    - **Container:margin** (`FRAME`) | `390.0x129.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/20.799999237060547/0)
+      - **Status Bar - iPhone** (`INSTANCE`) | `390.0x50.0` | Fill: #FFFFFF | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+        - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+          - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+            - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+          - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+            - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+            - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+            - **Battery** (`GROUP`) | `27.3x13.0`
+              - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+              - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+              - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+      - **category-list** (`FRAME`) | `390.0x59.0` | Fill: #FFFFFF
+        - **키링 컬렉션** (`TEXT`) | `78.0x26.0` | Fill: #1C1C14 | Font: Pretendard 700 17.0px | Text: "키링 컬렉션"
+        - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Icon** (`FRAME`) | `18.0x18.0`
+            - **Vector** (`VECTOR`) | `4.5x9.0`
+        - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+          - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+          - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #1C1B1F
+    - **Container** (`FRAME`) | `390.0x1362.4` | Layout: VERTICAL (Gap: 0px, Pad: 0/20.799999237060547/41.599998474121094/20.799999237060547)
+      - **Container:margin** (`FRAME`) | `348.4x140.4` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/24.959999084472656/0)
+        - **Container** (`FRAME`) | `348.4x115.4` | Radius: 24.0px | Layout: VERTICAL (Gap: 0px, Pad: 23.919998168945312/20.799999237060547/23.919998168945312/20.799999237060547)
+          - **Container** (`FRAME`) | `306.8x48.8` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Container** (`FRAME`) | `133.1x48.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Heading 2** (`FRAME`) | `133.1x28.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+                - **나의 키링 컬렉션** (`TEXT`) | `118.0x28.0` | Fill: #FFFFFF | Font: Pretendard 700 18.0px | Text: "나의 키링 컬렉션"
+              - **Paragraph** (`FRAME`) | `133.1x20.8` | Layout: VERTICAL (Gap: 0px, Pad: 7.279999732971191/0/0/0)
+                - **여행할수록 키링이 채워져요!** (`TEXT`) | `134.0x16.0` | Fill: #E7EAF3 | Font: Pretendard 500 12.0px | Text: "여행할수록 키링이 채워져요!"
+            - **Container** (`FRAME`) | `49.0x37.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **4 / 17** (`TEXT`) | `49.0x37.0` | Fill: #CDFF35 | Font: Noto Sans KR 900 31.19999885559082px | Text: "4 / 17"
+          - **Container:margin** (`FRAME`) | `306.8x23.9` | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/0/0/0)
+            - **Container** (`FRAME`) | `306.8x7.3` | Fill: #FFFFFF4A | Radius: 5.0px | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Container** (`FRAME`) | `71.8x7.3` | Fill: #FFFFFF | Radius: 5.0px
+      - **Container** (`FRAME`) | `348.4x1186.6` | Layout: GRID (Gap: 0px, Pad: 0/0/0/0)
+        - **Container** (`FRAME`) | `109.2x189.3` | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **📍** (`TEXT`) | `30.0x29.0` | Fill: #FFFFFF | Font: Pretendard 400 29.119998931884766px | Text: "📍"
+              - **Text** (`FRAME`) | `45.8x27.0` | Radius: 16.911535263061523px
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **서울** (`TEXT`) | `25.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "서울"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **남산타워** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "남산타워"
+          - **Container** (`FRAME`) | `50.1x26.4` | Fill: #CFFF3D | Radius: 12.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 5.199999809265137/10.399999618530273/5.199999809265137/10.399999618530273)
+            - **Container** (`FRAME`) | `4.2x4.2` | Fill: #222B63
+            - **획득** (`TEXT`) | `21.0x16.0` | Fill: #222B63 | Font: Pretendard 700 12.0px | Text: "획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **인천** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "인천"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **인천대교** (`TEXT`) | `42.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "인천대교"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **경기** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "경기"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **수원화성** (`TEXT`) | `42.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "수원화성"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **강원** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "강원"
+          - **Container** (`FRAME`) | `29.1x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **설악산** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "설악산"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **충북** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "충북"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **법주사** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "법주사"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **충남** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "충남"
+          - **Container** (`FRAME`) | `51.0x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **공주 공산성** (`TEXT`) | `55.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "공주 공산성"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **대전** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "대전"
+          - **Container** (`FRAME`) | `47.8x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **한빛탑** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "한빛탑"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **세종** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "세종"
+          - **Container** (`FRAME`) | `58.2x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **세종대왕 동상** (`TEXT`) | `66.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "세종대왕 동상"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **전북** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "전북"
+          - **Container** (`FRAME`) | `60.3x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **전주 한옥마을** (`TEXT`) | `66.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "전주 한옥마을"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **전남** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "전남"
+          - **Container** (`FRAME`) | `47.8x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **여수 오동도** (`TEXT`) | `55.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "여수 오동도"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **광주** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "광주"
+          - **Container** (`FRAME`) | `29.1x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **무등산** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "무등산"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x188.8` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **경북** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "경북"
+          - **Container** (`FRAME`) | `51.0x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **경주 불국사** (`TEXT`) | `55.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "경주 불국사"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **경남** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "경남"
+          - **Container** (`FRAME`) | `51.0x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **통영 거북선** (`TEXT`) | `55.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "통영 거북선"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🥟** (`TEXT`) | `30.0x29.0` | Fill: #FFFFFF | Font: Pretendard 400 29.119998931884766px | Text: "🥟"
+              - **Text** (`FRAME`) | `45.8x27.0` | Radius: 16.911535263061523px
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **대구** (`TEXT`) | `25.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "대구"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **83타워** (`TEXT`) | `36.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "83타워"
+          - **Container** (`FRAME`) | `50.1x26.4` | Fill: #CFFF3D | Radius: 12.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 5.199999809265137/10.399999618530273/5.199999809265137/10.399999618530273)
+            - **Container** (`FRAME`) | `4.2x4.2` | Fill: #222B63
+            - **획득** (`TEXT`) | `21.0x16.0` | Fill: #222B63 | Font: Pretendard 700 12.0px | Text: "획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Fill: #FFFFFF | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Fill: #F9F7F6 | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🔒** (`TEXT`) | `21.0x21.0` | Fill: #CCCCCC | Font: Pretendard 400 20.799999237060547px | Text: "🔒"
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **울산** (`TEXT`) | `25.0x20.0` | Fill: #888888 | Font: Pretendard 700 14.0px | Text: "울산"
+          - **Container** (`FRAME`) | `29.1x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **태화강 십리대숲** (`TEXT`) | `76.0x16.0` | Fill: #999999 | Font: Pretendard 500 12.0px | Text: "태화강 십리대숲"
+          - **Container** (`FRAME`) | `52.8x24.3` | Layout: VERTICAL (Gap: 0px, Pad: 4.159999847412109/10.399999618530273/4.159999847412109/10.399999618530273)
+            - **미획득** (`TEXT`) | `32.0x16.0` | Fill: #999999 | Font: Pretendard 700 12.0px | Text: "미획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🌉** (`TEXT`) | `30.0x29.0` | Fill: #FFFFFF | Font: Pretendard 400 29.119998931884766px | Text: "🌉"
+              - **Text** (`FRAME`) | `45.8x27.0` | Radius: 16.911535263061523px
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **부산** (`TEXT`) | `25.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "부산"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **광안대교** (`TEXT`) | `42.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "광안대교"
+          - **Container** (`FRAME`) | `50.1x26.4` | Fill: #CFFF3D | Radius: 12.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 5.199999809265137/10.399999618530273/5.199999809265137/10.399999618530273)
+            - **Container** (`FRAME`) | `4.2x4.2` | Fill: #222B63
+            - **획득** (`TEXT`) | `21.0x16.0` | Fill: #222B63 | Font: Pretendard 700 12.0px | Text: "획득"
+        - **Container** (`FRAME`) | `109.2x189.3` | Radius: 22.0px | Layout: VERTICAL (Gap: 0px, Pad: 18.719999313354492/5.199999809265137/14.559999465942383/5.199999809265137)
+          - **Container:margin** (`FRAME`) | `64.5x78.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/13.519999504089355/0)
+            - **Container** (`FRAME`) | `64.5x64.5` | Radius: 31.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **🗿** (`TEXT`) | `30.0x29.0` | Fill: #FFFFFF | Font: Pretendard 400 29.119998931884766px | Text: "🗿"
+              - **Text** (`FRAME`) | `45.8x27.0` | Radius: 16.911535263061523px
+          - **Container:margin** (`FRAME`) | `25.0x22.1` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/2.0799999237060547/0)
+            - **제주** (`TEXT`) | `25.0x20.0` | Fill: #171A2B | Font: Pretendard 700 14.0px | Text: "제주"
+          - **Container** (`FRAME`) | `38.5x27.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/12.479999542236328/0)
+            - **성산일출봉** (`TEXT`) | `52.0x16.0` | Fill: #888888 | Font: Pretendard 500 12.0px | Text: "성산일출봉"
+          - **Container** (`FRAME`) | `50.1x26.4` | Fill: #CFFF3D | Radius: 12.0px | Layout: HORIZONTAL (Gap: 4.159999847412109px, Pad: 5.199999809265137/10.399999618530273/5.199999809265137/10.399999618530273)
+            - **Container** (`FRAME`) | `4.2x4.2` | Fill: #222B63
+            - **획득** (`TEXT`) | `21.0x16.0` | Fill: #222B63 | Font: Pretendard 700 12.0px | Text: "획득"
+  - **Container** (`FRAME`) | `390.0x844.5` | Fill: #15264159
+  - **Container** (`FRAME`) | `390.0x495.0` | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/24.959999084472656/33.279998779296875/24.959999084472656)
+    - **Container:margin** (`FRAME`) | `41.6x38.5` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/33.279998779296875/0)
+      - **Container** (`FRAME`) | `41.6x5.2` | Fill: #E5E7EB | Radius: 3.0px
+    - **Container:margin** (`FRAME`) | `116.5x139.4` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/22.8799991607666/0)
+      - **Container** (`FRAME`) | `116.5x116.5` | Fill: #F9F7F6 | Radius: 56.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+        - **Container** (`FRAME`) | `50.0x50.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+          - **🔒** (`TEXT`) | `50.0x50.0` | Fill: #CCCCCC | Font: Pretendard 400 49.91999816894531px | Text: "🔒"
+    - **Container:margin** (`FRAME`) | `34.0x36.2` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/6.239999771118164/0)
+      - **인천** (`TEXT`) | `34.0x30.0` | Fill: #171A2B | Font: Pretendard 800 20.0px | Text: "인천"
+    - **Container:margin** (`FRAME`) | `49.0x45.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/24.959999084472656/0)
+      - **인천대교** (`TEXT`) | `49.0x20.0` | Fill: #888888 | Font: Pretendard 500 14.0px | Text: "인천대교"
+    - **Container:margin** (`FRAME`) | `340.1x120.9` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/24.959999084472656/0)
+      - **Container** (`FRAME`) | `340.1x95.9` | Fill: #FFFFFF | Radius: 20.0px | Layout: VERTICAL (Gap: 8.319999694824219px, Pad: 20.799999237060547/20.799999237060547/20.799999237060547/20.799999237060547)
+        - **Container** (`FRAME`) | `214.2x24.0` | Layout: HORIZONTAL (Gap: 6.239999771118164px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `17.0x17.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **🔒** (`TEXT`) | `17.0x17.0` | Fill: #BBBBBB | Font: Pretendard 400 16.639999389648438px | Text: "🔒"
+          - **Container** (`FRAME`) | `191.0x24.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **아직 방문하지 않은 지역이에요** (`TEXT`) | `191.0x24.0` | Fill: #171A2B | Font: Pretendard 700 16.0px | Text: "아직 방문하지 않은 지역이에요"
+        - **인천을(를) 여행하면 키링을 획득할 수 있어요.** (`TEXT`) | `231.0x20.0` | Fill: #888888 | Font: Pretendard 400 13.0px | Text: "인천을(를) 여행하면 키링을 획득할 수 있어요."
+    - **Container** (`FRAME`) | `340.1x57.3` | Radius: 20.0px | Layout: VERTICAL (Gap: 0px, Pad: 16.639999389648438/16.639999389648438/16.639999389648438/16.639999389648438)
+      - **닫기** (`TEXT`) | `28.0x24.0` | Fill: #FFFFFF | Font: Pretendard 700 16.0px | Text: "닫기"
+
+---
+
+## 13. 날짜 선택 · 2박 3일 선택 (ID: `2002:2818`)
+- **Screen Size**: `390.0px × 844.0px`
+- **Screen Image**: `screens/13_날짜 선택 · 2박 3일 선택.png`
+
+### Component Tree & Styles
+- **날짜 선택 · 2박 3일 선택** (`FRAME`) | `390.0x844.0` | Fill: #F7F8FA
+  - **Container** (`FRAME`) | `390.0x844.5` | Fill: #F9FAFB | Layout: VERTICAL (Gap: -20.0px, Pad: 0/0/0/0)
+    - **Container:margin** (`FRAME`) | `390.0x129.8` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/20.799999237060547/0)
+      - **Status Bar - iPhone** (`INSTANCE`) | `390.0x50.0` | Layout: VERTICAL (Gap: 0px, Pad: 21.0/0/0/0)
+        - **Frame** (`FRAME`) | `390.0x22.0` | Layout: HORIZONTAL (Gap: 134.0px, Pad: 0/0/0/0)
+          - **Time** (`FRAME`) | `133.0x22.0` | Layout: HORIZONTAL (Gap: 10.0px, Pad: 0/39.0/0/0)
+            - **Time** (`TEXT`) | `34.0x22.0` | Fill: #000000 | Font: Pretendard 600 17.0px | Text: "9:41"
+          - **Dynamic Island spacer** (`FRAME`) | `124.0x10.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Levels** (`FRAME`) | `133.0x13.0` | Layout: HORIZONTAL (Gap: 7.0px, Pad: 0/0/0/11.0)
+            - **Cellular Connection** (`VECTOR`) | `19.2x12.2` | Fill: #000000
+            - **Wifi** (`VECTOR`) | `17.1x12.3` | Fill: #000000
+            - **Battery** (`GROUP`) | `27.3x13.0`
+              - **Border** (`RECTANGLE`) | `25.0x13.0` | Radius: 4.300000190734863px
+              - **Cap** (`VECTOR`) | `1.3x4.1` | Fill: #000000
+              - **Capacity** (`RECTANGLE`) | `21.0x9.0` | Fill: #000000 | Radius: 2.5px
+      - **category-list** (`FRAME`) | `390.0x59.0`
+        - **날짜 선택** (`TEXT`) | `63.0x26.0` | Fill: #1C1C14 | Font: Pretendard 700 17.0px | Text: "날짜 선택"
+        - **BackButton** (`FRAME`) | `40.0x40.0` | Fill: #FFFFFF | Radius: 21704000.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+          - **Icon** (`FRAME`) | `18.0x18.0`
+            - **Vector** (`VECTOR`) | `4.5x9.0`
+        - **arrow_forward_ios** (`GROUP`) | `22.0x22.0`
+          - **Bounding box** (`RECTANGLE`) | `22.0x22.0` | Fill: #D9D9D9
+          - **arrow_forward_ios** (`VECTOR`) | `9.1x17.0` | Fill: #1C1B1F
+    - **Container** (`FRAME`) | `390.0x734.7` | Fill: #F7F8FA | Layout: VERTICAL (Gap: 0px, Pad: 0/20.799999237060547/41.599998474121094/20.799999237060547)
+      - **Container** (`FRAME`) | `348.4x467.5` | Layout: VERTICAL (Gap: 12.0px, Pad: 20.0/20.0/40.0/20.0)
+        - **Container** (`FRAME`) | `308.4x26.0` | Layout: HORIZONTAL (Gap: 109.80000305175781px, Pad: 0/0/0/0)
+          - **Container** (`FRAME`) | `26.0x26.0` | Layout: VERTICAL (Gap: 0px, Pad: 4.0/4.0/4.0/4.0)
+            - **Container** (`FRAME`) | `18.0x18.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Icon** (`FRAME`) | `18.0x18.0`
+                - **Vector** (`VECTOR`) | `7.3x12.9` | Fill: #22222280
+          - **Container** (`FRAME`) | `79.0x21.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **2026. 09** (`TEXT`) | `79.0x21.0` | Fill: #222222 | Font: Pretendard 800 18.0px | Text: "2026. 09"
+          - **Container** (`FRAME`) | `26.0x26.0` | Layout: VERTICAL (Gap: 0px, Pad: 4.0/4.0/4.0/4.0)
+            - **Container** (`FRAME`) | `18.0x18.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+              - **Icon** (`FRAME`) | `18.0x18.0`
+                - **Vector** (`VECTOR`) | `7.3x12.9` | Fill: #22222280
+        - **Container** (`FRAME`) | `308.4x22.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 8.0/0/0/0)
+          - **Container** (`FRAME`) | `44.1x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **일** (`TEXT`) | `11.0x14.0` | Fill: #A3A3A3 | Font: Pretendard 700 12.0px | Text: "일"
+          - **Container** (`FRAME`) | `44.1x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **월** (`TEXT`) | `11.0x14.0` | Fill: #A3A3A3 | Font: Pretendard 700 12.0px | Text: "월"
+          - **Container** (`FRAME`) | `44.1x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **화** (`TEXT`) | `11.0x14.0` | Fill: #A3A3A3 | Font: Pretendard 700 12.0px | Text: "화"
+          - **Container** (`FRAME`) | `44.1x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **수** (`TEXT`) | `11.0x14.0` | Fill: #A3A3A3 | Font: Pretendard 700 12.0px | Text: "수"
+          - **Container** (`FRAME`) | `44.1x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **목** (`TEXT`) | `11.0x14.0` | Fill: #A3A3A3 | Font: Pretendard 700 12.0px | Text: "목"
+          - **Container** (`FRAME`) | `44.1x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **금** (`TEXT`) | `11.0x14.0` | Fill: #A3A3A3 | Font: Pretendard 700 12.0px | Text: "금"
+          - **Container** (`FRAME`) | `44.1x14.0` | Layout: VERTICAL (Gap: 0px, Pad: 0/0/0/0)
+            - **토** (`TEXT`) | `11.0x14.0` | Fill: #A3A3A3 | Font: Pretendard 700 12.0px | Text: "토"
+        - **Container** (`FRAME`) | `308.4x272.0` | Layout: GRID (Gap: 0px, Pad: 0/0/28.0/0)
+          - **Rectangle** (`RECTANGLE`) | `88.1x36.0` | Fill: #EEF0FF
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Rectangle** (`RECTANGLE`) | `36.0x36.0` | Radius: 18.0px
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Rectangle** (`RECTANGLE`) | `36.0x36.0` | Radius: 18.0px
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **1** (`TEXT`) | `7.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "1"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **2** (`TEXT`) | `9.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "2"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **3** (`TEXT`) | `10.0x17.0` | Fill: #222222 | Font: Pretendard 800 14.0px | Text: "3"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **4** (`TEXT`) | `10.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "4"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **5** (`TEXT`) | `9.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "5"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **6** (`TEXT`) | `9.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "6"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **7** (`TEXT`) | `8.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "7"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **8** (`TEXT`) | `9.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "8"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **9** (`TEXT`) | `9.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "9"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **10** (`TEXT`) | `16.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "10"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **11** (`TEXT`) | `13.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "11"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **12** (`TEXT`) | `15.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "12"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **13** (`TEXT`) | `16.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "13"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **14** (`TEXT`) | `16.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "14"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **15** (`TEXT`) | `16.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "15"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **16** (`TEXT`) | `16.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "16"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **17** (`TEXT`) | `15.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "17"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **18** (`TEXT`) | `16.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "18"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **19** (`TEXT`) | `16.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "19"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **20** (`TEXT`) | `18.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "20"
+          - **Container** (`FRAME`) | `44.1x36.0` | Radius: 18.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Ellipse** (`ELLIPSE`) | `36.0x36.0` | Fill: #4A63FF
+            - **21** (`TEXT`) | `16.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "21"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **22** (`TEXT`) | `18.0x17.0` | Fill: #4A63FF | Font: Pretendard 700 14.0px | Text: "22"
+          - **Container** (`FRAME`) | `44.1x36.0` | Radius: 18.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **Ellipse** (`ELLIPSE`) | `36.0x36.0` | Fill: #4A63FF
+            - **23** (`TEXT`) | `18.0x17.0` | Fill: #FFFFFF | Font: Pretendard 700 14.0px | Text: "23"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **24** (`TEXT`) | `18.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "24"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **25** (`TEXT`) | `18.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "25"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **26** (`TEXT`) | `18.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "26"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **27** (`TEXT`) | `17.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "27"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **28** (`TEXT`) | `18.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "28"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **29** (`TEXT`) | `18.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "29"
+          - **Container** (`FRAME`) | `44.1x36.0` | Layout: HORIZONTAL (Gap: 0px, Pad: 0/0/0/0)
+            - **30** (`TEXT`) | `18.0x17.0` | Fill: #222222 | Font: Pretendard 600 14.0px | Text: "30"
+        - **Button** (`FRAME`) | `308.4x51.5` | Radius: 20.0px | Layout: HORIZONTAL (Gap: 0px, Pad: 16.0/16.0/17.5/16.0)
+          - **선택 완료** (`TEXT`) | `56.0x18.0` | Fill: #FFFFFF | Font: Pretendard 800 15.0px | Text: "선택 완료"
+  - **9월 21일 – 9월 23일 · 2박 3일** (`TEXT`) | `161.0x16.0` | Fill: #4A63FF | Font: Pretendard 500 13.0px | Text: "9월 21일 – 9월 23일 · 2박 3일"
+
+---

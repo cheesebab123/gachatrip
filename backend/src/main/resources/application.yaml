@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: gachatrip
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:file:./data/gachatrip;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE;MODE=MySQL;NON_KEYWORDS=USER
+    username: sa
+    password: 
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:schema.sql
+      data-locations: classpath:data.sql, classpath:tour_data_insert.sql
+  jpa:
+    defer-datasource-initialization: false
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        format_sql: true
+    show-sql: true
+
+tour:
+  api:
+    key: bfc0b440e5c726822cce4b719baca693bdc62a96541092c7ad8dd1c53fb908e3
