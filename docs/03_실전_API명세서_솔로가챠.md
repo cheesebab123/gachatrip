@@ -9,7 +9,7 @@
 
 ### 1.1 개인 가챠 뽑기 실행
 * **엔드포인트**: `POST /api/v1/gacha/draw`
-* **설명**: 사용자가 선택한 조건(스타일, 거리, 선호지역 등)을 기반으로 백엔드 DB에서 여행지 1곳을 랜덤 추첨하여 티켓을 발급합니다.
+* **설명**: 사용자가 선택한 조건(스타일, 거리, 선호지역 등)을 기반으로 백엔드 DB의 20개 대표 여행지 중 1곳을 랜덤 추첨하여 티켓을 발급합니다.
 * **Request Header**:
   * `Content-Type`: `application/json`
   * `X-User-Id`: `1` *(선택: 로그인한 사용자 ID, 미지정 시 게스트 1번 유저)*
@@ -21,7 +21,7 @@
   "date": "2026.10.15",
   "budget": "10만원 이하",
   "distance": 150,
-  "preferredRegions": ["강원도", "제주도"],
+  "preferredRegions": ["강원", "제주"],
   "companion": "alone",
   "memberCount": 1,
   "excludeConditions": ["비행기 필요"]
@@ -51,7 +51,7 @@
 
 ### 1.2 다시 뽑기 (재추첨)
 * **엔드포인트**: `POST /api/v1/gacha/redraw?ticketId={ticketId}`
-* **설명**: 마음에 들지 않아 [다시 뽑기]를 눌렀을 때 이전 티켓과 겹치지 않는 새로운 여행지를 재추첨합니다.
+* **설명**: 마음에 들지 않아 [다시 뽑기]를 눌렀을 때 이전 티켓과 겹치지 않는 새로운 여행지를 20개 지역 DB에서 재추첨합니다.
 * **Query Parameters**:
   * `ticketId`: `105` (이전 티켓 번호)
 
@@ -98,37 +98,7 @@
 
 ## 2. 여행지 (Destination) 조회 API
 
-### 2.1 메인 홈 인기 여행지 TOP 5 조회
-* **엔드포인트**: `GET /api/v1/destinations/popular`
-* **설명**: 메인 홈 화면의 '인기 여행지' 섹션에 노출할 5개 대표 여행지를 조회합니다.
-
-* **Response Body (200 OK)**:
-```json
-[
-  {
-    "id": 17,
-    "title": "제주 협재 에메랄드 바다 & 금능 피크닉",
-    "region": "제주",
-    "address": "제주특별자치도 제주시 한림읍 한림로 329",
-    "imageUrl": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80",
-    "capsuleImageUrl": "/assets/images/capsules/17. 제주.png",
-    "overview": "비양도가 그림처럼 떠 있는 에메랄드빛 바다와 하얀 모래사장",
-    "tags": ["#바다", "#힐링", "#노을"]
-  },
-  {
-    "id": 4,
-    "title": "강원 강릉 안목해변 커피거리",
-    "region": "강원",
-    "address": "강원특별자치도 강릉시 창해로 14번길",
-    "imageUrl": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80",
-    "capsuleImageUrl": "/assets/images/capsules/4. 강원.png",
-    "overview": "푸른 동해 바다를 바라보며 향긋한 핸드드립 커피를 즐기는 낭만 여행",
-    "tags": ["#동해", "#커피", "#카페거리"]
-  }
-]
-```
-
-### 2.2 여행지 단건 상세 조회
+### 2.1 여행지 단건 상세 조회
 * **엔드포인트**: `GET /api/v1/destinations/{id}`
 * **Path Variables**: `id` (1 ~ 20)
 * **Response Body (200 OK)**:
